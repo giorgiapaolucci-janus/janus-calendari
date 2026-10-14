@@ -1,0 +1,2022 @@
+{
+  "version": 1,
+  "revision": 2,
+  "updatedAt": "2026-10-14T07:42:17.477Z",
+  "collections": {
+    "assenze": [
+      {
+        "al": "2026-10-09",
+        "dal": "2026-10-09",
+        "docenteId": "aa",
+        "nota": "R/O recupero open day (foglio PERMESSI)",
+        "origine": "PERMESSI",
+        "tipo": "recupero",
+        "id": "seed_aa_20261009"
+      },
+      {
+        "al": "2026-10-12",
+        "dal": "2026-10-12",
+        "docenteId": "aa",
+        "nota": "F ferie (foglio PERMESSI)",
+        "origine": "PERMESSI",
+        "tipo": "ferie",
+        "id": "seed_aa_20261012"
+      }
+    ],
+    "sost": [],
+    "mods": [
+      {
+        "batch": "pmv0uqkee8oy",
+        "creata": "2026-10-09T10:58:25.990Z",
+        "lessonId": "L138",
+        "motivo": "Spostamento del Lab matematica del venerdì 12:00 dall'Aula 4 all'Aula 6 (link Zoom dell'Aula 6)",
+        "patch": {
+          "aula": "6"
+        },
+        "propostaId": "pmv0uqkee8oy",
+        "tipo": "set",
+        "id": "pmv0uqkee8oy_m0"
+      },
+      {
+        "batch": "pmv0uqkee8oy",
+        "creata": "2026-10-09T10:58:25.990Z",
+        "lessonId": "L140",
+        "motivo": "Spostamento del Lab matematica del venerdì 12:00 dall'Aula 4 all'Aula 6 (link Zoom dell'Aula 6)",
+        "patch": {
+          "aula": "6"
+        },
+        "propostaId": "pmv0uqkee8oy",
+        "tipo": "set",
+        "id": "pmv0uqkee8oy_m1"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L024",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L024",
+        "tipo": "set",
+        "patch": {
+          "materia": "ECONOMIA AZIENDALE",
+          "doc": "lc",
+          "aula": "7"
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L031",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L031",
+        "tipo": "set",
+        "patch": {
+          "materia": "ECONOMIA AZIENDALE",
+          "doc": "lc",
+          "aula": "7"
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L038",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L038",
+        "tipo": "set",
+        "patch": {
+          "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+          "tracks": [
+            "scientifico",
+            "scienze-applicate",
+            "sportivo",
+            "les",
+            "linguistico",
+            "scienze-umane"
+          ]
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L041",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L041",
+        "tipo": "set",
+        "patch": {
+          "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+          "tracks": [
+            "scientifico",
+            "scienze-applicate",
+            "sportivo",
+            "les",
+            "linguistico",
+            "scienze-umane"
+          ]
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L046",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L046",
+        "tipo": "set",
+        "patch": {
+          "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+          "tracks": [
+            "scientifico",
+            "scienze-applicate",
+            "sportivo",
+            "les",
+            "linguistico",
+            "scienze-umane"
+          ]
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L049",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L049",
+        "tipo": "set",
+        "patch": {
+          "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+          "tracks": [
+            "scientifico",
+            "scienze-applicate",
+            "sportivo",
+            "les",
+            "linguistico",
+            "scienze-umane"
+          ]
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L039",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L039",
+        "tipo": "set",
+        "patch": {
+          "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "scienze-applicate",
+            "sportivo",
+            "informatico",
+            "afm",
+            "socio-sanitario",
+            "turismo",
+            "mme",
+            "ipseoa"
+          ]
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L042",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L042",
+        "tipo": "set",
+        "patch": {
+          "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "scienze-applicate",
+            "sportivo",
+            "informatico",
+            "afm",
+            "socio-sanitario",
+            "turismo",
+            "mme",
+            "ipseoa"
+          ]
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L047",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L047",
+        "tipo": "set",
+        "patch": {
+          "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "scienze-applicate",
+            "sportivo",
+            "informatico",
+            "afm",
+            "socio-sanitario",
+            "turismo",
+            "mme",
+            "ipseoa"
+          ]
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "giorgia_20261012_martedi_L050",
+        "batch": "giorgia_20261012_martedi",
+        "creata": "2026-10-12T15:31:48.519Z",
+        "lessonId": "L050",
+        "tipo": "set",
+        "patch": {
+          "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "scienze-applicate",
+            "sportivo",
+            "informatico",
+            "afm",
+            "socio-sanitario",
+            "turismo",
+            "mme",
+            "ipseoa"
+          ]
+        },
+        "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+      },
+      {
+        "id": "foglio_20261014_L007",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L007",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "del"
+      },
+      {
+        "id": "foglio_20261014_L059",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L059",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / LES",
+          "tracks": [
+            "afm",
+            "les"
+          ],
+          "aula": "3",
+          "note": "(+3 + 3/4)",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L060",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L060",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / ITI INFORMATICO / SCIENZE UMANE",
+          "tracks": [
+            "afm",
+            "informatico",
+            "scienze-umane"
+          ],
+          "aula": "1",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L063",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L063",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "SCIENZE UMANE",
+          "tracks": [
+            "scienze-umane"
+          ],
+          "aula": "4",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L064",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L064",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+          "tracks": [
+            "afm",
+            "classico",
+            "informatico",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo",
+            "turismo"
+          ],
+          "aula": "7",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L065",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L065",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "SCIENZE UMANE",
+          "tracks": [
+            "scienze-umane"
+          ],
+          "aula": "4",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L066",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L066",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+          "tracks": [
+            "afm",
+            "classico",
+            "informatico",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo",
+            "turismo"
+          ],
+          "aula": "7",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L068",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L068",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "LES / SCIENZE UMANE",
+          "tracks": [
+            "les",
+            "scienze-umane"
+          ],
+          "aula": "4",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L070",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L070",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO",
+          "tracks": [
+            "afm",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "socio-sanitario"
+          ],
+          "aula": "3",
+          "note": "( +4)",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L071",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L071",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+          "tracks": [
+            "classico",
+            "les",
+            "linguistico",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "sportivo"
+          ],
+          "aula": "2",
+          "note": "(+4)",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L073",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L073",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / LES / LINGUISTICO / SOCIO SANITARIO",
+          "tracks": [
+            "afm",
+            "les",
+            "linguistico",
+            "socio-sanitario"
+          ],
+          "aula": "3",
+          "note": "( +4)",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L074",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L074",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+          "tracks": [
+            "classico",
+            "les",
+            "linguistico",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "sportivo"
+          ],
+          "aula": "2",
+          "note": "(+4)",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L078",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L078",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO",
+          "tracks": [
+            "afm",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "socio-sanitario"
+          ],
+          "aula": "3",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L079",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L079",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO",
+          "tracks": [
+            "classico",
+            "informatico",
+            "ipseoa",
+            "mme",
+            "scienze-umane",
+            "socio-sanitario",
+            "turismo"
+          ],
+          "aula": "1",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L080",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L080",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / LES / LINGUISTICO / SOCIO SANITARIO",
+          "tracks": [
+            "afm",
+            "les",
+            "linguistico",
+            "socio-sanitario"
+          ],
+          "aula": "3",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L081",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L081",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO",
+          "tracks": [
+            "classico",
+            "informatico",
+            "ipseoa",
+            "mme",
+            "scienze-umane",
+            "socio-sanitario",
+            "turismo"
+          ],
+          "aula": "1",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L082",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L082",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "del"
+      },
+      {
+        "id": "foglio_20261014_L087",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L087",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / ITI INFORMATICO / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / TURISMO",
+          "tracks": [
+            "classico",
+            "informatico",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "turismo"
+          ],
+          "aula": "3",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L095",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L095",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+          "tracks": [
+            "classico",
+            "informatico",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "socio-sanitario",
+            "sportivo",
+            "turismo"
+          ],
+          "aula": "3",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L109",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L109",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "del"
+      },
+      {
+        "id": "foglio_20261014_L112",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L112",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / SCIENTIFICO / SCIENZE UMANE",
+          "tracks": [
+            "classico",
+            "scientifico",
+            "scienze-umane"
+          ],
+          "aula": "2",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L114",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L114",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / SCIENTIFICO / SCIENZE UMANE",
+          "tracks": [
+            "classico",
+            "scientifico",
+            "scienze-umane"
+          ],
+          "aula": "2",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L121",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L121",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "SOCIO SANITARIO",
+          "tracks": [
+            "socio-sanitario"
+          ],
+          "aula": "3",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L122",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L122",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / LES / SOCIO SANITARIO / TURISMO",
+          "tracks": [
+            "afm",
+            "les",
+            "socio-sanitario",
+            "turismo"
+          ],
+          "aula": "5",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L124",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L124",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / LES / SOCIO SANITARIO / TURISMO",
+          "tracks": [
+            "afm",
+            "les",
+            "socio-sanitario",
+            "turismo"
+          ],
+          "aula": "5",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L128",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L128",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / LES / LINGUISTICO / TURISMO",
+          "tracks": [
+            "afm",
+            "les",
+            "linguistico",
+            "turismo"
+          ],
+          "aula": "5",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L129",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L129",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "del"
+      },
+      {
+        "id": "foglio_20261014_L130",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L130",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "SOCIO SANITARIO",
+          "tracks": [
+            "socio-sanitario"
+          ],
+          "aula": "3",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L131",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L131",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "del"
+      },
+      {
+        "id": "foglio_20261014_L132",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L132",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / LES / SOCIO SANITARIO / TURISMO",
+          "tracks": [
+            "afm",
+            "les",
+            "socio-sanitario",
+            "turismo"
+          ],
+          "aula": "5",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L144",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L144",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO",
+          "tracks": [
+            "classico"
+          ],
+          "aula": "5",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L134",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L134",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / LES / SOCIO SANITARIO / TURISMO",
+          "tracks": [
+            "afm",
+            "les",
+            "socio-sanitario",
+            "turismo"
+          ],
+          "aula": "5",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_L145",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "L145",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "CLASSICO / IPSEOA",
+          "tracks": [
+            "classico",
+            "ipseoa"
+          ],
+          "aula": "5",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_A010",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "A010",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / IPSEOA / LES / SOCIO SANITARIO / SPORTIVO",
+          "tracks": [
+            "afm",
+            "ipseoa",
+            "les",
+            "socio-sanitario",
+            "sportivo"
+          ],
+          "aula": "1",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_A025",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "A025",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "del"
+      },
+      {
+        "id": "foglio_20261014_A026",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "A026",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+          "tracks": [
+            "afm",
+            "classico",
+            "informatico",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "socio-sanitario",
+            "sportivo",
+            "turismo"
+          ],
+          "aula": "7",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_A027",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "A027",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+          "tracks": [
+            "afm",
+            "classico",
+            "informatico",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo",
+            "turismo"
+          ],
+          "aula": "7",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_A029",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "A029",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO",
+          "tracks": [
+            "afm",
+            "informatico",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo"
+          ],
+          "aula": "7",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_A030",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "A030",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "set",
+        "patch": {
+          "ind": "AFM / ITI INFORMATICO / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO",
+          "tracks": [
+            "afm",
+            "informatico",
+            "les",
+            "linguistico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo"
+          ],
+          "aula": "7",
+          "note": "",
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_1",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_1",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 1,
+          "h": 10,
+          "anno": "1/2",
+          "materia": "ECONOMIA AZIENDALE",
+          "ind": "AFM",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_2",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_2",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 9,
+          "anno": "1/2",
+          "materia": "ECONOMIA AZIENDALE",
+          "ind": "AFM",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_3",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_3",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 11,
+          "anno": "3/4",
+          "materia": "LAB MATEMATICA",
+          "ind": "AFM / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "tracks": [
+            "afm",
+            "linguistico",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_4",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_4",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 4,
+          "h": 10,
+          "anno": "4/5",
+          "materia": "EC POLITICA / RELAZIONI INTERNAZIONALI",
+          "ind": "AFM",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_5",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_5",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 3,
+          "h": 10,
+          "anno": "4/5",
+          "materia": "FRANCESE AVANZATO",
+          "ind": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "tracks": [
+            "afm",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "socio-sanitario"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_6",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_6",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 3,
+          "h": 10,
+          "anno": "5",
+          "materia": "FRANCESE AVANZATO",
+          "ind": "LES / LINGUISTICO / SOCIO SANITARIO",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "tracks": [
+            "les",
+            "linguistico",
+            "socio-sanitario"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_7",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_7",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 3,
+          "h": 12,
+          "anno": "4/5",
+          "materia": "LAB FISICA",
+          "ind": "LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "tracks": [
+            "les",
+            "linguistico",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_8",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_8",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 3,
+          "h": 12,
+          "anno": "5",
+          "materia": "LAB FISICA",
+          "ind": "LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "tracks": [
+            "les",
+            "linguistico",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_9",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_9",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 11,
+          "anno": "4/5",
+          "materia": "LAB MATEMATICA",
+          "ind": "IPSEOA / LINGUISTICO / SPORTIVO",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "tracks": [
+            "ipseoa",
+            "linguistico",
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_10",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_10",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 11,
+          "anno": "5",
+          "materia": "LAB MATEMATICA",
+          "ind": "LINGUISTICO / SPORTIVO",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "tracks": [
+            "linguistico",
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_11",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_11",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 10,
+          "anno": "4/5",
+          "materia": "FRANCESE GRAMMATICA",
+          "ind": "IPSEOA / LINGUISTICO",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "tracks": [
+            "ipseoa",
+            "linguistico"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_12",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_12",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 10,
+          "anno": "5",
+          "materia": "FRANCESE GRAMMATICA",
+          "ind": "LINGUISTICO",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "tracks": [
+            "linguistico"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_13",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_13",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 11,
+          "anno": "4/5",
+          "materia": "FRANCESE AVANZATO",
+          "ind": "IPSEOA / LINGUISTICO",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "tracks": [
+            "ipseoa",
+            "linguistico"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_14",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_14",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 11,
+          "anno": "5",
+          "materia": "FRANCESE AVANZATO",
+          "ind": "LINGUISTICO",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "tracks": [
+            "linguistico"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_15",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_15",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 10,
+          "anno": "3/4",
+          "materia": "FRANCESE GRAMMATICA",
+          "ind": "SOCIO SANITARIO",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "tracks": [
+            "socio-sanitario"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_16",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_16",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 5,
+          "h": 11,
+          "anno": "3/4",
+          "materia": "FRANCESE AVANZATO",
+          "ind": "SOCIO SANITARIO",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "tracks": [
+            "socio-sanitario"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_17",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_17",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 3,
+          "h": 11,
+          "anno": "4/5",
+          "materia": "SCIENZE MOTORIE",
+          "ind": "IPSEOA / SOCIO SANITARIO",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "tracks": [
+            "ipseoa",
+            "socio-sanitario"
+          ]
+        }
+      },
+      {
+        "id": "foglio_20261014_LJ20261014_18",
+        "batch": "foglio_20261014",
+        "creata": "2026-10-14T07:41:51.521Z",
+        "lessonId": "LJ20261014_18",
+        "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+        "tipo": "add",
+        "lezione": {
+          "g": 3,
+          "h": 11,
+          "anno": "5",
+          "materia": "SCIENZE MOTORIE",
+          "ind": "SOCIO SANITARIO",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "tracks": [
+            "socio-sanitario"
+          ]
+        }
+      }
+    ],
+    "proposte": [
+      {
+        "azioni": [
+          {
+            "al": "2026-10-16",
+            "dal": "2026-10-12",
+            "docenteId": "bl",
+            "nota": "",
+            "t": "assenza",
+            "tipo": "malattia"
+          },
+          {
+            "data": "2026-10-13",
+            "map": {
+              "L022": "gd",
+              "L029": "gd",
+              "L037": "gd",
+              "L040": "gd",
+              "L045": "gd",
+              "L048": "gd"
+            },
+            "t": "sost"
+          },
+          {
+            "data": "2026-10-16",
+            "map": {
+              "L121": "gd",
+              "L130": "gd"
+            },
+            "t": "sost"
+          }
+        ],
+        "creata": "2026-10-08T13:25:24.376Z",
+        "da": "u_09SerguTLUz7TDicGQAHEQ",
+        "deciso": "2026-10-08T13:30:03.793Z",
+        "decisoDa": "u_09SerguTLUz7TDicGQAHEQ",
+        "dettagli": [
+          {
+            "a": "gd",
+            "alternative": [],
+            "anni": "3/4",
+            "aula": "3",
+            "avvisi": [
+              "di martedì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": false,
+            "da": "bl",
+            "data": "2026-10-13",
+            "h": 9,
+            "ids": [
+              "L022"
+            ],
+            "livNome": "affine",
+            "materia": "IGIENE"
+          },
+          {
+            "a": "gd",
+            "alternative": [],
+            "anni": "3/4",
+            "aula": "3",
+            "avvisi": [
+              "di martedì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": true,
+            "da": "bl",
+            "data": "2026-10-13",
+            "h": 10,
+            "ids": [
+              "L029"
+            ],
+            "livNome": "affine",
+            "materia": "METODOLOGIE"
+          },
+          {
+            "a": "gd",
+            "alternative": [],
+            "anni": "4/5, 5",
+            "aula": "3",
+            "avvisi": [
+              "di martedì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": true,
+            "da": "bl",
+            "data": "2026-10-13",
+            "h": 11,
+            "ids": [
+              "L037",
+              "L040"
+            ],
+            "livNome": "affine",
+            "materia": "IGIENE/METOD / IGIENE/METODOLOGIE OPERATIVE"
+          },
+          {
+            "a": "gd",
+            "alternative": [],
+            "anni": "4/5, 5",
+            "aula": "3",
+            "avvisi": [
+              "di martedì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": true,
+            "da": "bl",
+            "data": "2026-10-13",
+            "h": 12,
+            "ids": [
+              "L045",
+              "L048"
+            ],
+            "livNome": "affine",
+            "materia": "PSICOLOGIA"
+          },
+          {
+            "a": "gd",
+            "alternative": [],
+            "anni": "3/4",
+            "aula": "3",
+            "avvisi": [
+              "di venerdì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": false,
+            "da": "bl",
+            "data": "2026-10-16",
+            "h": 10,
+            "ids": [
+              "L121"
+            ],
+            "livNome": "affine",
+            "materia": "IGIENE"
+          },
+          {
+            "a": "gd",
+            "alternative": [],
+            "anni": "3/4",
+            "aula": "3",
+            "avvisi": [
+              "di venerdì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": true,
+            "da": "bl",
+            "data": "2026-10-16",
+            "h": 11,
+            "ids": [
+              "L130"
+            ],
+            "livNome": "affine",
+            "materia": "PSICOLOGIA"
+          }
+        ],
+        "errori": [],
+        "fonte": "form",
+        "id": "pmuzkk1zsiss",
+        "nonServe": [],
+        "params": {
+          "al": "2026-10-16",
+          "dal": "2026-10-12",
+          "docenteId": "bl",
+          "nota": "",
+          "tipo": "malattia"
+        },
+        "riepilogo": "6 sessioni coperte, 0 scoperte, 0 esercitazioni da casa senza copertura",
+        "scoperte": [],
+        "stato": "rifiutata",
+        "tipo": "assenza",
+        "titolo": "Beatrice Lungu assente dal Lun 12/10 al Ven 16/10 (malattia)"
+      },
+      {
+        "azioni": [
+          {
+            "al": "2026-10-25",
+            "dal": "2026-10-19",
+            "docenteId": "gd",
+            "nota": "",
+            "t": "assenza",
+            "tipo": "malattia"
+          },
+          {
+            "data": "2026-10-19",
+            "map": {
+              "L001": "ed",
+              "L006": "bl"
+            },
+            "t": "sost"
+          },
+          {
+            "data": "2026-10-21",
+            "map": {
+              "A001": "ed",
+              "A004": "ed",
+              "A005": "ed",
+              "A012": "ed",
+              "L063": "bl",
+              "L065": "bl",
+              "L067": "ed",
+              "L068": "bl",
+              "L075": "ed",
+              "L077": "ed",
+              "L079": "ed",
+              "L081": "ed"
+            },
+            "t": "sost"
+          }
+        ],
+        "creata": "2026-10-08T14:27:12.336Z",
+        "da": "u_09SerguTLUz7TDicGQAHEQ",
+        "deciso": "2026-10-08T15:44:12.233Z",
+        "decisoDa": "u_09SerguTLUz7TDicGQAHEQ",
+        "dettagli": [
+          {
+            "a": "ed",
+            "alternative": [],
+            "anni": "1/2",
+            "aula": "4",
+            "avvisi": [
+              "di lunedì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": false,
+            "da": "gd",
+            "data": "2026-10-19",
+            "h": 9,
+            "ids": [
+              "L001"
+            ],
+            "livNome": "esatta",
+            "materia": "LAB ITALIANO"
+          },
+          {
+            "a": "bl",
+            "alternative": [],
+            "anni": "1/2",
+            "aula": "4",
+            "avvisi": [
+              "di lunedì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": false,
+            "da": "gd",
+            "data": "2026-10-19",
+            "h": 10,
+            "ids": [
+              "L006"
+            ],
+            "livNome": "affine",
+            "materia": "SCIENZE UMANE"
+          },
+          {
+            "a": "bl",
+            "alternative": [],
+            "anni": "4/5, 5",
+            "aula": "4",
+            "avvisi": [
+              "di mercoledì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": false,
+            "da": "gd",
+            "data": "2026-10-21",
+            "h": 10,
+            "ids": [
+              "L063",
+              "L065"
+            ],
+            "livNome": "affine",
+            "materia": "SCIENZE UMANE"
+          },
+          {
+            "a": "ed",
+            "alternative": [],
+            "anni": "1/2, 3/4, 4/5, 5, 4/5",
+            "aula": "1",
+            "avvisi": [
+              "di mercoledì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": false,
+            "da": "gd",
+            "data": "2026-10-21",
+            "h": 11,
+            "ids": [
+              "L067",
+              "A001",
+              "A004",
+              "A005",
+              "A012"
+            ],
+            "livNome": "affine",
+            "materia": "LAB GRAMMATICA / LAB ITALIANO"
+          },
+          {
+            "a": "bl",
+            "alternative": [],
+            "anni": "3/4",
+            "aula": "4",
+            "avvisi": [
+              "di mercoledì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": true,
+            "da": "gd",
+            "data": "2026-10-21",
+            "h": 11,
+            "ids": [
+              "L068"
+            ],
+            "livNome": "affine",
+            "materia": "SCIENZE UMANE"
+          },
+          {
+            "a": "ed",
+            "alternative": [],
+            "anni": "1/2, 3/4, 4/5, 5",
+            "aula": "1",
+            "avvisi": [
+              "di mercoledì è in smart working: serve il rientro in sede",
+              "carico alto: 6 ore quel giorno"
+            ],
+            "cal": "M",
+            "continuita": true,
+            "da": "gd",
+            "data": "2026-10-21",
+            "h": 12,
+            "ids": [
+              "L075",
+              "L077",
+              "L079",
+              "L081"
+            ],
+            "livNome": "affine",
+            "materia": "LAB GRAMMATICA / LAB ITALIANO"
+          },
+          {
+            "a": null,
+            "alternative": [],
+            "anni": "5",
+            "aula": "4",
+            "cal": "S",
+            "da": "gd",
+            "data": "2026-10-22",
+            "h": 17,
+            "ids": [
+              "S050"
+            ],
+            "materia": "SCIENZE UMANE",
+            "motivo": "Luca Picarazzi: ha già lezione alle 17:00 (aula 2) | Beatrice Lungu: non fa lezioni serali"
+          }
+        ],
+        "errori": [],
+        "fonte": "form",
+        "id": "pmuzmrj2onjk",
+        "nonServe": [
+          {
+            "data": "2026-10-19",
+            "h": 10,
+            "materia": "LAB ITALIANO"
+          },
+          {
+            "data": "2026-10-21",
+            "h": 11,
+            "materia": "LAB GRAMMATICA"
+          },
+          {
+            "data": "2026-10-21",
+            "h": 12,
+            "materia": "LAB GRAMMATICA"
+          }
+        ],
+        "params": {
+          "al": "2026-10-25",
+          "dal": "2026-10-19",
+          "docenteId": "gd",
+          "nota": "",
+          "tipo": "malattia"
+        },
+        "riepilogo": "6 sessioni coperte, 1 scoperte, 3 esercitazioni da casa senza copertura",
+        "scoperte": [
+          {
+            "a": null,
+            "alternative": [],
+            "anni": "5",
+            "aula": "4",
+            "cal": "S",
+            "da": "gd",
+            "data": "2026-10-22",
+            "h": 17,
+            "ids": [
+              "S050"
+            ],
+            "materia": "SCIENZE UMANE",
+            "motivo": "Luca Picarazzi: ha già lezione alle 17:00 (aula 2) | Beatrice Lungu: non fa lezioni serali"
+          }
+        ],
+        "stato": "rifiutata",
+        "tipo": "assenza",
+        "titolo": "Giulia Dipalo assente dal Lun 19/10 al  25/10 (malattia)"
+      },
+      {
+        "azioni": [
+          {
+            "al": "2026-11-20",
+            "dal": "2026-11-20",
+            "docenteId": "gd",
+            "nota": "",
+            "t": "assenza",
+            "tipo": "malattia"
+          }
+        ],
+        "creata": "2026-10-08T15:52:23.739Z",
+        "da": "u_09SerguTLUz7TDicGQAHEQ",
+        "deciso": "2026-10-08T15:57:29.920Z",
+        "decisoDa": "u_09SerguTLUz7TDicGQAHEQ",
+        "dettagli": [],
+        "errori": [],
+        "fonte": "chat",
+        "id": "pmuzpt323ecv",
+        "nonServe": [],
+        "params": {
+          "al": "2026-11-20",
+          "dal": "2026-11-20",
+          "docenteId": "gd",
+          "nota": "",
+          "tipo": "malattia"
+        },
+        "riepilogo": "0 sessioni coperte, 0 scoperte, 0 sessioni di esercizi senza copertura",
+        "scoperte": [],
+        "stato": "rifiutata",
+        "tipo": "assenza",
+        "titolo": "Giulia Dipalo assente Ven 20/11 (malattia)"
+      },
+      {
+        "azioni": [
+          {
+            "al": "2026-11-18",
+            "dal": "2026-11-18",
+            "docenteId": "gd",
+            "nota": "",
+            "t": "assenza",
+            "tipo": "malattia"
+          },
+          {
+            "data": "2026-11-18",
+            "map": {
+              "A001": "ed",
+              "A004": "ed",
+              "A005": "ed",
+              "A012": "ed",
+              "L063": "bl",
+              "L065": "bl",
+              "L067": "ed",
+              "L068": "bl",
+              "L075": "ed",
+              "L077": "ed",
+              "L079": "ed",
+              "L081": "ed"
+            },
+            "t": "sost"
+          }
+        ],
+        "creata": "2026-10-08T15:53:34.557Z",
+        "da": "u_09SerguTLUz7TDicGQAHEQ",
+        "deciso": "2026-10-08T15:53:53.785Z",
+        "decisoDa": "u_09SerguTLUz7TDicGQAHEQ",
+        "dettagli": [
+          {
+            "a": "bl",
+            "alternative": [],
+            "anni": "4/5, 5",
+            "aula": "4",
+            "avvisi": [
+              "di mercoledì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": false,
+            "da": "gd",
+            "data": "2026-11-18",
+            "h": 10,
+            "ids": [
+              "L063",
+              "L065"
+            ],
+            "livNome": "affine",
+            "materia": "SCIENZE UMANE"
+          },
+          {
+            "a": "ed",
+            "alternative": [],
+            "anni": "1/2, 3/4, 4/5, 5, 4/5",
+            "aula": "1",
+            "avvisi": [
+              "di mercoledì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": false,
+            "da": "gd",
+            "data": "2026-11-18",
+            "h": 11,
+            "ids": [
+              "L067",
+              "A001",
+              "A004",
+              "A005",
+              "A012"
+            ],
+            "livNome": "affine",
+            "materia": "LAB GRAMMATICA / LAB ITALIANO"
+          },
+          {
+            "a": "bl",
+            "alternative": [],
+            "anni": "3/4",
+            "aula": "4",
+            "avvisi": [
+              "di mercoledì è in smart working: serve il rientro in sede"
+            ],
+            "cal": "M",
+            "continuita": true,
+            "da": "gd",
+            "data": "2026-11-18",
+            "h": 11,
+            "ids": [
+              "L068"
+            ],
+            "livNome": "affine",
+            "materia": "SCIENZE UMANE"
+          },
+          {
+            "a": "ed",
+            "alternative": [],
+            "anni": "1/2, 3/4, 4/5, 5",
+            "aula": "1",
+            "avvisi": [
+              "di mercoledì è in smart working: serve il rientro in sede",
+              "carico alto: 6 ore quel giorno"
+            ],
+            "cal": "M",
+            "continuita": true,
+            "da": "gd",
+            "data": "2026-11-18",
+            "h": 12,
+            "ids": [
+              "L075",
+              "L077",
+              "L079",
+              "L081"
+            ],
+            "livNome": "affine",
+            "materia": "LAB GRAMMATICA / LAB ITALIANO"
+          }
+        ],
+        "errori": [],
+        "fonte": "chat",
+        "id": "pmuzpulp9w1v",
+        "nonServe": [
+          {
+            "data": "2026-11-18",
+            "h": 11,
+            "materia": "LAB GRAMMATICA"
+          },
+          {
+            "data": "2026-11-18",
+            "h": 12,
+            "materia": "LAB GRAMMATICA"
+          }
+        ],
+        "params": {
+          "al": "2026-11-18",
+          "dal": "2026-11-18",
+          "docenteId": "gd",
+          "nota": "",
+          "tipo": "malattia"
+        },
+        "riepilogo": "4 sessioni coperte, 0 scoperte, 2 sessioni di esercizi senza copertura",
+        "scoperte": [],
+        "stato": "approvata",
+        "tipo": "assenza",
+        "titolo": "Giulia Dipalo assente Mer 18/11 (malattia)"
+      },
+      {
+        "avvisi": [],
+        "azioni": [
+          {
+            "lessonId": "L138",
+            "motivo": "Spostamento del Lab matematica del venerdì 12:00 dall'Aula 4 all'Aula 6 (link Zoom dell'Aula 6)",
+            "patch": {
+              "aula": "6"
+            },
+            "t": "mod",
+            "tipo": "set"
+          },
+          {
+            "lessonId": "L140",
+            "motivo": "Spostamento del Lab matematica del venerdì 12:00 dall'Aula 4 all'Aula 6 (link Zoom dell'Aula 6)",
+            "patch": {
+              "aula": "6"
+            },
+            "t": "mod",
+            "tipo": "set"
+          }
+        ],
+        "creata": "2026-10-09T10:58:10.502Z",
+        "da": "u_09SerguTLUz7TDicGQAHEQ",
+        "deciso": "2026-10-09T10:58:25.990Z",
+        "decisoDa": "u_09SerguTLUz7TDicGQAHEQ",
+        "descrizione": "L138 · Venerdì 12:00 · LAB MATEMATICA (4/5, TUTTI) · Gabriele Luverà · aula 4 → aula 6. Spostamento del Lab matematica del venerdì 12:00 dall'Aula 4 all'Aula 6 (link Zoom dell'Aula 6)",
+        "fonte": "chat",
+        "id": "pmv0uqkee8oy",
+        "stato": "approvata",
+        "tipo": "modifica",
+        "titolo": "Modifica: LAB MATEMATICA (Venerdì 12:00)"
+      }
+    ],
+    "regole": [],
+    "docenti": []
+  }
+}
