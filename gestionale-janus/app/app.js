@@ -1,8 +1,8 @@
-/* ===== APP: interfaccia, db condiviso, chat ===== */
+/* ===== APP: interfaccia, db condiviso ===== */
 const $ = s => document.querySelector(s);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const oggiIso = () => { const d = new Date(); return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()); };
-const U = { tab: 'cal', cal: 'M', week: lunediDi(oggiIso() < INIZIO ? INIZIO : oggiIso()), filtro: '', sel: null, canEdit: false, canWrite: true, db: null, user: null, sample: null, uid: 'anon', docSel: '', edit: null, form: { docenteId: '', dal: '', al: '', tipo: 'malattia', nota: '' }, showInfo: false, msg: null, loaded: {} };
+const U = { tab: 'cal', cal: 'M', week: lunediDi(oggiIso() < INIZIO ? INIZIO : oggiIso()), filtro: '', sel: null, canEdit: false, canWrite: true, db: null, user: null, uid: 'anon', docSel: '', edit: null, form: { docenteId: '', dal: '', al: '', tipo: 'malattia', nota: '' }, showInfo: false, msg: null, loaded: {} };
 const LOCAL = { assenze: {}, sost: {}, mods: {}, proposte: {}, regole: {}, docenti: {} };
 const COLS = ['assenze', 'sost', 'mods', 'proposte', 'regole', 'docenti'];
 const hueOf = id => Math.max(0, DOCENTI.findIndex(d => d.id === id)) * 18 + 60;
@@ -18,13 +18,12 @@ function localEmit(col) { applyCol(col, Object.entries(LOCAL[col]).map(([id, d])
 /* ---------- render ---------- */
 let _raf = 0;
 function scheduleRender() { if (_raf) return; _raf = requestAnimationFrame(() => { _raf = 0; render(); }); }
-const TABS = [['cal', 'Calendario'], ['doc', 'Docenti'], ['ass', 'Assenze e modifiche'], ['ctl', 'Controlli'], ['reg', 'Regole'], ['chat', 'Chat'], ['sync', 'Salvataggio e collegamenti']];
+const TABS = [['cal', 'Calendario'], ['doc', 'Docenti'], ['ass', 'Assenze e modifiche'], ['ctl', 'Controlli'], ['reg', 'Regole'], ['sync', 'Salvataggio e collegamenti']];
 function render() {
   const attesa = ST.proposte.filter(p => p.stato === 'in attesa').length;
-  $('#tabs').innerHTML = TABS.map(([k, n]) => '<button role="tab" data-a="tab" data-k="' + k + '" aria-selected="' + (U.tab === k) + '">' + n + ((k === 'ass' || k === 'chat') && attesa ? '<span class="badge">' + attesa + '</span>' : '') + '</button>').join('');
+  $('#tabs').innerHTML = TABS.map(([k, n]) => '<button role="tab" data-a="tab" data-k="' + k + '" aria-selected="' + (U.tab === k) + '">' + n + (k === 'ass' && attesa ? '<span class="badge">' + attesa + '</span>' : '') + '</button>').join('');
   $('#status').innerHTML = '<span class="pill ' + (U.canEdit ? 'ok' : '') + '">' + (U.canEdit ? 'Può modificare e approvare' : 'Sola consultazione') + '</span>'
     + '<span class="pill ' + (localReady ? 'ok' : 'warn') + '">' + (localReady ? (localBusy ? 'Salvataggio in corso…' : 'Salvato su questo Mac') : 'Caricamento archivio…') + '</span>';
-  if (U.tab === 'chat') { renderChat(); return; }
   const keep = {}; const ae = document.activeElement;
   $('#main').querySelectorAll('input[id],select[id],textarea[id]').forEach(el => { if (el.type !== 'file' && el.type !== 'password') keep[el.id] = el.value; });
   const aid = ae && ae.id; const ss = ae && ae.selectionStart;
@@ -242,7 +241,7 @@ function pAss() {
     + '<label class="f">Motivo<select id="f-tipo">' + ['malattia', 'ferie', 'permesso', 'recupero', 'altro'].map(t => '<option' + (f.tipo === t ? ' selected' : '') + '>' + t + '</option>').join('') + '</select></label>'
     + '<label class="f" style="flex:1;min-width:160px">Nota<input id="f-nota" value="' + esc(f.nota) + '"></label>'
     + '<button class="b pri" data-a="preparaAss"' + (U.canWrite ? '' : ' disabled') + '>Prepara proposta</button></div>'
-    + '<p class="sub">Il software trova i sostituti secondo le regole e li mostra qui: il calendario cambia solo dopo l\'approvazione. Puoi farlo anche scrivendo in chat.</p></div>';
+    + '<p class="sub">Il software trova i sostituti secondo le regole e li mostra qui: il calendario cambia solo dopo l\'approvazione.</p></div>';
   if (att.length) h += '<h2>Da approvare</h2><div class="grid2">' + att.map(p => propCard(p)).join('') + '</div>';
   const oggi = oggiIso();
   const ass = ST.assenze.slice().sort((a, b) => a.dal.localeCompare(b.dal));
@@ -281,113 +280,11 @@ function pCtl() {
 /* ---------- regole ---------- */
 function pReg() {
   const rs = regoleTutte(ST.regole); const aree = uniq(rs.map(r => r.area));
-  let h = '<div class="col"><div class="row sp"><p class="sub" style="margin:0;flex:1;min-width:220px">Queste regole sono quelle che il software e la chat rispettano per ogni proposta. Quando ne arrivano di nuove si aggiungono qui (anche dalla chat).</p><button class="b" data-a="copiaManuale">Copia il manuale (testo)</button></div><div id="man"></div>';
+  let h = '<div class="col"><div class="row sp"><p class="sub" style="margin:0;flex:1;min-width:220px">Queste regole sono quelle che il software rispetta per ogni proposta. Quando ne arrivano di nuove si aggiungono qui.</p><button class="b" data-a="copiaManuale">Copia il manuale (testo)</button></div><div id="man"></div>';
   aree.forEach(a => {
     h += '<div class="card"><h2>' + esc(a) + '</h2>' + rs.filter(r => r.area === a).map(r => '<div class="rule"><span class="id">' + r.id + '</span><b>' + esc(r.titolo) + '</b>' + (r.stato === 'ipotesi' ? ' <span class="pill warn">da confermare</span>' : '') + '<div>' + esc(r.testo) + '</div>' + (r.custom && U.canEdit ? '<button class="b sm bad" data-a="disattivaReg" data-id="' + esc(r.docId) + '" style="margin-top:6px">Rimuovi regola</button>' : '') + '</div>').join('') + '</div>';
   });
   return h + '</div>';
-}
-
-/* ---------- chat ---------- */
-const CHAT = { msgs: [], busy: false, ctl: null };
-const SUGG = ['Giulia Dipalo è in malattia dal 12 al 16 ottobre, chi può sostituirla?', 'Chi è assente questa settimana e cosa resta scoperto?', 'Sposta la lezione S019 al mercoledì alle 18', 'Nuova regola: nessuna lezione di sostituzione per Luca il lunedì'];
-function renderChat() {
-  const main = $('#main');
-  if (!document.getElementById('chatbox')) {
-    main.innerHTML = '<div class="card col"><div class="chatbox" id="chatbox"></div><div class="sugg" id="sugg"></div><div class="composer"><textarea id="chat-in" rows="2" placeholder="Scrivi una richiesta, per esempio: Giulia Dipalo è in malattia per una settimana"></textarea><button class="b pri" id="chat-send" data-a="invia">Invia</button></div><div class="row sp"><span class="sub">Claude propone, tu approvi dalle schede che compaiono qui sotto.</span><button class="b sm" data-a="chatReset">Nuova conversazione</button></div></div>';
-  }
-  const box = document.getElementById('chatbox'); const near = box.scrollHeight - box.scrollTop - box.clientHeight < 80;
-  let h = '';
-  if (!CHAT.msgs.length) h = '<div class="msg a">Ciao! Dimmi cosa è successo (un\'assenza, una lezione da spostare, una nuova regola) e ti preparo una proposta rispettando il manuale delle regole. Non cambio nulla finché non premi Approva.' + (U.sample ? '' : '\n\nLa chat AI di Claude non è collegata nella versione locale. Puoi chiedere assistenza nella conversazione Codex oppure usare "Assenze e modifiche".') + '</div>';
-  CHAT.msgs.forEach(m => {
-    if (m.r === 'p') { const p = ST.proposte.find(x => x.id === m.c); h += p ? propCard(p) : ''; }
-    else if (m.r === 't') h += '<div class="msg t">' + esc(m.c) + '</div>';
-    else h += '<div class="msg ' + m.r + '">' + esc(m.c || (m.r === 'a' ? '…' : '')) + '</div>';
-  });
-  box.innerHTML = h; if (near || CHAT.busy) box.scrollTop = box.scrollHeight;
-  document.getElementById('sugg').innerHTML = CHAT.msgs.length ? '' : SUGG.map(s => '<button data-a="sugg" data-t="' + esc(s) + '">' + esc(s) + '</button>').join('');
-  const b = document.getElementById('chat-send'); b.disabled = !U.sample || !U.canWrite; b.textContent = CHAT.busy ? 'Interrompi' : 'Invia'; b.dataset.a = CHAT.busy ? 'stop' : 'invia';
-}
-function istruzioni() {
-  const rs = regoleTutte(ST.regole).map(r => r.id + ' (' + r.stato + ') ' + r.titolo + ': ' + r.testo).join('\n');
-  const dc = DOCENTI.map(d => d.id + ' = ' + d.nome + ' | materie: ' + matDocente(d.id).join(', ') + ' | aule ' + d.aule.join('/') + ' | ' + (d.cal.includes('M') ? 'mattina' : '') + (d.sera ? ' sera' : '') + ' | turni mattina L-V: ' + (TURNI.m[d.id] || '-----')).join('\n');
-  return 'Sei l\'assistente di pianificazione di Istituto Janus, dentro il software dei calendari (mattina, sera, docenti). Rispondi sempre in italiano, in modo diretto, umano e breve: niente linguaggio burocratico.\n'
-    + 'Oggi è ' + fmtDL(oggiIso()) + ' (' + oggiIso() + '). Il calendario parte il ' + INIZIO + '. Le date negli strumenti sono sempre AAAA-MM-GG; se manca l\'anno è il 2026; se mancano le date di un\'assenza chiedile.\n\n'
-    + 'REGOLE DA RISPETTARE SEMPRE (manuale):\n' + rs + '\n\nDOCENTI (id = nome):\n' + dc + '\n\n'
-    + 'COME LAVORI:\n1. Non modifichi mai il calendario da solo: usi gli strumenti "proponi_*", che creano una proposta con i pulsanti Approva/Rifiuta. Non dire mai che una modifica è stata applicata: dì che è pronta da approvare.\n'
-    + '2. Assenza di un docente: chiama proponi_assenza (opzionalmente prima candidati_sostituzione per capire le alternative). Poi riassumi: chi copre cosa e perché (competenza, continuità), gli avvisi (es. smart working, carico alto), le ore che restano scoperte e le alternative. Le sessioni di esercizi (aula docenti o da casa) non vanno coperte.\n'
-    + '3. Spostamenti o cambi docente permanenti: usa cerca_lezioni per trovare il codice, valuta_modifica per i conflitti, poi proponi_modifica. Se ci sono conflitti bloccanti non proporre: spiega e offri un\'alternativa.\n'
-    + '4. Nuove regole o disponibilità/materie di un docente dette dall\'utente: proponi_regola oppure proponi_docente (materie aggiunte o giorni non disponibili). Poi ricorda che dopo l\'approvazione valgono per tutte le decisioni future.\n'
-    + '5. Se una richiesta contrasta con una regola, dillo e proponi un\'alternativa. Non inventare dati: usa solo ciò che restituiscono gli strumenti.\n'
-    + '6. Dopo aver creato una proposta, scrivi una sintesi di poche righe: la scheda con il dettaglio è già visibile nella chat.';
-}
-function toolsChat() {
-  const nz = f => ({ errore: 'Non hai il permesso di scrivere sui dati condivisi.' });
-  const push = (m) => { CHAT.msgs.push(m); scheduleRender(); };
-  const note = t => push({ r: 't', c: t });
-  const compatta = p => ({ propostaId: p.id, titolo: p.titolo, riepilogo: p.riepilogo, sessioni: (p.dettagli || []).slice(0, 40).map(d => ({ data: d.data, ora: d.h, aula: d.aula, materia: d.materia, sostituto: d.a ? nomeD(d.a) : null, competenza: d.livNome, avvisi: d.avvisi, motivoScoperta: d.motivo, alternative: (d.alternative || []).map(x => nomeD(x.id)) })), esercitazioniDaCasaNonCoperte: (p.nonServe || []).length, errori: p.errori });
-  const lez = l => ({ codice: l.id, giorno: GIORNI[l.g], ora: l.h, materia: l.materia, anni: l.anno, indirizzi: l.ind, docente: l.doc ? nomeD(l.doc) : null, docenteId: l.doc, aula: l.aula, daCasa: l.casa });
-  return [
-    { name: 'elenco_docenti', description: 'Elenco dei docenti con id, materie, aule, turni e se fanno il serale.', inputSchema: { type: 'object', properties: {} }, execute: () => DOCENTI.map(d => ({ id: d.id, nome: d.nome, materie: matDocente(d.id), aule: d.aule, mattina: d.cal.includes('M'), sera: d.sera, turniMattinaLV: TURNI.m[d.id] || '-----', indisponibile: (ST.docOv[d.id] || {}).indisp || [] })) },
-    { name: 'lezioni_docente', description: 'Lezioni (con sostituzioni e assenze applicate) di un docente tra due date.', inputSchema: { type: 'object', properties: { docenteId: { type: 'string' }, dal: { type: 'string' }, al: { type: 'string' } }, required: ['docenteId', 'dal', 'al'] }, execute: i => {
-      if (!DOC[i.docenteId] || !validaData(i.dal) || !validaData(i.al)) return { errore: 'Parametri non validi' };
-      const out = []; intervallo(i.dal, i.al).slice(0, 15).forEach(d => sessioni(d, l => l.docEff === i.docenteId || l.docOrig === i.docenteId).forEach(s => out.push({ data: d, ora: s.h, materia: uniq(s.lezioni.map(l => l.materia)).join(' / '), aula: s.aula, docenteEffettivo: s.doc ? nomeD(s.doc) : null, scoperta: !!s.scoperta, daCasa: s.casa }))); return out.slice(0, 120);
-    } },
-    { name: 'cerca_lezioni', description: 'Cerca lezioni nel calendario base per trovarne il codice. Tutti i filtri sono facoltativi.', inputSchema: { type: 'object', properties: { docenteId: { type: 'string' }, giorno: { type: 'integer', description: '1=lunedì … 5=venerdì' }, ora: { type: 'integer' }, materia: { type: 'string' }, calendario: { type: 'string', description: 'M mattina, S sera' }, codice: { type: 'string' } } }, execute: i => {
-      let r = lezioni(); if (i.codice) r = r.filter(l => l.id.toLowerCase() === String(i.codice).toLowerCase()); if (i.docenteId) r = r.filter(l => l.doc === i.docenteId); if (i.giorno) r = r.filter(l => l.g === +i.giorno); if (i.ora) r = r.filter(l => l.h === +i.ora); if (i.calendario) r = r.filter(l => l.cal === i.calendario); if (i.materia) r = r.filter(l => l.materia.toLowerCase().includes(String(i.materia).toLowerCase()));
-      return { totale: r.length, lezioni: r.slice(0, 40).map(lez) };
-    } },
-    { name: 'candidati_sostituzione', description: 'Per ogni sessione di un docente nell\'intervallo, elenca i migliori candidati e i motivi di esclusione. Solo lettura.', inputSchema: { type: 'object', properties: { docenteId: { type: 'string' }, dal: { type: 'string' }, al: { type: 'string' } }, required: ['docenteId', 'dal', 'al'] }, execute: i => {
-      if (!DOC[i.docenteId] || !validaData(i.dal) || !validaData(i.al)) return { errore: 'Parametri non validi' };
-      const idT = '__c__'; ST.assenze.push({ id: idT, docenteId: i.docenteId, dal: i.dal, al: i.al, tipo: 'prova' }); bump(); const out = [];
-      try { intervallo(i.dal, i.al).slice(0, 10).forEach(d => sessioni(d, l => l.docEff === i.docenteId && !l.casa).forEach(s => { const c = candidati(s); out.push({ data: d, ora: s.h, materia: uniq(s.lezioni.map(l => l.materia)).join(' / '), aula: s.aula, candidati: c.elenco.slice(0, 4).map(x => ({ nome: x.nome, competenza: x.livNome, avvisi: x.avvisi })), esclusiConCompetenza: c.esclusi.slice(0, 3).map(x => nomeD(x.id) + ': ' + x.motivi.join(', ')) }); })); } finally { ST.assenze = ST.assenze.filter(a => a.id !== idT); bump(); }
-      return out.slice(0, 40);
-    } },
-    { name: 'proponi_assenza', description: 'Registra una PROPOSTA di assenza con le sostituzioni migliori. Il calendario cambia solo dopo Approva. "scelte" (facoltativo) forza un sostituto per una sessione.', inputSchema: { type: 'object', properties: { docenteId: { type: 'string' }, dal: { type: 'string' }, al: { type: 'string' }, tipo: { type: 'string', description: 'malattia, ferie, permesso, recupero, altro' }, nota: { type: 'string' }, scelte: { type: 'array', items: { type: 'object', properties: { data: { type: 'string' }, ora: { type: 'integer' }, aula: { type: 'string' }, docenteId: { type: 'string' } } } } }, required: ['docenteId', 'dal', 'al'] }, execute: async i => {
-      if (!U.canWrite) return nz(); if (!validaData(i.dal) || !validaData(i.al)) return { errore: 'Date non valide (AAAA-MM-GG)' };
-      note('Cerco i sostituti per ' + nomeD(i.docenteId) + '…');
-      const params = { docenteId: i.docenteId, dal: i.dal, al: i.al, tipo: i.tipo || 'malattia', nota: i.nota || '' };
-      const n = creaPropostaAssenza({ ...params, scelte: i.scelte || [] }); if (n.errore) return n;
-      const p = await salvaProposta({ ...n, params, fonte: 'chat' }); push({ r: 'p', c: p.id }); return compatta(p);
-    } },
-    { name: 'valuta_modifica', description: 'Valuta i conflitti di una modifica permanente a una lezione (e alla sua sessione). Solo lettura.', inputSchema: { type: 'object', properties: { codice: { type: 'string' }, giorno: { type: 'integer' }, ora: { type: 'integer' }, aula: { type: 'string' }, docenteId: { type: 'string', description: 'id docente, stringa vuota per nessuno' } }, required: ['codice'] }, execute: i => {
-      const patch = {}; if (i.giorno) patch.g = +i.giorno; if (i.ora) patch.h = +i.ora; if (i.aula != null) patch.aula = String(i.aula); if (i.docenteId != null) patch.doc = i.docenteId || null;
-      const r = valutaModifica(i.codice, patch); if (r.errore) return r; return { lezioniCoinvolte: r.lezioni, bloccanti: r.bloccanti.map(x => x.msg), avvisi: r.avvisi.map(x => x.msg), problemiRisolti: r.risolte };
-    } },
-    { name: 'proponi_modifica', description: 'Registra una PROPOSTA di modifica permanente (sposta giorno/ora/aula o cambia docente) per una lezione e la sua sessione. Rifiuta se ci sono conflitti bloccanti.', inputSchema: { type: 'object', properties: { codice: { type: 'string' }, giorno: { type: 'integer' }, ora: { type: 'integer' }, aula: { type: 'string' }, docenteId: { type: 'string' }, motivo: { type: 'string' } }, required: ['codice', 'motivo'] }, execute: async i => {
-      if (!U.canWrite) return nz(); const patch = {}; if (i.giorno) patch.g = +i.giorno; if (i.ora) patch.h = +i.ora; if (i.aula != null) patch.aula = String(i.aula); if (i.docenteId != null) patch.doc = i.docenteId || null;
-      if (!Object.keys(patch).length) return { errore: 'Nessuna modifica indicata' };
-      const r = valutaModifica(i.codice, patch); if (r.errore) return r; if (r.bloccanti.length) return { creata: false, bloccanti: r.bloccanti.map(x => x.msg) };
-      const l0 = lezioni().find(x => x.id === i.codice);
-      const p = await salvaProposta({ tipo: 'modifica', titolo: 'Modifica: ' + l0.materia + ' (' + GIORNI[l0.g] + ' ' + l0.h + ':00)', descrizione: descLezione(l0) + ' → ' + Object.entries(patch).map(([k, v]) => ({ g: 'giorno', h: 'ora', aula: 'aula', doc: 'docente' }[k]) + ' ' + (k === 'doc' ? nomeD(v) : k === 'g' ? GIORNI[v] : v)).join(', ') + '. ' + (i.motivo || ''), avvisi: r.avvisi.map(x => x.msg), azioni: r.lezioni.map(id => ({ t: 'mod', tipo: 'set', lessonId: id, patch, motivo: i.motivo || '' })), fonte: 'chat' });
-      push({ r: 'p', c: p.id }); return { creata: true, propostaId: p.id, avvisi: r.avvisi.map(x => x.msg) };
-    } },
-    { name: 'proponi_regola', description: 'Registra una PROPOSTA di nuova regola testuale per il manuale (vale per le decisioni future dopo l\'approvazione).', inputSchema: { type: 'object', properties: { titolo: { type: 'string' }, testo: { type: 'string' } }, required: ['titolo', 'testo'] }, execute: async i => {
-      if (!U.canWrite) return nz(); const p = await salvaProposta({ tipo: 'regola', titolo: 'Nuova regola: ' + i.titolo, azioni: [{ t: 'regola', titolo: i.titolo, testo: i.testo }], fonte: 'chat' }); push({ r: 'p', c: p.id }); return { propostaId: p.id };
-    } },
-    { name: 'proponi_docente', description: 'Registra una PROPOSTA di modifica a un docente: materie aggiunte, materie tolte, giorni non disponibili (1-5, o "giorno:ora").', inputSchema: { type: 'object', properties: { docenteId: { type: 'string' }, aggiungiMaterie: { type: 'array', items: { type: 'string' } }, togliMaterie: { type: 'array', items: { type: 'string' } }, nonDisponibile: { type: 'array', items: { type: 'string' } }, disponibileDi_nuovo: { type: 'array', items: { type: 'string' } } }, required: ['docenteId'] }, execute: async i => {
-      if (!U.canWrite) return nz(); if (!DOC[i.docenteId]) return { errore: 'Docente non trovato' };
-      const a = { t: 'docente', docenteId: i.docenteId, addMat: i.aggiungiMaterie || [], togliMat: i.togliMaterie || [], addIndisp: (i.nonDisponibile || []).map(String), delIndisp: (i.disponibileDi_nuovo || []).map(String) };
-      const desc = [a.addMat.length ? 'aggiunge materie: ' + a.addMat.join(', ') : '', a.togliMat.length ? 'toglie materie: ' + a.togliMat.join(', ') : '', a.addIndisp.length ? 'non disponibile: ' + a.addIndisp.join(', ') : '', a.delIndisp.length ? 'di nuovo disponibile: ' + a.delIndisp.join(', ') : ''].filter(Boolean).join(' · ');
-      const p = await salvaProposta({ tipo: 'docente', titolo: 'Docente: ' + nomeD(i.docenteId), descrizione: desc, azioni: [a], fonte: 'chat' }); push({ r: 'p', c: p.id }); return { propostaId: p.id };
-    } },
-    { name: 'controlli', description: 'Riepilogo dei conflitti e delle voci da verificare nel calendario.', inputSchema: { type: 'object', properties: {} }, execute: () => { const c = controlli().filter(x => x.sev !== 'info'); return { totale: c.length, voci: c.slice(0, 30).map(x => x.sev + ': ' + x.msg) }; } }
-  ];
-}
-async function inviaChat(testo) {
-  if (!U.sample || CHAT.busy || !testo.trim()) return;
-  CHAT.msgs.push({ r: 'u', c: testo.trim() }); const a = { r: 'a', c: '' }; CHAT.msgs.push(a); CHAT.busy = true; CHAT.ctl = new AbortController(); renderChat();
-  const turns = []; CHAT.msgs.forEach(m => { if ((m.r === 'u' || m.r === 'a') && m.c && m !== a) { const role = m.r === 'u' ? 'user' : 'assistant'; if (turns.length && turns[turns.length - 1].role === role) turns[turns.length - 1].content += '\n' + m.c; else turns.push({ role, content: m.c }); } });
-  while (turns.length && turns[0].role !== 'user') turns.shift();
-  if (turns.length) turns[0] = { role: 'user', content: istruzioni() + '\n\n---\nRichiesta dell\'utente:\n' + turns[0].content };
-  try {
-    const r = await U.sample(turns, { tools: toolsChat(), cache: false, signal: CHAT.ctl.signal, onText: u => { a.c = u.text; renderChat(); } });
-    a.c = r.text || a.c || 'Fatto: guarda le schede qui sotto.';
-  } catch (e) {
-    const c = e && e.code; a.c = c === 'cancelled' ? (a.c || 'Interrotto.') : c === 'not_granted' ? 'Per usare la chat serve il consenso a far rispondere Claude da questa pagina.' : c === 'rate_limited' ? 'Troppe richieste in poco tempo: riprova tra un minuto.' : 'Non sono riuscita a rispondere (' + ((e && e.message) || c || 'errore') + '). Riprova, oppure usa "Assenze e modifiche".';
-  }
-  CHAT.busy = false; CHAT.ctl = null; renderChat();
-  const inp = document.getElementById('chat-in'); if (inp) inp.focus();
 }
 
 /* ---------- azioni ---------- */
@@ -441,10 +338,6 @@ const ACT = {
     catch (e) { box.innerHTML = '<textarea readonly style="width:100%;height:240px;margin-bottom:10px">' + esc(md) + '</textarea>'; const t = box.querySelector('textarea'); t.focus(); t.select(); }
   },
   disattivaReg: async d => { const r = ST.regole.find(x => x.id === d.id); if (r) await put('regole', d.id, { ...r, attiva: false }); },
-  invia: () => { const t = document.getElementById('chat-in'); const v = t.value; t.value = ''; inviaChat(v); },
-  stop: () => { if (CHAT.ctl) CHAT.ctl.abort(); },
-  sugg: d => { const t = document.getElementById('chat-in'); t.value = d.t; t.focus(); },
-  chatReset: () => { if (CHAT.busy) return; CHAT.msgs = []; renderChat(); }
 };
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-a]'); if (!t || t.disabled) return;
@@ -456,5 +349,4 @@ document.addEventListener('change', e => {
   else if (k === 'showInfo') { U.showInfo = t.checked; render(); }
   else if (k === 'cambiaSost') localAction(() => cambiaSost(t.dataset.p, t.dataset.i, t.value)).catch(er => { U.msg = { k: 'err', t: 'Errore: ' + ((er && er.message) || er) }; render(); });
 });
-document.addEventListener('keydown', e => { if (e.target.id === 'chat-in' && e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); if (!CHAT.busy) ACT.invia(); } });
 

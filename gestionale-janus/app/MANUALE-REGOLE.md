@@ -60,7 +60,7 @@ Lucia può fare lezione la sera solo il martedì e il giovedì, nelle ore 17 e 1
 ## Sostituzioni
 
 ### R14 - Il software propone, una persona approva
-Quando si segnala un'assenza o una modifica, il software (o la chat) prepara una proposta con i docenti candidati e gli avvisi. Nulla cambia nel calendario finché una persona autorizzata non preme "Approva". Con "Rifiuta" la proposta viene scartata e non lascia tracce nel calendario.
+Quando si segnala un'assenza o una modifica, il software prepara una proposta con i docenti candidati e gli avvisi. Nulla cambia nel calendario finché una persona autorizzata non preme "Approva". Con "Rifiuta" la proposta viene scartata e non lascia tracce nel calendario.
 
 ### R15 - Come si sceglie il sostituto
 Ordine di preferenza: 1) competenza esatta, poi affine, poi parziale; 2) docente con turno in presenza (mattina); 3) docente che è già nell'aula o nella fascia oraria (continuità: la stessa persona per ore consecutive); 4) chi ha avuto meno sostituzioni nel periodo (equità); 5) chi ha meno ore quel giorno. Il docente scelto non deve avere altre lezioni nella stessa ora. Se nessun docente è idoneo, la lezione resta "scoperta" e viene segnalata.
@@ -76,10 +76,7 @@ Spostare una lezione (giorno, ora, aula) o cambiare il docente in modo definitiv
 ### R18 - Chi può approvare
 Possono approvare, rifiutare, annullare un'assenza e applicare modifiche le persone con permesso di modifica sul software (la responsabile del progetto e chi lei designa). Chi ha solo permesso di lettura può consultare calendari, controlli e regole.
 
-## Chat
-
-### R19 - Chat integrata
-Nella tab Chat si scrive in italiano, per esempio "Giulia Dipalo è in malattia dal 12 al 16 ottobre". Claude consulta il calendario e le regole di questo manuale, prepara la proposta e la mostra nella chat con i pulsanti Approva / Rifiuta. Claude non può approvare da solo. Le nuove regole dette in chat diventano proposte di regola e, una volta approvate, entrano subito nel manuale e nelle decisioni successive.
+## Approvazioni
 
 ### R20 - Il manuale va sempre rispettato
 Ogni proposta, sostituzione o modifica deve rispettare tutte le regole di questo manuale, comprese quelle aggiunte in seguito. Se una richiesta contrasta con una regola, il software lo dice e propone un'alternativa invece di forzare.

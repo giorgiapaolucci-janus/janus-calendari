@@ -1,4 +1,4 @@
-/* REGOLE - Istituto Janus. Unica fonte per: tab "Regole" del software, istruzioni alla chat e manuale (MANUALE-REGOLE.md).
+/* REGOLE - Istituto Janus. Unica fonte per: tab "Regole" del software e manuale (MANUALE-REGOLE.md).
    Ogni regola: id, area, titolo, testo, stato ('attiva' = applicata dal motore; 'ipotesi' = da confermare). */
 const RULES = [
   { id: 'R01', area: 'Struttura', stato: 'attiva', titolo: 'Orari e calendario',
@@ -32,7 +32,7 @@ const RULES = [
   { id: 'R13', area: 'Serale', stato: 'attiva', titolo: 'Lucia Carlucci: sera solo martedì e giovedì dalle 17 alle 19',
     testo: 'Lucia può fare lezione la sera solo il martedì e il giovedì, nelle ore 17 e 18 (fino alle 19:00).' },
   { id: 'R14', area: 'Sostituzioni', stato: 'attiva', titolo: 'Il software propone, una persona approva',
-    testo: 'Quando si segnala un\'assenza o una modifica, il software (o la chat) prepara una proposta con i docenti candidati e gli avvisi. Nulla cambia nel calendario finché una persona autorizzata non preme "Approva". Con "Rifiuta" la proposta viene scartata e non lascia tracce nel calendario.' },
+    testo: 'Quando si segnala un\'assenza o una modifica, il software prepara una proposta con i docenti candidati e gli avvisi. Nulla cambia nel calendario finché una persona autorizzata non preme "Approva". Con "Rifiuta" la proposta viene scartata e non lascia tracce nel calendario.' },
   { id: 'R15', area: 'Sostituzioni', stato: 'attiva', titolo: 'Come si sceglie il sostituto',
     testo: 'Ordine di preferenza: 1) competenza esatta, poi affine, poi parziale; 2) docente con turno in presenza (mattina); 3) docente che è già nell\'aula o nella fascia oraria (continuità: la stessa persona per ore consecutive); 4) chi ha avuto meno sostituzioni nel periodo (equità); 5) chi ha meno ore quel giorno. Il docente scelto non deve avere altre lezioni nella stessa ora. Se nessun docente è idoneo, la lezione resta "scoperta" e viene segnalata.' },
   { id: 'R16', area: 'Sostituzioni', stato: 'attiva', titolo: 'Massimo 8 ore al giorno per docente',
@@ -41,9 +41,7 @@ const RULES = [
     testo: 'Spostare una lezione (giorno, ora, aula) o cambiare il docente in modo definitivo è una modifica permanente. Prima di applicarla il software controlla i conflitti (docenti, aule, competenze, turni, regole serali) e mostra solo i problemi nuovi creati dalla modifica. Va approvata come ogni proposta.' },
   { id: 'R18', area: 'Modifiche', stato: 'attiva', titolo: 'Chi può approvare',
     testo: 'Possono approvare, rifiutare, annullare un\'assenza e applicare modifiche le persone con permesso di modifica sul software (la responsabile del progetto e chi lei designa). Chi ha solo permesso di lettura può consultare calendari, controlli e regole.' },
-  { id: 'R19', area: 'Chat', stato: 'attiva', titolo: 'Chat integrata',
-    testo: 'Nella tab Chat si scrive in italiano, per esempio "Giulia Dipalo è in malattia dal 12 al 16 ottobre". Claude consulta il calendario e le regole di questo manuale, prepara la proposta e la mostra nella chat con i pulsanti Approva / Rifiuta. Claude non può approvare da solo. Le nuove regole dette in chat diventano proposte di regola e, una volta approvate, entrano subito nel manuale e nelle decisioni successive.' },
-  { id: 'R20', area: 'Chat', stato: 'attiva', titolo: 'Il manuale va sempre rispettato',
+  { id: 'R20', area: 'Approvazioni', stato: 'attiva', titolo: 'Il manuale va sempre rispettato',
     testo: 'Ogni proposta, sostituzione o modifica deve rispettare tutte le regole di questo manuale, comprese quelle aggiunte in seguito. Se una richiesta contrasta con una regola, il software lo dice e propone un\'alternativa invece di forzare.' },
   { id: 'R21', area: 'Dati da confermare', stato: 'ipotesi', titolo: 'Ipotesi sui nomi nel foglio turni',
     testo: 'Le colonne del foglio PERMESSI sono state lette come: Alessandra Albano, Beatrice, Giulia, Lucia, Elisa (Di Felice), Gabriele, Martina, Luca, Elisa (Rubeo), Federico (Vani). Giorgia Clementi non era nell\'elenco: le sue giornate (giovedì mattina e sera) sono state ricavate dagli orari e vanno confermate. Confermati: "Ale" è Alessandra Albano; "Gab" è Gabriele Luverà; "ED CIVICA" è Educazione civica (non Economia aziendale).' },

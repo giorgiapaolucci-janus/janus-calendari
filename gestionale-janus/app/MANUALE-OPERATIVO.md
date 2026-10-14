@@ -20,7 +20,7 @@ Ultimo aggiornamento: 9 ottobre 2026
   - Calendario docenti: https://link.delera.co/preview/1PKnvJoCd0GS1Hpok8dU?notrack=true
 
 ## Operazioni di ogni giorno
-1. **Modifica o assenza**: si registra nel software (chat o pulsanti). Le sostituzioni sono proposte dal software e approvate da una persona.
+1. **Modifica o assenza**: si registra nel software tramite i pulsanti. Le sostituzioni sono proposte dal software e approvate da una persona.
 2. **Aggiornamento**: Giorgia scrive a Claude "aggiorna i calendari". Claude legge assenze, sostituzioni e modifiche dal software, rigenera `mattina.json`, `sera.json`, `docenti.json`, li carica su GitHub e rigenera il file Excel.
 3. **Controllo**: ricaricare le pagine Delera; le modifiche compaiono in pochi minuti.
 

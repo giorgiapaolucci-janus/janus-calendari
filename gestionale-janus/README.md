@@ -29,6 +29,6 @@ Non copiare la cartella `archivio` dal Mac nel repository. Per la sincronizzazio
 
 ### Cosa comprende
 
-Calendario, docenti, assenze e modifiche, controlli, regole, persistenza locale con backup e controllo revisioni, generatori dei tre calendari e integrazioni Google/GitHub. La sezione Chat presente nella sorgente originale resta disattivata: non è stato aggiunto alcun nuovo collegamento AI. `riservato/` contiene la preparazione del portale di sola consultazione, ancora da configurare e pubblicare. I relativi test richiedono prima `npm run build:riservato`.
+Calendario, docenti, assenze e modifiche, controlli, regole, persistenza locale con backup e controllo revisioni, generatori dei tre calendari e integrazioni Google/GitHub. La funzione Chat interna è stata rimossa. `riservato/` contiene la preparazione del portale di sola consultazione, ancora da configurare e pubblicare. I relativi test richiedono prima `npm run build:riservato`.
 
 Le due copie locali non condividono automaticamente i dati inseriti nel gestionale: GitHub condivide il codice. Un archivio operativo unico richiede una configurazione ulteriore. La pubblicazione del codice in questo ramo non cambia i file dei calendari Delera.
