@@ -1,0 +1,8 @@
+archivio/
+node_modules/
+.env
+.env.*
+!.env.example
+*.prima-*
+.DS_Store
+Thumbs.db

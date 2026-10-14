@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": "foglio_20261014_LJ20261014_10",
+    "batch": "foglio_20261014",
+    "creata": "2026-10-14T07:41:51.521Z",
+    "lessonId": "LJ20261014_10",
+    "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+    "tipo": "add",
+    "lezione": {
+      "g": 5,
+      "h": 11,
+      "anno": "5",
+      "materia": "LAB MATEMATICA",
+      "ind": "LINGUISTICO / SPORTIVO",
+      "doc": "gl",
+      "aula": "6",
+      "note": "",
+      "tracks": [
+        "linguistico",
+        "sportivo"
+      ]
+    }
+  }
+}

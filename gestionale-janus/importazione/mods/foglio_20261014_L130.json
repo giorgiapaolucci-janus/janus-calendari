@@ -1,0 +1,19 @@
+{
+  "data": {
+    "id": "foglio_20261014_L130",
+    "batch": "foglio_20261014",
+    "creata": "2026-10-14T07:41:51.521Z",
+    "lessonId": "L130",
+    "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+    "tipo": "set",
+    "patch": {
+      "ind": "SOCIO SANITARIO",
+      "tracks": [
+        "socio-sanitario"
+      ],
+      "aula": "3",
+      "note": "",
+      "affiancaA": []
+    }
+  }
+}

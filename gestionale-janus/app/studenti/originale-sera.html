@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendario lezioni serali | Istituto Janus</title>
+
+<style>
+.jc{
+  --navy:#252846;
+  --peri:#788CB4;
+  --violet:#A6529A;
+  --grey:#E9EAEA;
+  --white:#FFFFFF;
+
+  --ink:var(--navy);
+  --muted:#666B88;
+  --line:#E9EAEA;
+  --line-strong:#D6D8E0;
+  --soft:#F7F8FA;
+  --hour:136px;
+
+  font-family:"Inter","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  max-width:1400px;
+  margin:0 auto;
+  padding:24px 24px 36px;
+  line-height:1.4;
+  -webkit-font-smoothing:antialiased;
+}
+.jc *,.jc *::before,.jc *::after{box-sizing:border-box}
+.jc button{font:inherit;color:inherit;cursor:pointer}
+.jc :focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+
+.jc .f-umanistiche{--bg:#F3E6F1;--bar:#A6529A}
+.jc .f-scienze    {--bg:#E5EAF3;--bar:#788CB4}
+.jc .f-lingue     {--bg:#DFE0EA;--bar:#252846}
+.jc .f-economia   {--bg:#ECEDEE;--bar:#9A9FB3}
+.jc .f-socio      {--bg:#EAE5F1;--bar:#8A6EAE}
+.jc .f-altro      {--bg:#ECEDEE;--bar:#9A9FB3}
+
+.jc-top{display:flex;flex-direction:column;gap:18px;margin-bottom:20px}
+.jc-titlebar{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.jc-kicker{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin:0 0 4px}
+.jc-title{margin:0;font-size:26px;font-weight:650;letter-spacing:-.015em;line-height:1.15}
+
+.jc-filters{display:flex;align-items:flex-start;gap:12px 32px;flex-wrap:wrap}
+.jc-fgroup{display:flex;align-items:center;gap:10px}
+.jc-flabel{font-size:13px;color:var(--muted);white-space:nowrap}
+.jc-years{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.jc-select{appearance:none;-webkit-appearance:none;height:38px;min-width:270px;max-width:100%;padding:0 38px 0 14px;
+  border:1px solid var(--line-strong);border-radius:10px;font:inherit;font-size:13.5px;font-weight:550;color:var(--ink);cursor:pointer;
+  background:var(--white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23252846' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m4 6 4 4 4-4'/></svg>") no-repeat right 12px center/14px;
+  transition:border-color .15s,background-color .15s}
+.jc-select:hover{border-color:var(--peri)}
+.jc-select.is-set{border-color:var(--navy);background-color:var(--soft)}
+.jc-chip{border:1px solid var(--line-strong);background:var(--white);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:550;transition:background .15s,color .15s,border-color .15s}
+.jc-chip:hover{background:var(--soft)}
+.jc-chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+
+.jc-nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.jc-nav-btns{display:flex;gap:8px}
+.jc-btn{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:1px solid var(--line-strong);background:var(--white);border-radius:10px;font-size:13.5px;font-weight:550;transition:background .15s,border-color .15s}
+.jc-btn:hover{background:var(--soft);border-color:var(--peri)}
+.jc-btn svg{width:16px;height:16px;flex:none}
+.jc-btn-today{color:var(--navy);border-color:var(--navy)}
+.jc-range{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.jc-legend{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.jc-legend span{display:inline-flex;align-items:center;gap:6px}
+.jc-legend i{width:10px;height:10px;border-radius:3px;background:var(--bar);display:inline-block}
+
+.jc-week{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--white)}
+.jc-head,.jc-body{display:grid;grid-template-columns:64px repeat(5,minmax(0,1fr))}
+.jc-head{border-bottom:1px solid var(--line)}
+.jc-dayhead{padding:12px 8px 10px;text-align:center;border-left:1px solid var(--line)}
+.jc-dname{font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.jc-dnum{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:36px;margin-top:4px;border-radius:999px;font-size:20px;font-weight:600}
+.jc-dayhead.is-today .jc-dname{color:var(--violet)}
+.jc-dayhead.is-today .jc-dnum{background:var(--navy);color:var(--white)}
+
+.jc-body{position:relative}
+.jc-times{position:relative}
+.jc-time-label{position:absolute;right:10px;font-size:11px;font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
+.jc-col{position:relative;border-left:1px solid var(--line);
+  background-image:linear-gradient(to bottom,var(--line) 1px,transparent 1px);
+  background-size:100% var(--hour)}
+.jc-col.is-today{background-color:rgba(166,82,154,.045)}
+
+.jc-nowline{position:absolute;left:0;right:0;height:2px;background:var(--violet);z-index:6;pointer-events:none}
+.jc-nowline::before{content:"";position:absolute;left:-5px;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--violet)}
+.jc-nowpill{position:absolute;right:6px;z-index:6;transform:translateY(-50%);background:var(--violet);color:var(--white);font-size:10px;font-weight:600;padding:2px 6px;border-radius:6px;font-variant-numeric:tabular-nums;pointer-events:none}
+
+.jc-evt{position:absolute;overflow:hidden;background:var(--bg);border-left:3px solid var(--bar);border-radius:8px;
+  padding:7px 8px 7px 9px;display:flex;flex-direction:column;gap:2px;cursor:pointer;
+  container-type:inline-size;container-name:evt;z-index:2;
+  transition:box-shadow .15s}
+.jc-evt:hover{box-shadow:0 3px 12px rgba(37,40,70,.14);z-index:4}
+.jc-evt-subject{font-size:12.5px;font-weight:650;line-height:1.25;letter-spacing:.01em;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:break-word}
+.jc-evt.has-zoom .jc-evt-subject{-webkit-line-clamp:1}
+.jc-evt-line{font-size:11.5px;line-height:1.3;color:var(--ink);opacity:.82;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jc-evt-time{font-variant-numeric:tabular-nums;opacity:.9}
+.jc-livetag{display:none;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
+.jc-evt.is-live .jc-livetag{display:block}
+.jc-evt.is-live{box-shadow:0 0 0 1.5px var(--violet)}
+.jc-tag{align-self:flex-start;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--navy);color:var(--white);padding:2px 6px;border-radius:5px}
+.jc-evt-cancel{font-size:11px;font-weight:600;color:var(--muted)}
+
+.jc-zoom{display:inline-flex;align-items:center;justify-content:center;height:24px;padding:0 10px;border-radius:7px;
+  background:var(--navy);color:var(--white);font-size:11px;font-weight:600;text-decoration:none;white-space:nowrap;
+  transition:background .15s}
+.jc-zoom:hover{background:var(--violet)}
+.jc-evt .jc-zoom{margin-top:auto;align-self:flex-start}
+.jc-zoom.is-off{background:transparent;color:var(--muted);border:1px solid rgba(37,40,70,.18);font-weight:550;cursor:not-allowed}
+.jc-zoom.is-off:hover{background:transparent}
+.jc-zoom.is-home{cursor:default;color:var(--ink);border-color:rgba(37,40,70,.35)}
+
+.jc-evt.is-cancelled,.jc-mcard.is-cancelled{opacity:.5}
+.jc-evt.is-cancelled .jc-evt-subject,.jc-mcard.is-cancelled .jc-m-subject{text-decoration:line-through}
+
+.jc-evt.is-stacked{flex-direction:row;align-items:center;gap:8px;padding:0 8px 0 9px;border-radius:6px}
+.jc-evt.is-stacked .jc-evt-subject{display:block;flex:0 1 auto;min-width:45%;white-space:nowrap;text-overflow:ellipsis;font-size:11.5px}
+.jc-evt.is-stacked .jc-evt-class{flex:1 1 0;min-width:0;font-size:11px;opacity:.75}
+.jc-evt.is-stacked.is-cancelled .jc-evt-class{opacity:.9}
+
+.jc-zoom .s{display:none}
+@container evt (max-width:150px){
+  .jc-evt .jc-zoom .l{display:none}
+  .jc-evt .jc-zoom .s{display:inline}
+  .jc-evt .jc-zoom{padding:0 9px}
+}
+@container evt (max-width:112px){ .jc-evt-teacher,.jc-evt-room,.jc-tag,.jc-livetag{display:none !important} .jc-evt-subject{font-size:11.5px} }
+@container evt (max-width:84px){ .jc-evt .jc-zoom{display:none} }
+
+.jc-mobile{display:none}
+.jc-daytabs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:16px}
+.jc-daytab{display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 0 8px;border:1px solid var(--line-strong);background:var(--white);border-radius:12px;position:relative}
+.jc-daytab .d{font-size:11px;font-weight:650;letter-spacing:.08em;color:var(--muted)}
+.jc-daytab .n{font-size:18px;font-weight:650}
+.jc-daytab.is-today::after{content:"";position:absolute;bottom:4px;width:5px;height:5px;border-radius:50%;background:var(--violet)}
+.jc-daytab[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.jc-daytab[aria-selected="true"] .d{color:#C9CFE2}
+.jc-daytab[aria-selected="true"].is-today::after{background:#E9B9E3}
+.jc-dayhead-m{display:flex;align-items:baseline;justify-content:space-between;margin:2px 2px 12px}
+.jc-dayhead-m h3{margin:0;font-size:17px;font-weight:650}
+.jc-dayhead-m span{font-size:12.5px;color:var(--muted)}
+.jc-group{display:grid;grid-template-columns:46px 1fr;gap:10px;margin-bottom:12px}
+.jc-group-time{font-size:13px;font-weight:600;color:var(--muted);padding-top:12px;font-variant-numeric:tabular-nums}
+.jc-group-cards{display:flex;flex-direction:column;gap:8px;min-width:0}
+.jc-mcard{background:var(--bg);border-left:4px solid var(--bar);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.jc-m-subject{font-size:15px;font-weight:650;line-height:1.25;overflow-wrap:anywhere}
+.jc-m-line{font-size:13px;color:var(--ink);opacity:.85}
+.jc-m-time{font-variant-numeric:tabular-nums;font-weight:600;opacity:1}
+.jc-mcard .jc-zoom{height:38px;margin-top:8px;font-size:13px;border-radius:9px;width:100%}
+.jc-mcard .jc-zoom.is-off{height:32px;font-size:12.5px}
+.jc-mcard.is-live .jc-livetag{display:block}
+.jc-empty{padding:36px 16px;text-align:center;color:var(--muted);font-size:14px;border:1px dashed var(--line-strong);border-radius:12px}
+
+.jc-dialog{border:0;border-radius:16px;padding:0;width:min(440px,calc(100vw - 32px));color:var(--ink);box-shadow:0 20px 60px rgba(37,40,70,.28)}
+.jc-dialog::backdrop{background:rgba(37,40,70,.45)}
+.jc-d-head{padding:20px 22px 16px;background:var(--bg);border-left:5px solid var(--bar)}
+.jc-d-head h3{margin:0 0 6px;font-size:19px;font-weight:650;line-height:1.25;overflow-wrap:anywhere}
+.jc-d-head p{margin:0;font-size:13.5px;opacity:.85}
+.jc-d-body{padding:16px 22px 22px}
+.jc-d-body dl{margin:0 0 16px;display:grid;grid-template-columns:110px 1fr;gap:8px 12px;font-size:14px}
+.jc-d-body dt{color:var(--muted)}
+.jc-d-body dd{margin:0;overflow-wrap:anywhere}
+.jc-d-actions{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.jc-d-actions .jc-zoom{height:40px;font-size:14px;padding:0 16px;border-radius:10px}
+.jc-d-actions .jc-btn{height:40px}
+.jc-d-note{font-size:12.5px;color:var(--muted)}
+
+@media (max-width:767px){
+  .jc{padding:16px 14px 28px}
+  .jc-title{font-size:22px}
+  .jc-filters{flex-direction:column;align-items:stretch;gap:12px}
+  .jc-fgroup{flex-direction:column;align-items:stretch;gap:6px}
+  .jc-years{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px;width:100%}
+  .jc-select{width:100%;min-width:0}
+  .jc-chip{padding:8px 0;text-align:center;font-size:12.5px}
+  .jc-nav{gap:10px}
+  .jc-range{font-size:15px;flex:1;text-align:center;order:2;line-height:1.25;text-wrap:balance}
+  .jc-nav-btns{display:contents}
+  .jc-btn:disabled{opacity:.35;cursor:default}
+  #jc-prev{order:1}
+  #jc-next{order:3}
+  #jc-today{order:4}
+  .jc-nav .jc-btn-text{display:none}
+  .jc-legend,.jc-week{display:none}
+  .jc-mobile{display:block}
+}
+@media (min-width:768px){ .jc-mobile{display:none} }
+
+@media (prefers-reduced-motion:reduce){ .jc *{transition:none !important} }
+</style>
+</head>
+
+<body style="margin:0;background:#fff">
+
+<div class="jc" id="janus-calendar">
+  <header class="jc-top">
+    <div class="jc-titlebar">
+      <div>
+        <p class="jc-kicker">Istituto Janus</p>
+        <h2 class="jc-title">Calendario lezioni serali</h2>
+      </div>
+    </div>
+    <div class="jc-filters">
+      <div class="jc-fgroup">
+        <span class="jc-flabel" id="jc-l-anno">Il tuo anno</span>
+        <div class="jc-years" id="jc-years" role="group" aria-labelledby="jc-l-anno"></div>
+      </div>
+      <div class="jc-fgroup">
+        <label class="jc-flabel" for="jc-indirizzo">Il tuo indirizzo</label>
+        <select class="jc-select" id="jc-indirizzo"></select>
+      </div>
+    </div>
+    <div class="jc-nav">
+      <div class="jc-nav-btns">
+        <button class="jc-btn" id="jc-prev" type="button" aria-label="Settimana precedente">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>
+          <span class="jc-btn-text">Settimana precedente</span>
+        </button>
+        <button class="jc-btn jc-btn-today" id="jc-today" type="button">Oggi</button>
+        <button class="jc-btn" id="jc-next" type="button" aria-label="Settimana successiva">
+          <span class="jc-btn-text">Settimana successiva</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg>
+        </button>
+      </div>
+      <div class="jc-range" id="jc-range" aria-live="polite"></div>
+      <div class="jc-legend" id="jc-legend" aria-label="Legenda colori"></div>
+    </div>
+  </header>
+
+  <section class="jc-week" id="jc-week" aria-label="Vista settimanale"></section>
+  <section class="jc-mobile" id="jc-mobile" aria-label="Lezioni del giorno"></section>
+  <dialog class="jc-dialog" id="jc-dialog" aria-labelledby="jc-d-title"></dialog>
+  <noscript>Per vedere il calendario delle lezioni attiva JavaScript nel browser.</noscript>
+</div>
+
+<script>
+window.JANUS_LEZIONI = [
+    // LUNEDÌ
+    { id: "S001", weekday: 1, start: "17:00", end: "17:50", subject: "EPICA/ANTOLOGIA", year: "1/2 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: ["classico"] },
+    { id: "S002", weekday: 1, start: "17:00", end: "17:50", subject: "FRANCESE", year: "4/5 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: ["afm", "ipseoa"] },
+    { id: "S003", weekday: 1, start: "17:00", end: "17:50", subject: "LAB MATEMATICA", year: "4/5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: ["informatico"] },
+    { id: "S004", weekday: 1, start: "17:00", end: "17:50", subject: "FRANCESE", year: "5 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: ["turismo", "afm"] },
+    { id: "S005", weekday: 1, start: "17:00", end: "17:50", subject: "LAB MATEMATICA", year: "5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: ["mme", "sportivo", "afm"] },
+    { id: "S006", weekday: 1, start: "17:00", end: "17:50", subject: "STORIA DELL'ARTE", year: "5 ANNO", class: "SERALE", teacher: "Luca Picarazzi", room: "AULA 2", note: "", zoomUrl: "https://us06web.zoom.us/j/85618843652", status: "scheduled", tracks: ["scientifico", "les"] },
+    { id: "S007", weekday: 1, start: "18:00", end: "18:50", subject: "ITALIANO", year: "1/2 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: ["classico"] },
+    { id: "S008", weekday: 1, start: "18:00", end: "18:50", subject: "LAB INGLESE", year: "4/5 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S009", weekday: 1, start: "18:00", end: "18:50", subject: "LAB INGLESE", year: "5 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S010", weekday: 1, start: "19:00", end: "19:50", subject: "INGLESE", year: "1/2 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S011", weekday: 1, start: "19:00", end: "19:50", subject: "ITALIANO", year: "4/5 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+    { id: "S012", weekday: 1, start: "19:00", end: "19:50", subject: "ITALIANO", year: "5 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+    { id: "S013", weekday: 1, start: "20:00", end: "20:50", subject: "INGLESE", year: "1/2 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S014", weekday: 1, start: "20:00", end: "20:50", subject: "ITALIANO", year: "4/5 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+    { id: "S015", weekday: 1, start: "20:00", end: "20:50", subject: "ITALIANO", year: "5 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+    // MARTEDÌ
+    { id: "S016", weekday: 2, start: "17:00", end: "17:50", subject: "LAB LETTURA", year: "1/2 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: "*" },
+    { id: "S017", weekday: 2, start: "17:00", end: "17:50", subject: "INFORMATICA", year: "4/5 ANNO", class: "SERALE", teacher: "Salvatore Martello", room: "AULA 1", note: "", zoomUrl: "https://us06web.zoom.us/j/86952268837", status: "scheduled", tracks: ["informatico"] },
+    { id: "S018", weekday: 2, start: "17:00", end: "17:50", subject: "LAB LETTURA", year: "4/5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["ipseoa", "afm"] },
+    { id: "S019", weekday: 2, start: "18:00", end: "18:50", subject: "RELAZIONI INTERNAZIONALI / ECONOMIA POLITICA", year: "4/5 ANNO", class: "SERALE", teacher: "Lucia Carlucci", room: "AULA 7", note: "", zoomUrl: "https://us06web.zoom.us/j/81644826135", status: "scheduled", tracks: ["afm"] },
+    { id: "S020", weekday: 2, start: "17:00", end: "17:50", subject: "FILOSOFIA", year: "5 ANNO", class: "SERALE", teacher: "Luca Picarazzi", room: "AULA 2", note: "", zoomUrl: "https://us06web.zoom.us/j/85618843652", status: "scheduled", tracks: ["scientifico", "sportivo", "les"] },
+    { id: "S021", weekday: 2, start: "17:00", end: "17:50", subject: "LAB LETTURA", year: "5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["turismo", "afm"] },
+    { id: "S022", weekday: 2, start: "17:00", end: "17:50", subject: "MECCATRONICA", year: "5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: ["mme"] },
+    { id: "S075", weekday: 2, start: "18:00", end: "18:50", subject: "RELAZIONI INTERNAZIONALI / ECONOMIA POLITICA", year: "5 ANNO", class: "SERALE", teacher: "Lucia Carlucci", room: "AULA 7", note: "", zoomUrl: "https://us06web.zoom.us/j/81644826135", status: "scheduled", tracks: ["afm"] },
+    { id: "S023", weekday: 2, start: "18:00", end: "18:50", subject: "LAB LETTURA", year: "1/2 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: "*" },
+    { id: "S025", weekday: 2, start: "18:00", end: "18:50", subject: "LAB LETTURA", year: "4/5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["ipseoa"] },
+    { id: "S026", weekday: 2, start: "18:00", end: "18:50", subject: "TPSI E SISTEMI E RETI", year: "4/5 ANNO", class: "SERALE", teacher: "Salvatore Martello", room: "AULA 1", note: "", zoomUrl: "https://us06web.zoom.us/j/86952268837", status: "scheduled", tracks: ["informatico"] },
+    { id: "S027", weekday: 2, start: "18:00", end: "18:50", subject: "LAB LETTURA", year: "5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["sportivo", "scientifico", "les", "turismo"] },
+    { id: "S028", weekday: 2, start: "18:00", end: "18:50", subject: "MECCATRONICA", year: "5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: ["mme"] },
+    { id: "S029", weekday: 2, start: "19:00", end: "19:50", subject: "MATEMATICA", year: "1/2 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: "*" },
+    { id: "S030", weekday: 2, start: "19:00", end: "19:50", subject: "MATEMATICA", year: "4/5 ANNO", class: "SERALE", teacher: "Fabio Trerè", room: "AULA 2", note: "", zoomUrl: "https://us06web.zoom.us/j/85618843652", status: "scheduled", tracks: "*" },
+    { id: "S031", weekday: 2, start: "19:00", end: "19:50", subject: "POTENZIAMENTO INGLESE", year: "5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: "*" },
+    { id: "S032", weekday: 2, start: "20:00", end: "20:50", subject: "MATEMATICA", year: "1/2 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: "*" },
+    { id: "S033", weekday: 2, start: "20:00", end: "20:50", subject: "MATEMATICA", year: "4/5 ANNO", class: "SERALE", teacher: "Fabio Trerè", room: "AULA 2", note: "", zoomUrl: "https://us06web.zoom.us/j/85618843652", status: "scheduled", tracks: "*" },
+    { id: "S034", weekday: 2, start: "20:00", end: "20:50", subject: "POTENZIAMENTO INGLESE", year: "5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: "*" },
+    // MERCOLEDÌ
+    { id: "S035", weekday: 3, start: "17:00", end: "17:50", subject: "ITALIANO", year: "1/2 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: ["classico"] },
+    { id: "S036", weekday: 3, start: "17:00", end: "17:50", subject: "INGLESE", year: "4/5 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S037", weekday: 3, start: "17:00", end: "17:50", subject: "INGLESE", year: "5 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S038", weekday: 3, start: "18:00", end: "18:50", subject: "STORIA", year: "1/2 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: ["classico"] },
+    { id: "S039", weekday: 3, start: "18:00", end: "18:50", subject: "INGLESE", year: "4/5 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S040", weekday: 3, start: "18:00", end: "18:50", subject: "INGLESE", year: "5 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S041", weekday: 3, start: "19:00", end: "19:50", subject: "POTENZIAMENTO INGLESE", year: "1/2 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S042", weekday: 3, start: "19:00", end: "19:50", subject: "STORIA", year: "4/5 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+    { id: "S043", weekday: 3, start: "19:00", end: "19:50", subject: "MATEMATICA", year: "5 ANNO", class: "SERALE", teacher: "Fabio Trerè", room: "AULA 2", note: "", zoomUrl: "https://us06web.zoom.us/j/85618843652", status: "scheduled", tracks: "*" },
+    { id: "S044", weekday: 3, start: "20:00", end: "20:50", subject: "POTENZIAMENTO INGLESE", year: "1/2 ANNO", class: "SERALE", teacher: "Elisa Di Felice", room: "AULA 5", note: "", zoomUrl: "https://us06web.zoom.us/j/84144422731", status: "scheduled", tracks: "*" },
+    { id: "S045", weekday: 3, start: "20:00", end: "20:50", subject: "STORIA", year: "4/5 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+    { id: "S046", weekday: 3, start: "20:00", end: "20:50", subject: "MATEMATICA", year: "5 ANNO", class: "SERALE", teacher: "Fabio Trerè", room: "AULA 2", note: "", zoomUrl: "https://us06web.zoom.us/j/85618843652", status: "scheduled", tracks: "*" },
+    // GIOVEDÌ
+    { id: "S047", weekday: 4, start: "17:00", end: "17:50", subject: "GRECO", year: "1/2 ANNO", class: "SERALE", teacher: "Luca Picarazzi", room: "AULA 2", note: "", zoomUrl: "https://us06web.zoom.us/j/85618843652", status: "scheduled", tracks: ["classico"] },
+    { id: "S048", weekday: 4, start: "17:00", end: "17:50", subject: "LAB MATEMATICA", year: "4/5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: "*" },
+    { id: "S049", weekday: 4, start: "17:00", end: "17:50", subject: "LAB MATEMATICA", year: "5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: ["sportivo", "scientifico", "mme", "turismo", "afm"] },
+    { id: "S050", weekday: 4, start: "17:00", end: "17:50", subject: "SCIENZE UMANE", year: "5 ANNO", class: "SERALE", teacher: "Giulia Dipalo", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: ["les"] },
+    { id: "S051", weekday: 4, start: "18:00", end: "18:50", subject: "SCIENZE", year: "1/2 ANNO", class: "SERALE", teacher: "Alessandra Sbucafratta", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+    { id: "S052", weekday: 4, start: "18:00", end: "18:50", subject: "DIRITTO", year: "4/5 ANNO", class: "SERALE", teacher: "Giorgia Clementi", room: "AULA 1", note: "", zoomUrl: "https://us06web.zoom.us/j/86952268837", status: "scheduled", tracks: ["afm", "ipseoa"] },
+    { id: "S053", weekday: 4, start: "18:00", end: "18:50", subject: "GPOI", year: "4/5 ANNO", class: "SERALE", teacher: "Lucia Carlucci", room: "AULA 7", note: "", zoomUrl: "https://us06web.zoom.us/j/81644826135", status: "scheduled", tracks: ["informatico"] },
+    { id: "S054", weekday: 4, start: "18:00", end: "18:50", subject: "DIRITTO", year: "5 ANNO", class: "SERALE", teacher: "Giorgia Clementi", room: "AULA 1", note: "", zoomUrl: "https://us06web.zoom.us/j/86952268837", status: "scheduled", tracks: ["turismo", "afm"] },
+    { id: "S055", weekday: 4, start: "18:00", end: "18:50", subject: "FISICA", year: "5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: ["scientifico", "sportivo", "les"] },
+    { id: "S056", weekday: 4, start: "19:00", end: "19:50", subject: "ECONOMIA AZIENDALE", year: "4/5 ANNO", class: "SERALE", teacher: "Sara Mazza", room: "AULA 7", note: "", zoomUrl: "https://us06web.zoom.us/j/81644826135", status: "scheduled", tracks: ["afm"] },
+    { id: "S057", weekday: 4, start: "19:00", end: "19:50", subject: "DTA", year: "5 ANNO", class: "SERALE", teacher: "Sara Mazza", room: "AULA 7", note: "", zoomUrl: "https://us06web.zoom.us/j/81644826135", status: "scheduled", tracks: ["turismo"] },
+    { id: "S076", weekday: 4, start: "19:00", end: "19:50", subject: "ECONOMIA AZIENDALE", year: "5 ANNO", class: "SERALE", teacher: "Sara Mazza", room: "AULA 7", note: "", zoomUrl: "https://us06web.zoom.us/j/81644826135", status: "scheduled", tracks: ["afm"] },
+    { id: "S058", weekday: 4, start: "19:00", end: "19:50", subject: "FISICA", year: "5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: ["scientifico", "sportivo", "les"] },
+    // VENERDÌ
+    { id: "S059", weekday: 5, start: "17:00", end: "17:50", subject: "LATINO", year: "1/2 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: ["classico"] },
+    { id: "S060", weekday: 5, start: "17:00", end: "17:50", subject: "LAB MATEMATICA", year: "4/5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: "*", affiancaA: ["afm"] },
+    { id: "S061", weekday: 5, start: "17:00", end: "17:50", subject: "SPAGNOLO", year: "4/5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["afm"] },
+    { id: "S062", weekday: 5, start: "17:00", end: "17:50", subject: "LAB MATEMATICA", year: "5 ANNO", class: "SERALE", teacher: "Gabriele Luverà", room: "AULA 6", note: "", zoomUrl: "https://us06web.zoom.us/j/89274784117", status: "scheduled", tracks: "*", affiancaA: ["afm"] },
+    { id: "S063", weekday: 5, start: "17:00", end: "17:50", subject: "SPAGNOLO", year: "5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["les", "afm"] },
+    { id: "S064", weekday: 5, start: "18:00", end: "18:50", subject: "GEOSTORIA - STORIA DELL'ARTE", year: "1/2 ANNO", class: "SERALE", teacher: "Alessandra Albano", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: ["classico"] },
+    { id: "S065", weekday: 5, start: "18:00", end: "18:50", subject: "SPAGNOLO", year: "4/5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["afm"] },
+    { id: "S066", weekday: 5, start: "18:00", end: "18:50", subject: "SCIENZE", year: "5 ANNO", class: "SERALE", teacher: "Alessandra Sbucafratta", room: "AULA 1", note: "", zoomUrl: "https://us06web.zoom.us/j/86952268837", status: "scheduled", tracks: ["sportivo", "scientifico"] },
+    { id: "S067", weekday: 5, start: "18:00", end: "18:50", subject: "SPAGNOLO", year: "5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["les", "afm"] },
+    { id: "S068", weekday: 5, start: "19:00", end: "19:50", subject: "LAB CREATIVO", year: "1/2 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: "*" },
+    { id: "S069", weekday: 5, start: "19:00", end: "19:50", subject: "LAB CREATIVO", year: "4/5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: "*" },
+    { id: "S070", weekday: 5, start: "19:00", end: "19:50", subject: "STORIA", year: "5 ANNO", class: "SERALE", teacher: "Alessandra Sbucafratta", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+    { id: "S071", weekday: 5, start: "20:00", end: "20:50", subject: "LAB CREATIVO", year: "1/2 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: "*" },
+    { id: "S072", weekday: 5, start: "20:00", end: "20:50", subject: "DIRITTO E TECNICHE AMM", year: "4/5 ANNO", class: "SERALE", teacher: "Sara Mazza", room: "AULA 7", note: "", zoomUrl: "https://us06web.zoom.us/j/81644826135", status: "scheduled", tracks: ["ipseoa"] },
+    { id: "S073", weekday: 5, start: "20:00", end: "20:50", subject: "LAB CREATIVO", year: "4/5 ANNO", class: "SERALE", teacher: "Martina Branca", room: "AULA 3", note: "", zoomUrl: "https://us06web.zoom.us/j/84208963789", status: "scheduled", tracks: ["informatico", "afm"] },
+    { id: "S074", weekday: 5, start: "20:00", end: "20:50", subject: "STORIA", year: "5 ANNO", class: "SERALE", teacher: "Alessandra Sbucafratta", room: "AULA 4", note: "", zoomUrl: "https://us06web.zoom.us/j/83343621947", status: "scheduled", tracks: "*" },
+];
+
+window.JANUS_MODIFICHE = [
+];
+
+window.JANUS_INDIRIZZI = [
+  { id: "scientifico",      label: "Liceo Scientifico" },
+  { id: "classico",         label: "Liceo Classico" },
+  { id: "linguistico",      label: "Liceo Linguistico" },
+  { id: "scienze-umane",    label: "Liceo Scienze Umane" },
+  { id: "scienze-applicate",label: "Liceo Scienze Applicate" },
+  { id: "sportivo",         label: "Liceo Scientifico Sportivo" },
+  { id: "les",              label: "Liceo Economico Sociale" },
+  { id: "informatico",      label: "Istituto Tecnico Informatico" },
+  { id: "afm",              label: "AFM" },
+  { id: "socio-sanitario",  label: "Professionale Socio Sanitario" },
+  { id: "turismo",          label: "Turismo" },
+  { id: "mme",              label: "MME" },
+  { id: "ipseoa",           label: "IPSEOA" }
+];
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var CONFIG = Object.assign({
+    annoPredefinito: '4/5 ANNO',
+    inizioLezioni: '2026-10-05',
+    pxOra: 136,
+    zoomDisabilitatoSuMobile: true
+  }, window.JANUS_CONFIG || {});
+
+  var FAMIGLIE = [
+    { id: 'socio',       nome: 'Area socio-umana',    re: /UMANE|IGIENE|METOD|PSICO/ },
+    { id: 'scienze',     nome: 'Matematica e scienze', re: /MATE|FISICA|CHIMICA|BIOLOGIA|SCIENZE|INFORMATICA|MECCATRONICA|TPSI|SISTEMI/ },
+    { id: 'lingue',      nome: 'Lingue',              re: /INGLESE|SPAGNOLO|FRANCESE/ },
+    { id: 'umanistiche', nome: 'Materie umanistiche', re: /ITALIANO|GRAMMATICA|STORIA|FILOSOFIA|LATINO|GRECO|EPICA|ANTOLOGIA|LETTURA/ },
+    { id: 'economia',    nome: 'Economia e diritto',  re: /DIRITTO|AZIENDALE|POLITICA|GPOI|DTA|TURISTICA|CIVICA|RELAZIONI/ }
+  ];
+
+  var LEZIONI   = window.JANUS_LEZIONI   || [];
+  var MODIFICHE = window.JANUS_MODIFICHE || [];
+  var INDIRIZZI = window.JANUS_INDIRIZZI || [];
+  var CLASSI    = window.JANUS_CLASSI    || {};
+
+  var GIORNI = ['Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì'];
+  var GIORNI_BREVI = ['LUN', 'MAR', 'MER', 'GIO', 'VEN'];
+  var MESI = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== null && text !== '') n.textContent = text;
+    return n;
+  }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function isoDate(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function addDays(d, n) { var x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); x.setDate(x.getDate() + n); return x; }
+  function mondayOf(d) { return addDays(d, -((d.getDay() + 6) % 7)); }
+  function toMin(t) { var p = t.split(':'); return (+p[0]) * 60 + (+p[1]); }
+  function fmtMin(m) { return pad(Math.floor(m / 60)) + ':' + pad(m % 60); }
+  function safeUrl(u) { return typeof u === 'string' && /^https:\/\//i.test(u.trim()) ? u.trim() : ''; }
+  function famiglia(materia) {
+    var s = String(materia || '').toUpperCase();
+    for (var i = 0; i < FAMIGLIE.length; i++) if (FAMIGLIE[i].re.test(s)) return FAMIGLIE[i].id;
+    return 'altro';
+  }
+  function labelAnno(a) { return String(a).replace(' ANNO', ' anno'); }
+  function testoData(d) { return GIORNI[(d.getDay() + 6) % 7] + ' ' + d.getDate() + ' ' + MESI[d.getMonth()]; }
+
+  var ANNI = [];
+  LEZIONI.forEach(function (l) { if (l.year && ANNI.indexOf(l.year) < 0) ANNI.push(l.year); });
+
+  function chiaveClasse(s) { return String(s || '').replace(/\s+/g, ' ').trim().toUpperCase(); }
+  var TABELLA_CLASSI = {};
+  Object.keys(CLASSI).forEach(function (k) { TABELLA_CLASSI[chiaveClasse(k)] = CLASSI[k]; });
+  var AVVISATI = {};
+  function indirizziDi(l) {
+    if (l.tracks) return l.tracks;
+    var k = chiaveClasse(l.class);
+    if (Object.prototype.hasOwnProperty.call(TABELLA_CLASSI, k)) return TABELLA_CLASSI[k];
+    if (!AVVISATI[k]) { AVVISATI[k] = true; if (window.console) console.warn('Calendario Janus: la classe "' + l.class + '" non è in JANUS_CLASSI, la lezione viene mostrata a tutti.'); }
+    return '*';
+  }
+  function perTutti(l) {
+    var t = indirizziDi(l);
+    return t === '*' || (Array.isArray(t) && t.indexOf('*') >= 0);
+  }
+  function visibileA(l, indirizzo) {
+    if (!indirizzo) return true;
+    var t = indirizziDi(l);
+    return t === '*' || (Array.isArray(t) && (t.indexOf('*') >= 0 || t.indexOf(indirizzo) >= 0));
+  }
+
+  var GRIGLIA = (function () {
+    var min = Infinity, max = -Infinity;
+    LEZIONI.concat(MODIFICHE).forEach(function (l) {
+      if (l.start) min = Math.min(min, toMin(l.start));
+      if (l.end)   max = Math.max(max, toMin(l.end));
+    });
+    if (!isFinite(min)) { min = 17 * 60; max = 21 * 60; }
+    return { start: Math.floor(min / 60) * 60, end: Math.ceil(max / 60) * 60 };
+  })();
+
+  function applicaModifica(l, dataIso) {
+    var r = Object.assign({}, l, { date: dataIso, origStart: l.start, origEnd: l.end });
+    var m = null;
+    for (var i = 0; i < MODIFICHE.length; i++) {
+      if (MODIFICHE[i].lessonId === l.id && MODIFICHE[i].date === dataIso) { m = MODIFICHE[i]; break; }
+    }
+    if (m) {
+      ['start','end','subject','class','teacher','room','note','zoomUrl'].forEach(function (k) { if (m[k] !== undefined) r[k] = m[k]; });
+      if (m.status) r.status = m.status;
+      else if (m.start || m.end) r.status = 'moved';
+    }
+    r.status = r.status || 'scheduled';
+    return r;
+  }
+
+  function lezioniDelGiorno(data, anno) {
+    var dIso = isoDate(data), wd = (data.getDay() + 6) % 7 + 1, out = [];
+    if (CONFIG.inizioLezioni && dIso < CONFIG.inizioLezioni) return out;
+    LEZIONI.forEach(function (l) {
+      if (l.year !== anno || !visibileA(l, stato.indirizzo)) return;
+      var vale = l.date ? l.date === dIso : l.weekday === wd;
+      if (vale) out.push(applicaModifica(l, dIso));
+    });
+    if (stato.indirizzo) {
+      var proprie = out.filter(function (e) { return !perTutti(e); });
+      out = out.filter(function (e) {
+        if (e.affiancaA && e.affiancaA.indexOf(stato.indirizzo) >= 0) return true;
+        return !perTutti(e) || !proprie.some(function (p) { return toMin(p.start) < toMin(e.end) && toMin(e.start) < toMin(p.end); });
+      });
+    }
+    out.sort(function (a, b) { return toMin(a.start) - toMin(b.start) || toMin(b.end) - toMin(a.end) || String(a.subject).localeCompare(b.subject); });
+    return out;
+  }
+
+  function disponi(evs, maxAffiancate) {
+    var cluster = [], fine = -1;
+    function chiudi() {
+      var n = 0, a = Infinity, b = -Infinity;
+      cluster.forEach(function (e) { n = Math.max(n, e.lane + 1); a = Math.min(a, toMin(e.start)); b = Math.max(b, toMin(e.end)); });
+      cluster.forEach(function (e, i) {
+        e.lanes = n;
+        if (n > maxAffiancate) { e.stack = true; e.stackIdx = i; e.stackN = cluster.length; e.cStart = a; e.cEnd = b; }
+      });
+      cluster = []; fine = -1;
+    }
+    evs.forEach(function (e) {
+      var s = toMin(e.start), f = toMin(e.end);
+      if (cluster.length && s >= fine) chiudi();
+      var lane = 0, occ = true;
+      while (occ) {
+        occ = cluster.some(function (c) { return c.lane === lane && toMin(c.end) > s; });
+        if (occ) lane++;
+      }
+      e.lane = lane; cluster.push(e); fine = Math.max(fine, f);
+    });
+    chiudi();
+    return evs;
+  }
+
+  var stato = { anno: null, indirizzo: '', lunedi: null, giorno: 0 };
+
+  function annoIniziale() {
+    var scelto = null;
+    try {
+      var p = new URLSearchParams(location.search).get('anno');
+      if (p) ANNI.forEach(function (a) { if (a.indexOf(p.trim()) === 0) scelto = a; });
+      if (!scelto) { var s = localStorage.getItem('janus-serale-anno'); if (s && ANNI.indexOf(s) >= 0) scelto = s; }
+    } catch (e) {}
+    if (!scelto && ANNI.indexOf(CONFIG.annoPredefinito) >= 0) scelto = CONFIG.annoPredefinito;
+    return scelto || ANNI[0];
+  }
+
+  function indirizzoIniziale() {
+    var scelto = '';
+    function esiste(id) { return INDIRIZZI.some(function (i) { return i.id === id; }); }
+    try {
+      var p = new URLSearchParams(location.search).get('indirizzo');
+      if (p && esiste(p)) scelto = p;
+      else if (!p) { var s = localStorage.getItem('janus-serale-indirizzo'); if (s && esiste(s)) scelto = s; }
+    } catch (e) {}
+    return scelto;
+  }
+
+  function vaiA_Oggi() {
+    var oggi = new Date(), dow = (oggi.getDay() + 6) % 7;
+    if (CONFIG.inizioLezioni && isoDate(oggi) < CONFIG.inizioLezioni) {
+      var p = CONFIG.inizioLezioni.split('-');
+      stato.lunedi = mondayOf(new Date(+p[0], +p[1] - 1, +p[2])); stato.giorno = 0; return;
+    }
+    if (dow > 4) { stato.lunedi = addDays(mondayOf(oggi), 7); stato.giorno = 0; }
+    else         { stato.lunedi = mondayOf(oggi); stato.giorno = dow; }
+  }
+
+  function disegnaAnni() {
+    var box = $('jc-years');
+    Array.prototype.slice.call(box.querySelectorAll('.jc-chip')).forEach(function (n) { n.remove(); });
+    ANNI.forEach(function (a) {
+      var b = el('button', 'jc-chip', labelAnno(a));
+      b.type = 'button';
+      b.setAttribute('aria-pressed', a === stato.anno ? 'true' : 'false');
+      b.addEventListener('click', function () {
+        stato.anno = a;
+        try { localStorage.setItem('janus-serale-anno', a); } catch (e) {}
+        disegna();
+      });
+      box.appendChild(b);
+    });
+  }
+
+  function creaMenuIndirizzi() {
+    var sel = $('jc-indirizzo');
+    if (!INDIRIZZI.length) { sel.parentNode.style.display = 'none'; return; }
+    var tutti = el('option', '', 'Tutti gli indirizzi'); tutti.value = '';
+    sel.appendChild(tutti);
+    INDIRIZZI.forEach(function (i) { var o = el('option', '', i.label); o.value = i.id; sel.appendChild(o); });
+    sel.addEventListener('change', function () {
+      stato.indirizzo = sel.value;
+      try { localStorage.setItem('janus-serale-indirizzo', sel.value); } catch (e) {}
+      disegna();
+    });
+  }
+  function aggiornaMenuIndirizzi() {
+    var sel = $('jc-indirizzo');
+    sel.value = stato.indirizzo;
+    sel.classList.toggle('is-set', !!stato.indirizzo);
+  }
+
+  function disegnaPeriodo() {
+    var a = stato.lunedi, b = addDays(a, 4), t;
+    if (a.getFullYear() !== b.getFullYear()) t = a.getDate() + ' ' + MESI[a.getMonth()] + ' ' + a.getFullYear() + ' – ' + b.getDate() + ' ' + MESI[b.getMonth()] + ' ' + b.getFullYear();
+    else if (a.getMonth() !== b.getMonth()) t = a.getDate() + ' ' + MESI[a.getMonth()] + ' – ' + b.getDate() + ' ' + MESI[b.getMonth()] + ' ' + b.getFullYear();
+    else t = a.getDate() + ' – ' + b.getDate() + ' ' + MESI[b.getMonth()] + ' ' + b.getFullYear();
+    $('jc-range').textContent = t;
+  }
+
+  function disegnaLegenda() {
+    var box = $('jc-legend'); box.textContent = '';
+    FAMIGLIE.forEach(function (f) {
+      var s = el('span'); var i = el('i'); i.className = 'f-' + f.id; s.appendChild(i); s.appendChild(document.createTextNode(f.nome)); box.appendChild(s);
+    });
+  }
+
+  function pulsanteZoom(ev, opzioni) {
+    var url = safeUrl(ev.zoomUrl);
+    if (ev.status === 'cancelled') return null;
+    if (ev.homework) {
+      var h = el('span', 'jc-zoom is-off is-home');
+      h.appendChild(el('span', 'l', 'Esercitazione da casa'));
+      h.appendChild(el('span', 's', 'Da casa'));
+      return h;
+    }
+    if (url) {
+      var a = el('a', 'jc-zoom');
+      a.appendChild(el('span', 'l', 'Accedi alla lezione'));
+      a.appendChild(el('span', 's', 'Accedi'));
+      a.setAttribute('aria-label', 'Accedi alla lezione');
+      a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.addEventListener('click', function (e) { e.stopPropagation(); });
+      return a;
+    }
+    if (opzioni && opzioni.disabilitato) {
+      var s = el('span', 'jc-zoom is-off', 'Link Zoom in arrivo');
+      s.setAttribute('aria-disabled', 'true');
+      return s;
+    }
+    return null;
+  }
+
+  function etichettaAccessibile(ev) {
+    var t = [ev.subject, ev.start + '–' + ev.end];
+    if (ev.teacher) t.push(ev.teacher);
+    if (ev.room) t.push(ev.room);
+    if (ev.status === 'cancelled') t.push('lezione annullata');
+    if (ev.status === 'moved') t.push('orario modificato');
+    return t.join(', ');
+  }
+
+  function disegnaSettimana() {
+    var root = $('jc-week'); root.textContent = '';
+    var px = CONFIG.pxOra, ore = (GRIGLIA.end - GRIGLIA.start) / 60;
+    var largCol = root.clientWidth ? (root.clientWidth - 64) / 5 : 232;
+    var maxAff = Math.max(1, Math.floor(largCol / 105));
+    var oggiIso = isoDate(new Date());
+
+    var head = el('div', 'jc-head');
+    head.appendChild(el('div'));
+    for (var i = 0; i < 5; i++) {
+      var d = addDays(stato.lunedi, i);
+      var h = el('div', 'jc-dayhead' + (isoDate(d) === oggiIso ? ' is-today' : ''));
+      h.appendChild(el('div', 'jc-dname', GIORNI[i]));
+      h.appendChild(el('div', 'jc-dnum', String(d.getDate())));
+      head.appendChild(h);
+    }
+    root.appendChild(head);
+
+    var body = el('div', 'jc-body');
+    body.style.height = (ore * px) + 'px';
+    body.style.setProperty('--hour', px + 'px');
+
+    var times = el('div', 'jc-times');
+    for (var k = 0; k < ore; k++) {
+      var lb = el('div', 'jc-time-label', fmtMin(GRIGLIA.start + k * 60));
+      lb.style.top = (k * px + 5) + 'px';
+      times.appendChild(lb);
+    }
+    body.appendChild(times);
+
+    for (var j = 0; j < 5; j++) {
+      var data = addDays(stato.lunedi, j);
+      var col = el('div', 'jc-col' + (isoDate(data) === oggiIso ? ' is-today' : ''));
+      col.dataset.date = isoDate(data);
+      disponi(lezioniDelGiorno(data, stato.anno), maxAff).forEach(function (ev) { col.appendChild(cardDesktop(ev, data, px)); });
+      body.appendChild(col);
+    }
+    root.appendChild(body);
+  }
+
+  function cardDesktop(ev, data, px) {
+    var top, alt, url = safeUrl(ev.zoomUrl);
+    var c = el('div', 'jc-evt f-' + famiglia(ev.subject) + (ev.status === 'cancelled' ? ' is-cancelled' : '') + (url && ev.status !== 'cancelled' ? ' has-zoom' : '') + (ev.stack ? ' is-stacked' : ''));
+    if (ev.stack) {
+      var blocco = (ev.cEnd - ev.cStart) / 60 * px, riga = blocco / ev.stackN;
+      top = (ev.cStart - GRIGLIA.start) / 60 * px + ev.stackIdx * riga + 1;
+      alt = riga - 2;
+      c.style.left = '2px'; c.style.width = 'calc(100% - 4px)';
+    } else {
+      top = (toMin(ev.start) - GRIGLIA.start) / 60 * px;
+      alt = (toMin(ev.end) - toMin(ev.start)) / 60 * px - 2;
+      c.style.left = 'calc(' + (ev.lane * 100 / ev.lanes) + '% + 2px)';
+      c.style.width = 'calc(' + (100 / ev.lanes) + '% - 4px)';
+    }
+    c.style.top = top + 'px';
+    c.style.height = alt + 'px';
+    c.setAttribute('role', 'button');
+    c.setAttribute('tabindex', '0');
+    c.setAttribute('aria-label', etichettaAccessibile(ev));
+    c.title = ev.subject + '\n' + ev.start + ' – ' + ev.end + (ev.teacher ? '\n' + ev.teacher : '') + (ev.room ? '\n' + ev.room : '');
+    c.dataset.date = ev.date; c.dataset.start = ev.start; c.dataset.end = ev.end; c.dataset.status = ev.status;
+
+    if (ev.stack) {
+      c.appendChild(el('div', 'jc-evt-subject', ev.subject));
+      var info = ev.status === 'cancelled' ? 'Lezione annullata' : ev.status === 'moved' ? 'Orario modificato' : (ev.teacher ? ev.teacher : '');
+      c.appendChild(el('div', 'jc-evt-line jc-evt-class', info));
+      c.addEventListener('click', function () { apriDettaglio(ev, data); });
+      c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); apriDettaglio(ev, data); } });
+      return c;
+    }
+    c.appendChild(el('div', 'jc-livetag', 'In corso'));
+    c.appendChild(el('div', 'jc-evt-subject', ev.subject));
+    c.appendChild(el('div', 'jc-evt-line jc-evt-time', ev.start + ' – ' + ev.end));
+    if (ev.status === 'cancelled') {
+      c.appendChild(el('div', 'jc-evt-cancel', 'Lezione annullata'));
+    } else {
+      if (ev.teacher) c.appendChild(el('div', 'jc-evt-line jc-evt-teacher', ev.teacher));
+      if (ev.room)    c.appendChild(el('div', 'jc-evt-line jc-evt-room', ev.room));
+      if (ev.status === 'moved') c.appendChild(el('span', 'jc-tag', 'Orario modificato'));
+      var z = pulsanteZoom(ev, { disabilitato: false });
+      if (z) c.appendChild(z);
+    }
+    c.addEventListener('click', function () { apriDettaglio(ev, data); });
+    c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); apriDettaglio(ev, data); } });
+    return c;
+  }
+
+  function disegnaMobile() {
+    var root = $('jc-mobile'); root.textContent = '';
+    var oggiIso = isoDate(new Date());
+
+    var tabs = el('div', 'jc-daytabs'); tabs.setAttribute('role', 'tablist');
+    for (var i = 0; i < 5; i++) {
+      (function (i) {
+        var d = addDays(stato.lunedi, i);
+        var b = el('button', 'jc-daytab' + (isoDate(d) === oggiIso ? ' is-today' : ''));
+        b.type = 'button'; b.setAttribute('role', 'tab');
+        b.setAttribute('aria-selected', i === stato.giorno ? 'true' : 'false');
+        b.setAttribute('aria-label', testoData(d));
+        b.appendChild(el('span', 'd', GIORNI_BREVI[i]));
+        b.appendChild(el('span', 'n', String(d.getDate())));
+        b.addEventListener('click', function () { stato.giorno = i; disegnaMobile(); });
+        tabs.appendChild(b);
+      })(i);
+    }
+    root.appendChild(tabs);
+
+    var data = addDays(stato.lunedi, stato.giorno);
+    var evs = lezioniDelGiorno(data, stato.anno);
+    var lista = el('div', 'jc-daylist');
+    var hd = el('div', 'jc-dayhead-m');
+    hd.appendChild(el('h3', '', testoData(data)));
+    hd.appendChild(el('span', '', evs.length === 1 ? '1 lezione' : evs.length + ' lezioni'));
+    lista.appendChild(hd);
+
+    if (!evs.length) {
+      lista.appendChild(el('div', 'jc-empty', 'Nessuna lezione in questo giorno.'));
+    } else {
+      var gruppi = {}, ordine = [];
+      evs.forEach(function (e) { if (!gruppi[e.start]) { gruppi[e.start] = []; ordine.push(e.start); } gruppi[e.start].push(e); });
+      ordine.forEach(function (start) {
+        var g = el('div', 'jc-group');
+        g.appendChild(el('div', 'jc-group-time', start));
+        var cards = el('div', 'jc-group-cards');
+        gruppi[start].forEach(function (ev) { cards.appendChild(cardMobile(ev, data)); });
+        g.appendChild(cards); lista.appendChild(g);
+      });
+    }
+    root.appendChild(lista);
+
+    var x0 = null;
+    lista.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lista.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) < 60) return;
+      var n = stato.giorno + (dx < 0 ? 1 : -1);
+      if (n >= 0 && n <= 4) { stato.giorno = n; disegnaMobile(); }
+    }, { passive: true });
+  }
+
+  function cardMobile(ev, data) {
+    var c = el('div', 'jc-mcard f-' + famiglia(ev.subject) + (ev.status === 'cancelled' ? ' is-cancelled' : ''));
+    c.dataset.date = ev.date; c.dataset.start = ev.start; c.dataset.end = ev.end; c.dataset.status = ev.status;
+    c.appendChild(el('div', 'jc-livetag', 'In corso'));
+    c.appendChild(el('div', 'jc-m-subject', ev.subject));
+    c.appendChild(el('div', 'jc-m-line jc-m-time', ev.start + ' – ' + ev.end));
+    if (ev.status === 'cancelled') {
+      c.appendChild(el('div', 'jc-m-line', 'Lezione annullata'));
+      return c;
+    }
+    if (ev.teacher) c.appendChild(el('div', 'jc-m-line', ev.teacher));
+    if (ev.room)    c.appendChild(el('div', 'jc-m-line', ev.room));
+    if (ev.status === 'moved') c.appendChild(el('span', 'jc-tag', 'Orario modificato'));
+    var z = pulsanteZoom(ev, { disabilitato: CONFIG.zoomDisabilitatoSuMobile });
+    if (z) c.appendChild(z);
+    return c;
+  }
+
+  function apriDettaglio(ev, data) {
+    var dlg = $('jc-dialog'); dlg.textContent = '';
+    var head = el('div', 'jc-d-head f-' + famiglia(ev.subject));
+    var h = el('h3', '', ev.subject); h.id = 'jc-d-title';
+    head.appendChild(h);
+    head.appendChild(el('p', '', testoData(data) + ' · ' + ev.start + ' – ' + ev.end));
+    dlg.appendChild(head);
+
+    var body = el('div', 'jc-d-body');
+    var dl = el('dl');
+    function riga(k, v) { if (!v) return; dl.appendChild(el('dt', '', k)); dl.appendChild(el('dd', '', v)); }
+    if (ev.status === 'cancelled') riga('Stato', 'Lezione annullata');
+    if (ev.status === 'moved') { riga('Stato', 'Orario modificato'); riga('Orario originale', ev.origStart + ' – ' + ev.origEnd); }
+    riga('Anno', labelAnno(ev.year));
+    riga('Docente', ev.teacher || 'Da definire');
+    riga('Aula', ev.room);
+    riga('Note', ev.note);
+    body.appendChild(dl);
+
+    var azioni = el('div', 'jc-d-actions');
+    var z = pulsanteZoom(ev, { disabilitato: true });
+    if (z) azioni.appendChild(z);
+    var chiudi = el('button', 'jc-btn', 'Chiudi'); chiudi.type = 'button';
+    chiudi.addEventListener('click', function () { dlg.close(); });
+    azioni.appendChild(chiudi);
+    body.appendChild(azioni);
+    dlg.appendChild(body);
+
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  $('jc-dialog').addEventListener('click', function (e) { if (e.target === this) this.close(); });
+
+  function aggiornaOra() {
+    var ora = new Date(), oggiIso = isoDate(ora), minuti = ora.getHours() * 60 + ora.getMinutes();
+
+    Array.prototype.forEach.call(document.querySelectorAll('.jc-nowline,.jc-nowpill'), function (n) { n.remove(); });
+    var col = document.querySelector('.jc-col[data-date="' + oggiIso + '"]');
+    if (col && minuti >= GRIGLIA.start && minuti <= GRIGLIA.end) {
+      var top = (minuti - GRIGLIA.start) / 60 * CONFIG.pxOra;
+      var linea = el('div', 'jc-nowline'); linea.style.top = top + 'px'; col.appendChild(linea);
+      var pill = el('div', 'jc-nowpill', fmtMin(minuti)); pill.style.top = top + 'px'; col.appendChild(pill);
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll('.jc-evt,.jc-mcard'), function (n) {
+      var live = n.dataset.date === oggiIso && n.dataset.status !== 'cancelled' && toMin(n.dataset.start) <= minuti && minuti < toMin(n.dataset.end);
+      n.classList.toggle('is-live', live);
+    });
+  }
+
+  function disegna() {
+    var prima = CONFIG.inizioLezioni && isoDate(addDays(stato.lunedi, -7)) < isoDate(mondayOf(new Date(CONFIG.inizioLezioni + 'T12:00:00')));
+    $('jc-prev').disabled = !!prima;
+    disegnaAnni(); aggiornaMenuIndirizzi(); disegnaPeriodo();
+    disegnaSettimana(); disegnaMobile(); aggiornaOra();
+  }
+
+  $('jc-prev').addEventListener('click', function () { stato.lunedi = addDays(stato.lunedi, -7); disegna(); });
+  $('jc-next').addEventListener('click', function () { stato.lunedi = addDays(stato.lunedi, 7); disegna(); });
+  $('jc-today').addEventListener('click', function () { vaiA_Oggi(); disegna(); });
+
+  if (!LEZIONI.length) {
+    $('jc-week').textContent = 'Nessuna lezione trovata: controlla il file lezioni-serale.js.';
+    return;
+  }
+  stato.anno = annoIniziale();
+  stato.indirizzo = indirizzoIniziale();
+  creaMenuIndirizzi();
+  vaiA_Oggi();
+  disegnaLegenda();
+  disegna();
+  setInterval(aggiornaOra, 30000);
+  var attesa = null, larghezzaPrec = window.innerWidth;
+  window.addEventListener('resize', function () {
+    clearTimeout(attesa);
+    attesa = setTimeout(function () { if (window.innerWidth !== larghezzaPrec) { larghezzaPrec = window.innerWidth; disegna(); } }, 150);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "id": "foglio_20261014_A029",
+    "batch": "foglio_20261014",
+    "creata": "2026-10-14T07:41:51.521Z",
+    "lessonId": "A029",
+    "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+    "tipo": "set",
+    "patch": {
+      "ind": "AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO",
+      "tracks": [
+        "afm",
+        "informatico",
+        "ipseoa",
+        "les",
+        "linguistico",
+        "scienze-applicate",
+        "socio-sanitario",
+        "sportivo"
+      ],
+      "aula": "7",
+      "note": "",
+      "affiancaA": []
+    }
+  }
+}

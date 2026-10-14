@@ -1,0 +1,23 @@
+{
+  "data": {
+    "id": "foglio_20261014_LJ20261014_16",
+    "batch": "foglio_20261014",
+    "creata": "2026-10-14T07:41:51.521Z",
+    "lessonId": "LJ20261014_16",
+    "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+    "tipo": "add",
+    "lezione": {
+      "g": 5,
+      "h": 11,
+      "anno": "3/4",
+      "materia": "FRANCESE AVANZATO",
+      "ind": "SOCIO SANITARIO",
+      "doc": "ed",
+      "aula": "5",
+      "note": "",
+      "tracks": [
+        "socio-sanitario"
+      ]
+    }
+  }
+}

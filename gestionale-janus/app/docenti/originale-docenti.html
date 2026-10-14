@@ -1,0 +1,371 @@
+<title>Calendario docenti</title>
+<style>
+/* Layout: testata con menù docente, riepilogo, poi 5 colonne (lun-ven) con le sole lezioni del docente scelto. Mobile: giorni in colonna. */
+:root{
+  --navy:#252846;
+  --peri:#788CB4;
+  --violet:#A6529A;
+  --bg:#FFFFFF;
+  --fg:#252846;
+  --muted:#666B88;
+  --line:#E9EAEA;
+  --line-strong:#D6D8E0;
+  --soft:#F7F8FA;
+  --today:rgba(166,82,154,.06);
+  --um-bg:#F3E6F1; --um-bar:#A6529A;
+  --sc-bg:#E5EAF3; --sc-bar:#788CB4;
+  --li-bg:#DFE0EA; --li-bar:#252846;
+  --ec-bg:#ECEDEE; --ec-bar:#9A9FB3;
+  --so-bg:#EAE5F1; --so-bar:#8A6EAE;
+  --chip-bg:#FFFFFF;
+  --chip-on-bg:#252846; --chip-on-fg:#FFFFFF;
+  --arrow:%23252846;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14162B; --fg:#E7E9F4; --muted:#A1A6C4; --line:#2A2D4B; --line-strong:#3A3E63; --soft:#1B1E38;
+    --today:rgba(200,120,190,.10); --violet:#C77BBB; --peri:#93A6CC;
+    --um-bg:#3A2338; --um-bar:#C77BBB;
+    --sc-bg:#23304A; --sc-bar:#93A6CC;
+    --li-bg:#2B2E52; --li-bar:#8D93D1;
+    --ec-bg:#272A3F; --ec-bar:#8C91AB;
+    --so-bg:#2D2644; --so-bar:#A58ACB;
+    --chip-bg:#1B1E38; --chip-on-bg:#E7E9F4; --chip-on-fg:#14162B;
+    --arrow:%23E7E9F4;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14162B; --fg:#E7E9F4; --muted:#A1A6C4; --line:#2A2D4B; --line-strong:#3A3E63; --soft:#1B1E38;
+  --today:rgba(200,120,190,.10); --violet:#C77BBB; --peri:#93A6CC;
+  --um-bg:#3A2338; --um-bar:#C77BBB;
+  --sc-bg:#23304A; --sc-bar:#93A6CC;
+  --li-bg:#2B2E52; --li-bar:#8D93D1;
+  --ec-bg:#272A3F; --ec-bar:#8C91AB;
+  --so-bg:#2D2644; --so-bar:#A58ACB;
+  --chip-bg:#1B1E38; --chip-on-bg:#E7E9F4; --chip-on-fg:#14162B;
+  --arrow:%23E7E9F4;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Inter","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;line-height:1.4;-webkit-font-smoothing:antialiased}
+.app{max-width:1400px;margin:0 auto;padding-inline:20px;padding-block:24px 36px}
+:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+
+.kicker{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin:0 0 4px}
+h1{margin:0;font-size:26px;font-weight:650;letter-spacing:-.015em;line-height:1.15;text-wrap:balance}
+.top{display:flex;flex-direction:column;gap:18px;margin-bottom:22px}
+.pick{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pick label{font-size:13px;color:var(--muted)}
+.select{appearance:none;-webkit-appearance:none;height:42px;min-width:300px;max-width:100%;padding:0 40px 0 14px;border:1px solid var(--navy);border-radius:10px;font:inherit;font-size:14.5px;font-weight:600;color:var(--fg);cursor:pointer;
+  background:var(--soft) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23788CB4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m4 6 4 4 4-4'/></svg>") no-repeat right 12px center/14px}
+.select:hover{border-color:var(--peri)}
+:root[data-theme="dark"] .select{border-color:var(--line-strong)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .select{border-color:var(--line-strong)}}
+
+.summary{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+.summary .name{font-size:18px;font-weight:650;letter-spacing:-.01em;margin-right:6px}
+.stat{display:flex;flex-direction:column;gap:1px;min-width:0}
+.stat b{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.stat span{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin-left:auto}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:3px;background:var(--bar);display:inline-block}
+
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.day{min-width:0;border-left:1px solid var(--line);display:flex;flex-direction:column}
+.day:first-child{border-left:0}
+.day.is-today{background:var(--today)}
+.dayhead{padding:12px 12px 10px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.dayhead h2{margin:0;font-size:12px;font-weight:650;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.day.is-today .dayhead h2{color:var(--violet)}
+.dayhead small{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.list{padding:10px;display:flex;flex-direction:column;gap:8px;flex:1}
+.slot{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:6px 2px 0}
+.slot:first-child{margin-top:0}
+.empty{margin:auto;padding:28px 8px;text-align:center;font-size:13px;color:var(--muted)}
+
+.f-um{--bgc:var(--um-bg);--bar:var(--um-bar)}
+.f-sc{--bgc:var(--sc-bg);--bar:var(--sc-bar)}
+.f-li{--bgc:var(--li-bg);--bar:var(--li-bar)}
+.f-ec{--bgc:var(--ec-bg);--bar:var(--ec-bar)}
+.f-so{--bgc:var(--so-bg);--bar:var(--so-bar)}
+.f-al{--bgc:var(--ec-bg);--bar:var(--ec-bar)}
+
+.card{background:var(--bgc);border-left:3px solid var(--bar);border-radius:8px;padding:9px 10px 10px 11px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.time{font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;opacity:.85}
+.subject{margin:0;font-size:13.5px;font-weight:650;line-height:1.25;overflow-wrap:anywhere}
+.aula{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--navy);color:#fff;padding:2px 7px;border-radius:5px}
+:root[data-theme="dark"] .aula{background:var(--chip-on-bg);color:var(--chip-on-fg)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .aula{background:var(--chip-on-bg);color:var(--chip-on-fg)}}
+.aula.is-home{background:transparent;color:var(--muted);border:1px solid var(--line-strong);text-transform:none;letter-spacing:0;font-weight:600}
+.classes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}
+.classes li{font-size:12px;line-height:1.3;overflow-wrap:anywhere}
+.classes b{font-weight:650;font-variant-numeric:tabular-nums;margin-right:4px}
+.note{margin:0;font-size:11.5px;color:var(--muted)}
+.foot{margin-top:16px;font-size:12px;color:var(--muted)}
+
+@media (max-width:1099px){
+  .week{grid-template-columns:1fr}
+  .day{border-left:0;border-top:1px solid var(--line)}
+  .day:first-child{border-top:0}
+  .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));align-items:start}
+  .slot{grid-column:1/-1}
+  .empty{padding:14px 4px;text-align:left;grid-column:1/-1}
+  .legend{margin-left:0;width:100%}
+}
+@media (max-width:640px){
+  .app{padding-inline:16px;padding-block:18px 28px}
+  h1{font-size:22px}
+  .select{min-width:0;width:100%}
+  .pick{flex-direction:column;align-items:stretch;gap:6px}
+  .list{grid-template-columns:1fr}
+}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div>
+      <p class="kicker">Istituto Janus</p>
+      <h1>Calendario docenti</h1>
+    </div>
+    <div class="pick">
+      <label for="docente">Scegli il docente</label>
+      <select class="select" id="docente"></select>
+    </div>
+    <div class="summary" id="summary"></div>
+  </header>
+  <main>
+    <section class="week" id="week" aria-live="polite"></section>
+    <p class="foot">Orario settimanale tipo, valido da lunedì 5 ottobre 2026. Mattina 9:00–13:00, sera 17:00–21:00.</p>
+  </main>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var P = 'Tutti gli indirizzi';
+  var CASA = 'Esercitazione da casa';
+
+  var NOMI = {
+    FV:'Federico Vani', GC:'Giorgia Clementi', LP:'Luca Picarazzi', BL:'Beatrice Lungu', MB:'Martina Branca',
+    ER:'Elisa Rubeo', GD:'Giulia Dipalo', ED:'Elisa Di Felice', GL:'Gabriele Luverà', LC:'Lucia Carlucci',
+    AA:'Alessandra Albano', SM:'Salvatore Martello', FT:'Fabio Trerè', AS:'Alessandra Sbucafratta', SZ:'Sara Mazza'
+  };
+  var GIORNI = ['Lunedì','Martedì','Mercoledì','Giovedì','Venerdì'];
+  var ORDINE_ANNI = ['1/2','3/4','4/5','5'];
+
+  /* Riga: [docente, giorno 1-5, ora di inizio, anno, materia, indirizzi, aula (0 = nessuna), note] */
+  var DIURNO = [
+    ['GD',1,9,'1/2','Lab italiano',P,4],['FV',1,9,'3/4','Matematica',P,1],['GL',1,9,'4/5','Meccatronica','Meccatronica',6],['MB',1,9,'4/5','Lab inglese',P,3],['LP',1,9,'5','Italiano',P,2],
+    ['GD',1,10,'1/2','Scienze umane','LES e Scienze umane',4],['LC',1,10,'1/2','Economia aziendale','AFM',7],['FV',1,10,'3/4','Matematica',P,1],['GL',1,10,'4/5','Meccatronica','Meccatronica',6],['MB',1,10,'4/5','Lab inglese',P,3],['LP',1,10,'5','Storia',P,2],
+    ['GD',1,10,'1/2','Lab italiano','ITI Informatico',0,CASA],
+    ['MB',1,11,'1/2','Inglese',P,3,'(+3 +3/4)'],['MB',1,11,'3/4','Inglese',P,3,'(+3 +3/4)'],['LP',1,11,'4/5','Italiano',P,2],['FV',1,11,'5','Matematica',P,1],
+    ['MB',1,12,'1/2','Inglese',P,3,'(+3 +3/4)'],['MB',1,12,'3/4','Inglese',P,3,'(+3 +3/4)'],['LP',1,12,'4/5','Storia',P,2],['FV',1,12,'5','Matematica',P,1],
+
+    ['LP',2,9,'1/2','Italiano',P,2],['BL',2,9,'3/4','Igiene','Socio sanitario',3],['ER',2,9,'3/4','Fisica','Licei',4],['LC',2,9,'3/4','Economia aziendale','AFM / Turismo',7],['FV',2,9,'4/5','Matematica',P,1],['FV',2,9,'5','Matematica',P,1],
+    ['LP',2,10,'1/2','Italiano',P,2],['BL',2,10,'3/4','Metodologie','Socio sanitario',3],['ER',2,10,'3/4','Fisica','Licei',4],['LC',2,10,'3/4','Economia aziendale','AFM / Turismo',7],['FV',2,10,'4/5','Matematica',P,1],['FV',2,10,'5','Matematica',P,1],
+    ['FV',2,11,'1/2','Matematica',P,1],['LP',2,11,'3/4','Italiano',P,2],['BL',2,11,'4/5','Igiene / Metodologie','Socio sanitario',3],['ER',2,11,'4/5','Fisica','Scientifico',4],['ED',2,11,'4/5','Lab italiano',P,5],
+    ['BL',2,11,'5','Igiene / Metodologie','Socio sanitario',3],['ER',2,11,'5','Fisica','Scientifico',4],['ED',2,11,'5','Lab italiano',P,5],
+    ['FV',2,12,'1/2','Matematica',P,1],['LP',2,12,'3/4','Storia',P,2],['BL',2,12,'4/5','Psicologia','Socio sanitario',3],['ER',2,12,'4/5','Fisica','Scientifico',4],['ED',2,12,'4/5','Lab italiano',P,5],
+    ['BL',2,12,'5','Psicologia','Socio sanitario',3],['ER',2,12,'5','Fisica','Scientifico',4],['ED',2,12,'5','Lab italiano',P,5],
+
+    ['MB',3,9,'1/2','Spagnolo','LES',3,'(+3 + 3/4)'],['LC',3,9,'1/2','Economia politica','ITI / AFM / Scienze umane',7],['MB',3,9,'3/4','Spagnolo','Socio sanitario / Turismo / AFM / LES',3,'(+3 + 3/4)'],
+    ['GL',3,9,'3/4','Lab matematica',P,1],['LP',3,9,'4/5','Filosofia','Licei',2],['GL',3,9,'4/5','Lab matematica',P,1],['LP',3,9,'5','Filosofia','Licei',2],['GL',3,9,'5','Lab matematica',P,1],
+    ['GL',3,9,'1/2','Lab matematica','LES',1],['MB',3,9,'3/4','Spagnolo','Linguistico',3],
+    ['MB',3,10,'1/2','Spagnolo','LES',3,'(+3 + 3/4)'],['GL',3,10,'1/2','Lab matematica','ITI / AFM / Scienze umane',1],['MB',3,10,'3/4','Spagnolo','Socio sanitario / Turismo / AFM / LES',3,'(+3 + 3/4)'],
+    ['LP',3,10,'3/4','Biologia','Licei (no LES)',2],['GD',3,10,'4/5','Scienze umane','Scienze umane / LES',4],['LC',3,10,'4/5','Educazione civica',P,7],
+    ['GD',3,10,'5','Scienze umane','Scienze umane / LES',4],['LC',3,10,'5','Educazione civica',P,7],['LC',3,10,'3/4','Educazione civica','Socio sanitario',7],['MB',3,10,'3/4','Spagnolo','Linguistico',3],
+    ['GD',3,11,'1/2','Lab grammatica',P,1],['GD',3,11,'3/4','Scienze umane','LES / Scienze umane',4],
+    ['MB',3,11,'4/5','Spagnolo','LES / Socio linguistico / AFM',3,'(+4)'],['LP',3,11,'4/5','Scienze integrate','Scientifico / Classico / Scienze umane / Scienze applicate / Sportivo',2,'(+4)'],['GL',3,11,'4/5','Meccatronica','Meccatronica',6],
+    ['MB',3,11,'5','Spagnolo','LES / Socio linguistico / AFM',3,'(+4)'],['LP',3,11,'5','Scienze integrate','Scientifico / Classico / Scienze umane / Scienze applicate / Sportivo',2,'(+4)'],
+    ['GD',3,11,'3/4','Lab italiano','Scientifico / Linguistico / Sportivo / AFM / Socio sanitario / Turismo',1],['GD',3,11,'4/5','Lab italiano','ITI Informatico',1],['GD',3,11,'5','Lab italiano','ITI Informatico / LES / Linguistico',1],
+    ['GD',3,11,'4/5','Lab italiano','LES / Linguistico',1],['GD',3,11,'1/2','Lab grammatica','ITI Informatico',0,CASA],
+    ['LC',3,11,'1/2','Scienze motorie',P,1,'Doppia scelta'],['LC',3,11,'3/4','Scienze motorie',P,1,'Doppia scelta'],
+    ['GD',3,12,'1/2','Lab grammatica',P,1],['LP',3,12,'3/4','Latino','Scientifico / Scienze umane',2],['GD',3,12,'3/4','Lab italiano',P,1],
+    ['MB',3,12,'4/5','Spagnolo','LES / Socio linguistico / AFM',3],['GD',3,12,'4/5','Lab italiano',P,1],['MB',3,12,'5','Spagnolo','LES / Socio linguistico / AFM',3],['GD',3,12,'5','Lab italiano',P,1],
+    ['GL',3,12,'5','Chimica','Scientifico',6],['GD',3,12,'1/2','Lab grammatica','ITI Informatico',0,CASA],
+
+    ['AA',4,9,'1/2','Geostoria',P,4],['LP',4,9,'3/4','Filosofia','Licei',2,'+4'],['MB',4,9,'3/4','Scrittura creativa',P,3],['MB',4,9,'4/5','Scrittura creativa',P,3],
+    ['GC',4,9,'5','Diritto','AFM / LES / Socio sanitario / Sportivo',1,'+4/5'],['GC',4,9,'4/5','Diritto','Socio sanitario / LES / Sportivo / AFM',1],['LC',4,9,'5','GPOI','ITI',7,'(+4/5)'],['MB',4,9,'5','Scrittura creativa',P,3],
+    ['LP',4,10,'1/2','Scienze integrate',P,2],['GC',4,10,'3/4','Diritto','Socio sanitario / Turismo / AFM / LES / Sportivo',1],['MB',4,10,'3/4','Scrittura creativa',P,3],['MB',4,10,'4/5','Scrittura creativa',P,3],
+    ['LC',4,10,'5','Economia politica / Relazioni internazionali','AFM / RIM',7],['MB',4,10,'5','Scrittura creativa',P,3],
+    ['GC',4,11,'1/2','Diritto',P,1],['LP',4,11,'3/4','Biologia','Classico / Scienze applicate',2],['MB',4,11,'3/4','Inglese',P,3],['MB',4,11,'4/5','Inglese',P,3,'(+4)'],['MB',4,11,'5','Inglese',P,3,'(+4)'],
+    ['GC',4,12,'1/2','Educazione civica',P,1,'(+3/4 anno)'],['GC',4,12,'3/4','Educazione civica','AFM / Socio sanitario',1],['LC',4,12,'3/4','Geografia turistica','Turismo',7],
+    ['LP',4,12,'3/4','Storia dell\'arte','Licei',2,'(+1/2)'],['MB',4,12,'4/5','Inglese',P,3,'(+4)'],['MB',4,12,'5','Inglese',P,3,'(+4)'],
+
+    ['LC',5,9,'1/2','Economia aziendale','AFM',7,'(+3)'],['GL',5,9,'1/2','Lab matematica',P,6],['GL',5,9,'3/4','Lab matematica',P,6],['ED',5,9,'4/5','Lab italiano',P,5],['ED',5,9,'5','Lab italiano',P,5],
+    ['ER',5,9,'4/5','Fisica','Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES',4],['ER',5,9,'5','Fisica','Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES',4],
+    ['LP',5,10,'4/5','Latino','Scientifico / Classico / Scienze umane / Sportivo',2],['LP',5,10,'5','Latino','Scientifico / Classico / Scienze umane / Sportivo',2],
+    ['ER',5,10,'1/2','Fisica','ITI / AFM',4,'+3/4 LES e Linguistico'],    ['ED',5,10,'3/4','Francese','Linguistico / Turismo / AFM / LES',5,'+2/3 LES'],['FV',5,10,'3/4','Informatica','AFM',1],['LP',5,10,'3/4','Lab italiano',P,2],['BL',5,10,'3/4','Igiene','Socio sanitario',3],
+    ['ED',5,10,'4/5','Francese','Linguistico / Turismo / AFM / Socio sanitario / LES',5],['LP',5,10,'4/5','Lab italiano',P,2],
+    ['ED',5,10,'5','Francese','Linguistico / Turismo / AFM / Socio sanitario / LES',5],['LP',5,10,'5','Lab italiano',P,2],['GL',5,10,'4/5','Meccatronica','Meccatronica',6],
+    ['LC',5,10,'1/2','Educazione civica','Scienze umane / LES',7],['LC',5,10,'3/4','Educazione civica','LES / Scienze umane / Linguistico / Scientifico / Scienze applicate / Sportivo',7],
+    ['ER',5,11,'1/2','Fisica','ITI / AFM',4,'+3/4 LES e Linguistico'],['LP',5,11,'1/2','Latino','Scienze umane',2],['ED',5,11,'3/4','Francese','Linguistico / Turismo / AFM / LES',5],
+    ['LC',5,11,'3/4','Economia aziendale','AFM',7],['BL',5,11,'3/4','Psicologia','Socio sanitario',3],['GL',5,11,'3/4','Chimica','Scientifico / Scienze applicate / Sportivo / Scienze umane',6],
+    ['ED',5,11,'4/5','Francese','Linguistico / Turismo / AFM / Socio sanitario / LES',5],['FV',5,11,'4/5','Informatica','ITI',1],
+    ['ED',5,11,'5','Francese','Linguistico / Turismo / AFM / Socio sanitario / LES',5],['FV',5,11,'5','Informatica','ITI',1],
+    ['GL',5,11,'4/5','Lab matematica','Scientifico / Scienze umane / AFM / Socio sanitario / MME / LES',0,CASA],['GL',5,11,'5','Lab matematica','Scientifico / Scienze umane / AFM / Socio sanitario / MME / LES',0,CASA],
+    ['FV',5,11,'4/5','Informatica','Scienze applicate',1],['FV',5,11,'5','Informatica','Scienze applicate',1],['GL',5,11,'1/2','Lab matematica','LES',0,CASA],['GL',5,11,'3/4','Lab matematica','LES',0,CASA],
+    ['GL',5,11,'3/4','Lab matematica','Linguistico',0,CASA],
+    ['FV',5,12,'1/2','Informatica','ITI / AFM',1],['ED',5,12,'3/4','Lab italiano',P,5],['GL',5,12,'4/5','Lab matematica',P,4],['LP',5,12,'5','Storia dell\'arte','Licei',2],
+    ['GL',5,12,'5','Lab matematica',P,4],['LP',5,12,'4/5','Storia dell\'arte','Licei',2]
+  ];
+
+  var SERALE = [
+    ['AA',1,17,'1/2','Epica / Antologia','Classico',4],['ED',1,17,'4/5','Francese','AFM, IPSEOA',5],['GL',1,17,'4/5','Lab matematica','ITI Informatico',6],['ED',1,17,'5','Francese','Turismo, AFM',5],
+    ['GL',1,17,'5','Lab matematica','MME, Sportivo, AFM',6],['LP',1,17,'5','Storia dell\'arte','Scientifico, LES',2],
+    ['AA',1,18,'1/2','Italiano','Classico',4],['ED',1,18,'4/5','Lab inglese',P,5],['ED',1,18,'5','Lab inglese',P,5],
+    ['ED',1,19,'1/2','Inglese',P,5],['AA',1,19,'4/5','Italiano',P,4],['AA',1,19,'5','Italiano',P,4],
+    ['ED',1,20,'1/2','Inglese',P,5],['AA',1,20,'4/5','Italiano',P,4],['AA',1,20,'5','Italiano',P,4],
+
+    ['MB',2,17,'1/2','Lab lettura',P,3],['SM',2,17,'4/5','Informatica','ITI Informatico',1],['MB',2,17,'4/5','Lab lettura','IPSEOA, AFM',3],['LP',2,17,'5','Filosofia','Scientifico, Sportivo, LES',2],
+    ['MB',2,17,'5','Lab lettura','Turismo, AFM',3],['GL',2,17,'5','Meccatronica','MME',6],['LC',2,17,'4/5','Relazioni internazionali','AFM',7],
+    ['MB',2,18,'1/2','Lab lettura',P,3],['MB',2,18,'4/5','Lab lettura','IPSEOA, AFM',3],['SM',2,18,'4/5','TPSI e Sistemi e reti','ITI Informatico',1],
+    ['MB',2,18,'5','Lab lettura','Sportivo, Scientifico, LES, Turismo',3],['GL',2,18,'5','Meccatronica','MME',6],['LC',2,18,'5','Relazioni internazionali / Economia politica','AFM',7],
+    ['GL',2,19,'1/2','Matematica',P,6],['FT',2,19,'4/5','Matematica',P,2],['MB',2,19,'5','Potenziamento inglese',P,3],
+    ['GL',2,20,'1/2','Matematica',P,6],['FT',2,20,'4/5','Matematica',P,2],['MB',2,20,'5','Potenziamento inglese',P,3],
+
+    ['AA',3,17,'1/2','Italiano','Classico',4],['ED',3,17,'4/5','Inglese',P,5],['ED',3,17,'5','Inglese',P,5],
+    ['AA',3,18,'1/2','Storia','Classico',4],['ED',3,18,'4/5','Inglese',P,5],['ED',3,18,'5','Inglese',P,5],
+    ['ED',3,19,'1/2','Potenziamento inglese',P,5],['AA',3,19,'4/5','Storia',P,4],['FT',3,19,'5','Matematica',P,2],
+    ['ED',3,20,'1/2','Potenziamento inglese',P,5],['AA',3,20,'4/5','Storia',P,4],['FT',3,20,'5','Matematica',P,2],
+
+    ['LP',4,17,'1/2','Greco','Classico',2],['GL',4,17,'4/5','Lab matematica',P,6],['GL',4,17,'5','Lab matematica','Sportivo, Scientifico, MME, Turismo, AFM',6],['GD',4,17,'5','Scienze umane','LES',4],
+    ['AS',4,18,'1/2','Scienze',P,4],['GC',4,18,'4/5','Diritto','AFM, IPSEOA',1],['LC',4,18,'4/5','GPOI','ITI Informatico',7],['GC',4,18,'5','Diritto','Turismo, AFM',1],['GL',4,18,'5','Fisica','Scientifico, Sportivo, LES',6],
+    ['SZ',4,19,'4/5','Economia aziendale','AFM',7],['SZ',4,19,'5','DTA','Turismo',7],['GL',4,19,'5','Fisica','Scientifico, Sportivo, LES',6],['SZ',4,19,'5','Economia aziendale','AFM',7],
+
+    ['AA',5,17,'1/2','Latino','Classico',4],['GL',5,17,'4/5','Lab matematica',P,6,'Doppia scelta per AFM'],['MB',5,17,'4/5','Spagnolo','AFM',3],
+    ['GL',5,17,'5','Lab matematica',P,6,'Doppia scelta per AFM'],['MB',5,17,'5','Spagnolo','LES, AFM',3],
+    ['AA',5,18,'1/2','Geostoria - Storia dell\'arte','Classico',4],['MB',5,18,'4/5','Spagnolo','AFM',3],['AS',5,18,'5','Scienze','Sportivo, Scientifico',1],['MB',5,18,'5','Spagnolo','LES, AFM',3],
+    ['MB',5,19,'1/2','Lab creativo',P,3],['MB',5,19,'4/5','Lab creativo',P,3],['AA',5,19,'5','Storia',P,4],
+    ['MB',5,20,'1/2','Lab creativo',P,3],['SZ',5,20,'4/5','Diritto e tecniche amm. (DTA)','IPSEOA',7],['MB',5,20,'4/5','Lab creativo','ITI Informatico, AFM',3],['AA',5,20,'5','Storia',P,4]
+  ];
+
+  var FAM = [
+    { id:'so', nome:'Area socio-umana',     re:/UMANE|IGIENE|METOD|PSICO/ },
+    { id:'sc', nome:'Matematica e scienze', re:/MATE|FISICA|CHIMICA|BIOLOGIA|SCIENZE|INFORMATICA|MECCATRONICA|TPSI|SISTEMI/ },
+    { id:'li', nome:'Lingue',               re:/INGLESE|SPAGNOLO|FRANCESE/ },
+    { id:'um', nome:'Materie umanistiche',  re:/ITALIANO|GRAMMATICA|STORIA|FILOSOFIA|LATINO|GRECO|EPICA|ANTOLOGIA|LETTURA|CREATIV|GEOSTORIA|SCRITTURA/ },
+    { id:'ec', nome:'Economia e diritto',   re:/DIRITTO|AZIENDALE|POLITICA|GPOI|DTA|TURISTICA|CIVICA|RELAZIONI|MOTORIE/ }
+  ];
+  function famiglia(m) {
+    var s = m.toUpperCase();
+    for (var i = 0; i < FAM.length; i++) if (FAM[i].re.test(s)) return FAM[i].id;
+    return 'al';
+  }
+
+  /* Unisce le righe con stesso docente, giorno, ora, materia e aula in un'unica lezione con più classi. */
+  var lezioni = {};
+  function aggiungi(righe, turno) {
+    righe.forEach(function (r) {
+      var k = [turno, r[0], r[1], r[2], r[4], r[6]].join('|');
+      var l = lezioni[k];
+      if (!l) l = lezioni[k] = { doc:r[0], day:r[1], hour:r[2], turno:turno, subject:r[4], aula:r[6], classi:[], note:[] };
+      var dup = l.classi.some(function (c) { return c.anno === r[3] && c.ind === r[5]; });
+      if (!dup) l.classi.push({ anno:r[3], ind:r[5] });
+      if (r[7] && l.note.indexOf(r[7]) < 0 && r[7] !== CASA) l.note.push(r[7]);
+      if (r[7] === CASA) l.casa = true;
+    });
+  }
+  aggiungi(DIURNO, 'Mattina');
+  aggiungi(SERALE, 'Sera');
+  var TUTTE = Object.keys(lezioni).map(function (k) { return lezioni[k]; });
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== '') n.textContent = text;
+    return n;
+  }
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  var sel = document.getElementById('docente');
+  var codici = Object.keys(NOMI).filter(function (c) { return TUTTE.some(function (l) { return l.doc === c; }); });
+  codici.sort(function (a, b) { return NOMI[a].localeCompare(NOMI[b], 'it'); });
+  codici.forEach(function (c) { var o = el('option', '', NOMI[c]); o.value = c; sel.appendChild(o); });
+
+  function annoLabel(a) { return a + ' anno'; }
+
+  function card(l) {
+    var c = el('article', 'card f-' + famiglia(l.subject));
+    c.appendChild(el('div', 'time', pad(l.hour) + ':00 – ' + pad(l.hour) + ':50'));
+    c.appendChild(el('h3', 'subject', l.subject));
+    var a = el('span', 'aula' + (l.aula ? '' : ' is-home'), l.aula ? 'Aula ' + l.aula : 'Da casa');
+    c.appendChild(a);
+    var perInd = {}, ordine = [];
+    l.classi.forEach(function (x) {
+      if (!perInd[x.ind]) { perInd[x.ind] = []; ordine.push(x.ind); }
+      perInd[x.ind].push(x.anno);
+    });
+    var ul = el('ul', 'classes');
+    ordine.forEach(function (ind) {
+      var anni = perInd[ind].sort(function (a, b) { return ORDINE_ANNI.indexOf(a) - ORDINE_ANNI.indexOf(b); });
+      var li = el('li');
+      li.appendChild(el('b', '', anni.join(' · ') + (anni.length ? ' anno' : '')));
+      li.appendChild(document.createTextNode(ind));
+      ul.appendChild(li);
+    });
+    c.appendChild(ul);
+    var note = l.note.slice();
+    if (l.casa) note.unshift('Esercitazione da casa');
+    if (note.length) c.appendChild(el('p', 'note', note.join(' · ')));
+    return c;
+  }
+
+  function disegna() {
+    var doc = sel.value;
+    var mie = TUTTE.filter(function (l) { return l.doc === doc; });
+    mie.sort(function (a, b) { return a.day - b.day || a.hour - b.hour || a.subject.localeCompare(b.subject); });
+
+    // riepilogo
+    var aule = [], giorni = {}, turni = [];
+    mie.forEach(function (l) {
+      if (l.aula && aule.indexOf(l.aula) < 0) aule.push(l.aula);
+      giorni[l.day] = true;
+      if (turni.indexOf(l.turno) < 0) turni.push(l.turno);
+    });
+    aule.sort();
+    var s = document.getElementById('summary'); s.textContent = '';
+    s.appendChild(el('div', 'name', NOMI[doc]));
+    function stat(k, v) { var d = el('div', 'stat'); d.appendChild(el('b', '', k)); d.appendChild(el('span', '', v)); s.appendChild(d); }
+    stat('Lezioni a settimana', String(mie.length));
+    stat('Giorni', Object.keys(giorni).length + ' su 5');
+    stat('Aule', aule.length ? aule.map(function (a) { return 'Aula ' + a; }).join(', ') : 'Da casa');
+    stat('Turni', turni.join(' e '));
+    var lg = el('div', 'legend');
+    FAM.forEach(function (f) {
+      var sp = el('span'); var i = el('i', 'f-' + f.id); sp.appendChild(i); sp.appendChild(document.createTextNode(f.nome)); lg.appendChild(sp);
+    });
+    s.appendChild(lg);
+
+    // settimana
+    var wk = document.getElementById('week'); wk.textContent = '';
+    var oggi = (new Date().getDay() + 6) % 7 + 1;
+    for (var d = 1; d <= 5; d++) {
+      var del = mie.filter(function (l) { return l.day === d; });
+      var col = el('section', 'day' + (d === oggi ? ' is-today' : ''));
+      var h = el('div', 'dayhead');
+      h.appendChild(el('h2', '', GIORNI[d - 1]));
+      h.appendChild(el('small', '', del.length === 0 ? '' : del.length === 1 ? '1 lezione' : del.length + ' lezioni'));
+      col.appendChild(h);
+      var list = el('div', 'list');
+      if (!del.length) {
+        list.appendChild(el('div', 'empty', 'Nessuna lezione'));
+      } else {
+        var ultimo = '';
+        del.forEach(function (l) {
+          if (l.turno !== ultimo) { list.appendChild(el('div', 'slot', l.turno)); ultimo = l.turno; }
+          list.appendChild(card(l));
+        });
+      }
+      col.appendChild(list);
+      wk.appendChild(col);
+    }
+  }
+
+  sel.value = 'MB';
+  sel.addEventListener('change', disegna);
+  disegna();
+})();
+</script>

@@ -1,0 +1,21 @@
+{
+  "data": {
+    "id": "giorgia_20261012_martedi_L049",
+    "batch": "giorgia_20261012_martedi",
+    "creata": "2026-10-12T15:31:48.519Z",
+    "lessonId": "L049",
+    "tipo": "set",
+    "patch": {
+      "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+      "tracks": [
+        "scientifico",
+        "scienze-applicate",
+        "sportivo",
+        "les",
+        "linguistico",
+        "scienze-umane"
+      ]
+    },
+    "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+  }
+}

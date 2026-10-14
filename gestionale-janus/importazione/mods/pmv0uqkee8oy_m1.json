@@ -1,0 +1,14 @@
+{
+  "data": {
+    "batch": "pmv0uqkee8oy",
+    "creata": "2026-10-09T10:58:25.990Z",
+    "lessonId": "L140",
+    "motivo": "Spostamento del Lab matematica del venerdì 12:00 dall'Aula 4 all'Aula 6 (link Zoom dell'Aula 6)",
+    "patch": {
+      "aula": "6"
+    },
+    "propostaId": "pmv0uqkee8oy",
+    "tipo": "set",
+    "id": "pmv0uqkee8oy_m1"
+  }
+}

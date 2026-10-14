@@ -1,0 +1,25 @@
+{
+  "data": {
+    "id": "giorgia_20261012_martedi_L047",
+    "batch": "giorgia_20261012_martedi",
+    "creata": "2026-10-12T15:31:48.519Z",
+    "lessonId": "L047",
+    "tipo": "set",
+    "patch": {
+      "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+      "tracks": [
+        "scientifico",
+        "classico",
+        "scienze-applicate",
+        "sportivo",
+        "informatico",
+        "afm",
+        "socio-sanitario",
+        "turismo",
+        "mme",
+        "ipseoa"
+      ]
+    },
+    "motivo": "Modifica permanente richiesta e confermata da Giorgia il 12 ottobre 2026"
+  }
+}

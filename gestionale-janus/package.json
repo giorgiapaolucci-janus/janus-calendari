@@ -1,0 +1,15 @@
+{
+  "name": "gestionale-janus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gestionale Janus operativo, consegna revisione calendario 2",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --test test-locale.cjs",
+    "build:riservato": "node riservato/build.cjs",
+    "test:riservato": "node --test riservato/test.cjs"
+  }
+}

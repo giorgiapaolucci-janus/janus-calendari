@@ -1,0 +1,25 @@
+{
+  "data": {
+    "id": "foglio_20261014_L074",
+    "batch": "foglio_20261014",
+    "creata": "2026-10-14T07:41:51.521Z",
+    "lessonId": "L074",
+    "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+    "tipo": "set",
+    "patch": {
+      "ind": "CLASSICO / LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+      "tracks": [
+        "classico",
+        "les",
+        "linguistico",
+        "scientifico",
+        "scienze-applicate",
+        "scienze-umane",
+        "sportivo"
+      ],
+      "aula": "2",
+      "note": "(+4)",
+      "affiancaA": []
+    }
+  }
+}

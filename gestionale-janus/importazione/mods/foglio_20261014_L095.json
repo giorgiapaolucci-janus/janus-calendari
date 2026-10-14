@@ -1,0 +1,30 @@
+{
+  "data": {
+    "id": "foglio_20261014_L095",
+    "batch": "foglio_20261014",
+    "creata": "2026-10-14T07:41:51.521Z",
+    "lessonId": "L095",
+    "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+    "tipo": "set",
+    "patch": {
+      "ind": "CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+      "tracks": [
+        "classico",
+        "informatico",
+        "ipseoa",
+        "les",
+        "linguistico",
+        "mme",
+        "scientifico",
+        "scienze-applicate",
+        "scienze-umane",
+        "socio-sanitario",
+        "sportivo",
+        "turismo"
+      ],
+      "aula": "3",
+      "note": "",
+      "affiancaA": []
+    }
+  }
+}

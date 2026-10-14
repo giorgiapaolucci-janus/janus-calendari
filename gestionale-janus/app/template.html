@@ -1,0 +1,128 @@
+<title>Calendari Janus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ec; --card:#fffdf8; --ink:#1d2433; --mute:#667085; --line:#e2dccd; --soft:#efe9db;
+  --accent:#1f4fd8; --accent-ink:#ffffff; --accent-soft:#e3eafc;
+  --ok:#1b7f4b; --ok-soft:#dff3e7; --warn:#a15c00; --warn-soft:#fdf0d5; --err:#b42318; --err-soft:#fde4e1;
+  --shadow:0 1px 2px rgba(29,36,51,.06),0 4px 14px rgba(29,36,51,.05);
+  --r:12px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151d; --card:#1b202c; --ink:#eceff6; --mute:#9aa3b5; --line:#2c3445; --soft:#232a39;
+  --accent:#7ea2ff; --accent-ink:#0c1226; --accent-soft:#222f55;
+  --ok:#5fd394; --ok-soft:#173a2a; --warn:#f2b45a; --warn-soft:#3b2d12; --err:#ff8a7d; --err-soft:#432019;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151d; --card:#1b202c; --ink:#eceff6; --mute:#9aa3b5; --line:#2c3445; --soft:#232a39;
+  --accent:#7ea2ff; --accent-ink:#0c1226; --accent-soft:#222f55;
+  --ok:#5fd394; --ok-soft:#173a2a; --warn:#f2b45a; --warn-soft:#3b2d12; --err:#ff8a7d; --err-soft:#432019;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.25); color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 14px/1.45 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;padding-inline:16px;padding-block:14px 40px;overflow-x:hidden}
+.wrap{max-width:1240px;margin:0 auto;min-width:0}
+h1{font-size:22px;line-height:1.15;margin:0;font-weight:800;letter-spacing:-.02em}
+h2{font-size:16px;margin:0 0 8px;font-weight:700}
+h3{font-size:13px;margin:0 0 6px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+p{margin:0 0 8px}
+.top{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+.sub{color:var(--mute);font-size:13px}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600;color:var(--mute)}
+.pill.ok{color:var(--ok);background:var(--ok-soft);border-color:transparent}
+.pill.warn{color:var(--warn);background:var(--warn-soft);border-color:transparent}
+.pill.err{color:var(--err);background:var(--err-soft);border-color:transparent}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;padding:4px;background:var(--soft);border-radius:14px;margin-bottom:14px;-webkit-overflow-scrolling:touch}
+nav.tabs button{flex:0 0 auto;border:0;background:transparent;color:var(--mute);font:600 13px Manrope,sans-serif;padding:8px 14px;border-radius:10px;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+nav.tabs .badge{display:inline-block;min-width:18px;text-align:center;background:var(--accent);color:var(--accent-ink);border-radius:9px;font-size:11px;padding:0 5px;margin-left:5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;box-shadow:var(--shadow);min-width:0}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.row.sp{justify-content:space-between}
+.col{display:flex;flex-direction:column;gap:10px;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px}
+button.b,a.b{font:600 13px Manrope,sans-serif;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 12px;border-radius:9px;cursor:pointer;text-decoration:none}
+button.b:hover{border-color:var(--accent)}
+button.b.pri{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+button.b.ok{background:var(--ok);color:#fff;border-color:transparent}
+button.b.bad{color:var(--err);border-color:var(--err)}
+button.b[disabled]{opacity:.5;cursor:not-allowed}
+button.b.sm{padding:4px 9px;font-size:12px}
+.seg{display:inline-flex;background:var(--soft);border-radius:10px;padding:3px}
+.seg button{border:0;background:transparent;font:600 13px Manrope,sans-serif;padding:6px 14px;border-radius:8px;color:var(--mute);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+input,select,textarea{font:500 14px Manrope,sans-serif;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:9px;padding:7px 10px;min-width:0;max-width:100%}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+label.f{display:flex;flex-direction:column;gap:3px;font-size:12px;font-weight:600;color:var(--mute)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+table.cal{border-collapse:separate;border-spacing:0;width:100%;min-width:820px;table-layout:fixed}
+table.cal th{position:sticky;top:0;background:var(--soft);font-size:12px;padding:8px 6px;text-align:left;border-bottom:1px solid var(--line);font-weight:700}
+table.cal th small{color:var(--mute);font-weight:600;display:block}
+table.cal td{vertical-align:top;padding:5px;border-bottom:1px solid var(--line);border-left:1px solid var(--line);height:96px}
+table.cal td.h{width:54px;border-left:0;background:var(--soft);font-weight:800;font-size:13px;text-align:center;padding-top:10px}
+table.cal tr:last-child td{border-bottom:0}
+.s{--c:hsl(var(--hue,220) 62% 48%);display:block;width:100%;text-align:left;font:500 12px/1.3 Manrope,sans-serif;color:var(--ink);background:color-mix(in srgb,var(--c) 13%,var(--card));border:1px solid color-mix(in srgb,var(--c) 30%,var(--line));border-left:4px solid var(--c);border-radius:8px;padding:5px 7px;margin-bottom:4px;cursor:pointer}
+.s b{display:block;font-weight:700;font-size:12px;overflow-wrap:anywhere}
+.s .m{color:var(--mute);font-size:11px}
+.s.sost{background:var(--ok-soft);border-color:var(--ok);border-left-color:var(--ok)}
+.s.scop{background:var(--err-soft);border-color:var(--err);border-left-color:var(--err)}
+.s.casa{opacity:.7;border-style:dashed}
+.s.dim{opacity:.22}
+.s.sel{outline:2px solid var(--accent)}
+.s .tag{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:0 5px;border-radius:5px;margin-right:4px;background:var(--soft);color:var(--mute)}
+.s.sost .tag{background:var(--ok);color:#fff}.s.scop .tag{background:var(--err);color:#fff}
+.aula{display:inline-block;background:var(--soft);border-radius:5px;padding:0 5px;font-weight:700;font-size:11px;color:var(--ink)}
+.chip{display:inline-block;background:var(--soft);border-radius:7px;padding:2px 8px;font-size:12px;margin:0 4px 4px 0;font-weight:600}
+.chip.x{background:var(--accent-soft);color:var(--accent)}
+.chip.P{background:var(--ok-soft);color:var(--ok)}.chip.S{background:var(--warn-soft);color:var(--warn)}.chip.n{color:var(--mute)}
+.issue{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.issue:last-child{border-bottom:0}
+.dot{flex:0 0 auto;width:9px;height:9px;border-radius:50%;margin-top:6px;background:var(--mute)}
+.dot.err{background:var(--err)}.dot.warn{background:var(--warn)}.dot.ok{background:var(--ok)}
+.box{border-radius:10px;padding:9px 11px;font-size:13px}
+.box.ok{background:var(--ok-soft);color:var(--ok)}.box.warn{background:var(--warn-soft);color:var(--warn)}.box.err{background:var(--err-soft);color:var(--err)}.box.info{background:var(--accent-soft);color:var(--accent)}
+.prop{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.prop.in-attesa{border-color:var(--accent)}
+.prop table{border-collapse:collapse;width:100%;font-size:12.5px}
+.prop td,.prop th{padding:5px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.prop th{color:var(--mute);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.tw{overflow-x:auto}
+.rule{padding:10px 0;border-bottom:1px solid var(--line)}
+.rule:last-child{border-bottom:0}
+.rule b{font-weight:700}
+.rule .id{font-size:11px;font-weight:800;color:var(--accent);margin-right:6px}
+.chatbox{display:flex;flex-direction:column;gap:10px;height:min(66vh,640px);overflow-y:auto;padding:4px 2px;scroll-behavior:smooth}
+.msg{max-width:min(92%,720px);padding:9px 12px;border-radius:14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.u{align-self:flex-end;background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:4px}
+.msg.a{align-self:flex-start;background:var(--soft);border-bottom-left-radius:4px}
+.msg.t{align-self:flex-start;color:var(--mute);font-size:12px;background:transparent;padding:0 4px}
+.chatbox .prop{align-self:stretch}
+.composer{display:flex;gap:8px;align-items:flex-end}
+.composer textarea{flex:1;resize:vertical;min-height:44px;max-height:160px}
+.sugg{display:flex;gap:6px;flex-wrap:wrap}
+.sugg button{font:600 12px Manrope,sans-serif;border:1px dashed var(--line);background:transparent;color:var(--mute);border-radius:999px;padding:5px 11px;cursor:pointer}
+.sugg button:hover{color:var(--accent);border-color:var(--accent)}
+.empty{color:var(--mute);padding:18px;text-align:center}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mute)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:4px}
+.tt{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px}
+details>summary{cursor:pointer;font-weight:700}
+.mono{font-variant-numeric:tabular-nums}
+@media (max-width:560px){h1{font-size:19px}.card{padding:11px}}
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Calendari Istituto Janus</h1>
+      <div class="sub" id="sub">Mattina, sera e orari dei docenti in un unico posto</div>
+    </div>
+    <div class="row" id="status"></div>
+  </div>
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+  <main id="main"></main>
+</div>
+<script>
+/*__SCRIPT__*/
+</script>

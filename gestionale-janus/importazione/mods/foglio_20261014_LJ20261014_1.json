@@ -1,0 +1,23 @@
+{
+  "data": {
+    "id": "foglio_20261014_LJ20261014_1",
+    "batch": "foglio_20261014",
+    "creata": "2026-10-14T07:41:51.521Z",
+    "lessonId": "LJ20261014_1",
+    "motivo": "Modifiche permanenti dal foglio MODIFICHE CALENDARIO ACADEMY, richieste da Giorgia il 14/10/2026",
+    "tipo": "add",
+    "lezione": {
+      "g": 1,
+      "h": 10,
+      "anno": "1/2",
+      "materia": "ECONOMIA AZIENDALE",
+      "ind": "AFM",
+      "doc": "lc",
+      "aula": "7",
+      "note": "",
+      "tracks": [
+        "afm"
+      ]
+    }
+  }
+}

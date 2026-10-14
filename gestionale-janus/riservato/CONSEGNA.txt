@@ -1,0 +1,53 @@
+CALENDARI JANUS — PREPARAZIONE AREA RISERVATA
+
+Stato: codice predisposto e verificabile localmente; NON pubblicato.
+Il gestionale locale e i link pubblici esistenti non sono stati modificati.
+Questa area offre esclusivamente consultazione di mattina, sera e docenti.
+Non espone il gestionale, le sue API di scrittura o le credenziali.
+
+Accesso previsto
+Cloudflare Access con codice email e lista di colleghi autorizzati.
+Il server verifica firma RS256, issuer, audience, scadenza e email del token.
+Email non autorizzata o configurazione mancante: accesso negato.
+Anche HTML e JSON richiedono autenticazione. Nessuna copia di riserva dei
+calendari nelle pagine e nessuna lettura da GitHub pubblico.
+
+Prima della pubblicazione
+1. Scegliere un server persistente dell'istituto o un hosting compatibile con
+   Node.js e Cloudflare Tunnel. Servono dominio, account e responsabile.
+2. Configurare un'applicazione Cloudflare Access per l'intero dominio,
+   senza regole Bypass o Allow Everyone. Autenticazione tramite codice email.
+   Inserire esclusivamente le email autorizzate; durata sessione consigliata 1 ora.
+3. Impostare le variabili del processo:
+   JANUS_ACCESS_ISSUER=https://NOME-TEAM.cloudflareaccess.com
+   JANUS_ACCESS_AUD=audience-dell-applicazione
+   JANUS_ALLOWED_EMAILS=email1,email2
+   JANUS_DATA_DIR=percorso-assoluto-archivio-Janus
+   JANUS_PRIVATE_PORT=8780
+4. Eseguire node riservato/build.cjs e node riservato/server.cjs dalla cartella
+   Calendari-Janus. Il server ascolta solo su 127.0.0.1.
+5. Collegare Cloudflare Tunnel a http://127.0.0.1:8780. Non esporre la porta
+   del gestionale (8765), la verifica ChatGPT (8766) o l'intera cartella archivio.
+6. Rendere disponibili sul server, con sincronizzazione affidabile e scritture
+   atomiche, stato.json ed esportazioni/<revisione>/{mattina,sera,docenti}.json.
+   Al momento legge l'archivio locale esistente: il trasporto verso un hosting
+   remoto resta da configurare. Non copiare credenziali nel sito o in Git pubblico.
+   Un'esportazione mancante restituisce 503, senza mostrare una vecchia copia.
+7. Verificare nel browser reale email autorizzata, email estranea, logout,
+   scadenza, filtri dei tre calendari e una modifica approvata da Janus.
+   Le prove automatiche usano firme di test: non confermano un account Cloudflare reale.
+
+Passaggio finale, solo dopo la prova della versione riservata
+- Ritirare/disabilitare TUTTE le vecchie pagine Delera. I template originali
+  contengono copie incorporate dei dati: chiudere solo GitHub non è sufficiente.
+- Disabilitare GitHub Pages e rendere privato janus-calendari; verificare come
+  visitatore anonimo che repository, raw JSON e vecchi URL Pages non rispondano.
+- Verificare separatamente la condivisione del foglio Google: solo persone
+  autorizzate, più l'account di servizio necessario agli aggiornamenti.
+- Verificare che gli aggiornamenti continuino sull'area riservata e sul foglio.
+- Consegnare il nuovo link ai colleghi. Le copie precedentemente scaricate da
+  terzi non sono revocabili tramite questi cambiamenti.
+
+Test: node --test riservato/test.cjs
+Documentazione del controllo token:
+https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/authorization-cookie/validating-json/
