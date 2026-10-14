@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-14T13:31:01.017Z",
+ "aggiornato": "2026-10-14T15:27:04.401Z",
  "lezioni": [
   {
    "id": "L001",
@@ -1487,7 +1487,13 @@
     "sportivo",
     "turismo"
    ],
-   "affiancaA": []
+   "affiancaA": [
+    "les",
+    "linguistico",
+    "socio-sanitario",
+    "turismo",
+    "ipseoa"
+   ]
   },
   {
    "id": "L096",
@@ -1515,7 +1521,14 @@
    "room": "AULA 3",
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/84208963789",
-   "status": "scheduled"
+   "status": "scheduled",
+   "affiancaA": [
+    "les",
+    "linguistico",
+    "socio-sanitario",
+    "turismo",
+    "ipseoa"
+   ]
   },
   {
    "id": "L098",
@@ -2885,46 +2898,6 @@
    ]
   },
   {
-   "id": "LJ20261014_5",
-   "weekday": 3,
-   "start": "10:00",
-   "end": "10:50",
-   "subject": "FRANCESE AVANZATO",
-   "year": "4/5 ANNO",
-   "class": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO",
-   "teacher": "Elisa Di Felice",
-   "room": "AULA 5",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
-   "status": "scheduled",
-   "tracks": [
-    "afm",
-    "ipseoa",
-    "les",
-    "linguistico",
-    "socio-sanitario"
-   ]
-  },
-  {
-   "id": "LJ20261014_6",
-   "weekday": 3,
-   "start": "10:00",
-   "end": "10:50",
-   "subject": "FRANCESE AVANZATO",
-   "year": "5 ANNO",
-   "class": "LES / LINGUISTICO / SOCIO SANITARIO",
-   "teacher": "Elisa Di Felice",
-   "room": "AULA 5",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
-   "status": "scheduled",
-   "tracks": [
-    "les",
-    "linguistico",
-    "socio-sanitario"
-   ]
-  },
-  {
    "id": "LJ20261014_7",
    "weekday": 3,
    "start": "12:00",
@@ -2985,6 +2958,48 @@
     "ipseoa",
     "linguistico",
     "sportivo"
+   ]
+  },
+  {
+   "id": "LJ20261014_FRA_GIO_45",
+   "weekday": 4,
+   "start": "10:00",
+   "end": "10:50",
+   "subject": "FRANCESE AVANZATO",
+   "year": "4/5 ANNO",
+   "class": "LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA",
+   "teacher": "Elisa Di Felice",
+   "room": "AULA 5",
+   "note": "Doppia scelta con Scrittura creativa",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "status": "scheduled",
+   "tracks": [
+    "les",
+    "linguistico",
+    "socio-sanitario",
+    "turismo",
+    "ipseoa"
+   ]
+  },
+  {
+   "id": "LJ20261014_FRA_GIO_5",
+   "weekday": 4,
+   "start": "10:00",
+   "end": "10:50",
+   "subject": "FRANCESE AVANZATO",
+   "year": "5 ANNO",
+   "class": "LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA",
+   "teacher": "Elisa Di Felice",
+   "room": "AULA 5",
+   "note": "Doppia scelta con Scrittura creativa",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "status": "scheduled",
+   "tracks": [
+    "les",
+    "linguistico",
+    "socio-sanitario",
+    "turismo",
+    "ipseoa"
    ]
   }
  ],
