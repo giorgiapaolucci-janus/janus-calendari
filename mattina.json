@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-14T15:27:04.401Z",
+ "aggiornato": "2026-10-15T08:16:43.972Z",
  "lezioni": [
   {
    "id": "L001",
@@ -932,14 +932,22 @@
    "weekday": 3,
    "start": "10:00",
    "end": "10:50",
-   "subject": "BIOLOGIA",
+   "subject": "SCIENZE INTEGRATE",
    "year": "3/4 ANNO",
-   "class": "LICEI (no Les)",
-   "teacher": "Luca Picarazzi",
-   "room": "AULA 2",
+   "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
+   "teacher": "Marianna Raia",
+   "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
-   "status": "scheduled"
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "status": "scheduled",
+   "tracks": [
+    "scientifico",
+    "classico",
+    "linguistico",
+    "scienze-umane",
+    "scienze-applicate",
+    "sportivo"
+   ]
   },
   {
    "id": "L063",
@@ -966,25 +974,14 @@
    "end": "10:50",
    "subject": "ED CIVICA",
    "year": "4/5 ANNO",
-   "class": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+   "class": "LES",
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/81644826135",
    "status": "scheduled",
    "tracks": [
-    "afm",
-    "classico",
-    "informatico",
-    "ipseoa",
-    "les",
-    "linguistico",
-    "mme",
-    "scientifico",
-    "scienze-applicate",
-    "socio-sanitario",
-    "sportivo",
-    "turismo"
+    "les"
    ],
    "affiancaA": []
   },
@@ -1013,25 +1010,14 @@
    "end": "10:50",
    "subject": "ED CIVICA",
    "year": "5 ANNO",
-   "class": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+   "class": "LES",
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/81644826135",
    "status": "scheduled",
    "tracks": [
-    "afm",
-    "classico",
-    "informatico",
-    "ipseoa",
-    "les",
-    "linguistico",
-    "mme",
-    "scientifico",
-    "scienze-applicate",
-    "socio-sanitario",
-    "sportivo",
-    "turismo"
+    "les"
    ],
    "affiancaA": []
   },
@@ -1083,20 +1069,14 @@
    "end": "11:50",
    "subject": "SCIENZE INTEGRATE",
    "year": "4/5 ANNO",
-   "class": "CLASSICO / LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+   "class": "LES",
    "teacher": "Luca Picarazzi",
    "room": "AULA 2",
    "note": "(+4)",
    "zoomUrl": "https://us06web.zoom.us/j/85618843652",
    "status": "scheduled",
    "tracks": [
-    "classico",
-    "les",
-    "linguistico",
-    "scientifico",
-    "scienze-applicate",
-    "scienze-umane",
-    "sportivo"
+    "les"
    ],
    "affiancaA": []
   },
@@ -1142,20 +1122,14 @@
    "end": "11:50",
    "subject": "SCIENZE INTEGRATE",
    "year": "5 ANNO",
-   "class": "CLASSICO / LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+   "class": "LES",
    "teacher": "Luca Picarazzi",
    "room": "AULA 2",
    "note": "(+4)",
    "zoomUrl": "https://us06web.zoom.us/j/85618843652",
    "status": "scheduled",
    "tracks": [
-    "classico",
-    "les",
-    "linguistico",
-    "scientifico",
-    "scienze-applicate",
-    "scienze-umane",
-    "sportivo"
+    "les"
    ],
    "affiancaA": []
   },
@@ -1164,14 +1138,30 @@
    "weekday": 3,
    "start": "12:00",
    "end": "12:50",
-   "subject": "LAB GRAMMATICA",
+   "subject": "SCIENZE INTEGRATE",
    "year": "1/2 ANNO",
-   "class": "PER TUTTI",
-   "teacher": "Giulia Dipalo",
-   "room": "AULA 1",
+   "class": "TUTTI",
+   "teacher": "Marianna Raia",
+   "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/86952268837",
-   "status": "scheduled"
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "status": "scheduled",
+   "tracks": [
+    "scientifico",
+    "classico",
+    "linguistico",
+    "scienze-umane",
+    "scienze-applicate",
+    "sportivo",
+    "les",
+    "informatico",
+    "afm",
+    "socio-sanitario",
+    "turismo",
+    "mme",
+    "ipseoa"
+   ],
+   "esercizi": false
   },
   {
    "id": "L076",
@@ -1416,7 +1406,7 @@
    "weekday": 4,
    "start": "10:00",
    "end": "10:50",
-   "subject": "SCIENZE INTEGRATE",
+   "subject": "LAB GRAMMATICA",
    "year": "1/2 ANNO",
    "class": "TUTTI",
    "teacher": "Luca Picarazzi",
@@ -2251,24 +2241,6 @@
    "esercizi": true
   },
   {
-   "id": "A008",
-   "weekday": 3,
-   "start": "12:00",
-   "end": "12:50",
-   "subject": "LAB GRAMMATICA",
-   "year": "1/2 ANNO",
-   "class": "SOLO INDIRIZZI INDICATI",
-   "teacher": "Giulia Dipalo",
-   "room": "AULA DOCENTI",
-   "note": "Esercizi assegnati dal docente: in sede in Aula docenti, da remoto da casa. Il docente è in lezione in AULA 1 (link Zoom).",
-   "zoomUrl": "https://us06web.zoom.us/j/86952268837",
-   "status": "scheduled",
-   "tracks": [
-    "informatico"
-   ],
-   "esercizi": true
-  },
-  {
    "id": "A009",
    "weekday": 4,
    "start": "12:00",
@@ -3001,6 +2973,112 @@
     "turismo",
     "ipseoa"
    ]
+  },
+  {
+   "id": "LJ20261015_1",
+   "weekday": 3,
+   "start": "11:00",
+   "end": "11:50",
+   "subject": "SCIENZE INTEGRATE",
+   "year": "4/5 ANNO",
+   "class": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+   "teacher": "Marianna Raia",
+   "room": "AULA 5",
+   "note": "(+4)",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "status": "scheduled",
+   "tracks": [
+    "classico",
+    "linguistico",
+    "scientifico",
+    "scienze-applicate",
+    "scienze-umane",
+    "sportivo"
+   ],
+   "affiancaA": [],
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261015_2",
+   "weekday": 3,
+   "start": "11:00",
+   "end": "11:50",
+   "subject": "SCIENZE INTEGRATE",
+   "year": "5 ANNO",
+   "class": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+   "teacher": "Marianna Raia",
+   "room": "AULA 5",
+   "note": "(+4)",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "status": "scheduled",
+   "tracks": [
+    "classico",
+    "linguistico",
+    "scientifico",
+    "scienze-applicate",
+    "scienze-umane",
+    "sportivo"
+   ],
+   "affiancaA": [],
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261015_3",
+   "weekday": 3,
+   "start": "10:00",
+   "end": "10:50",
+   "subject": "LAB COMPETENZE MATURITÀ",
+   "year": "4/5 ANNO",
+   "class": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+   "teacher": "Luca Picarazzi",
+   "room": "AULA 2",
+   "note": "",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "status": "scheduled",
+   "tracks": [
+    "afm",
+    "classico",
+    "informatico",
+    "ipseoa",
+    "linguistico",
+    "mme",
+    "scientifico",
+    "scienze-applicate",
+    "socio-sanitario",
+    "sportivo",
+    "turismo"
+   ],
+   "affiancaA": [],
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261015_4",
+   "weekday": 3,
+   "start": "10:00",
+   "end": "10:50",
+   "subject": "LAB COMPETENZE MATURITÀ",
+   "year": "5 ANNO",
+   "class": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+   "teacher": "Luca Picarazzi",
+   "room": "AULA 2",
+   "note": "",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "status": "scheduled",
+   "tracks": [
+    "afm",
+    "classico",
+    "informatico",
+    "ipseoa",
+    "linguistico",
+    "mme",
+    "scientifico",
+    "scienze-applicate",
+    "socio-sanitario",
+    "sportivo",
+    "turismo"
+   ],
+   "affiancaA": [],
+   "esercizi": false
   }
  ],
  "modifiche": []

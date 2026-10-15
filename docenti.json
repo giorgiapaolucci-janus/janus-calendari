@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-14T15:27:04.401Z",
+ "aggiornato": "2026-10-15T08:16:43.972Z",
  "nomi": {
   "FV": "Federico Vani",
   "GC": "Giorgia Clementi",
@@ -16,7 +16,8 @@
   "SM": "Salvatore Martello",
   "FT": "Fabio Trerè",
   "AS": "Alessandra Sbucafratta",
-  "SZ": "Sara Mazza"
+  "SZ": "Sara Mazza",
+  "MR": "Marianna Raia"
  },
  "sostituzioni": {},
  "diurno": [
@@ -828,14 +829,14 @@
   },
   {
    "id": "L062",
-   "doc": "LP",
+   "doc": "MR",
    "day": 3,
    "hour": 10,
    "turno": "Mattina",
    "anno": "3/4",
-   "materia": "Biologia",
-   "ind": "Licei (no LES)",
-   "aula": 2,
+   "materia": "Scienze integrate",
+   "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
+   "aula": 5,
    "note": "",
    "esercizi": false
   },
@@ -860,7 +861,7 @@
    "turno": "Mattina",
    "anno": "4/5",
    "materia": "Educazione civica",
-   "ind": "AFM / Classico / ITI Informatico / IPSEOA / LES / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+   "ind": "LES",
    "aula": 7,
    "note": "",
    "esercizi": false
@@ -886,7 +887,7 @@
    "turno": "Mattina",
    "anno": "5",
    "materia": "Educazione civica",
-   "ind": "AFM / Classico / ITI Informatico / IPSEOA / LES / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+   "ind": "LES",
    "aula": 7,
    "note": "",
    "esercizi": false
@@ -951,7 +952,7 @@
    "turno": "Mattina",
    "anno": "4/5",
    "materia": "Scienze integrate",
-   "ind": "Classico / LES / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+   "ind": "LES",
    "aula": 2,
    "note": "(+4)",
    "esercizi": false
@@ -990,7 +991,7 @@
    "turno": "Mattina",
    "anno": "5",
    "materia": "Scienze integrate",
-   "ind": "Classico / LES / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+   "ind": "LES",
    "aula": 2,
    "note": "(+4)",
    "esercizi": false
@@ -1049,14 +1050,14 @@
   },
   {
    "id": "L075",
-   "doc": "GD",
+   "doc": "MR",
    "day": 3,
    "hour": 12,
    "turno": "Mattina",
    "anno": "1/2",
-   "materia": "Lab grammatica",
-   "ind": "Tutti gli indirizzi",
-   "aula": 1,
+   "materia": "Scienze integrate",
+   "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES / ITI informatico / AFM / Socio sanitario / Turismo / MME / IPSEOA",
+   "aula": 5,
    "note": "",
    "esercizi": false
   },
@@ -1137,19 +1138,6 @@
    "aula": 1,
    "note": "",
    "esercizi": false
-  },
-  {
-   "id": "A008",
-   "doc": "GD",
-   "day": 3,
-   "hour": 12,
-   "turno": "Mattina",
-   "anno": "1/2",
-   "materia": "Lab grammatica",
-   "ind": "ITI Informatico",
-   "aula": 0,
-   "note": "",
-   "esercizi": true
   },
   {
    "id": "LJ20261014_7",
@@ -1288,7 +1276,7 @@
    "hour": 10,
    "turno": "Mattina",
    "anno": "1/2",
-   "materia": "Scienze integrate",
+   "materia": "Lab grammatica",
    "ind": "Tutti gli indirizzi",
    "aula": 2,
    "note": "",
@@ -2241,6 +2229,58 @@
    "ind": "LES / Linguistico / Socio sanitario / Turismo / IPSEOA",
    "aula": 5,
    "note": "Doppia scelta con Scrittura creativa",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261015_1",
+   "doc": "MR",
+   "day": 3,
+   "hour": 11,
+   "turno": "Mattina",
+   "anno": "4/5",
+   "materia": "Scienze integrate",
+   "ind": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+   "aula": 5,
+   "note": "(+4)",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261015_2",
+   "doc": "MR",
+   "day": 3,
+   "hour": 11,
+   "turno": "Mattina",
+   "anno": "5",
+   "materia": "Scienze integrate",
+   "ind": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+   "aula": 5,
+   "note": "(+4)",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261015_3",
+   "doc": "LP",
+   "day": 3,
+   "hour": 10,
+   "turno": "Mattina",
+   "anno": "4/5",
+   "materia": "Lab Competenze Maturità",
+   "ind": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+   "aula": 2,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261015_4",
+   "doc": "LP",
+   "day": 3,
+   "hour": 10,
+   "turno": "Mattina",
+   "anno": "5",
+   "materia": "Lab Competenze Maturità",
+   "ind": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+   "aula": 2,
+   "note": "",
    "esercizi": false
   }
  ],
