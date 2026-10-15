@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-08T15:16:36.657Z",
+ "aggiornato": "2026-10-15T08:32:46.959Z",
  "lezioni": [
   {
    "id": "S001",
@@ -13,7 +13,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
     "classico"
@@ -30,7 +30,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": [
     "afm",
@@ -48,7 +48,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": [
     "informatico"
@@ -65,7 +65,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": [
     "turismo",
@@ -83,7 +83,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": [
     "mme",
@@ -102,7 +102,7 @@
    "teacher": "Luca Picarazzi",
    "room": "AULA 2",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
    "status": "scheduled",
    "tracks": [
     "scientifico",
@@ -120,7 +120,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
     "classico"
@@ -137,7 +137,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -152,7 +152,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -167,7 +167,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -182,7 +182,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -197,7 +197,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -212,7 +212,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -227,7 +227,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -242,7 +242,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -257,7 +257,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -272,7 +272,7 @@
    "teacher": "Salvatore Martello",
    "room": "AULA 1",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/86952268837",
+   "zoomUrl": "https://us06web.zoom.us/j/86952268837?pwd=M6xt0t9NUwP7mx3vpz9l5Fv3bwgRoB.1",
    "status": "scheduled",
    "tracks": [
     "informatico"
@@ -289,7 +289,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "ipseoa",
@@ -307,7 +307,7 @@
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
    "status": "scheduled",
    "tracks": [
     "afm"
@@ -324,7 +324,7 @@
    "teacher": "Luca Picarazzi",
    "room": "AULA 2",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
    "status": "scheduled",
    "tracks": [
     "scientifico",
@@ -343,7 +343,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "turismo",
@@ -361,7 +361,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": [
     "mme"
@@ -378,7 +378,7 @@
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
    "status": "scheduled",
    "tracks": [
     "afm"
@@ -395,7 +395,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -410,7 +410,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "ipseoa"
@@ -427,7 +427,7 @@
    "teacher": "Salvatore Martello",
    "room": "AULA 1",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/86952268837",
+   "zoomUrl": "https://us06web.zoom.us/j/86952268837?pwd=M6xt0t9NUwP7mx3vpz9l5Fv3bwgRoB.1",
    "status": "scheduled",
    "tracks": [
     "informatico"
@@ -444,7 +444,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "sportivo",
@@ -464,7 +464,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": [
     "mme"
@@ -481,7 +481,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -496,7 +496,7 @@
    "teacher": "Fabio Trerè",
    "room": "AULA 2",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -511,7 +511,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -526,7 +526,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -541,7 +541,7 @@
    "teacher": "Fabio Trerè",
    "room": "AULA 2",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -556,7 +556,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -571,7 +571,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
     "classico"
@@ -588,7 +588,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -603,7 +603,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -618,7 +618,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
     "classico"
@@ -635,7 +635,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -650,7 +650,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -665,7 +665,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -680,7 +680,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -695,7 +695,7 @@
    "teacher": "Fabio Trerè",
    "room": "AULA 2",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -710,7 +710,7 @@
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -725,7 +725,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -740,7 +740,7 @@
    "teacher": "Fabio Trerè",
    "room": "AULA 2",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -755,7 +755,7 @@
    "teacher": "Luca Picarazzi",
    "room": "AULA 2",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652",
+   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
    "status": "scheduled",
    "tracks": [
     "classico"
@@ -772,7 +772,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -787,7 +787,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": [
     "sportivo",
@@ -808,7 +808,7 @@
    "teacher": "Giulia Dipalo",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
     "les"
@@ -825,7 +825,7 @@
    "teacher": "Alessandra Sbucafratta",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -840,7 +840,7 @@
    "teacher": "Giorgia Clementi",
    "room": "AULA 1",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/86952268837",
+   "zoomUrl": "https://us06web.zoom.us/j/86952268837?pwd=M6xt0t9NUwP7mx3vpz9l5Fv3bwgRoB.1",
    "status": "scheduled",
    "tracks": [
     "afm",
@@ -858,7 +858,7 @@
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
    "status": "scheduled",
    "tracks": [
     "informatico"
@@ -875,7 +875,7 @@
    "teacher": "Giorgia Clementi",
    "room": "AULA 1",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/86952268837",
+   "zoomUrl": "https://us06web.zoom.us/j/86952268837?pwd=M6xt0t9NUwP7mx3vpz9l5Fv3bwgRoB.1",
    "status": "scheduled",
    "tracks": [
     "turismo",
@@ -893,7 +893,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": [
     "scientifico",
@@ -912,7 +912,7 @@
    "teacher": "Sara Mazza",
    "room": "AULA 7",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
    "status": "scheduled",
    "tracks": [
     "afm"
@@ -929,7 +929,7 @@
    "teacher": "Sara Mazza",
    "room": "AULA 7",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
    "status": "scheduled",
    "tracks": [
     "turismo"
@@ -946,7 +946,7 @@
    "teacher": "Sara Mazza",
    "room": "AULA 7",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
    "status": "scheduled",
    "tracks": [
     "afm"
@@ -963,7 +963,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": [
     "scientifico",
@@ -982,7 +982,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
     "classico"
@@ -999,7 +999,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": "*",
    "affiancaA": [
@@ -1017,7 +1017,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "afm"
@@ -1034,7 +1034,7 @@
    "teacher": "Gabriele Luverà",
    "room": "AULA 6",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117",
+   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled",
    "tracks": "*",
    "affiancaA": [
@@ -1052,7 +1052,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "les",
@@ -1070,7 +1070,7 @@
    "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
     "classico"
@@ -1087,7 +1087,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "afm"
@@ -1104,7 +1104,7 @@
    "teacher": "Alessandra Sbucafratta",
    "room": "AULA 1",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/86952268837",
+   "zoomUrl": "https://us06web.zoom.us/j/86952268837?pwd=M6xt0t9NUwP7mx3vpz9l5Fv3bwgRoB.1",
    "status": "scheduled",
    "tracks": [
     "sportivo",
@@ -1122,7 +1122,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "les",
@@ -1140,7 +1140,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -1155,7 +1155,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -1170,7 +1170,7 @@
    "teacher": "Alessandra Sbucafratta",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -1185,7 +1185,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": "*"
   },
@@ -1200,7 +1200,7 @@
    "teacher": "Sara Mazza",
    "room": "AULA 7",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
    "status": "scheduled",
    "tracks": [
     "ipseoa"
@@ -1217,7 +1217,7 @@
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84208963789",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "tracks": [
     "informatico",
@@ -1235,7 +1235,7 @@
    "teacher": "Alessandra Sbucafratta",
    "room": "AULA 4",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947",
+   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": "*"
   }
