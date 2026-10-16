@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-15T08:32:46.946Z",
+ "aggiornato": "2026-10-16T14:30:25.757Z",
  "lezioni": [
   {
    "id": "S001",
@@ -815,21 +815,6 @@
    ]
   },
   {
-   "id": "S051",
-   "weekday": 4,
-   "start": "18:00",
-   "end": "18:50",
-   "subject": "SCIENZE",
-   "year": "1/2 ANNO",
-   "class": "SERALE",
-   "teacher": "Alessandra Sbucafratta",
-   "room": "AULA 4",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
-   "status": "scheduled",
-   "tracks": "*"
-  },
-  {
    "id": "S052",
    "weekday": 4,
    "start": "18:00",
@@ -1101,10 +1086,10 @@
    "subject": "SCIENZE",
    "year": "5 ANNO",
    "class": "SERALE",
-   "teacher": "Alessandra Sbucafratta",
-   "room": "AULA 1",
+   "teacher": "Marianna Raia",
+   "room": "AULA 5",
    "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/86952268837?pwd=M6xt0t9NUwP7mx3vpz9l5Fv3bwgRoB.1",
+   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": [
     "sportivo",
@@ -1167,7 +1152,7 @@
    "subject": "STORIA",
    "year": "5 ANNO",
    "class": "SERALE",
-   "teacher": "Alessandra Sbucafratta",
+   "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
@@ -1232,7 +1217,7 @@
    "subject": "STORIA",
    "year": "5 ANNO",
    "class": "SERALE",
-   "teacher": "Alessandra Sbucafratta",
+   "teacher": "Alessandra Albano",
    "room": "AULA 4",
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
