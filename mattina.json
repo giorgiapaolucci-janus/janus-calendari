@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-16T05:51:55.605Z",
+ "aggiornato": "2026-10-16T14:05:53.446Z",
  "lezioni": [
   {
    "id": "L001",
@@ -956,31 +956,14 @@
    "end": "10:50",
    "subject": "SCIENZE UMANE",
    "year": "4/5 ANNO",
-   "class": "SCIENZE UMANE",
+   "class": "Scienze umane / LES",
    "teacher": "Giulia Dipalo",
    "room": "AULA 4",
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
-    "scienze-umane"
-   ],
-   "affiancaA": []
-  },
-  {
-   "id": "L064",
-   "weekday": 3,
-   "start": "10:00",
-   "end": "10:50",
-   "subject": "ED CIVICA",
-   "year": "4/5 ANNO",
-   "class": "LES",
-   "teacher": "Lucia Carlucci",
-   "room": "AULA 7",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
-   "status": "scheduled",
-   "tracks": [
+    "scienze-umane",
     "les"
    ],
    "affiancaA": []
@@ -992,31 +975,14 @@
    "end": "10:50",
    "subject": "SCIENZE UMANE",
    "year": "5 ANNO",
-   "class": "SCIENZE UMANE",
+   "class": "Scienze umane / LES",
    "teacher": "Giulia Dipalo",
    "room": "AULA 4",
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/83343621947?pwd=S1K5QGcebZc2VbKIiR0YgXHkHKbazY.1",
    "status": "scheduled",
    "tracks": [
-    "scienze-umane"
-   ],
-   "affiancaA": []
-  },
-  {
-   "id": "L066",
-   "weekday": 3,
-   "start": "10:00",
-   "end": "10:50",
-   "subject": "ED CIVICA",
-   "year": "5 ANNO",
-   "class": "LES",
-   "teacher": "Lucia Carlucci",
-   "room": "AULA 7",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
-   "status": "scheduled",
-   "tracks": [
+    "scienze-umane",
     "les"
    ],
    "affiancaA": []
@@ -1063,24 +1029,6 @@
    "affiancaA": []
   },
   {
-   "id": "L071",
-   "weekday": 3,
-   "start": "11:00",
-   "end": "11:50",
-   "subject": "SCIENZE INTEGRATE",
-   "year": "4/5 ANNO",
-   "class": "LES",
-   "teacher": "Luca Picarazzi",
-   "room": "AULA 2",
-   "note": "(+4)",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
-   "status": "scheduled",
-   "tracks": [
-    "les"
-   ],
-   "affiancaA": []
-  },
-  {
    "id": "L072",
    "weekday": 3,
    "start": "11:00",
@@ -1112,24 +1060,6 @@
     "les",
     "linguistico",
     "socio-sanitario"
-   ],
-   "affiancaA": []
-  },
-  {
-   "id": "L074",
-   "weekday": 3,
-   "start": "11:00",
-   "end": "11:50",
-   "subject": "SCIENZE INTEGRATE",
-   "year": "5 ANNO",
-   "class": "LES",
-   "teacher": "Luca Picarazzi",
-   "room": "AULA 2",
-   "note": "(+4)",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
-   "status": "scheduled",
-   "tracks": [
-    "les"
    ],
    "affiancaA": []
   },
@@ -1457,7 +1387,7 @@
    "end": "10:50",
    "subject": "SCRITTURA CREATIVA",
    "year": "4/5 ANNO",
-   "class": "CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+   "class": "Classico / ITI Informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
    "teacher": "Martina Branca",
    "room": "AULA 3",
    "note": "",
@@ -1467,7 +1397,6 @@
     "classico",
     "informatico",
     "ipseoa",
-    "les",
     "linguistico",
     "mme",
     "scientifico",
@@ -1478,7 +1407,6 @@
     "turismo"
    ],
    "affiancaA": [
-    "les",
     "linguistico",
     "socio-sanitario",
     "turismo",
@@ -1513,7 +1441,6 @@
    "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
    "status": "scheduled",
    "affiancaA": [
-    "les",
     "linguistico",
     "socio-sanitario",
     "turismo",
@@ -2785,7 +2712,7 @@
    "end": "11:50",
    "subject": "SCIENZE MOTORIE",
    "year": "4/5 ANNO",
-   "class": "IPSEOA / SOCIO SANITARIO",
+   "class": "IPSEOA / Socio sanitario / LES",
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
@@ -2793,7 +2720,8 @@
    "status": "scheduled",
    "tracks": [
     "ipseoa",
-    "socio-sanitario"
+    "socio-sanitario",
+    "les"
    ]
   },
   {
@@ -2803,14 +2731,15 @@
    "end": "11:50",
    "subject": "SCIENZE MOTORIE",
    "year": "5 ANNO",
-   "class": "SOCIO SANITARIO",
+   "class": "Socio sanitario / LES",
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
    "status": "scheduled",
    "tracks": [
-    "socio-sanitario"
+    "socio-sanitario",
+    "les"
    ]
   },
   {
@@ -2942,7 +2871,7 @@
    "class": "LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA",
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
-   "note": "Doppia scelta con Scrittura creativa",
+   "note": "Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa",
    "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": [
@@ -2963,7 +2892,7 @@
    "class": "LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA",
    "teacher": "Elisa Di Felice",
    "room": "AULA 5",
-   "note": "Doppia scelta con Scrittura creativa",
+   "note": "Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa",
    "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
    "status": "scheduled",
    "tracks": [
@@ -3098,6 +3027,42 @@
     "scienze-umane",
     "les"
    ]
+  },
+  {
+   "id": "LJ20261016_LES_1",
+   "weekday": 4,
+   "start": "10:00",
+   "end": "10:50",
+   "subject": "ECONOMIA POLITICA",
+   "year": "4/5 ANNO",
+   "class": "LES",
+   "teacher": "Lucia Carlucci",
+   "room": "AULA 7",
+   "note": "",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
+   "status": "scheduled",
+   "tracks": [
+    "les"
+   ],
+   "affiancaA": []
+  },
+  {
+   "id": "LJ20261016_LES_2",
+   "weekday": 4,
+   "start": "10:00",
+   "end": "10:50",
+   "subject": "ECONOMIA POLITICA",
+   "year": "5 ANNO",
+   "class": "LES",
+   "teacher": "Lucia Carlucci",
+   "room": "AULA 7",
+   "note": "",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
+   "status": "scheduled",
+   "tracks": [
+    "les"
+   ],
+   "affiancaA": []
   }
  ],
  "modifiche": []

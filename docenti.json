@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-16T05:51:55.605Z",
+ "aggiornato": "2026-10-16T14:05:53.446Z",
  "nomi": {
   "FV": "Federico Vani",
   "GC": "Giorgia Clementi",
@@ -848,21 +848,8 @@
    "turno": "Mattina",
    "anno": "4/5",
    "materia": "Scienze umane",
-   "ind": "Scienze umane",
+   "ind": "Scienze umane / LES",
    "aula": 4,
-   "note": "",
-   "esercizi": false
-  },
-  {
-   "id": "L064",
-   "doc": "LC",
-   "day": 3,
-   "hour": 10,
-   "turno": "Mattina",
-   "anno": "4/5",
-   "materia": "Educazione civica",
-   "ind": "LES",
-   "aula": 7,
    "note": "",
    "esercizi": false
   },
@@ -874,21 +861,8 @@
    "turno": "Mattina",
    "anno": "5",
    "materia": "Scienze umane",
-   "ind": "Scienze umane",
+   "ind": "Scienze umane / LES",
    "aula": 4,
-   "note": "",
-   "esercizi": false
-  },
-  {
-   "id": "L066",
-   "doc": "LC",
-   "day": 3,
-   "hour": 10,
-   "turno": "Mattina",
-   "anno": "5",
-   "materia": "Educazione civica",
-   "ind": "LES",
-   "aula": 7,
    "note": "",
    "esercizi": false
   },
@@ -945,19 +919,6 @@
    "esercizi": false
   },
   {
-   "id": "L071",
-   "doc": "LP",
-   "day": 3,
-   "hour": 11,
-   "turno": "Mattina",
-   "anno": "4/5",
-   "materia": "Scienze integrate",
-   "ind": "LES",
-   "aula": 2,
-   "note": "(+4)",
-   "esercizi": false
-  },
-  {
    "id": "L072",
    "doc": "GL",
    "day": 3,
@@ -981,19 +942,6 @@
    "ind": "AFM / LES / Linguistico / Socio sanitario",
    "aula": 3,
    "note": "( +4)",
-   "esercizi": false
-  },
-  {
-   "id": "L074",
-   "doc": "LP",
-   "day": 3,
-   "hour": 11,
-   "turno": "Mattina",
-   "anno": "5",
-   "materia": "Scienze integrate",
-   "ind": "LES",
-   "aula": 2,
-   "note": "(+4)",
    "esercizi": false
   },
   {
@@ -1030,7 +978,7 @@
    "turno": "Mattina",
    "anno": "4/5",
    "materia": "Scienze motorie",
-   "ind": "IPSEOA / Socio sanitario",
+   "ind": "IPSEOA / Socio sanitario / LES",
    "aula": 7,
    "note": "",
    "esercizi": false
@@ -1043,7 +991,7 @@
    "turno": "Mattina",
    "anno": "5",
    "materia": "Scienze motorie",
-   "ind": "Socio sanitario",
+   "ind": "Socio sanitario / LES",
    "aula": 7,
    "note": "",
    "esercizi": false
@@ -1316,7 +1264,7 @@
    "turno": "Mattina",
    "anno": "4/5",
    "materia": "Scrittura creativa",
-   "ind": "Classico / ITI Informatico / IPSEOA / LES / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
+   "ind": "Classico / ITI Informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
    "aula": 3,
    "note": "",
    "esercizi": false
@@ -1342,7 +1290,7 @@
    "turno": "Mattina",
    "anno": "5",
    "materia": "Scrittura creativa",
-   "ind": "Tutti gli indirizzi",
+   "ind": "Tutti gli indirizzi tranne LES",
    "aula": 3,
    "note": "",
    "esercizi": false
@@ -2215,7 +2163,7 @@
    "materia": "Francese avanzato",
    "ind": "LES / Linguistico / Socio sanitario / Turismo / IPSEOA",
    "aula": 5,
-   "note": "Doppia scelta con Scrittura creativa",
+   "note": "Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa",
    "esercizi": false
   },
   {
@@ -2228,7 +2176,7 @@
    "materia": "Francese avanzato",
    "ind": "LES / Linguistico / Socio sanitario / Turismo / IPSEOA",
    "aula": 5,
-   "note": "Doppia scelta con Scrittura creativa",
+   "note": "Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa",
    "esercizi": false
   },
   {
@@ -2293,6 +2241,32 @@
    "materia": "Lab compiti",
    "ind": "ITI Informatico / Scienze umane / LES",
    "aula": 3,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261016_LES_1",
+   "doc": "LC",
+   "day": 4,
+   "hour": 10,
+   "turno": "Mattina",
+   "anno": "4/5",
+   "materia": "Economia politica",
+   "ind": "LES",
+   "aula": 7,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261016_LES_2",
+   "doc": "LC",
+   "day": 4,
+   "hour": 10,
+   "turno": "Mattina",
+   "anno": "5",
+   "materia": "Economia politica",
+   "ind": "LES",
+   "aula": 7,
    "note": "",
    "esercizi": false
   }
