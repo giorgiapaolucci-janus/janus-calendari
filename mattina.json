@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-15T08:32:46.937Z",
+ "aggiornato": "2026-10-16T05:51:55.605Z",
  "lezioni": [
   {
    "id": "L001",
@@ -3079,6 +3079,25 @@
    ],
    "affiancaA": [],
    "esercizi": false
+  },
+  {
+   "id": "LJ20261016_1",
+   "weekday": 5,
+   "start": "09:00",
+   "end": "09:50",
+   "subject": "LAB COMPITI",
+   "year": "1/2 ANNO",
+   "class": "ITI INFORMATICO / SCIENZE UMANE / LES",
+   "teacher": "Beatrice Lungu",
+   "room": "AULA 3",
+   "note": "",
+   "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
+   "status": "scheduled",
+   "tracks": [
+    "informatico",
+    "scienze-umane",
+    "les"
+   ]
   }
  ],
  "modifiche": []

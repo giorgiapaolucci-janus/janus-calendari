@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-15T08:16:43.972Z",
+ "aggiornato": "2026-10-16T05:51:55.605Z",
  "nomi": {
   "FV": "Federico Vani",
   "GC": "Giorgia Clementi",
@@ -1524,7 +1524,7 @@
    "turno": "Mattina",
    "anno": "1/2",
    "materia": "Lab matematica",
-   "ind": "Tutti gli indirizzi",
+   "ind": "Scientifico / Classico / Linguistico / Scienze applicate / Sportivo / Socio sanitario / Turismo / MME / IPSEOA",
    "aula": 6,
    "note": "",
    "esercizi": false
@@ -2280,6 +2280,19 @@
    "materia": "Lab Competenze Maturità",
    "ind": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
    "aula": 2,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261016_1",
+   "doc": "BL",
+   "day": 5,
+   "hour": 9,
+   "turno": "Mattina",
+   "anno": "1/2",
+   "materia": "Lab compiti",
+   "ind": "ITI Informatico / Scienze umane / LES",
+   "aula": 3,
    "note": "",
    "esercizi": false
   }
