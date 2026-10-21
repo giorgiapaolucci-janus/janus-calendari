@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-16T14:30:25.757Z",
+ "aggiornato": "2026-10-21T14:17:16.966Z",
  "nomi": {
   "FV": "Federico Vani",
   "GC": "Giorgia Clementi",
@@ -1542,19 +1542,6 @@
    "esercizi": false
   },
   {
-   "id": "LJ20261014_2",
-   "doc": "LC",
-   "day": 5,
-   "hour": 9,
-   "turno": "Mattina",
-   "anno": "1/2",
-   "materia": "Economia aziendale",
-   "ind": "AFM",
-   "aula": 7,
-   "note": "",
-   "esercizi": false
-  },
-  {
    "id": "L112",
    "doc": "LP",
    "day": 5,
@@ -2238,7 +2225,7 @@
    "turno": "Mattina",
    "anno": "1/2",
    "materia": "Lab compiti",
-   "ind": "ITI Informatico / Scienze umane / LES",
+   "ind": "ITI Informatico / Scienze umane / LES / AFM",
    "aula": 3,
    "note": "",
    "esercizi": false

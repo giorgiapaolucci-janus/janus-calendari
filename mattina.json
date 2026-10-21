@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-16T14:30:25.757Z",
+ "aggiornato": "2026-10-21T14:17:16.966Z",
  "lezioni": [
   {
    "id": "L001",
@@ -2743,23 +2743,6 @@
    ]
   },
   {
-   "id": "LJ20261014_2",
-   "weekday": 5,
-   "start": "09:00",
-   "end": "09:50",
-   "subject": "ECONOMIA AZIENDALE",
-   "year": "1/2 ANNO",
-   "class": "AFM",
-   "teacher": "Lucia Carlucci",
-   "room": "AULA 7",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
-   "status": "scheduled",
-   "tracks": [
-    "afm"
-   ]
-  },
-  {
    "id": "LJ20261014_3",
    "weekday": 5,
    "start": "11:00",
@@ -3016,7 +2999,7 @@
    "end": "09:50",
    "subject": "LAB COMPITI",
    "year": "1/2 ANNO",
-   "class": "ITI INFORMATICO / SCIENZE UMANE / LES",
+   "class": "ITI INFORMATICO / SCIENZE UMANE / LES / AFM",
    "teacher": "Beatrice Lungu",
    "room": "AULA 3",
    "note": "",
@@ -3025,7 +3008,8 @@
    "tracks": [
     "informatico",
     "scienze-umane",
-    "les"
+    "les",
+    "afm"
    ]
   },
   {
