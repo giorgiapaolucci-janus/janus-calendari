@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-21T14:17:16.966Z",
+ "aggiornato": "2026-10-22T14:26:16.569Z",
  "lezioni": [
   {
    "id": "L001",
@@ -934,7 +934,7 @@
    "end": "10:50",
    "subject": "SCIENZE INTEGRATE",
    "year": "3/4 ANNO",
-   "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
+   "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
    "teacher": "Marianna Raia",
    "room": "AULA 5",
    "note": "",
@@ -946,7 +946,8 @@
     "linguistico",
     "scienze-umane",
     "scienze-applicate",
-    "sportivo"
+    "sportivo",
+    "socio-sanitario"
    ]
   },
   {
@@ -1462,24 +1463,6 @@
    "status": "scheduled"
   },
   {
-   "id": "L099",
-   "weekday": 4,
-   "start": "11:00",
-   "end": "11:50",
-   "subject": "BIOLOGIA",
-   "year": "3/4 ANNO",
-   "class": "LICEI /no Les",
-   "teacher": "Luca Picarazzi",
-   "room": "AULA 2",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/85618843652?pwd=8N6D1AofxXsY2pX4rv9aqe8RHhubBY.1",
-   "status": "scheduled",
-   "tracks": [
-    "classico",
-    "scienze-applicate"
-   ]
-  },
-  {
    "id": "L141",
    "weekday": 4,
    "start": "11:00",
@@ -1603,20 +1586,6 @@
    "room": "AULA 3",
    "note": "(+4)",
    "zoomUrl": "https://us06web.zoom.us/j/84208963789?pwd=ghOZCihNJl9LvGFydI4SHbpaDlaCp3.1",
-   "status": "scheduled"
-  },
-  {
-   "id": "L110",
-   "weekday": 5,
-   "start": "09:00",
-   "end": "09:50",
-   "subject": "LAB MATEMATICA",
-   "year": "1/2 ANNO",
-   "class": "TUTTI",
-   "teacher": "Gabriele Luverà",
-   "room": "AULA 6",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/89274784117?pwd=zvSreZ7vcSJ1w8WYVJKkgBLsyXDFqA.1",
    "status": "scheduled"
   },
   {
@@ -1899,20 +1868,6 @@
    "affiancaA": []
   },
   {
-   "id": "L142",
-   "weekday": 5,
-   "start": "11:00",
-   "end": "11:50",
-   "subject": "LAB ITALIANO",
-   "year": "3/4 ANNO",
-   "class": "TUTTI",
-   "teacher": "Elisa Di Felice",
-   "room": "AULA 5",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
-   "status": "scheduled"
-  },
-  {
    "id": "L132",
    "weekday": 5,
    "start": "11:00",
@@ -1948,24 +1903,6 @@
    "status": "scheduled"
   },
   {
-   "id": "L144",
-   "weekday": 5,
-   "start": "11:00",
-   "end": "11:50",
-   "subject": "LAB ITALIANO",
-   "year": "4/5 ANNO",
-   "class": "CLASSICO",
-   "teacher": "Elisa Di Felice",
-   "room": "AULA 5",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
-   "status": "scheduled",
-   "tracks": [
-    "classico"
-   ],
-   "affiancaA": []
-  },
-  {
    "id": "L134",
    "weekday": 5,
    "start": "11:00",
@@ -1999,25 +1936,6 @@
    "note": "",
    "zoomUrl": "https://us06web.zoom.us/j/86952268837?pwd=M6xt0t9NUwP7mx3vpz9l5Fv3bwgRoB.1",
    "status": "scheduled"
-  },
-  {
-   "id": "L145",
-   "weekday": 5,
-   "start": "11:00",
-   "end": "11:50",
-   "subject": "LAB ITALIANO",
-   "year": "5 ANNO",
-   "class": "CLASSICO / IPSEOA",
-   "teacher": "Elisa Di Felice",
-   "room": "AULA 5",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/84144422731?pwd=l7NgcLrF4JwYygbyxNBbR4mGMHA2Yr.1",
-   "status": "scheduled",
-   "tracks": [
-    "classico",
-    "ipseoa"
-   ],
-   "affiancaA": []
   },
   {
    "id": "L136",
@@ -2301,7 +2219,7 @@
    "end": "10:50",
    "subject": "ED CIVICA",
    "year": "3/4 ANNO",
-   "class": "SOLO INDIRIZZI INDICATI",
+   "class": "SOLO INDIRIZZI INDICATI / ITI Informatico",
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
@@ -2313,7 +2231,8 @@
     "linguistico",
     "scientifico",
     "scienze-applicate",
-    "sportivo"
+    "sportivo",
+    "informatico"
    ]
   },
   {
@@ -2333,23 +2252,6 @@
     "les"
    ],
    "esercizi": true
-  },
-  {
-   "id": "A020",
-   "weekday": 3,
-   "start": "10:00",
-   "end": "10:50",
-   "subject": "ED CIVICA",
-   "year": "3/4 ANNO",
-   "class": "SOLO INDIRIZZI INDICATI",
-   "teacher": "Lucia Carlucci",
-   "room": "AULA 7",
-   "note": "",
-   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
-   "status": "scheduled",
-   "tracks": [
-    "socio-sanitario"
-   ]
   },
   {
    "id": "A021",
@@ -2712,7 +2614,7 @@
    "end": "11:50",
    "subject": "SCIENZE MOTORIE",
    "year": "4/5 ANNO",
-   "class": "IPSEOA / Socio sanitario / LES",
+   "class": "IPSEOA / Socio sanitario / LES / ITI Informatico",
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
@@ -2721,7 +2623,8 @@
    "tracks": [
     "ipseoa",
     "socio-sanitario",
-    "les"
+    "les",
+    "informatico"
    ]
   },
   {
@@ -2731,7 +2634,7 @@
    "end": "11:50",
    "subject": "SCIENZE MOTORIE",
    "year": "5 ANNO",
-   "class": "Socio sanitario / LES",
+   "class": "Socio sanitario / LES / ITI Informatico",
    "teacher": "Lucia Carlucci",
    "room": "AULA 7",
    "note": "",
@@ -2739,7 +2642,8 @@
    "status": "scheduled",
    "tracks": [
     "socio-sanitario",
-    "les"
+    "les",
+    "informatico"
    ]
   },
   {
@@ -3047,6 +2951,44 @@
     "les"
    ],
    "affiancaA": []
+  },
+  {
+   "id": "LJ20261022_AFM_45",
+   "weekday": 5,
+   "start": "12:00",
+   "end": "12:50",
+   "subject": "ECONOMIA AZIENDALE",
+   "year": "4/5 ANNO",
+   "class": "AFM",
+   "teacher": "Lucia Carlucci",
+   "room": "AULA 7",
+   "note": "",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
+   "status": "scheduled",
+   "tracks": [
+    "afm"
+   ],
+   "affiancaA": [],
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261022_AFM_5",
+   "weekday": 5,
+   "start": "12:00",
+   "end": "12:50",
+   "subject": "ECONOMIA AZIENDALE",
+   "year": "5 ANNO",
+   "class": "AFM",
+   "teacher": "Lucia Carlucci",
+   "room": "AULA 7",
+   "note": "",
+   "zoomUrl": "https://us06web.zoom.us/j/81644826135?pwd=BnjxUnNnRbaHy1jhYhKsjTu3a15BFu.1",
+   "status": "scheduled",
+   "tracks": [
+    "afm"
+   ],
+   "affiancaA": [],
+   "esercizi": false
   }
  ],
  "modifiche": []

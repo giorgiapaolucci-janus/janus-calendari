@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-21T14:17:16.966Z",
+ "aggiornato": "2026-10-22T14:26:16.569Z",
  "nomi": {
   "FV": "Federico Vani",
   "GC": "Giorgia Clementi",
@@ -834,7 +834,7 @@
    "turno": "Mattina",
    "anno": "3/4",
    "materia": "Scienze integrate",
-   "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
+   "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
    "aula": 5,
    "note": "",
    "esercizi": false
@@ -862,19 +862,6 @@
    "materia": "Scienze umane",
    "ind": "Scienze umane / LES",
    "aula": 4,
-   "note": "",
-   "esercizi": false
-  },
-  {
-   "id": "A020",
-   "doc": "LC",
-   "day": 3,
-   "hour": 10,
-   "turno": "Mattina",
-   "anno": "3/4",
-   "materia": "Educazione civica",
-   "ind": "Socio sanitario",
-   "aula": 7,
    "note": "",
    "esercizi": false
   },
@@ -977,7 +964,7 @@
    "turno": "Mattina",
    "anno": "4/5",
    "materia": "Scienze motorie",
-   "ind": "IPSEOA / Socio sanitario / LES",
+   "ind": "IPSEOA / Socio sanitario / LES / ITI Informatico",
    "aula": 7,
    "note": "",
    "esercizi": false
@@ -990,7 +977,7 @@
    "turno": "Mattina",
    "anno": "5",
    "materia": "Scienze motorie",
-   "ind": "Socio sanitario / LES",
+   "ind": "Socio sanitario / LES / ITI Informatico",
    "aula": 7,
    "note": "",
    "esercizi": false
@@ -1093,7 +1080,7 @@
    "hour": 12,
    "turno": "Mattina",
    "anno": "4/5",
-   "materia": "Fisica",
+   "materia": "Lab fisica",
    "ind": "LES / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
    "aula": 6,
    "note": "",
@@ -1106,7 +1093,7 @@
    "hour": 12,
    "turno": "Mattina",
    "anno": "5",
-   "materia": "Fisica",
+   "materia": "Lab fisica",
    "ind": "LES / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
    "aula": 6,
    "note": "",
@@ -1321,19 +1308,6 @@
    "esercizi": false
   },
   {
-   "id": "L099",
-   "doc": "LP",
-   "day": 4,
-   "hour": 11,
-   "turno": "Mattina",
-   "anno": "3/4",
-   "materia": "Biologia",
-   "ind": "Classico / Scienze applicate",
-   "aula": 2,
-   "note": "",
-   "esercizi": false
-  },
-  {
    "id": "L141",
    "doc": "MB",
    "day": 4,
@@ -1460,19 +1434,6 @@
    "materia": "Educazione civica",
    "ind": "AFM / Socio sanitario",
    "aula": 1,
-   "note": "",
-   "esercizi": false
-  },
-  {
-   "id": "L110",
-   "doc": "GL",
-   "day": 5,
-   "hour": 9,
-   "turno": "Mattina",
-   "anno": "1/2",
-   "materia": "Lab matematica",
-   "ind": "Scientifico / Classico / Linguistico / Scienze applicate / Sportivo / Socio sanitario / Turismo / MME / IPSEOA",
-   "aula": 6,
    "note": "",
    "esercizi": false
   },
@@ -1679,7 +1640,7 @@
    "turno": "Mattina",
    "anno": "3/4",
    "materia": "Educazione civica",
-   "ind": "LES / Scienze umane / Linguistico / Scientifico / Scienze applicate / Sportivo",
+   "ind": "LES / Scienze umane / Linguistico / Scientifico / Scienze applicate / Sportivo / ITI Informatico",
    "aula": 7,
    "note": "",
    "esercizi": false
@@ -1850,45 +1811,6 @@
    "materia": "Informatica",
    "ind": "ITI",
    "aula": 1,
-   "note": "",
-   "esercizi": false
-  },
-  {
-   "id": "L142",
-   "doc": "ED",
-   "day": 5,
-   "hour": 11,
-   "turno": "Mattina",
-   "anno": "3/4",
-   "materia": "Lab italiano",
-   "ind": "Tutti gli indirizzi",
-   "aula": 5,
-   "note": "",
-   "esercizi": false
-  },
-  {
-   "id": "L144",
-   "doc": "ED",
-   "day": 5,
-   "hour": 11,
-   "turno": "Mattina",
-   "anno": "4/5",
-   "materia": "Lab italiano",
-   "ind": "Classico",
-   "aula": 5,
-   "note": "",
-   "esercizi": false
-  },
-  {
-   "id": "L145",
-   "doc": "ED",
-   "day": 5,
-   "hour": 11,
-   "turno": "Mattina",
-   "anno": "5",
-   "materia": "Lab italiano",
-   "ind": "Classico / IPSEOA",
-   "aula": 5,
    "note": "",
    "esercizi": false
   },
@@ -2082,7 +2004,7 @@
    "turno": "Mattina",
    "anno": "4/5",
    "materia": "Lab matematica",
-   "ind": "Tutti gli indirizzi",
+   "ind": "Tutti gli indirizzi tranne AFM",
    "aula": 6,
    "note": "",
    "esercizi": false
@@ -2108,7 +2030,7 @@
    "turno": "Mattina",
    "anno": "5",
    "materia": "Lab matematica",
-   "ind": "Tutti gli indirizzi",
+   "ind": "Tutti gli indirizzi tranne AFM",
    "aula": 6,
    "note": "",
    "esercizi": false
@@ -2252,6 +2174,32 @@
    "anno": "5",
    "materia": "Economia politica",
    "ind": "LES",
+   "aula": 7,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261022_AFM_45",
+   "doc": "LC",
+   "day": 5,
+   "hour": 12,
+   "turno": "Mattina",
+   "anno": "4/5",
+   "materia": "Economia aziendale",
+   "ind": "AFM",
+   "aula": 7,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "LJ20261022_AFM_5",
+   "doc": "LC",
+   "day": 5,
+   "hour": 12,
+   "turno": "Mattina",
+   "anno": "5",
+   "materia": "Economia aziendale",
+   "ind": "AFM",
    "aula": 7,
    "note": "",
    "esercizi": false
