@@ -2,6 +2,9 @@
    - mattina.json / sera.json  (dati: lezioni + modifiche) -> da pubblicare su GitHub
    - calendario-mattina.html / calendario-sera.html (stessa grafica, dati caricati dal JSON, con copia incorporata di riserva) */
 const fs = require('fs'), vm = require('vm');
+const path = require('path');
+const accessiPath = path.join(__dirname, '../../../accessi-zoom.cjs');
+const accessiZoom = fs.existsSync(accessiPath) ? require(accessiPath) : null;
 const URL_BASE = process.env.URL_BASE || 'https://UTENTE.github.io/REPO';
 function dividi(html) {
   const re = /<script>([\s\S]*?)<\/script>/g; const m = []; let x;
@@ -44,6 +47,7 @@ function costruisci(nome, origine, jsonUrl) {
   const lezioni = JSON.parse(fix(JSON.stringify(W.JANUS_LEZIONI))).filter(l => !(Array.isArray(l.tracks) && l.tracks.length === 0));   // le lezioni con tracks vuoto (L025, L032, L069, L117) sono eliminate
   const log = esercizi(lezioni);
   const dati = { versione: 1, aggiornato: new Date().toISOString(), lezioni, modifiche: JSON.parse(fix(JSON.stringify(W.JANUS_MODIFICHE || []))) };
+  if (accessiZoom) accessiZoom.applica(dati, nome);
   // parte statica del blocco dati: indirizzi, tabella classi, ecc.
   const k = d.t.indexOf('window.JANUS_INDIRIZZI');
   const statico = d.t.slice(k);
@@ -66,7 +70,7 @@ ${statico}
   var avviato = false;
   function avvia(d) {
     if (avviato) return; avviato = true;
-    window.JANUS_LEZIONI = d.lezioni || []; window.JANUS_MODIFICHE = d.modifiche || [];
+    window.JANUS_ACCESSI_ZOOM = d.accessiZoom; window.JANUS_LEZIONI = d.lezioni || []; window.JANUS_MODIFICHE = d.modifiche || [];
     var s = document.createElement('script'); s.text = testoApp; document.body.appendChild(s);
   }
   if (!URL_DATI || URL_DATI.indexOf('UTENTE') >= 0 || !window.fetch) { avvia(incorporati); return; }

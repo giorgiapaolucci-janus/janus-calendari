@@ -7,7 +7,7 @@ for(const name of ['mattina','sera','docenti']){
  html=html.replace(/<script type="application\/json" id="janus-dati">[\s\S]*?<\/script>/,'');
  const start=html.lastIndexOf('<script>'),end=html.indexOf('</script>',start);
  if(start<0||end<0)throw Error('Template non riconosciuto');
- const assignment=name==='docenti'?'window.JANUS_DOCENTI=d;':'window.JANUS_LEZIONI=d.lezioni;window.JANUS_MODIFICHE=d.modifiche||[];';
+ const assignment=name==='docenti'?'window.JANUS_DOCENTI=d;':'window.JANUS_ACCESSI_ZOOM=d.accessiZoom;window.JANUS_LEZIONI=d.lezioni;window.JANUS_MODIFICHE=d.modifiche||[];';
  html=html.slice(0,start)+`<script>fetch('/dati/${name}.json',{cache:'no-store',credentials:'same-origin'}).then(function(r){if(!r.ok)throw Error('Accesso o dati non disponibili');return r.json();}).then(function(d){${assignment}var s=document.createElement('script');s.text=document.getElementById('janus-app').textContent;document.body.appendChild(s);}).catch(function(){document.body.textContent='Calendario non disponibile. Ricarica la pagina e verifica il tuo accesso.';});</script>`+html.slice(end+9);
  html='<nav style="padding:16px;font:16px system-ui"><a href="/">Tutti i calendari</a> · <a href="/cdn-cgi/access/logout">Esci</a></nav>'+html;
  fs.writeFileSync(path.join(out,name+'.html'),html);

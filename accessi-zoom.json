@@ -1,0 +1,397 @@
+{
+  "versione": 1,
+  "accessi": [
+    {
+      "aula": "AULA 1",
+      "ora": "09:00",
+      "meetingId": "83568027431",
+      "link": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+      "passcode": "132082"
+    },
+    {
+      "aula": "AULA 1",
+      "ora": "10:00",
+      "meetingId": "86537770129",
+      "link": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+      "passcode": "86719"
+    },
+    {
+      "aula": "AULA 1",
+      "ora": "11:00",
+      "meetingId": "81013308978",
+      "link": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+      "passcode": "859341"
+    },
+    {
+      "aula": "AULA 1",
+      "ora": "12:00",
+      "meetingId": "81161849501",
+      "link": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+      "passcode": "438503"
+    },
+    {
+      "aula": "AULA 1",
+      "ora": "17:00",
+      "meetingId": "81474490913",
+      "link": "https://us06web.zoom.us/j/81474490913?pwd=2K4jGaoLlBezAmCMaJtf21Psh2jQlO.1",
+      "passcode": "629221"
+    },
+    {
+      "aula": "AULA 1",
+      "ora": "18:00",
+      "meetingId": "86320197566",
+      "link": "https://us06web.zoom.us/j/86320197566?pwd=ZIKvXYla7pgy9KlayGiB30fuOmegtg.1",
+      "passcode": "419328"
+    },
+    {
+      "aula": "AULA 1",
+      "ora": "19:00",
+      "meetingId": "83940028245",
+      "link": "https://us06web.zoom.us/j/83940028245?pwd=fEF2N9mZwaHWMy0VxLm5YEwzCJ5i6L.1",
+      "passcode": "990985"
+    },
+    {
+      "aula": "AULA 1",
+      "ora": "20:00",
+      "meetingId": "87655303816",
+      "link": "https://us06web.zoom.us/j/87655303816?pwd=oSV9KNiV6znCgL3asnkxlbGrrzH2Ca.1",
+      "passcode": "76302"
+    },
+    {
+      "aula": "AULA 2",
+      "ora": "09:00",
+      "meetingId": "87982744860",
+      "link": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+      "passcode": "617514"
+    },
+    {
+      "aula": "AULA 2",
+      "ora": "10:00",
+      "meetingId": "82423044250",
+      "link": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+      "passcode": "290382"
+    },
+    {
+      "aula": "AULA 2",
+      "ora": "11:00",
+      "meetingId": "84104210082",
+      "link": "https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1",
+      "passcode": "517741"
+    },
+    {
+      "aula": "AULA 2",
+      "ora": "12:00",
+      "meetingId": "87556167000",
+      "link": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+      "passcode": "816044"
+    },
+    {
+      "aula": "AULA 2",
+      "ora": "17:00",
+      "meetingId": "83170304877",
+      "link": "https://us06web.zoom.us/j/83170304877?pwd=bpGf3l212xfS0EkXn2Dtruc3PtCIqy.1",
+      "passcode": "356111"
+    },
+    {
+      "aula": "AULA 2",
+      "ora": "18:00",
+      "meetingId": "83199389312",
+      "link": "https://us06web.zoom.us/j/83199389312?pwd=L3kvrW9af4QyUsl0ankmxsjiisYXIW.1",
+      "passcode": "252453"
+    },
+    {
+      "aula": "AULA 2",
+      "ora": "19:00",
+      "meetingId": "86906722891",
+      "link": "https://us06web.zoom.us/j/86906722891?pwd=3g1Rw6UUFJjgJzlmXbYNSB4Hp2kGPn.1",
+      "passcode": "587051"
+    },
+    {
+      "aula": "AULA 2",
+      "ora": "20:00",
+      "meetingId": "83415684344",
+      "link": "https://us06web.zoom.us/j/83415684344?pwd=QlZaTia2PTaZE1bkJTdFH2teCAoyw4.1",
+      "passcode": "697563"
+    },
+    {
+      "aula": "AULA 3",
+      "ora": "09:00",
+      "meetingId": "88296074447",
+      "link": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+      "passcode": "197031"
+    },
+    {
+      "aula": "AULA 3",
+      "ora": "10:00",
+      "meetingId": "82316518078",
+      "link": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+      "passcode": "419767"
+    },
+    {
+      "aula": "AULA 3",
+      "ora": "11:00",
+      "meetingId": "83608101390",
+      "link": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+      "passcode": "703830"
+    },
+    {
+      "aula": "AULA 3",
+      "ora": "12:00",
+      "meetingId": "81648812864",
+      "link": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+      "passcode": "728446"
+    },
+    {
+      "aula": "AULA 3",
+      "ora": "17:00",
+      "meetingId": "85606085123",
+      "link": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+      "passcode": "834320"
+    },
+    {
+      "aula": "AULA 3",
+      "ora": "18:00",
+      "meetingId": "87132662648",
+      "link": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+      "passcode": "677493"
+    },
+    {
+      "aula": "AULA 3",
+      "ora": "19:00",
+      "meetingId": "84979030342",
+      "link": "https://us06web.zoom.us/j/84979030342?pwd=i1IZeaxaX59eUq9cXtVwdS7Kg8Uq2a.1",
+      "passcode": "413745"
+    },
+    {
+      "aula": "AULA 3",
+      "ora": "20:00",
+      "meetingId": "86903781297",
+      "link": "https://us06web.zoom.us/j/86903781297?pwd=4ye2NxZrxbObIDPuHZHGNmX93PbjaP.1",
+      "passcode": "254135"
+    },
+    {
+      "aula": "AULA 4",
+      "ora": "09:00",
+      "meetingId": "89300227622",
+      "link": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+      "passcode": "498159"
+    },
+    {
+      "aula": "AULA 4",
+      "ora": "10:00",
+      "meetingId": "83012781888",
+      "link": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+      "passcode": "71721"
+    },
+    {
+      "aula": "AULA 4",
+      "ora": "11:00",
+      "meetingId": "83479030326",
+      "link": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+      "passcode": "925403"
+    },
+    {
+      "aula": "AULA 4",
+      "ora": "12:00",
+      "meetingId": "81444547422",
+      "link": "https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1",
+      "passcode": "612842"
+    },
+    {
+      "aula": "AULA 4",
+      "ora": "17:00",
+      "meetingId": "87303145307",
+      "link": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+      "passcode": "729635"
+    },
+    {
+      "aula": "AULA 4",
+      "ora": "18:00",
+      "meetingId": "82305647110",
+      "link": "https://us06web.zoom.us/j/82305647110?pwd=6Yjv5oyunDlOHc4bz8IdL6C5dqooDR.1",
+      "passcode": "120431"
+    },
+    {
+      "aula": "AULA 4",
+      "ora": "19:00",
+      "meetingId": "82066832845",
+      "link": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+      "passcode": "881979"
+    },
+    {
+      "aula": "AULA 4",
+      "ora": "20:00",
+      "meetingId": "84328484178",
+      "link": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+      "passcode": "960821"
+    },
+    {
+      "aula": "AULA 5",
+      "ora": "09:00",
+      "meetingId": "81877167780",
+      "link": "https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1",
+      "passcode": "513826"
+    },
+    {
+      "aula": "AULA 5",
+      "ora": "10:00",
+      "meetingId": "82496726093",
+      "link": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+      "passcode": "118862"
+    },
+    {
+      "aula": "AULA 5",
+      "ora": "11:00",
+      "meetingId": "85720114111",
+      "link": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+      "passcode": "991407"
+    },
+    {
+      "aula": "AULA 5",
+      "ora": "12:00",
+      "meetingId": "86270285894",
+      "link": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+      "passcode": "343517"
+    },
+    {
+      "aula": "AULA 5",
+      "ora": "17:00",
+      "meetingId": "88037158316",
+      "link": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+      "passcode": "140585"
+    },
+    {
+      "aula": "AULA 5",
+      "ora": "18:00",
+      "meetingId": "85276782515",
+      "link": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+      "passcode": "217016"
+    },
+    {
+      "aula": "AULA 5",
+      "ora": "19:00",
+      "meetingId": "81403969941",
+      "link": "https://us06web.zoom.us/j/81403969941?pwd=K8HTkmtbRoO3JGH3PK8lbBupkmy82a.1",
+      "passcode": "680190"
+    },
+    {
+      "aula": "AULA 5",
+      "ora": "20:00",
+      "meetingId": "82025847999",
+      "link": "https://us06web.zoom.us/j/82025847999?pwd=L1Xjo1nNbawBlDwFpJEz12rZEXugCb.1",
+      "passcode": "69921"
+    },
+    {
+      "aula": "AULA 6",
+      "ora": "09:00",
+      "meetingId": "86246038904",
+      "link": "https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1",
+      "passcode": "510304"
+    },
+    {
+      "aula": "AULA 6",
+      "ora": "10:00",
+      "meetingId": "88256833884",
+      "link": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+      "passcode": "579497"
+    },
+    {
+      "aula": "AULA 6",
+      "ora": "11:00",
+      "meetingId": "81903670591",
+      "link": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+      "passcode": "494425"
+    },
+    {
+      "aula": "AULA 6",
+      "ora": "12:00",
+      "meetingId": "85119207521",
+      "link": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+      "passcode": "434438"
+    },
+    {
+      "aula": "AULA 6",
+      "ora": "17:00",
+      "meetingId": "82163498901",
+      "link": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+      "passcode": "905998"
+    },
+    {
+      "aula": "AULA 6",
+      "ora": "18:00",
+      "meetingId": "84974333805",
+      "link": "https://us06web.zoom.us/j/84974333805?pwd=saT6DX5Pn9rjmulNpXCOsfs0i5CIpt.1",
+      "passcode": "677574"
+    },
+    {
+      "aula": "AULA 6",
+      "ora": "19:00",
+      "meetingId": "88925192676",
+      "link": "https://us06web.zoom.us/j/88925192676?pwd=EBgU5GwttDJ64puqkh3AanoU6ZsqbD.1",
+      "passcode": "246927"
+    },
+    {
+      "aula": "AULA 6",
+      "ora": "20:00",
+      "meetingId": "85415773151",
+      "link": "https://us06web.zoom.us/j/85415773151?pwd=tgVLv9Ig3xBTTVHcLdU45Mb1YfIJi1.1",
+      "passcode": "490801"
+    },
+    {
+      "aula": "AULA 7",
+      "ora": "09:00",
+      "meetingId": "83282325109",
+      "link": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+      "passcode": "350240"
+    },
+    {
+      "aula": "AULA 7",
+      "ora": "10:00",
+      "meetingId": "87593831246",
+      "link": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+      "passcode": "36079"
+    },
+    {
+      "aula": "AULA 7",
+      "ora": "11:00",
+      "meetingId": "89713424183",
+      "link": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+      "passcode": "929574"
+    },
+    {
+      "aula": "AULA 7",
+      "ora": "12:00",
+      "meetingId": "87017061368",
+      "link": "https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1",
+      "passcode": "377146"
+    },
+    {
+      "aula": "AULA 7",
+      "ora": "17:00",
+      "meetingId": "82482308991",
+      "link": "https://us06web.zoom.us/j/82482308991?pwd=hX6kfuiHlT12cxqda6pZJfu7aguK9L.1",
+      "passcode": "557005"
+    },
+    {
+      "aula": "AULA 7",
+      "ora": "18:00",
+      "meetingId": "83766661468",
+      "link": "https://us06web.zoom.us/j/83766661468?pwd=0yFhk5gLkajhb2Z1Ggbbe0T5CU3Cf2.1",
+      "passcode": "659802"
+    },
+    {
+      "aula": "AULA 7",
+      "ora": "19:00",
+      "meetingId": "83229719016",
+      "link": "https://us06web.zoom.us/j/83229719016?pwd=KvcAYbNOfDYfqXhqHdbNJmPkkbkata.1",
+      "passcode": "891408"
+    },
+    {
+      "aula": "AULA 7",
+      "ora": "20:00",
+      "meetingId": "83069508750",
+      "link": "https://us06web.zoom.us/j/83069508750?pwd=dYQOYGWBeZ8ENuzjvAvOVcXWkHr1tq.1",
+      "passcode": "646585"
+    }
+  ]
+}

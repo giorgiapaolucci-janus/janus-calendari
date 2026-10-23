@@ -194,6 +194,25 @@
 @media (min-width:768px){ .jc-mobile{display:none} }
 
 @media (prefers-reduced-motion:reduce){ .jc *{transition:none !important} }
+/* Aggiornamento manuale del calendario */
+.jc .jc-refresh{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:44px;padding:12px 18px;border:1px solid #B49ACF;border-radius:12px;
+  background:#E8D9F5;color:#35234B;font-size:14px;font-weight:700;
+  box-shadow:0 3px 10px rgba(116,76,151,.13);transition:background .15s,box-shadow .15s}
+.jc .jc-refresh:hover{background:#DCC5EF;box-shadow:0 4px 12px rgba(116,76,151,.2)}
+.jc .jc-refresh:disabled{cursor:wait;opacity:.75}
+.jc-refresh svg{width:19px;height:19px;flex:none}
+@media(max-width:540px){.jc .jc-refresh{width:100%}}
+
+
+.janus-accesso-passcode{display:flex;align-items:center;gap:6px;flex-wrap:wrap;max-width:100%}
+.janus-passcode{font-size:11px;line-height:1.3;color:var(--ink,#252846);white-space:nowrap}
+.jc-evt .janus-accesso-passcode{margin-top:auto;align-self:flex-start}
+.jc-evt .janus-accesso-passcode .jc-zoom{margin-top:0}
+.jc-mcard .janus-accesso-passcode{margin-top:8px}
+.jc-mcard .janus-accesso-passcode .jc-zoom{margin-top:0;width:auto}
+@container evt (max-width:84px){.jc-evt .janus-accesso-passcode{display:none}}
+
 </style>
 </head>
 
@@ -206,6 +225,10 @@
         <p class="jc-kicker">Istituto Janus</p>
         <h2 class="jc-title">Calendario lezioni serali</h2>
       </div>
+<button type="button" class="jc-refresh" id="jc-refresh" title="Ricarica la pagina e i dati del calendario">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5"/><path d="M4 17v-5h5"/><path d="M6.1 7a7 7 0 0 1 11.5-1L20 9M4 15l2.4 3A7 7 0 0 0 17.9 17"/></svg>
+        <span aria-live="polite">Aggiorna calendario</span>
+      </button>
     </div>
     <div class="jc-filters">
       <div class="jc-fgroup">
@@ -570,8 +593,19 @@ window.JANUS_INDIRIZZI = [
     });
   }
 
+  function accessoZoomLezione(ev) {
+    var aula=String(ev.room||'').trim().toUpperCase();
+    if(aula==='AULA DOCENTI'||ev.esercizi){
+      var m=/\/j\/(\d+)/.exec(ev.zoomUrl||'');
+      var aule={"86952268837":"AULA 1","85618843652":"AULA 2","84208963789":"AULA 3","83343621947":"AULA 4","84144422731":"AULA 5","89274784117":"AULA 6","81644826135":"AULA 7","83568027431":"AULA 1","86537770129":"AULA 1","81013308978":"AULA 1","81161849501":"AULA 1","81474490913":"AULA 1","86320197566":"AULA 1","83940028245":"AULA 1","87655303816":"AULA 1","87982744860":"AULA 2","82423044250":"AULA 2","84104210082":"AULA 2","87556167000":"AULA 2","83170304877":"AULA 2","83199389312":"AULA 2","86906722891":"AULA 2","83415684344":"AULA 2","88296074447":"AULA 3","82316518078":"AULA 3","83608101390":"AULA 3","81648812864":"AULA 3","85606085123":"AULA 3","87132662648":"AULA 3","84979030342":"AULA 3","86903781297":"AULA 3","89300227622":"AULA 4","83012781888":"AULA 4","83479030326":"AULA 4","81444547422":"AULA 4","87303145307":"AULA 4","82305647110":"AULA 4","82066832845":"AULA 4","84328484178":"AULA 4","81877167780":"AULA 5","82496726093":"AULA 5","85720114111":"AULA 5","86270285894":"AULA 5","88037158316":"AULA 5","85276782515":"AULA 5","81403969941":"AULA 5","82025847999":"AULA 5","86246038904":"AULA 6","88256833884":"AULA 6","81903670591":"AULA 6","85119207521":"AULA 6","82163498901":"AULA 6","84974333805":"AULA 6","88925192676":"AULA 6","85415773151":"AULA 6","83282325109":"AULA 7","87593831246":"AULA 7","89713424183":"AULA 7","87017061368":"AULA 7","82482308991":"AULA 7","83766661468":"AULA 7","83229719016":"AULA 7","83069508750":"AULA 7"};
+      aula=m&&aule[m[1]]||aula;
+    }
+    var accessi=window.JANUS_ACCESSI_ZOOM||{};
+    return accessi[aula+'|'+ev.start] || (ev.zoomPasscode ? {link:ev.zoomUrl,passcode:ev.zoomPasscode}:null);
+  }
   function pulsanteZoom(ev, opzioni) {
-    var url = safeUrl(ev.zoomUrl);
+    var accesso = accessoZoomLezione(ev);
+    var url = safeUrl(accesso ? accesso.link : ev.zoomUrl);
     if (ev.status === 'cancelled') return null;
     if (ev.homework) {
       var h = el('span', 'jc-zoom is-off is-home');
@@ -586,7 +620,9 @@ window.JANUS_INDIRIZZI = [
       a.setAttribute('aria-label', 'Accedi alla lezione');
       a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
       a.addEventListener('click', function (e) { e.stopPropagation(); });
-      return a;
+      if (!accesso) return a;
+      var gruppo=el('div','janus-accesso-passcode');gruppo.appendChild(a);
+      gruppo.appendChild(el('span','janus-passcode','passcode: '+accesso.passcode));return gruppo;
     }
     if (opzioni && opzioni.disabilitato) {
       var s = el('span', 'jc-zoom is-off', 'Link Zoom in arrivo');
@@ -841,6 +877,20 @@ window.JANUS_INDIRIZZI = [
     attesa = setTimeout(function () { if (window.innerWidth !== larghezzaPrec) { larghezzaPrec = window.innerWidth; disegna(); } }, 150);
   });
 })();
+
+
+(function () {
+  var pulsante = document.getElementById('jc-refresh');
+  if (!pulsante) return;
+  pulsante.addEventListener('click', function () {
+    var indirizzo = new URL(window.location.href);
+    indirizzo.searchParams.set('jc_refresh', String(Date.now()));
+    pulsante.disabled = true;
+    pulsante.querySelector('span').textContent = 'Aggiornamento…';
+    window.location.replace(indirizzo.href);
+  });
+})();
+
 </script>
 </body>
 </html>

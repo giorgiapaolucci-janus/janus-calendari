@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendario lezioni | Istituto Janus</title>
+
+<!-- =====================================================================
+     ISTITUTO JANUS | CALENDARIO LEZIONI
+     File 1 di 2: interfaccia (questo file).
+     File 2 di 2: lezioni.js  -> contiene TUTTE le lezioni. Si modifica solo quello.
+     Nessuna libreria esterna: HTML, CSS e JavaScript puri.
+     ===================================================================== -->
+
+<style>
+/* ---------- Identità visiva Janus ---------- */
+.jc{
+  --navy:#252846;      /* blu notte */
+  --peri:#788CB4;      /* azzurro / pervinca */
+  --violet:#A6529A;    /* viola */
+  --grey:#E9EAEA;      /* grigio chiaro */
+  --white:#FFFFFF;
+
+  --ink:var(--navy);
+  --muted:#666B88;
+  --line:#E9EAEA;
+  --line-strong:#D6D8E0;
+  --soft:#F7F8FA;
+  --hour:136px;        /* altezza di un'ora nella griglia (impostata dal JS) */
+
+  font-family:"Inter","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  max-width:1400px;
+  margin:0 auto;
+  padding:24px 24px 36px;
+  line-height:1.4;
+  -webkit-font-smoothing:antialiased;
+}
+.jc *,.jc *::before,.jc *::after{box-sizing:border-box}
+.jc button{font:inherit;color:inherit;cursor:pointer}
+.jc :focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+
+/* ---------- Colori delle materie (una famiglia = un colore, tutta la settimana) ---------- */
+.jc .f-umanistiche{--bg:#F3E6F1;--bar:#A6529A}   /* viola   */
+.jc .f-scienze    {--bg:#E5EAF3;--bar:#788CB4}   /* pervinca */
+.jc .f-lingue     {--bg:#DFE0EA;--bar:#252846}   /* blu notte chiaro */
+.jc .f-economia   {--bg:#ECEDEE;--bar:#9A9FB3}   /* neutro  */
+.jc .f-socio      {--bg:#EAE5F1;--bar:#8A6EAE}   /* viola-pervinca */
+.jc .f-altro      {--bg:#ECEDEE;--bar:#9A9FB3}
+
+/* ---------- Testata ---------- */
+.jc-top{display:flex;flex-direction:column;gap:18px;margin-bottom:20px}
+.jc-titlebar{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.jc-kicker{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin:0 0 4px}
+.jc-title{margin:0;font-size:26px;font-weight:650;letter-spacing:-.015em;line-height:1.15}
+
+.jc-filters{display:flex;align-items:flex-start;gap:12px 32px;flex-wrap:wrap}
+.jc-fgroup{display:flex;align-items:center;gap:10px}
+.jc-flabel{font-size:13px;color:var(--muted);white-space:nowrap}
+.jc-years{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.jc-select{appearance:none;-webkit-appearance:none;height:38px;min-width:270px;max-width:100%;padding:0 38px 0 14px;
+  border:1px solid var(--line-strong);border-radius:10px;font:inherit;font-size:13.5px;font-weight:550;color:var(--ink);cursor:pointer;
+  background:var(--white) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23252846' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m4 6 4 4 4-4'/></svg>") no-repeat right 12px center/14px;
+  transition:border-color .15s,background-color .15s}
+.jc-select:hover{border-color:var(--peri)}
+.jc-select.is-set{border-color:var(--navy);background-color:var(--soft)}
+.jc-chip{border:1px solid var(--line-strong);background:var(--white);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:550;transition:background .15s,color .15s,border-color .15s}
+.jc-chip:hover{background:var(--soft)}
+.jc-chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+
+.jc-nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.jc-nav-btns{display:flex;gap:8px}
+.jc-btn{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:1px solid var(--line-strong);background:var(--white);border-radius:10px;font-size:13.5px;font-weight:550;transition:background .15s,border-color .15s}
+.jc-btn:hover{background:var(--soft);border-color:var(--peri)}
+.jc-btn svg{width:16px;height:16px;flex:none}
+.jc-btn-today{color:var(--navy);border-color:var(--navy)}
+.jc-range{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.jc-legend{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.jc-legend span{display:inline-flex;align-items:center;gap:6px}
+.jc-legend i{width:10px;height:10px;border-radius:3px;background:var(--bar);display:inline-block}
+
+/* ---------- Vista settimanale (desktop) ---------- */
+.jc-week{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--white)}
+.jc-head,.jc-body{display:grid;grid-template-columns:64px repeat(5,minmax(0,1fr))}
+.jc-head{border-bottom:1px solid var(--line)}
+.jc-dayhead{padding:12px 8px 10px;text-align:center;border-left:1px solid var(--line)}
+.jc-dname{font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.jc-dnum{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:36px;margin-top:4px;border-radius:999px;font-size:20px;font-weight:600}
+.jc-dayhead.is-today .jc-dname{color:var(--violet)}
+.jc-dayhead.is-today .jc-dnum{background:var(--navy);color:var(--white)}
+
+.jc-body{position:relative}
+.jc-times{position:relative}
+.jc-time-label{position:absolute;right:10px;font-size:11px;font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
+.jc-col{position:relative;border-left:1px solid var(--line);
+  background-image:linear-gradient(to bottom,var(--line) 1px,transparent 1px);
+  background-size:100% var(--hour)}
+.jc-col.is-today{background-color:rgba(166,82,154,.045)}
+
+/* linea dell'orario attuale */
+.jc-nowline{position:absolute;left:0;right:0;height:2px;background:var(--violet);z-index:6;pointer-events:none}
+.jc-nowline::before{content:"";position:absolute;left:-5px;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--violet)}
+.jc-nowpill{position:absolute;right:6px;z-index:6;transform:translateY(-50%);background:var(--violet);color:var(--white);font-size:10px;font-weight:600;padding:2px 6px;border-radius:6px;font-variant-numeric:tabular-nums;pointer-events:none}
+
+/* ---------- Card lezione (desktop) ---------- */
+.jc-evt{position:absolute;overflow:hidden;background:var(--bg);border-left:3px solid var(--bar);border-radius:8px;
+  padding:7px 8px 7px 9px;display:flex;flex-direction:column;gap:2px;cursor:pointer;
+  container-type:inline-size;container-name:evt;z-index:2;
+  transition:box-shadow .15s}
+.jc-evt:hover{box-shadow:0 3px 12px rgba(37,40,70,.14);z-index:4}
+.jc-evt-subject{font-size:12.5px;font-weight:650;line-height:1.25;letter-spacing:.01em;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:break-word}
+.jc-evt.has-zoom .jc-evt-subject{-webkit-line-clamp:1}
+.jc-evt-line{font-size:11.5px;line-height:1.3;color:var(--ink);opacity:.82;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.jc-evt-time{font-variant-numeric:tabular-nums;opacity:.9}
+.jc-livetag{display:none;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
+.jc-evt.is-live .jc-livetag{display:block}
+.jc-evt.is-live{box-shadow:0 0 0 1.5px var(--violet)}
+.jc-tag{align-self:flex-start;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--navy);color:var(--white);padding:2px 6px;border-radius:5px}
+.jc-evt-cancel{font-size:11px;font-weight:600;color:var(--muted)}
+
+/* pulsante Zoom */
+.jc-zoom{display:inline-flex;align-items:center;justify-content:center;height:24px;padding:0 10px;border-radius:7px;
+  background:var(--navy);color:var(--white);font-size:11px;font-weight:600;text-decoration:none;white-space:nowrap;
+  transition:background .15s}
+.jc-zoom:hover{background:var(--violet)}
+.jc-evt .jc-zoom{margin-top:auto;align-self:flex-start}
+.jc-zoom.is-off{background:transparent;color:var(--muted);border:1px solid rgba(37,40,70,.18);font-weight:550;cursor:not-allowed}
+.jc-zoom.is-off:hover{background:transparent}
+.jc-zoom.is-home{cursor:default;color:var(--ink);border-color:rgba(37,40,70,.35)}
+
+/* lezione annullata / spostata */
+.jc-evt.is-cancelled,.jc-mcard.is-cancelled{opacity:.5}
+.jc-evt.is-cancelled .jc-evt-subject,.jc-mcard.is-cancelled .jc-m-subject{text-decoration:line-through}
+
+/* lezioni contemporanee: 2 = affiancate, 3 o più = impilate su una riga ciascuna */
+.jc-evt.is-stacked{flex-direction:row;align-items:center;gap:8px;padding:0 8px 0 9px;border-radius:6px}
+.jc-evt.is-stacked .jc-evt-subject{display:block;flex:0 1 auto;min-width:45%;white-space:nowrap;text-overflow:ellipsis;font-size:11.5px}
+.jc-evt.is-stacked .jc-evt-class{flex:1 1 0;min-width:0;font-size:11px;opacity:.75}
+.jc-evt.is-stacked.is-cancelled .jc-evt-class{opacity:.9}
+
+/* etichetta Zoom: completa se c'è spazio, breve se la card è stretta */
+.jc-zoom .s{display:none}
+@container evt (max-width:150px){
+  .jc-evt .jc-zoom .l{display:none}
+  .jc-evt .jc-zoom .s{display:inline}
+  .jc-evt .jc-zoom{padding:0 9px}
+}
+@container evt (max-width:112px){ .jc-evt-teacher,.jc-evt-room,.jc-tag,.jc-livetag{display:none !important} .jc-evt-subject{font-size:11.5px} }
+@container evt (max-width:84px){ .jc-evt .jc-zoom{display:none} }
+
+/* ---------- Vista mobile ---------- */
+.jc-mobile{display:none}
+.jc-daytabs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:16px}
+.jc-daytab{display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 0 8px;border:1px solid var(--line-strong);background:var(--white);border-radius:12px;position:relative}
+.jc-daytab .d{font-size:11px;font-weight:650;letter-spacing:.08em;color:var(--muted)}
+.jc-daytab .n{font-size:18px;font-weight:650}
+.jc-daytab.is-today::after{content:"";position:absolute;bottom:4px;width:5px;height:5px;border-radius:50%;background:var(--violet)}
+.jc-daytab[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.jc-daytab[aria-selected="true"] .d{color:#C9CFE2}
+.jc-daytab[aria-selected="true"].is-today::after{background:#E9B9E3}
+.jc-dayhead-m{display:flex;align-items:baseline;justify-content:space-between;margin:2px 2px 12px}
+.jc-dayhead-m h3{margin:0;font-size:17px;font-weight:650}
+.jc-dayhead-m span{font-size:12.5px;color:var(--muted)}
+.jc-group{display:grid;grid-template-columns:46px 1fr;gap:10px;margin-bottom:12px}
+.jc-group-time{font-size:13px;font-weight:600;color:var(--muted);padding-top:12px;font-variant-numeric:tabular-nums}
+.jc-group-cards{display:flex;flex-direction:column;gap:8px;min-width:0}
+.jc-mcard{background:var(--bg);border-left:4px solid var(--bar);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.jc-m-subject{font-size:15px;font-weight:650;line-height:1.25;overflow-wrap:anywhere}
+.jc-m-line{font-size:13px;color:var(--ink);opacity:.85}
+.jc-m-time{font-variant-numeric:tabular-nums;font-weight:600;opacity:1}
+.jc-mcard .jc-zoom{height:38px;margin-top:8px;font-size:13px;border-radius:9px;width:100%}
+.jc-mcard .jc-zoom.is-off{height:32px;font-size:12.5px}
+.jc-mcard.is-live .jc-livetag{display:block}
+.jc-empty{padding:36px 16px;text-align:center;color:var(--muted);font-size:14px;border:1px dashed var(--line-strong);border-radius:12px}
+
+/* ---------- Dettaglio lezione ---------- */
+.jc-dialog{border:0;border-radius:16px;padding:0;width:min(440px,calc(100vw - 32px));color:var(--ink);box-shadow:0 20px 60px rgba(37,40,70,.28)}
+.jc-dialog::backdrop{background:rgba(37,40,70,.45)}
+.jc-d-head{padding:20px 22px 16px;background:var(--bg);border-left:5px solid var(--bar)}
+.jc-d-head h3{margin:0 0 6px;font-size:19px;font-weight:650;line-height:1.25;overflow-wrap:anywhere}
+.jc-d-head p{margin:0;font-size:13.5px;opacity:.85}
+.jc-d-body{padding:16px 22px 22px}
+.jc-d-body dl{margin:0 0 16px;display:grid;grid-template-columns:110px 1fr;gap:8px 12px;font-size:14px}
+.jc-d-body dt{color:var(--muted)}
+.jc-d-body dd{margin:0;overflow-wrap:anywhere}
+.jc-d-actions{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.jc-d-actions .jc-zoom{height:40px;font-size:14px;padding:0 16px;border-radius:10px}
+.jc-d-actions .jc-btn{height:40px}
+.jc-d-note{font-size:12.5px;color:var(--muted)}
+
+/* ---------- Passaggio a smartphone ---------- */
+@media (max-width:767px){
+  .jc{padding:16px 14px 28px}
+  .jc-title{font-size:22px}
+  .jc-filters{flex-direction:column;align-items:stretch;gap:12px}
+  .jc-fgroup{flex-direction:column;align-items:stretch;gap:6px}
+  .jc-years{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px;width:100%}
+  .jc-select{width:100%;min-width:0}
+  .jc-chip{padding:8px 0;text-align:center;font-size:12.5px}
+  .jc-nav{gap:10px}
+  .jc-range{font-size:15px;flex:1;text-align:center;order:2;line-height:1.25;text-wrap:balance}
+  .jc-nav-btns{display:contents}
+  .jc-btn:disabled{opacity:.35;cursor:default}
+  #jc-prev{order:1}
+  #jc-next{order:3}
+  #jc-today{order:4}
+  .jc-nav .jc-btn-text{display:none}
+  .jc-legend,.jc-week{display:none}
+  .jc-mobile{display:block}
+}
+@media (min-width:768px){ .jc-mobile{display:none} }
+
+@media (prefers-reduced-motion:reduce){ .jc *{transition:none !important} }
+
+/* Aggiornamento manuale del calendario */
+.jc .jc-refresh{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:44px;padding:12px 18px;border:1px solid #B49ACF;border-radius:12px;
+  background:#E8D9F5;color:#35234B;font-size:14px;font-weight:700;
+  box-shadow:0 3px 10px rgba(116,76,151,.13);transition:background .15s,box-shadow .15s}
+.jc .jc-refresh:hover{background:#DCC5EF;box-shadow:0 4px 12px rgba(116,76,151,.2)}
+.jc .jc-refresh:disabled{cursor:wait;opacity:.75}
+.jc-refresh svg{width:19px;height:19px;flex:none}
+@media(max-width:540px){.jc .jc-refresh{width:100%}}
+
+</style>
+<style>
+.janus-accesso-passcode{display:flex;align-items:center;gap:6px;flex-wrap:wrap;max-width:100%}
+.janus-passcode{font-size:11px;line-height:1.3;color:var(--ink,#252846);white-space:nowrap}
+.jc-evt .janus-accesso-passcode{margin-top:auto;align-self:flex-start}
+.jc-evt .janus-accesso-passcode .jc-zoom{margin-top:0}
+.jc-mcard .janus-accesso-passcode{margin-top:8px}
+.jc-mcard .janus-accesso-passcode .jc-zoom{margin-top:0;width:auto}
+@container evt (max-width:84px){.jc-evt .janus-accesso-passcode{display:none}}
+</style>
+</head>
+
+<body style="margin:0;background:#fff">
+
+<div class="jc" id="janus-calendar">
+  <header class="jc-top">
+    <div class="jc-titlebar">
+      <div>
+        <p class="jc-kicker">Istituto Janus</p>
+        <h2 class="jc-title">Calendario lezioni</h2>
+      </div>
+      <button type="button" class="jc-refresh" id="jc-refresh" title="Ricarica la pagina e i dati del calendario">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7v5h-5"/><path d="M4 17v-5h5"/><path d="M6.1 7a7 7 0 0 1 11.5-1L20 9M4 15l2.4 3A7 7 0 0 0 17.9 17"/></svg>
+        <span aria-live="polite">Aggiorna calendario</span>
+      </button>
+    </div>
+    <div class="jc-filters">
+      <div class="jc-fgroup">
+        <span class="jc-flabel" id="jc-l-anno">Il tuo anno</span>
+        <div class="jc-years" id="jc-years" role="group" aria-labelledby="jc-l-anno"></div>
+      </div>
+      <div class="jc-fgroup">
+        <label class="jc-flabel" for="jc-indirizzo">Il tuo indirizzo</label>
+        <select class="jc-select" id="jc-indirizzo"></select>
+      </div>
+    </div>
+    <div class="jc-nav">
+      <div class="jc-nav-btns">
+        <button class="jc-btn" id="jc-prev" type="button" aria-label="Settimana precedente">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>
+          <span class="jc-btn-text">Settimana precedente</span>
+        </button>
+        <button class="jc-btn jc-btn-today" id="jc-today" type="button">Oggi</button>
+        <button class="jc-btn" id="jc-next" type="button" aria-label="Settimana successiva">
+          <span class="jc-btn-text">Settimana successiva</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg>
+        </button>
+      </div>
+      <div class="jc-range" id="jc-range" aria-live="polite"></div>
+      <div class="jc-legend" id="jc-legend" aria-label="Legenda colori"></div>
+    </div>
+  </header>
+
+  <section class="jc-week" id="jc-week" aria-label="Vista settimanale"></section>
+  <section class="jc-mobile" id="jc-mobile" aria-label="Lezioni del giorno"></section>
+  <dialog class="jc-dialog" id="jc-dialog" aria-labelledby="jc-d-title"></dialog>
+  <noscript>Per vedere il calendario delle lezioni attiva JavaScript nel browser.</noscript>
+</div>
+
+<!-- I DATI: tutte le lezioni sono in questo file -->
+
+<script>
+window.JANUS_INDIRIZZI = [
+  { id: "scientifico",      label: "Liceo Scientifico" },
+  { id: "classico",         label: "Liceo Classico" },
+  { id: "linguistico",      label: "Liceo Linguistico" },
+  { id: "scienze-umane",    label: "Liceo Scienze Umane" },
+  { id: "scienze-applicate",label: "Liceo Scienze Applicate" },
+  { id: "sportivo",         label: "Liceo Scientifico Sportivo" },
+  { id: "les",              label: "Liceo Economico Sociale" },
+  { id: "informatico",      label: "Istituto Tecnico Informatico" },
+  { id: "afm",              label: "AFM" },
+  { id: "socio-sanitario",  label: "Professionale Socio Sanitario" },
+  { id: "turismo",          label: "Turismo" },
+  { id: "mme",              label: "MME" },
+  { id: "ipseoa",           label: "IPSEOA" }
+];
+
+
+/* ---------------------------------------------------------------------
+   4) CHI VEDE COSA
+   Per ogni testo del campo class (Indirizzo / classe del foglio) elenca gli
+   indirizzi che vedono quella lezione. "*" = tutti gli indirizzi.
+   Per cambiare chi vede una lezione basta modificare una riga qui:
+   vale per tutte le lezioni con quel testo. Maiuscole e spazi non contano.
+   Un testo non presente in questa tabella viene mostrato a tutti.
+   --------------------------------------------------------------------- */
+(function () {
+  var LICEI       = ["scientifico", "classico", "linguistico", "scienze-umane", "scienze-applicate", "sportivo", "les"];
+  var SCIENTIFICI = ["scientifico", "scienze-applicate", "sportivo"];
+
+  window.JANUS_CLASSI = {
+    "PER TUTTI": "*",
+    "TUTTI": "*",
+
+    "LICEI": LICEI,
+    "SCIENTIFICI": SCIENTIFICI,
+    "LING/SCIENTIFICO": ["linguistico", "scientifico"],
+    "LES": ["les"],
+    "LES E SCIENZE UMANE": ["les", "scienze-umane"],
+    "UMANE": ["scienze-umane"],
+    "UMANE/LES": ["scienze-umane", "les"],
+    "Les + Linguistico": ["les", "linguistico"],
+    "Les+Linguistico": ["les", "linguistico"],
+    "Les + Linguistico+umane": ["les", "linguistico", "scienze-umane"],
+    "Les+Linguistico+umane": ["les", "linguistico", "scienze-umane"],
+    "Les+Linguistico +umane": ["les", "linguistico", "scienze-umane"],
+    "LES/UMANE": ["les", "scienze-umane"],
+    "LICEI (no Les)": LICEI.filter(function (x) { return x !== "les"; }),
+    "LICEI /no Les": LICEI.filter(function (x) { return x !== "les"; }),
+
+    "LES/SOCIOLING/AFM": ["les", "socio-sanitario", "linguistico", "afm"],
+    "SOCIO": ["socio-sanitario"],
+    "SOCIO/TUR/AFM/LES": ["socio-sanitario", "turismo", "afm", "les"],
+    "AFM/LES/SOCIO": ["afm", "les", "socio-sanitario"],
+
+    "AFM": ["afm"],
+    "AFM/TUR": ["afm", "turismo"],
+    "AFM-RIM": ["afm"],
+    "TUR": ["turismo"],
+    "LING/TUR /AFM-RIM": ["linguistico", "turismo", "afm"],
+
+    "ITI": ["informatico"],
+    "ITI/AFM": ["informatico", "afm"],
+    "ITI/AFM/UMANE": ["informatico", "afm", "scienze-umane"],
+
+    "MECCATRONICA": ["mme"],
+
+    "": SCIENTIFICI   // lezione senza indirizzo nel foglio (L131, Chimica): la vedono gli scientifici
+  };
+})();
+
+
+</script>
+<script type="application/json" id="janus-dati">{"versione":1,"aggiornato":"2026-10-23T09:36:33.052Z","lezioni":[{"id":"L001","weekday":1,"start":"09:00","end":"09:50","subject":"LAB ITALIANO","year":"1/2 ANNO","class":"PER TUTTI","teacher":"Giulia Dipalo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1","status":"scheduled","zoomPasscode":"498159"},{"id":"L002","weekday":1,"start":"09:00","end":"09:50","subject":"MATEMATICA","year":"3/4 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","zoomPasscode":"132082"},{"id":"L003","weekday":1,"start":"09:00","end":"09:50","subject":"MECCATRONICA","year":"4/5 ANNO","class":"MECCATRONICA","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1","status":"scheduled","zoomPasscode":"510304"},{"id":"L004","weekday":1,"start":"09:00","end":"09:50","subject":"LAB INGLESE","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","zoomPasscode":"197031"},{"id":"L005","weekday":1,"start":"09:00","end":"09:50","subject":"ITALIANO","year":"5 ANNO","class":"PER TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1","status":"scheduled","zoomPasscode":"617514"},{"id":"L006","weekday":1,"start":"10:00","end":"10:50","subject":"SCIENZE UMANE","year":"1/2 ANNO","class":"LES E SCIENZE UMANE","teacher":"Giulia Dipalo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","status":"scheduled","zoomPasscode":"71721"},{"id":"L008","weekday":1,"start":"10:00","end":"10:50","subject":"LAB ITALIANO","year":"1/2 ANNO","class":"PER TUTTI","teacher":"Giulia Dipalo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","status":"scheduled","zoomPasscode":"71721"},{"id":"L009","weekday":1,"start":"10:00","end":"10:50","subject":"MATEMATICA","year":"3/4 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1","status":"scheduled","zoomPasscode":"86719"},{"id":"L010","weekday":1,"start":"10:00","end":"10:50","subject":"MECCATRONICA","year":"4/5 ANNO","class":"MECCATRONICA","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1","status":"scheduled","zoomPasscode":"579497"},{"id":"L011","weekday":1,"start":"10:00","end":"10:50","subject":"LAB INGLESE","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","zoomPasscode":"419767"},{"id":"L012","weekday":1,"start":"10:00","end":"10:50","subject":"STORIA","year":"5 ANNO","class":"PER TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","status":"scheduled","zoomPasscode":"290382"},{"id":"L013","weekday":1,"start":"11:00","end":"11:50","subject":"INGLESE","year":"1/2 ANNO","class":"PER TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"(+3 +3/4)","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","zoomPasscode":"703830"},{"id":"L014","weekday":1,"start":"11:00","end":"11:50","subject":"INGLESE","year":"3/4 ANNO","class":"PER TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"(+3 +3/4)","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","zoomPasscode":"703830"},{"id":"L015","weekday":1,"start":"11:00","end":"11:50","subject":"ITALIANO","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1","status":"scheduled","zoomPasscode":"517741"},{"id":"L016","weekday":1,"start":"11:00","end":"11:50","subject":"MATEMATICA","year":"5 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","status":"scheduled","zoomPasscode":"859341"},{"id":"L017","weekday":1,"start":"12:00","end":"12:50","subject":"INGLESE","year":"1/2 ANNO","class":"PER TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"(+3 +3/4)","zoomUrl":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","status":"scheduled","zoomPasscode":"728446"},{"id":"L018","weekday":1,"start":"12:00","end":"12:50","subject":"INGLESE","year":"3/4 ANNO","class":"PER TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"(+3 +3/4)","zoomUrl":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","status":"scheduled","zoomPasscode":"728446"},{"id":"L019","weekday":1,"start":"12:00","end":"12:50","subject":"STORIA","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1","status":"scheduled","zoomPasscode":"816044"},{"id":"L020","weekday":1,"start":"12:00","end":"12:50","subject":"MATEMATICA","year":"5 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","zoomPasscode":"438503"},{"id":"L021","weekday":2,"start":"09:00","end":"09:50","subject":"ITALIANO","year":"1/2 ANNO","class":"PER TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1","status":"scheduled","zoomPasscode":"617514"},{"id":"L022","weekday":2,"start":"09:00","end":"09:50","subject":"IGIENE","year":"3/4 ANNO","class":"SOCIO","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","zoomPasscode":"197031"},{"id":"L023","weekday":2,"start":"09:00","end":"09:50","subject":"FISICA","year":"3/4 ANNO","class":"SCIENTIFICI","teacher":"Elisa Rubeo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1","status":"scheduled","tracks":["scientifico","scienze-applicate","sportivo","classico","linguistico","scienze-umane","les"],"zoomPasscode":"498159"},{"id":"L024","weekday":2,"start":"09:00","end":"09:50","subject":"ECONOMIA AZIENDALE","year":"3/4 ANNO","class":"AFM/TUR","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1","status":"scheduled","zoomPasscode":"350240"},{"id":"L026","weekday":2,"start":"09:00","end":"09:50","subject":"MATEMATICA","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","zoomPasscode":"132082"},{"id":"L027","weekday":2,"start":"09:00","end":"09:50","subject":"MATEMATICA","year":"5 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","zoomPasscode":"132082"},{"id":"L028","weekday":2,"start":"10:00","end":"10:50","subject":"ITALIANO","year":"1/2 ANNO","class":"PER TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","status":"scheduled","zoomPasscode":"290382"},{"id":"L029","weekday":2,"start":"10:00","end":"10:50","subject":"METODOLOGIE","year":"3/4 ANNO","class":"SOCIO","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","zoomPasscode":"419767"},{"id":"L030","weekday":2,"start":"10:00","end":"10:50","subject":"FISICA","year":"3/4 ANNO","class":"SCIENTIFICI","teacher":"Elisa Rubeo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","status":"scheduled","tracks":["scientifico","scienze-applicate","sportivo","classico","linguistico","scienze-umane","les"],"zoomPasscode":"71721"},{"id":"L031","weekday":2,"start":"10:00","end":"10:50","subject":"ECONOMIA AZIENDALE","year":"3/4 ANNO","class":"AFM/TUR","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","zoomPasscode":"36079"},{"id":"L033","weekday":2,"start":"10:00","end":"10:50","subject":"MATEMATICA","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1","status":"scheduled","zoomPasscode":"86719"},{"id":"L034","weekday":2,"start":"10:00","end":"10:50","subject":"MATEMATICA","year":"5 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1","status":"scheduled","zoomPasscode":"86719"},{"id":"L035","weekday":2,"start":"11:00","end":"11:50","subject":"MATEMATICA","year":"1/2 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","status":"scheduled","zoomPasscode":"859341"},{"id":"L036","weekday":2,"start":"11:00","end":"11:50","subject":"ITALIANO","year":"3/4 ANNO","class":"PER TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1","status":"scheduled","zoomPasscode":"517741"},{"id":"L037","weekday":2,"start":"11:00","end":"11:50","subject":"IGIENE/METOD","year":"4/5 ANNO","class":"SOCIO","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","zoomPasscode":"703830"},{"id":"L038","weekday":2,"start":"11:00","end":"11:50","subject":"FISICA","year":"4/5 ANNO","class":"SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE","teacher":"Elisa Rubeo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1","status":"scheduled","tracks":["scientifico","scienze-applicate","sportivo","les","linguistico","scienze-umane"],"zoomPasscode":"925403"},{"id":"L039","weekday":2,"start":"11:00","end":"11:50","subject":"LAB ITALIANO","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["scientifico","classico","scienze-applicate","sportivo","informatico","afm","socio-sanitario","turismo","mme","ipseoa"],"zoomPasscode":"991407"},{"id":"L040","weekday":2,"start":"11:00","end":"11:50","subject":"IGIENE/METODOLOGIE OPERATIVE","year":"5 ANNO","class":"SOCIO","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","zoomPasscode":"703830"},{"id":"L041","weekday":2,"start":"11:00","end":"11:50","subject":"FISICA","year":"5 ANNO","class":"SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE","teacher":"Elisa Rubeo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1","status":"scheduled","tracks":["scientifico","scienze-applicate","sportivo","les","linguistico","scienze-umane"],"zoomPasscode":"925403"},{"id":"L042","weekday":2,"start":"11:00","end":"11:50","subject":"LAB ITALIANO","year":"5 ANNO","class":"PER TUTTI","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["scientifico","classico","scienze-applicate","sportivo","informatico","afm","socio-sanitario","turismo","mme","ipseoa"],"zoomPasscode":"991407"},{"id":"L043","weekday":2,"start":"12:00","end":"12:50","subject":"MATEMATICA","year":"1/2 ANNO","class":"PER TUTTI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","zoomPasscode":"438503"},{"id":"L044","weekday":2,"start":"12:00","end":"12:50","subject":"STORIA","year":"3/4 ANNO","class":"PER TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1","status":"scheduled","zoomPasscode":"816044"},{"id":"L045","weekday":2,"start":"12:00","end":"12:50","subject":"PSICOLOGIA","year":"4/5 ANNO","class":"SOCIO","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","status":"scheduled","zoomPasscode":"728446"},{"id":"L046","weekday":2,"start":"12:00","end":"12:50","subject":"FISICA","year":"4/5 ANNO","class":"SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE","teacher":"Elisa Rubeo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1","status":"scheduled","tracks":["scientifico","scienze-applicate","sportivo","les","linguistico","scienze-umane"],"zoomPasscode":"612842"},{"id":"L047","weekday":2,"start":"12:00","end":"12:50","subject":"LAB ITALIANO","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1","status":"scheduled","tracks":["scientifico","classico","scienze-applicate","sportivo","informatico","afm","socio-sanitario","turismo","mme","ipseoa"],"zoomPasscode":"343517"},{"id":"L048","weekday":2,"start":"12:00","end":"12:50","subject":"PSICOLOGIA","year":"5 ANNO","class":"SOCIO","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","status":"scheduled","zoomPasscode":"728446"},{"id":"L049","weekday":2,"start":"12:00","end":"12:50","subject":"FISICA","year":"5 ANNO","class":"SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE","teacher":"Elisa Rubeo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1","status":"scheduled","tracks":["scientifico","scienze-applicate","sportivo","les","linguistico","scienze-umane"],"zoomPasscode":"612842"},{"id":"L050","weekday":2,"start":"12:00","end":"12:50","subject":"LAB ITALIANO","year":"5 ANNO","class":"PER TUTTI","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1","status":"scheduled","tracks":["scientifico","classico","scienze-applicate","sportivo","informatico","afm","socio-sanitario","turismo","mme","ipseoa"],"zoomPasscode":"343517"},{"id":"L051","weekday":3,"start":"09:00","end":"09:50","subject":"SPAGNOLO","year":"1/2 ANNO","class":"LES","teacher":"Martina Branca","room":"AULA 3","note":"(+3 + 3/4)","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","zoomPasscode":"197031"},{"id":"L052","weekday":3,"start":"09:00","end":"09:50","subject":"EC.POLITICA","year":"1/2 ANNO","class":"ITI/AFM/UMANE","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1","status":"scheduled","zoomPasscode":"350240"},{"id":"L053","weekday":3,"start":"09:00","end":"09:50","subject":"SPAGNOLO","year":"3/4 ANNO","class":"SOCIO/TUR/AFM/LES","teacher":"Martina Branca","room":"AULA 3","note":"(+3 + 3/4)","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","zoomPasscode":"197031"},{"id":"L054","weekday":3,"start":"09:00","end":"09:50","subject":"LAB MATEMATICA","year":"3/4 ANNO","class":"PER TUTTI","teacher":"Gabriele Luverà","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","affiancaA":["socio-sanitario","linguistico"],"zoomPasscode":"132082"},{"id":"L055","weekday":3,"start":"09:00","end":"09:50","subject":"FILOSOFIA","year":"4/5 ANNO","class":"LICEI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1","status":"scheduled","zoomPasscode":"617514"},{"id":"L056","weekday":3,"start":"09:00","end":"09:50","subject":"LAB MATEMATICA","year":"4/5 ANNO","class":"PER TUTTI","teacher":"Gabriele Luverà","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","zoomPasscode":"132082"},{"id":"L057","weekday":3,"start":"09:00","end":"09:50","subject":"FILOSOFIA","year":"5 ANNO","class":"LICEI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1","status":"scheduled","zoomPasscode":"617514"},{"id":"L058","weekday":3,"start":"09:00","end":"09:50","subject":"LAB MATEMATICA","year":"5 ANNO","class":"PER TUTTI","teacher":"Gabriele Luverà","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","zoomPasscode":"132082"},{"id":"L059","weekday":3,"start":"10:00","end":"10:50","subject":"SPAGNOLO","year":"1/2 ANNO","class":"AFM / LES","teacher":"Martina Branca","room":"AULA 3","note":"(+3 + 3/4)","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","tracks":["afm","les"],"affiancaA":[],"zoomPasscode":"419767"},{"id":"L060","weekday":3,"start":"10:00","end":"10:50","subject":"LAB MATEMATICA","year":"1/2 ANNO","class":"AFM / ITI INFORMATICO / SCIENZE UMANE","teacher":"Gabriele Luverà","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1","status":"scheduled","tracks":["afm","informatico","scienze-umane"],"affiancaA":[],"zoomPasscode":"86719"},{"id":"L061","weekday":3,"start":"10:00","end":"10:50","subject":"SPAGNOLO","year":"3/4 ANNO","class":"SOCIO/TUR/AFM/LES","teacher":"Martina Branca","room":"AULA 3","note":"(+3 + 3/4)","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","zoomPasscode":"419767"},{"id":"L062","weekday":3,"start":"10:00","end":"10:50","subject":"SCIENZE INTEGRATE","year":"3/4 ANNO","class":"Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario","teacher":"Marianna Raia","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["scientifico","classico","linguistico","scienze-umane","scienze-applicate","sportivo","socio-sanitario"],"zoomPasscode":"118862"},{"id":"L063","weekday":3,"start":"10:00","end":"10:50","subject":"SCIENZE UMANE","year":"4/5 ANNO","class":"Scienze umane / LES","teacher":"Giulia Dipalo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","status":"scheduled","tracks":["scienze-umane","les"],"affiancaA":[],"zoomPasscode":"71721"},{"id":"L065","weekday":3,"start":"10:00","end":"10:50","subject":"SCIENZE UMANE","year":"5 ANNO","class":"Scienze umane / LES","teacher":"Giulia Dipalo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","status":"scheduled","tracks":["scienze-umane","les"],"affiancaA":[],"zoomPasscode":"71721"},{"id":"L068","weekday":3,"start":"11:00","end":"11:50","subject":"SCIENZE UMANE","year":"3/4 ANNO","class":"LES / SCIENZE UMANE","teacher":"Giulia Dipalo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1","status":"scheduled","tracks":["les","scienze-umane"],"affiancaA":[],"zoomPasscode":"925403"},{"id":"L070","weekday":3,"start":"11:00","end":"11:50","subject":"SPAGNOLO","year":"4/5 ANNO","class":"AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO","teacher":"Martina Branca","room":"AULA 3","note":"( +4)","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","tracks":["afm","ipseoa","les","linguistico","socio-sanitario"],"affiancaA":[],"zoomPasscode":"703830"},{"id":"L072","weekday":3,"start":"11:00","end":"11:50","subject":"MECCATRONICA","year":"4/5 ANNO","class":"MECCATRONICA","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","status":"scheduled","zoomPasscode":"494425"},{"id":"L073","weekday":3,"start":"11:00","end":"11:50","subject":"SPAGNOLO","year":"5 ANNO","class":"AFM / LES / LINGUISTICO / SOCIO SANITARIO","teacher":"Martina Branca","room":"AULA 3","note":"( +4)","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","tracks":["afm","les","linguistico","socio-sanitario"],"affiancaA":[],"zoomPasscode":"703830"},{"id":"L075","weekday":3,"start":"12:00","end":"12:50","subject":"SCIENZE INTEGRATE","year":"1/2 ANNO","class":"TUTTI","teacher":"Marianna Raia","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1","status":"scheduled","tracks":["scientifico","classico","linguistico","scienze-umane","scienze-applicate","sportivo","les","informatico","afm","socio-sanitario","turismo","mme","ipseoa"],"esercizi":false,"zoomPasscode":"343517"},{"id":"L076","weekday":3,"start":"12:00","end":"12:50","subject":"LATINO","year":"3/4 ANNO","class":"LING/SCIENTIFICO","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1","status":"scheduled","tracks":["scientifico","scienze-umane"],"zoomPasscode":"816044"},{"id":"L077","weekday":3,"start":"12:00","end":"12:50","subject":"LAB ITALIANO","year":"3/4 ANNO","class":"TUTTI","teacher":"Giulia Dipalo","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","zoomPasscode":"438503"},{"id":"L078","weekday":3,"start":"12:00","end":"12:50","subject":"SPAGNOLO","year":"4/5 ANNO","class":"AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","status":"scheduled","tracks":["afm","ipseoa","les","linguistico","socio-sanitario"],"affiancaA":[],"zoomPasscode":"728446"},{"id":"L079","weekday":3,"start":"12:00","end":"12:50","subject":"LAB ITALIANO","year":"4/5 ANNO","class":"CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO","teacher":"Giulia Dipalo","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","affiancaA":[],"tracks":["classico","informatico","ipseoa","mme","scienze-umane","socio-sanitario","turismo"],"zoomPasscode":"438503"},{"id":"L080","weekday":3,"start":"12:00","end":"12:50","subject":"SPAGNOLO","year":"5 ANNO","class":"AFM / LES / LINGUISTICO / SOCIO SANITARIO","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","status":"scheduled","tracks":["afm","les","linguistico","socio-sanitario"],"affiancaA":[],"zoomPasscode":"728446"},{"id":"L081","weekday":3,"start":"12:00","end":"12:50","subject":"LAB ITALIANO","year":"5 ANNO","class":"CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO","teacher":"Giulia Dipalo","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","affiancaA":[],"tracks":["classico","informatico","ipseoa","mme","scienze-umane","socio-sanitario","turismo"],"zoomPasscode":"438503"},{"id":"L083","weekday":4,"start":"09:00","end":"09:50","subject":"GEOSTORIA","year":"1/2 ANNO","class":"TUTTI","teacher":"Alessandra Albano","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1","status":"scheduled","zoomPasscode":"498159"},{"id":"L084","weekday":4,"start":"09:00","end":"09:50","subject":"FILOSOFIA","year":"3/4 ANNO","class":"LICEI","teacher":"Luca Picarazzi","room":"AULA 2","note":"+ 4","zoomUrl":"https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1","status":"scheduled","zoomPasscode":"617514"},{"id":"L085","weekday":4,"start":"09:00","end":"09:50","subject":"SCRITTURA CREATIVA","year":"3/4 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","zoomPasscode":"197031"},{"id":"L087","weekday":4,"start":"09:00","end":"09:50","subject":"SCRITTURA CREATIVA","year":"4/5 ANNO","class":"CLASSICO / ITI INFORMATICO / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / TURISMO","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","tracks":["classico","informatico","linguistico","mme","scientifico","scienze-applicate","scienze-umane","turismo"],"affiancaA":[],"zoomPasscode":"197031"},{"id":"L088","weekday":4,"start":"09:00","end":"09:50","subject":"DIRITTO","year":"5 ANNO","class":"AFM/LES/SOCIO","teacher":"Giorgia Clementi","room":"AULA 1","note":"+4/5","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","tracks":["afm","les","socio-sanitario","sportivo"],"zoomPasscode":"132082"},{"id":"L089","weekday":4,"start":"09:00","end":"09:50","subject":"GPOI","year":"5 ANNO","class":"ITI","teacher":"Lucia Carlucci","room":"AULA 7","note":"(+4/5)","zoomUrl":"https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1","status":"scheduled","zoomPasscode":"350240"},{"id":"L090","weekday":4,"start":"09:00","end":"09:50","subject":"SCRITTURA CREATIVA","year":"5 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","zoomPasscode":"197031"},{"id":"L091","weekday":4,"start":"10:00","end":"10:50","subject":"LAB GRAMMATICA","year":"1/2 ANNO","class":"TUTTI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","status":"scheduled","zoomPasscode":"290382"},{"id":"L092","weekday":4,"start":"10:00","end":"10:50","subject":"DIRITTO","year":"3/4 ANNO","class":"SOCIO/TUR/AFM/LES","teacher":"Giorgia Clementi","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1","status":"scheduled","tracks":["socio-sanitario","turismo","afm","les","sportivo"],"zoomPasscode":"86719"},{"id":"L093","weekday":4,"start":"10:00","end":"10:50","subject":"SCRITTURA CREATIVA","year":"3/4 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","zoomPasscode":"419767"},{"id":"L095","weekday":4,"start":"10:00","end":"10:50","subject":"SCRITTURA CREATIVA","year":"4/5 ANNO","class":"Classico / ITI Informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","tracks":["classico","informatico","ipseoa","linguistico","mme","scientifico","scienze-applicate","scienze-umane","socio-sanitario","sportivo","turismo"],"affiancaA":["linguistico","socio-sanitario","turismo","ipseoa"],"zoomPasscode":"419767"},{"id":"L096","weekday":4,"start":"10:00","end":"10:50","subject":"EC POLITICA /RELAZIONI INTERNAZIONALI","year":"5 ANNO","class":"AFM-RIM","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","zoomPasscode":"36079"},{"id":"L097","weekday":4,"start":"10:00","end":"10:50","subject":"SCRITTURA CREATIVA","year":"5 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","affiancaA":["linguistico","socio-sanitario","turismo","ipseoa"],"zoomPasscode":"419767"},{"id":"L098","weekday":4,"start":"11:00","end":"11:50","subject":"DIRITTO","year":"1/2 ANNO","class":"TUTTI","teacher":"Giorgia Clementi","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","status":"scheduled","zoomPasscode":"859341"},{"id":"L141","weekday":4,"start":"11:00","end":"11:50","subject":"INGLESE","year":"3/4 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","zoomPasscode":"703830"},{"id":"L101","weekday":4,"start":"11:00","end":"11:50","subject":"INGLESE","year":"4/5 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"(+4)","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","zoomPasscode":"703830"},{"id":"L102","weekday":4,"start":"11:00","end":"11:50","subject":"INGLESE","year":"5 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"(+4)","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","zoomPasscode":"703830"},{"id":"L103","weekday":4,"start":"12:00","end":"12:50","subject":"EDUCAZIONE CIVICA","year":"1/2 ANNO","class":"TUTTI","teacher":"Giorgia Clementi","room":"AULA 1","note":"(+3/4 ANNO)","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","zoomPasscode":"438503"},{"id":"L104","weekday":4,"start":"12:00","end":"12:50","subject":"GEO TURISTICA","year":"3/4 ANNO","class":"TUR","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1","status":"scheduled","zoomPasscode":"377146"},{"id":"L105","weekday":4,"start":"12:00","end":"12:50","subject":"STORIA DELL'ARTE","year":"3/4 ANNO","class":"LICEI","teacher":"Luca Picarazzi","room":"AULA 2","note":"(+1/2)","zoomUrl":"https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1","status":"scheduled","zoomPasscode":"816044"},{"id":"L106","weekday":4,"start":"12:00","end":"12:50","subject":"ED CIVICA","year":"3/4 ANNO","class":"TUTTI","teacher":"Giorgia Clementi","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","zoomPasscode":"438503"},{"id":"L107","weekday":4,"start":"12:00","end":"12:50","subject":"INGLESE","year":"4/5 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"(+4)","zoomUrl":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","status":"scheduled","zoomPasscode":"728446"},{"id":"L108","weekday":4,"start":"12:00","end":"12:50","subject":"INGLESE","year":"5 ANNO","class":"TUTTI","teacher":"Martina Branca","room":"AULA 3","note":"(+4)","zoomUrl":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","status":"scheduled","zoomPasscode":"728446"},{"id":"L111","weekday":5,"start":"09:00","end":"09:50","subject":"LAB MATEMATICA","year":"3/4 ANNO","class":"TUTTI","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1","status":"scheduled","zoomPasscode":"510304"},{"id":"L112","weekday":5,"start":"10:00","end":"10:50","subject":"LATINO","year":"4/5 ANNO","class":"CLASSICO / SCIENTIFICO / SCIENZE UMANE","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","status":"scheduled","tracks":["classico","scientifico","scienze-umane"],"affiancaA":[],"zoomPasscode":"290382"},{"id":"L113","weekday":5,"start":"09:00","end":"09:50","subject":"LAB ITALIANO","year":"4/5 ANNO","class":"TUTTI","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1","status":"scheduled","affiancaA":["linguistico","les"],"zoomPasscode":"513826"},{"id":"L114","weekday":5,"start":"10:00","end":"10:50","subject":"LATINO","year":"5 ANNO","class":"CLASSICO / SCIENTIFICO / SCIENZE UMANE","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","status":"scheduled","tracks":["classico","scientifico","scienze-umane"],"affiancaA":[],"zoomPasscode":"290382"},{"id":"L115","weekday":5,"start":"09:00","end":"09:50","subject":"LAB ITALIANO","year":"5 ANNO","class":"TUTTI","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1","status":"scheduled","affiancaA":["linguistico","les"],"zoomPasscode":"513826"},{"id":"L116","weekday":5,"start":"10:00","end":"10:50","subject":"FISICA","year":"1/2 ANNO","class":"ITI/AFM","teacher":"Elisa Rubeo","room":"AULA 4","note":"+3/4 Les e Linguistico","zoomUrl":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","status":"scheduled","zoomPasscode":"71721"},{"id":"L118","weekday":5,"start":"10:00","end":"10:50","subject":"FRANCESE GRAMMATICA","year":"3/4 ANNO","class":"LING/TUR /AFM-RIM","teacher":"Elisa Di Felice","room":"AULA 5","note":"+2/3 LES","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["linguistico","turismo","afm","les"],"zoomPasscode":"118862"},{"id":"L119","weekday":5,"start":"10:00","end":"10:50","subject":"INFORMATICA","year":"3/4 ANNO","class":"AFM","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1","status":"scheduled","zoomPasscode":"86719"},{"id":"L121","weekday":5,"start":"10:00","end":"10:50","subject":"IGIENE","year":"3/4 ANNO","class":"SOCIO SANITARIO","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","tracks":["socio-sanitario"],"affiancaA":[],"zoomPasscode":"419767"},{"id":"L122","weekday":5,"start":"10:00","end":"10:50","subject":"FRANCESE GRAMMATICA","year":"4/5 ANNO","class":"AFM / LES / SOCIO SANITARIO / TURISMO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["afm","les","socio-sanitario","turismo"],"affiancaA":[],"zoomPasscode":"118862"},{"id":"L143","weekday":5,"start":"10:00","end":"10:50","subject":"MECCATRONICA","year":"4/5 ANNO","class":"MECCATRONICA","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1","status":"scheduled","zoomPasscode":"579497"},{"id":"L124","weekday":5,"start":"10:00","end":"10:50","subject":"FRANCESE GRAMMATICA","year":"5 ANNO","class":"AFM / LES / SOCIO SANITARIO / TURISMO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["afm","les","socio-sanitario","turismo"],"affiancaA":[],"zoomPasscode":"118862"},{"id":"L126","weekday":5,"start":"11:00","end":"11:50","subject":"FISICA","year":"1/2 ANNO","class":"ITI/AFM","teacher":"Elisa Rubeo","room":"AULA 4","note":"+3/4 Les e Linguistico","zoomUrl":"https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1","status":"scheduled","zoomPasscode":"925403"},{"id":"L127","weekday":5,"start":"11:00","end":"11:50","subject":"LATINO","year":"1/2 ANNO","class":"UMANE","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1","status":"scheduled","zoomPasscode":"517741"},{"id":"L128","weekday":5,"start":"11:00","end":"11:50","subject":"FRANCESE AVANZATO","year":"3/4 ANNO","class":"AFM / LES / LINGUISTICO / TURISMO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["afm","les","linguistico","turismo"],"affiancaA":[],"zoomPasscode":"991407"},{"id":"L130","weekday":5,"start":"11:00","end":"11:50","subject":"PSICOLOGIA","year":"3/4 ANNO","class":"SOCIO SANITARIO","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","status":"scheduled","tracks":["socio-sanitario"],"affiancaA":[],"zoomPasscode":"703830"},{"id":"L132","weekday":5,"start":"11:00","end":"11:50","subject":"FRANCESE AVANZATO","year":"4/5 ANNO","class":"AFM / LES / SOCIO SANITARIO / TURISMO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["afm","les","socio-sanitario","turismo"],"affiancaA":[],"zoomPasscode":"991407"},{"id":"L133","weekday":5,"start":"11:00","end":"11:50","subject":"INFORMATICA","year":"4/5 ANNO","class":"ITI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","status":"scheduled","zoomPasscode":"859341"},{"id":"L134","weekday":5,"start":"11:00","end":"11:50","subject":"FRANCESE AVANZATO","year":"5 ANNO","class":"AFM / LES / SOCIO SANITARIO / TURISMO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["afm","les","socio-sanitario","turismo"],"affiancaA":[],"zoomPasscode":"991407"},{"id":"L135","weekday":5,"start":"11:00","end":"11:50","subject":"INFORMATICA","year":"5 ANNO","class":"ITI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","status":"scheduled","zoomPasscode":"859341"},{"id":"L136","weekday":5,"start":"12:00","end":"12:50","subject":"INFORMATICA","year":"1/2 ANNO","class":"ITI/AFM","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","zoomPasscode":"438503"},{"id":"L137","weekday":5,"start":"12:00","end":"12:50","subject":"LAB ITALIANO","year":"3/4 ANNO","class":"TUTTI","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1","status":"scheduled","zoomPasscode":"343517"},{"id":"L138","weekday":5,"start":"12:00","end":"12:50","subject":"LAB MATEMATICA","year":"4/5 ANNO","class":"TUTTI","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1","status":"scheduled","zoomPasscode":"434438"},{"id":"L146","weekday":5,"start":"12:00","end":"12:50","subject":"STORIA DELL'ARTE","year":"4/5 ANNO","class":"LICEI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1","status":"scheduled","zoomPasscode":"816044"},{"id":"L139","weekday":5,"start":"12:00","end":"12:50","subject":"STORIA DELL'ARTE","year":"5 ANNO","class":"LICEI","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1","status":"scheduled","zoomPasscode":"816044"},{"id":"L140","weekday":5,"start":"12:00","end":"12:50","subject":"LAB MATEMATICA","year":"5 ANNO","class":"TUTTI","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1","status":"scheduled","zoomPasscode":"434438"},{"id":"A002","weekday":5,"start":"11:00","end":"11:50","subject":"LAB MATEMATICA","year":"4/5 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Gabriele Luverà","room":"AULA 6","note":"Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).","zoomUrl":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","status":"scheduled","tracks":["scientifico","scienze-umane","afm","socio-sanitario","mme","les"],"esercizi":true,"zoomPasscode":"494425"},{"id":"A003","weekday":5,"start":"11:00","end":"11:50","subject":"LAB MATEMATICA","year":"5 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Gabriele Luverà","room":"AULA 6","note":"Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).","zoomUrl":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","status":"scheduled","tracks":["scientifico","scienze-umane","afm","socio-sanitario","mme","les"],"esercizi":true,"zoomPasscode":"494425"},{"id":"A006","weekday":1,"start":"10:00","end":"10:50","subject":"LAB ITALIANO","year":"1/2 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Giulia Dipalo","room":"AULA DOCENTI","note":"Esercizi assegnati dal docente: in sede in Aula docenti, da remoto da casa. Il docente è in lezione in AULA 4 (link Zoom).","zoomUrl":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","status":"scheduled","tracks":["informatico"],"esercizi":true,"zoomPasscode":"71721"},{"id":"A009","weekday":4,"start":"12:00","end":"12:50","subject":"ED CIVICA","year":"3/4 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Giorgia Clementi","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","status":"scheduled","tracks":["afm","socio-sanitario"],"zoomPasscode":"438503"},{"id":"A010","weekday":4,"start":"09:00","end":"09:50","subject":"DIRITTO","year":"4/5 ANNO","class":"AFM / IPSEOA / LES / SOCIO SANITARIO / SPORTIVO","teacher":"Giorgia Clementi","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","tracks":["afm","ipseoa","les","socio-sanitario","sportivo"],"affiancaA":[],"zoomPasscode":"132082"},{"id":"A013","weekday":5,"start":"11:00","end":"11:50","subject":"INFORMATICA","year":"4/5 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","status":"scheduled","tracks":["scienze-applicate"],"zoomPasscode":"859341"},{"id":"A014","weekday":5,"start":"11:00","end":"11:50","subject":"INFORMATICA","year":"5 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Federico Vani","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","status":"scheduled","tracks":["scienze-applicate"],"zoomPasscode":"859341"},{"id":"A015","weekday":5,"start":"10:00","end":"10:50","subject":"ED CIVICA","year":"1/2 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","tracks":["les","scienze-umane"],"zoomPasscode":"36079"},{"id":"A016","weekday":5,"start":"11:00","end":"11:50","subject":"LAB MATEMATICA","year":"1/2 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Gabriele Luverà","room":"AULA 6","note":"Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).","zoomUrl":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","status":"scheduled","tracks":["les"],"esercizi":true,"zoomPasscode":"494425"},{"id":"A017","weekday":3,"start":"09:00","end":"09:50","subject":"LAB MATEMATICA","year":"1/2 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Gabriele Luverà","room":"AULA 1","note":"","zoomUrl":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","status":"scheduled","tracks":["les"],"zoomPasscode":"132082"},{"id":"A018","weekday":5,"start":"10:00","end":"10:50","subject":"ED CIVICA","year":"3/4 ANNO","class":"SOLO INDIRIZZI INDICATI / ITI Informatico","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","tracks":["les","scienze-umane","linguistico","scientifico","scienze-applicate","sportivo","informatico"],"zoomPasscode":"36079"},{"id":"A019","weekday":5,"start":"11:00","end":"11:50","subject":"LAB MATEMATICA","year":"3/4 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Gabriele Luverà","room":"AULA 6","note":"Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).","zoomUrl":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","status":"scheduled","tracks":["les"],"esercizi":true,"zoomPasscode":"494425"},{"id":"A021","weekday":5,"start":"09:00","end":"09:50","subject":"FISICA","year":"4/5 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Elisa Rubeo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1","status":"scheduled","tracks":["scientifico","classico","linguistico","scienze-umane","scienze-applicate","sportivo","les"],"zoomPasscode":"498159"},{"id":"A022","weekday":5,"start":"09:00","end":"09:50","subject":"FISICA","year":"5 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Elisa Rubeo","room":"AULA 4","note":"","zoomUrl":"https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1","status":"scheduled","tracks":["scientifico","classico","linguistico","scienze-umane","scienze-applicate","sportivo","les"],"zoomPasscode":"498159"},{"id":"A023","weekday":3,"start":"09:00","end":"09:50","subject":"SPAGNOLO","year":"3/4 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","tracks":["linguistico"],"zoomPasscode":"197031"},{"id":"A024","weekday":3,"start":"10:00","end":"10:50","subject":"SPAGNOLO","year":"3/4 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Martina Branca","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","status":"scheduled","tracks":["linguistico"],"zoomPasscode":"419767"},{"id":"A026","weekday":3,"start":"11:00","end":"11:50","subject":"SCIENZE MOTORIE","year":"1/2 ANNO","class":"AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1","status":"scheduled","affiancaA":[],"tracks":["afm","classico","informatico","ipseoa","les","linguistico","mme","scientifico","scienze-applicate","scienze-umane","socio-sanitario","sportivo","turismo"],"zoomPasscode":"929574"},{"id":"A027","weekday":3,"start":"11:00","end":"11:50","subject":"SCIENZE MOTORIE","year":"3/4 ANNO","class":"AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1","status":"scheduled","affiancaA":[],"tracks":["afm","classico","informatico","ipseoa","les","linguistico","mme","scientifico","scienze-applicate","socio-sanitario","sportivo","turismo"],"zoomPasscode":"929574"},{"id":"A028","weekday":5,"start":"12:00","end":"12:50","subject":"LAB ITALIANO","year":"1/2 ANNO","class":"SOLO INDIRIZZI INDICATI","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1","status":"scheduled","tracks":["scientifico","classico","linguistico","scienze-umane","scienze-applicate","sportivo","les","socio-sanitario","turismo","mme","ipseoa"],"zoomPasscode":"343517"},{"id":"A029","weekday":5,"start":"10:00","end":"10:50","subject":"ED CIVICA","year":"4/5 ANNO","class":"AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","tracks":["afm","informatico","ipseoa","les","linguistico","scienze-applicate","socio-sanitario","sportivo"],"affiancaA":[],"zoomPasscode":"36079"},{"id":"A030","weekday":5,"start":"10:00","end":"10:50","subject":"ED CIVICA","year":"5 ANNO","class":"AFM / ITI INFORMATICO / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","tracks":["afm","informatico","les","linguistico","scienze-applicate","socio-sanitario","sportivo"],"affiancaA":[],"zoomPasscode":"36079"},{"id":"LJ20261014_1","weekday":1,"start":"10:00","end":"10:50","subject":"ECONOMIA AZIENDALE","year":"1/2 ANNO","class":"AFM","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","tracks":["afm"],"zoomPasscode":"36079"},{"id":"LJ20261014_10","weekday":5,"start":"11:00","end":"11:50","subject":"LAB MATEMATICA","year":"5 ANNO","class":"LINGUISTICO / SPORTIVO","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","status":"scheduled","tracks":["linguistico","sportivo"],"zoomPasscode":"494425"},{"id":"LJ20261014_11","weekday":5,"start":"10:00","end":"10:50","subject":"FRANCESE GRAMMATICA","year":"4/5 ANNO","class":"IPSEOA / LINGUISTICO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["ipseoa","linguistico"],"zoomPasscode":"118862"},{"id":"LJ20261014_12","weekday":5,"start":"10:00","end":"10:50","subject":"FRANCESE GRAMMATICA","year":"5 ANNO","class":"LINGUISTICO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["linguistico"],"zoomPasscode":"118862"},{"id":"LJ20261014_13","weekday":5,"start":"11:00","end":"11:50","subject":"FRANCESE AVANZATO","year":"4/5 ANNO","class":"IPSEOA / LINGUISTICO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["ipseoa","linguistico"],"zoomPasscode":"991407"},{"id":"LJ20261014_14","weekday":5,"start":"11:00","end":"11:50","subject":"FRANCESE AVANZATO","year":"5 ANNO","class":"LINGUISTICO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["linguistico"],"zoomPasscode":"991407"},{"id":"LJ20261014_15","weekday":5,"start":"10:00","end":"10:50","subject":"FRANCESE GRAMMATICA","year":"3/4 ANNO","class":"SOCIO SANITARIO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["socio-sanitario"],"zoomPasscode":"118862"},{"id":"LJ20261014_16","weekday":5,"start":"11:00","end":"11:50","subject":"FRANCESE AVANZATO","year":"3/4 ANNO","class":"SOCIO SANITARIO","teacher":"Elisa Di Felice","room":"AULA 5","note":"","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["socio-sanitario"],"zoomPasscode":"991407"},{"id":"LJ20261014_17","weekday":3,"start":"11:00","end":"11:50","subject":"SCIENZE MOTORIE","year":"4/5 ANNO","class":"IPSEOA / Socio sanitario / LES / ITI Informatico","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1","status":"scheduled","tracks":["ipseoa","socio-sanitario","les","informatico"],"zoomPasscode":"929574"},{"id":"LJ20261014_18","weekday":3,"start":"11:00","end":"11:50","subject":"SCIENZE MOTORIE","year":"5 ANNO","class":"Socio sanitario / LES / ITI Informatico","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1","status":"scheduled","tracks":["socio-sanitario","les","informatico"],"zoomPasscode":"929574"},{"id":"LJ20261014_3","weekday":5,"start":"11:00","end":"11:50","subject":"LAB MATEMATICA","year":"3/4 ANNO","class":"AFM / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","status":"scheduled","tracks":["afm","linguistico","scientifico","scienze-applicate","scienze-umane","sportivo"],"zoomPasscode":"494425"},{"id":"LJ20261014_4","weekday":4,"start":"10:00","end":"10:50","subject":"EC POLITICA / RELAZIONI INTERNAZIONALI","year":"4/5 ANNO","class":"AFM","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","tracks":["afm"],"zoomPasscode":"36079"},{"id":"LJ20261014_7","weekday":3,"start":"12:00","end":"12:50","subject":"LAB FISICA","year":"4/5 ANNO","class":"LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1","status":"scheduled","tracks":["les","linguistico","scientifico","scienze-applicate","scienze-umane","sportivo"],"zoomPasscode":"434438"},{"id":"LJ20261014_8","weekday":3,"start":"12:00","end":"12:50","subject":"LAB FISICA","year":"5 ANNO","class":"LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1","status":"scheduled","tracks":["les","linguistico","scientifico","scienze-applicate","scienze-umane","sportivo"],"zoomPasscode":"434438"},{"id":"LJ20261014_9","weekday":5,"start":"11:00","end":"11:50","subject":"LAB MATEMATICA","year":"4/5 ANNO","class":"IPSEOA / LINGUISTICO / SPORTIVO","teacher":"Gabriele Luverà","room":"AULA 6","note":"","zoomUrl":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","status":"scheduled","tracks":["ipseoa","linguistico","sportivo"],"zoomPasscode":"494425"},{"id":"LJ20261014_FRA_GIO_45","weekday":4,"start":"10:00","end":"10:50","subject":"FRANCESE AVANZATO","year":"4/5 ANNO","class":"LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA","teacher":"Elisa Di Felice","room":"AULA 5","note":"Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["les","linguistico","socio-sanitario","turismo","ipseoa"],"zoomPasscode":"118862"},{"id":"LJ20261014_FRA_GIO_5","weekday":4,"start":"10:00","end":"10:50","subject":"FRANCESE AVANZATO","year":"5 ANNO","class":"LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA","teacher":"Elisa Di Felice","room":"AULA 5","note":"Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa","zoomUrl":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","status":"scheduled","tracks":["les","linguistico","socio-sanitario","turismo","ipseoa"],"zoomPasscode":"118862"},{"id":"LJ20261015_1","weekday":3,"start":"11:00","end":"11:50","subject":"SCIENZE INTEGRATE","year":"4/5 ANNO","class":"Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo","teacher":"Marianna Raia","room":"AULA 5","note":"(+4)","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["classico","linguistico","scientifico","scienze-applicate","scienze-umane","sportivo"],"affiancaA":[],"esercizi":false,"zoomPasscode":"991407"},{"id":"LJ20261015_2","weekday":3,"start":"11:00","end":"11:50","subject":"SCIENZE INTEGRATE","year":"5 ANNO","class":"Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo","teacher":"Marianna Raia","room":"AULA 5","note":"(+4)","zoomUrl":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","status":"scheduled","tracks":["classico","linguistico","scientifico","scienze-applicate","scienze-umane","sportivo"],"affiancaA":[],"esercizi":false,"zoomPasscode":"991407"},{"id":"LJ20261015_3","weekday":3,"start":"10:00","end":"10:50","subject":"LAB COMPETENZE MATURITÀ","year":"4/5 ANNO","class":"AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","status":"scheduled","tracks":["afm","classico","informatico","ipseoa","linguistico","mme","scientifico","scienze-applicate","socio-sanitario","sportivo","turismo"],"affiancaA":[],"esercizi":false,"zoomPasscode":"290382"},{"id":"LJ20261015_4","weekday":3,"start":"10:00","end":"10:50","subject":"LAB COMPETENZE MATURITÀ","year":"5 ANNO","class":"AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo","teacher":"Luca Picarazzi","room":"AULA 2","note":"","zoomUrl":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","status":"scheduled","tracks":["afm","classico","informatico","ipseoa","linguistico","mme","scientifico","scienze-applicate","socio-sanitario","sportivo","turismo"],"affiancaA":[],"esercizi":false,"zoomPasscode":"290382"},{"id":"LJ20261016_1","weekday":5,"start":"09:00","end":"09:50","subject":"LAB COMPITI","year":"1/2 ANNO","class":"ITI INFORMATICO / SCIENZE UMANE / LES / AFM","teacher":"Beatrice Lungu","room":"AULA 3","note":"","zoomUrl":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","status":"scheduled","tracks":["informatico","scienze-umane","les","afm"],"zoomPasscode":"197031"},{"id":"LJ20261016_LES_1","weekday":4,"start":"10:00","end":"10:50","subject":"ECONOMIA POLITICA","year":"4/5 ANNO","class":"LES","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","tracks":["les"],"affiancaA":[],"zoomPasscode":"36079"},{"id":"LJ20261016_LES_2","weekday":4,"start":"10:00","end":"10:50","subject":"ECONOMIA POLITICA","year":"5 ANNO","class":"LES","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","status":"scheduled","tracks":["les"],"affiancaA":[],"zoomPasscode":"36079"},{"id":"LJ20261022_AFM_45","weekday":5,"start":"12:00","end":"12:50","subject":"ECONOMIA AZIENDALE","year":"4/5 ANNO","class":"AFM","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1","status":"scheduled","tracks":["afm"],"affiancaA":[],"esercizi":false,"zoomPasscode":"377146"},{"id":"LJ20261022_AFM_5","weekday":5,"start":"12:00","end":"12:50","subject":"ECONOMIA AZIENDALE","year":"5 ANNO","class":"AFM","teacher":"Lucia Carlucci","room":"AULA 7","note":"","zoomUrl":"https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1","status":"scheduled","tracks":["afm"],"affiancaA":[],"esercizi":false,"zoomPasscode":"377146"}],"modifiche":[],"accessiZoom":{"AULA 1|09:00":{"link":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","passcode":"132082"},"AULA 1|10:00":{"link":"https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1","passcode":"86719"},"AULA 1|11:00":{"link":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","passcode":"859341"},"AULA 1|12:00":{"link":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","passcode":"438503"},"AULA 2|09:00":{"link":"https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1","passcode":"617514"},"AULA 2|10:00":{"link":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","passcode":"290382"},"AULA 2|11:00":{"link":"https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1","passcode":"517741"},"AULA 2|12:00":{"link":"https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1","passcode":"816044"},"AULA 3|09:00":{"link":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","passcode":"197031"},"AULA 3|10:00":{"link":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","passcode":"419767"},"AULA 3|11:00":{"link":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","passcode":"703830"},"AULA 3|12:00":{"link":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","passcode":"728446"},"AULA 4|09:00":{"link":"https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1","passcode":"498159"},"AULA 4|10:00":{"link":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","passcode":"71721"},"AULA 4|11:00":{"link":"https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1","passcode":"925403"},"AULA 4|12:00":{"link":"https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1","passcode":"612842"},"AULA 5|09:00":{"link":"https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1","passcode":"513826"},"AULA 5|10:00":{"link":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","passcode":"118862"},"AULA 5|11:00":{"link":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","passcode":"991407"},"AULA 5|12:00":{"link":"https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1","passcode":"343517"},"AULA 6|09:00":{"link":"https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1","passcode":"510304"},"AULA 6|10:00":{"link":"https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1","passcode":"579497"},"AULA 6|11:00":{"link":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","passcode":"494425"},"AULA 6|12:00":{"link":"https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1","passcode":"434438"},"AULA 7|09:00":{"link":"https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1","passcode":"350240"},"AULA 7|10:00":{"link":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","passcode":"36079"},"AULA 7|11:00":{"link":"https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1","passcode":"929574"},"AULA 7|12:00":{"link":"https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1","passcode":"377146"}}}</script>
+<script type="text/plain" id="janus-app">
+(function () {
+  'use strict';
+
+  /* =====================================================================
+     IMPOSTAZIONI (le uniche cose da toccare qui, se serve)
+     ===================================================================== */
+  var CONFIG = Object.assign({
+    annoPredefinito: '3/4 ANNO',   // anno mostrato la prima volta (la piattaforma può passare ?anno=3/4)
+    inizioLezioni: '2026-10-05',   // primo giorno di lezione (AAAA-MM-GG): prima di questa data il calendario è vuoto
+    pxOra: 136,                    // altezza grafica di un'ora nella griglia desktop
+    zoomDisabilitatoSuMobile: true // se il link manca: su mobile mostra "Link Zoom in arrivo" (false = nessun pulsante)
+  }, window.JANUS_CONFIG || {});
+
+  /* Famiglie di materie -> colore. La prima regola che corrisponde vince.
+     Una materia non riconosciuta prende il colore neutro. */
+  var FAMIGLIE = [
+    { id: 'socio',       nome: 'Area socio-umana',    re: /UMANE|IGIENE|METOD|PSICO/ },
+    { id: 'scienze',     nome: 'Matematica e scienze', re: /MATE|FISICA|CHIMICA|BIOLOGIA|SCIENZE|INFORMATICA|MECCATRONICA|TPSI|SISTEMI/ },
+    { id: 'lingue',      nome: 'Lingue',              re: /INGLESE|SPAGNOLO|FRANCESE/ },
+    { id: 'umanistiche', nome: 'Materie umanistiche', re: /ITALIANO|GRAMMATICA|STORIA|FILOSOFIA|LATINO|GRECO|EPICA|ANTOLOGIA|LETTURA/ },
+    { id: 'economia',    nome: 'Economia e diritto',  re: /DIRITTO|AZIENDALE|POLITICA|GPOI|DTA|TURISTICA|CIVICA|RELAZIONI/ }
+  ];
+
+  var LEZIONI   = window.JANUS_LEZIONI   || [];
+  var MODIFICHE = window.JANUS_MODIFICHE || [];
+  var INDIRIZZI = window.JANUS_INDIRIZZI || [];
+  var CLASSI    = window.JANUS_CLASSI    || {};
+
+  var GIORNI = ['Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì'];
+  var GIORNI_BREVI = ['LUN', 'MAR', 'MER', 'GIO', 'VEN'];
+  var MESI = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+
+  /* =====================================================================
+     UTILITÀ
+     ===================================================================== */
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== null && text !== '') n.textContent = text;
+    return n;
+  }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function isoDate(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function addDays(d, n) { var x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); x.setDate(x.getDate() + n); return x; }
+  function mondayOf(d) { return addDays(d, -((d.getDay() + 6) % 7)); }
+  function toMin(t) { var p = t.split(':'); return (+p[0]) * 60 + (+p[1]); }
+  function fmtMin(m) { return pad(Math.floor(m / 60)) + ':' + pad(m % 60); }
+  function safeUrl(u) { return typeof u === 'string' && /^https:\/\//i.test(u.trim()) ? u.trim() : ''; }
+  function famiglia(materia) {
+    var s = String(materia || '').toUpperCase();
+    for (var i = 0; i < FAMIGLIE.length; i++) if (FAMIGLIE[i].re.test(s)) return FAMIGLIE[i].id;
+    return 'altro';
+  }
+  function labelAnno(a) { return String(a).replace(' ANNO', ' anno'); }
+  function testoData(d) { return GIORNI[(d.getDay() + 6) % 7] + ' ' + d.getDate() + ' ' + MESI[d.getMonth()]; }
+
+  /* =====================================================================
+     DATI -> LEZIONI DI UNA DATA
+     ===================================================================== */
+  var ANNI = [];
+  LEZIONI.forEach(function (l) { if (l.year && ANNI.indexOf(l.year) < 0) ANNI.push(l.year); });
+
+  // Chi vede cosa: indirizzi associati a una lezione ('*' = tutti)
+  function chiaveClasse(s) { return String(s || '').replace(/\s+/g, ' ').trim().toUpperCase(); }
+  var TABELLA_CLASSI = {};
+  Object.keys(CLASSI).forEach(function (k) { TABELLA_CLASSI[chiaveClasse(k)] = CLASSI[k]; });
+  var AVVISATI = {};
+  function indirizziDi(l) {
+    if (l.tracks) return l.tracks;
+    var k = chiaveClasse(l.class);
+    if (Object.prototype.hasOwnProperty.call(TABELLA_CLASSI, k)) return TABELLA_CLASSI[k];
+    if (!AVVISATI[k]) { AVVISATI[k] = true; if (window.console) console.warn('Calendario Janus: la classe "' + l.class + '" non è in JANUS_CLASSI, la lezione viene mostrata a tutti.'); }
+    return '*';
+  }
+  function perTutti(l) {
+    var t = indirizziDi(l);
+    return t === '*' || (Array.isArray(t) && t.indexOf('*') >= 0);
+  }
+  function visibileA(l, indirizzo) {
+    if (!indirizzo) return true;
+    var t = indirizziDi(l);
+    return t === '*' || (Array.isArray(t) && (t.indexOf('*') >= 0 || t.indexOf(indirizzo) >= 0));
+  }
+
+  // Intervallo orario della griglia, ricavato dai dati (lezioni e modifiche)
+  var GRIGLIA = (function () {
+    var min = Infinity, max = -Infinity;
+    LEZIONI.concat(MODIFICHE).forEach(function (l) {
+      if (l.start) min = Math.min(min, toMin(l.start));
+      if (l.end)   max = Math.max(max, toMin(l.end));
+    });
+    if (!isFinite(min)) { min = 9 * 60; max = 13 * 60; }
+    return { start: Math.floor(min / 60) * 60, end: Math.ceil(max / 60) * 60 };
+  })();
+
+  function applicaModifica(l, dataIso) {
+    var r = Object.assign({}, l, { date: dataIso, origStart: l.start, origEnd: l.end });
+    var m = null;
+    for (var i = 0; i < MODIFICHE.length; i++) {
+      if (MODIFICHE[i].lessonId === l.id && MODIFICHE[i].date === dataIso) { m = MODIFICHE[i]; break; }
+    }
+    if (m) {
+      ['start','end','subject','class','teacher','room','note','zoomUrl'].forEach(function (k) { if (m[k] !== undefined) r[k] = m[k]; });
+      if (m.status) r.status = m.status;
+      else if (m.start || m.end) r.status = 'moved';
+    }
+    r.status = r.status || 'scheduled';
+    return r;
+  }
+
+  function lezioniDelGiorno(data, anno) {
+    var dIso = isoDate(data), wd = (data.getDay() + 6) % 7 + 1, out = [];
+    if (CONFIG.inizioLezioni && dIso < CONFIG.inizioLezioni) return out;   // le lezioni iniziano il giorno di inizio
+    LEZIONI.forEach(function (l) {
+      if (l.year !== anno || !visibileA(l, stato.indirizzo)) return;
+      var vale = l.date ? l.date === dIso : l.weekday === wd;
+      if (vale) out.push(applicaModifica(l, dIso));
+    });
+    // Con un indirizzo scelto, la lezione "PER TUTTI" compare solo dove quell'indirizzo non ha
+    // una lezione sua nella stessa fascia oraria: se c'è, vale quella dell'indirizzo.
+    if (stato.indirizzo) {
+      var proprie = out.filter(function (e) { return !perTutti(e); });
+      out = out.filter(function (e) {
+        if (e.affiancaA && e.affiancaA.indexOf(stato.indirizzo) >= 0) return true;   // eccezione: resta accanto alla lezione dell'indirizzo
+        return !perTutti(e) || !proprie.some(function (p) { return toMin(p.start) < toMin(e.end) && toMin(e.start) < toMin(p.end); });
+      });
+    }
+    out.sort(function (a, b) { return toMin(a.start) - toMin(b.start) || toMin(b.end) - toMin(a.end) || String(a.subject).localeCompare(b.subject); });
+    return out;
+  }
+
+  // Lezioni contemporanee: le mette una accanto all'altra (come Google Calendar)
+  function disponi(evs, maxAffiancate) {
+    var cluster = [], fine = -1;
+    function chiudi() {
+      var n = 0, a = Infinity, b = -Infinity;
+      cluster.forEach(function (e) { n = Math.max(n, e.lane + 1); a = Math.min(a, toMin(e.start)); b = Math.max(b, toMin(e.end)); });
+      cluster.forEach(function (e, i) {
+        e.lanes = n;
+        if (n > maxAffiancate) { e.stack = true; e.stackIdx = i; e.stackN = cluster.length; e.cStart = a; e.cEnd = b; }
+      });
+      cluster = []; fine = -1;
+    }
+    evs.forEach(function (e) {
+      var s = toMin(e.start), f = toMin(e.end);
+      if (cluster.length && s >= fine) chiudi();
+      var lane = 0, occ = true;
+      while (occ) {
+        occ = cluster.some(function (c) { return c.lane === lane && toMin(c.end) > s; });
+        if (occ) lane++;
+      }
+      e.lane = lane; cluster.push(e); fine = Math.max(fine, f);
+    });
+    chiudi();
+    return evs;
+  }
+
+  /* =====================================================================
+     STATO
+     ===================================================================== */
+  var stato = { anno: null, indirizzo: '', lunedi: null, giorno: 0 };
+
+  function annoIniziale() {
+    var scelto = null;
+    try {
+      var p = new URLSearchParams(location.search).get('anno');
+      if (p) ANNI.forEach(function (a) { if (a.indexOf(p.trim()) === 0) scelto = a; });
+      if (!scelto) { var s = localStorage.getItem('janus-calendario-anno'); if (s && ANNI.indexOf(s) >= 0) scelto = s; }
+    } catch (e) {}
+    if (!scelto && ANNI.indexOf(CONFIG.annoPredefinito) >= 0) scelto = CONFIG.annoPredefinito;
+    return scelto || ANNI[0];
+  }
+
+  function indirizzoIniziale() {
+    var scelto = '';
+    function esiste(id) { return INDIRIZZI.some(function (i) { return i.id === id; }); }
+    try {
+      var p = new URLSearchParams(location.search).get('indirizzo');
+      if (p && esiste(p)) scelto = p;
+      else if (!p) { var s = localStorage.getItem('janus-calendario-indirizzo'); if (s && esiste(s)) scelto = s; }
+    } catch (e) {}
+    return scelto;
+  }
+
+  function vaiA_Oggi() {
+    var oggi = new Date(), dow = (oggi.getDay() + 6) % 7;
+    if (CONFIG.inizioLezioni && isoDate(oggi) < CONFIG.inizioLezioni) {   // prima dell'inizio: apre la prima settimana di lezioni
+      var p = CONFIG.inizioLezioni.split('-');
+      stato.lunedi = mondayOf(new Date(+p[0], +p[1] - 1, +p[2])); stato.giorno = 0; return;
+    }
+    if (dow > 4) { stato.lunedi = addDays(mondayOf(oggi), 7); stato.giorno = 0; }   // sabato/domenica: settimana seguente
+    else         { stato.lunedi = mondayOf(oggi); stato.giorno = dow; }
+  }
+
+  /* =====================================================================
+     TESTATA: anni, periodo, legenda
+     ===================================================================== */
+  function disegnaAnni() {
+    var box = $('jc-years');
+    Array.prototype.slice.call(box.querySelectorAll('.jc-chip')).forEach(function (n) { n.remove(); });
+    ANNI.forEach(function (a) {
+      var b = el('button', 'jc-chip', labelAnno(a));
+      b.type = 'button';
+      b.setAttribute('aria-pressed', a === stato.anno ? 'true' : 'false');
+      b.addEventListener('click', function () {
+        stato.anno = a;
+        try { localStorage.setItem('janus-calendario-anno', a); } catch (e) {}
+        disegna();
+      });
+      box.appendChild(b);
+    });
+  }
+
+  function creaMenuIndirizzi() {
+    var sel = $('jc-indirizzo');
+    if (!INDIRIZZI.length) { sel.parentNode.style.display = 'none'; return; }
+    var tutti = el('option', '', 'Tutti gli indirizzi'); tutti.value = '';
+    sel.appendChild(tutti);
+    INDIRIZZI.forEach(function (i) { var o = el('option', '', i.label); o.value = i.id; sel.appendChild(o); });
+    sel.addEventListener('change', function () {
+      stato.indirizzo = sel.value;
+      try { localStorage.setItem('janus-calendario-indirizzo', sel.value); } catch (e) {}
+      disegna();
+    });
+  }
+  function aggiornaMenuIndirizzi() {
+    var sel = $('jc-indirizzo');
+    sel.value = stato.indirizzo;
+    sel.classList.toggle('is-set', !!stato.indirizzo);
+  }
+
+  function disegnaPeriodo() {
+    var a = stato.lunedi, b = addDays(a, 4), t;
+    if (a.getFullYear() !== b.getFullYear()) t = a.getDate() + ' ' + MESI[a.getMonth()] + ' ' + a.getFullYear() + ' – ' + b.getDate() + ' ' + MESI[b.getMonth()] + ' ' + b.getFullYear();
+    else if (a.getMonth() !== b.getMonth()) t = a.getDate() + ' ' + MESI[a.getMonth()] + ' – ' + b.getDate() + ' ' + MESI[b.getMonth()] + ' ' + b.getFullYear();
+    else t = a.getDate() + ' – ' + b.getDate() + ' ' + MESI[b.getMonth()] + ' ' + b.getFullYear();
+    $('jc-range').textContent = t;
+  }
+
+  function disegnaLegenda() {
+    var box = $('jc-legend'); box.textContent = '';
+    FAMIGLIE.forEach(function (f) {
+      var s = el('span'); var i = el('i'); i.className = 'f-' + f.id; s.appendChild(i); s.appendChild(document.createTextNode(f.nome)); box.appendChild(s);
+    });
+  }
+
+  /* =====================================================================
+     ELEMENTI COMUNI
+     ===================================================================== */
+  // Accessi mattutini per aula e ora dal CSV fornito il 22 ottobre 2026.
+  var ACCESSI_MATTINA = window.JANUS_ACCESSI_ZOOM || {"AULA 1|09:00":{"link":"https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1","passcode":"132082"},"AULA 1|10:00":{"link":"https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1","passcode":"86719"},"AULA 1|11:00":{"link":"https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1","passcode":"859341"},"AULA 1|12:00":{"link":"https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1","passcode":"438503"},"AULA 2|09:00":{"link":"https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1","passcode":"617514"},"AULA 2|10:00":{"link":"https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1","passcode":"290382"},"AULA 2|11:00":{"link":"https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1","passcode":"517741"},"AULA 2|12:00":{"link":"https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1","passcode":"816044"},"AULA 3|09:00":{"link":"https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1","passcode":"197031"},"AULA 3|10:00":{"link":"https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1","passcode":"419767"},"AULA 3|11:00":{"link":"https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1","passcode":"703830"},"AULA 3|12:00":{"link":"https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1","passcode":"728446"},"AULA 4|09:00":{"link":"https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1","passcode":"498159"},"AULA 4|10:00":{"link":"https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1","passcode":"71721"},"AULA 4|11:00":{"link":"https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1","passcode":"925403"},"AULA 4|12:00":{"link":"https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1","passcode":"612842"},"AULA 5|09:00":{"link":"https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1","passcode":"513826"},"AULA 5|10:00":{"link":"https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1","passcode":"118862"},"AULA 5|11:00":{"link":"https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1","passcode":"991407"},"AULA 5|12:00":{"link":"https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1","passcode":"343517"},"AULA 6|09:00":{"link":"https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1","passcode":"510304"},"AULA 6|10:00":{"link":"https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1","passcode":"579497"},"AULA 6|11:00":{"link":"https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1","passcode":"494425"},"AULA 6|12:00":{"link":"https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1","passcode":"434438"},"AULA 7|09:00":{"link":"https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1","passcode":"350240"},"AULA 7|10:00":{"link":"https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1","passcode":"36079"},"AULA 7|11:00":{"link":"https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1","passcode":"929574"},"AULA 7|12:00":{"link":"https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1","passcode":"377146"}};
+  var AULA_DA_INCONTRO = {"86952268837":"AULA 1","85618843652":"AULA 2","84208963789":"AULA 3","83343621947":"AULA 4","84144422731":"AULA 5","89274784117":"AULA 6","81644826135":"AULA 7","83568027431":"AULA 1","86537770129":"AULA 1","81013308978":"AULA 1","81161849501":"AULA 1","81474490913":"AULA 1","86320197566":"AULA 1","83940028245":"AULA 1","87655303816":"AULA 1","87982744860":"AULA 2","82423044250":"AULA 2","84104210082":"AULA 2","87556167000":"AULA 2","83170304877":"AULA 2","83199389312":"AULA 2","86906722891":"AULA 2","83415684344":"AULA 2","88296074447":"AULA 3","82316518078":"AULA 3","83608101390":"AULA 3","81648812864":"AULA 3","85606085123":"AULA 3","87132662648":"AULA 3","84979030342":"AULA 3","86903781297":"AULA 3","89300227622":"AULA 4","83012781888":"AULA 4","83479030326":"AULA 4","81444547422":"AULA 4","87303145307":"AULA 4","82305647110":"AULA 4","82066832845":"AULA 4","84328484178":"AULA 4","81877167780":"AULA 5","82496726093":"AULA 5","85720114111":"AULA 5","86270285894":"AULA 5","88037158316":"AULA 5","85276782515":"AULA 5","81403969941":"AULA 5","82025847999":"AULA 5","86246038904":"AULA 6","88256833884":"AULA 6","81903670591":"AULA 6","85119207521":"AULA 6","82163498901":"AULA 6","84974333805":"AULA 6","88925192676":"AULA 6","85415773151":"AULA 6","83282325109":"AULA 7","87593831246":"AULA 7","89713424183":"AULA 7","87017061368":"AULA 7","82482308991":"AULA 7","83766661468":"AULA 7","83229719016":"AULA 7","83069508750":"AULA 7"};
+  function accessoMattina(ev) {
+    var aula = String(ev.room || '').trim().toUpperCase();
+    if (aula === 'AULA DOCENTI' || ev.esercizi) {
+      var incontro = /\/j\/(\d+)/.exec(ev.zoomUrl || '');
+      aula = incontro && AULA_DA_INCONTRO[incontro[1]] || aula;
+    }
+    return ACCESSI_MATTINA[aula + '|' + ev.start] || null;
+  }
+  function pulsanteZoom(ev, opzioni) {
+    var accesso = accessoMattina(ev);
+    var url = safeUrl(accesso ? accesso.link : ev.zoomUrl);
+    if (ev.status === 'cancelled') return null;
+    if (ev.esercizi && !url) {   // esercizi senza link: al posto del pulsante compare "Esercizi"
+      var h = el('span', 'jc-zoom is-off is-home');
+      h.appendChild(el('span', 'l', 'Esercizi'));
+      h.appendChild(el('span', 's', 'Esercizi'));
+      return h;
+    }
+    if (url) {
+      var a = el('a', 'jc-zoom');
+      a.appendChild(el('span', 'l', 'Accedi alla lezione'));
+      a.appendChild(el('span', 's', 'Accedi'));
+      a.setAttribute('aria-label', 'Accedi alla lezione');
+      a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.addEventListener('click', function (e) { e.stopPropagation(); });
+      if (!accesso) return a;
+      var gruppo = el('div', 'janus-accesso-passcode');
+      gruppo.appendChild(a);
+      gruppo.appendChild(el('span', 'janus-passcode', 'passcode: ' + accesso.passcode));
+      return gruppo;
+    }
+    if (opzioni && opzioni.disabilitato) {
+      var s = el('span', 'jc-zoom is-off', 'Link Zoom in arrivo');
+      s.setAttribute('aria-disabled', 'true');
+      return s;
+    }
+    return null;
+  }
+
+  function etichettaAccessibile(ev) {
+    var t = [ev.subject, ev.start + '–' + ev.end];
+    if (ev.teacher) t.push(ev.teacher);
+    if (ev.room) t.push(ev.room);
+    if (ev.status === 'cancelled') t.push('lezione annullata');
+    if (ev.status === 'moved') t.push('orario modificato');
+    return t.join(', ');
+  }
+
+  /* =====================================================================
+     VISTA SETTIMANALE (desktop)
+     ===================================================================== */
+  function disegnaSettimana() {
+    var root = $('jc-week'); root.textContent = '';
+    var px = CONFIG.pxOra, ore = (GRIGLIA.end - GRIGLIA.start) / 60;
+    // quante lezioni contemporanee stanno una accanto all'altra (almeno 105 px l'una); oltre, vengono impilate
+    var largCol = root.clientWidth ? (root.clientWidth - 64) / 5 : 232;
+    var maxAff = Math.max(1, Math.floor(largCol / 105));
+    var oggiIso = isoDate(new Date());
+
+    var head = el('div', 'jc-head');
+    head.appendChild(el('div'));
+    for (var i = 0; i < 5; i++) {
+      var d = addDays(stato.lunedi, i);
+      var h = el('div', 'jc-dayhead' + (isoDate(d) === oggiIso ? ' is-today' : ''));
+      h.appendChild(el('div', 'jc-dname', GIORNI[i]));
+      h.appendChild(el('div', 'jc-dnum', String(d.getDate())));
+      head.appendChild(h);
+    }
+    root.appendChild(head);
+
+    var body = el('div', 'jc-body');
+    body.style.height = (ore * px) + 'px';
+    body.style.setProperty('--hour', px + 'px');
+
+    var times = el('div', 'jc-times');
+    for (var k = 0; k < ore; k++) {
+      var lb = el('div', 'jc-time-label', fmtMin(GRIGLIA.start + k * 60));
+      lb.style.top = (k * px + 5) + 'px';
+      times.appendChild(lb);
+    }
+    body.appendChild(times);
+
+    for (var j = 0; j < 5; j++) {
+      var data = addDays(stato.lunedi, j);
+      var col = el('div', 'jc-col' + (isoDate(data) === oggiIso ? ' is-today' : ''));
+      col.dataset.date = isoDate(data);
+      disponi(lezioniDelGiorno(data, stato.anno), maxAff).forEach(function (ev) { col.appendChild(cardDesktop(ev, data, px)); });
+      body.appendChild(col);
+    }
+    root.appendChild(body);
+  }
+
+  function cardDesktop(ev, data, px) {
+    var top, alt, url = safeUrl(ev.zoomUrl);
+    var c = el('div', 'jc-evt f-' + famiglia(ev.subject) + (ev.status === 'cancelled' ? ' is-cancelled' : '') + (url && ev.status !== 'cancelled' ? ' has-zoom' : '') + (ev.stack ? ' is-stacked' : ''));
+    if (ev.stack) {
+      var blocco = (ev.cEnd - ev.cStart) / 60 * px, riga = blocco / ev.stackN;
+      top = (ev.cStart - GRIGLIA.start) / 60 * px + ev.stackIdx * riga + 1;
+      alt = riga - 2;
+      c.style.left = '2px'; c.style.width = 'calc(100% - 4px)';
+    } else {
+      top = (toMin(ev.start) - GRIGLIA.start) / 60 * px;
+      alt = (toMin(ev.end) - toMin(ev.start)) / 60 * px - 2;
+      c.style.left = 'calc(' + (ev.lane * 100 / ev.lanes) + '% + 2px)';
+      c.style.width = 'calc(' + (100 / ev.lanes) + '% - 4px)';
+    }
+    c.style.top = top + 'px';
+    c.style.height = alt + 'px';
+    c.setAttribute('role', 'button');
+    c.setAttribute('tabindex', '0');
+    c.setAttribute('aria-label', etichettaAccessibile(ev));
+    c.title = ev.subject + '\n' + ev.start + ' – ' + ev.end + (ev.teacher ? '\n' + ev.teacher : '') + (ev.room ? '\n' + ev.room : '');
+    c.dataset.date = ev.date; c.dataset.start = ev.start; c.dataset.end = ev.end; c.dataset.status = ev.status;
+
+    if (ev.stack) {
+      c.appendChild(el('div', 'jc-evt-subject', ev.subject));
+      var info = ev.status === 'cancelled' ? 'Lezione annullata' : ev.status === 'moved' ? 'Orario modificato' : (ev.teacher ? ev.teacher : '');
+      c.appendChild(el('div', 'jc-evt-line jc-evt-class', info));
+      c.addEventListener('click', function () { apriDettaglio(ev, data); });
+      c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); apriDettaglio(ev, data); } });
+      return c;
+    }
+    c.appendChild(el('div', 'jc-livetag', 'In corso'));
+    c.appendChild(el('div', 'jc-evt-subject', ev.subject));
+    c.appendChild(el('div', 'jc-evt-line jc-evt-time', ev.start + ' – ' + ev.end));
+    if (ev.status === 'cancelled') {
+      c.appendChild(el('div', 'jc-evt-cancel', 'Lezione annullata'));
+    } else {
+      if (ev.teacher) c.appendChild(el('div', 'jc-evt-line jc-evt-teacher', ev.teacher));
+      if (ev.room)    c.appendChild(el('div', 'jc-evt-line jc-evt-room', ev.room));
+      if (ev.status === 'moved') c.appendChild(el('span', 'jc-tag', 'Orario modificato'));
+      if (ev.esercizi) c.appendChild(el('span', 'jc-tag', 'Esercizi'));
+      var z = pulsanteZoom(ev, { disabilitato: false });
+      if (z) c.appendChild(z);
+    }
+    c.addEventListener('click', function () { apriDettaglio(ev, data); });
+    c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); apriDettaglio(ev, data); } });
+    return c;
+  }
+
+  /* =====================================================================
+     VISTA MOBILE
+     ===================================================================== */
+  function disegnaMobile() {
+    var root = $('jc-mobile'); root.textContent = '';
+    var oggiIso = isoDate(new Date());
+
+    var tabs = el('div', 'jc-daytabs'); tabs.setAttribute('role', 'tablist');
+    for (var i = 0; i < 5; i++) {
+      (function (i) {
+        var d = addDays(stato.lunedi, i);
+        var b = el('button', 'jc-daytab' + (isoDate(d) === oggiIso ? ' is-today' : ''));
+        b.type = 'button'; b.setAttribute('role', 'tab');
+        b.setAttribute('aria-selected', i === stato.giorno ? 'true' : 'false');
+        b.setAttribute('aria-label', testoData(d));
+        b.appendChild(el('span', 'd', GIORNI_BREVI[i]));
+        b.appendChild(el('span', 'n', String(d.getDate())));
+        b.addEventListener('click', function () { stato.giorno = i; disegnaMobile(); });
+        tabs.appendChild(b);
+      })(i);
+    }
+    root.appendChild(tabs);
+
+    var data = addDays(stato.lunedi, stato.giorno);
+    var evs = lezioniDelGiorno(data, stato.anno);
+    var lista = el('div', 'jc-daylist');
+    var hd = el('div', 'jc-dayhead-m');
+    hd.appendChild(el('h3', '', testoData(data)));
+    hd.appendChild(el('span', '', evs.length === 1 ? '1 lezione' : evs.length + ' lezioni'));
+    lista.appendChild(hd);
+
+    if (!evs.length) {
+      lista.appendChild(el('div', 'jc-empty', 'Nessuna lezione in questo giorno.'));
+    } else {
+      var gruppi = {}, ordine = [];
+      evs.forEach(function (e) { if (!gruppi[e.start]) { gruppi[e.start] = []; ordine.push(e.start); } gruppi[e.start].push(e); });
+      ordine.forEach(function (start) {
+        var g = el('div', 'jc-group');
+        g.appendChild(el('div', 'jc-group-time', start));
+        var cards = el('div', 'jc-group-cards');
+        gruppi[start].forEach(function (ev) { cards.appendChild(cardMobile(ev, data)); });
+        g.appendChild(cards); lista.appendChild(g);
+      });
+    }
+    root.appendChild(lista);
+
+    // scorrimento con il dito tra i giorni
+    var x0 = null;
+    lista.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    lista.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) < 60) return;
+      var n = stato.giorno + (dx < 0 ? 1 : -1);
+      if (n >= 0 && n <= 4) { stato.giorno = n; disegnaMobile(); }
+    }, { passive: true });
+  }
+
+  function cardMobile(ev, data) {
+    var c = el('div', 'jc-mcard f-' + famiglia(ev.subject) + (ev.status === 'cancelled' ? ' is-cancelled' : ''));
+    c.dataset.date = ev.date; c.dataset.start = ev.start; c.dataset.end = ev.end; c.dataset.status = ev.status;
+    c.appendChild(el('div', 'jc-livetag', 'In corso'));
+    c.appendChild(el('div', 'jc-m-subject', ev.subject));
+    c.appendChild(el('div', 'jc-m-line jc-m-time', ev.start + ' – ' + ev.end));
+    if (ev.status === 'cancelled') {
+      c.appendChild(el('div', 'jc-m-line', 'Lezione annullata'));
+      return c;
+    }
+    if (ev.teacher) c.appendChild(el('div', 'jc-m-line', ev.teacher));
+    if (ev.room)    c.appendChild(el('div', 'jc-m-line', ev.room));
+    if (ev.status === 'moved') c.appendChild(el('span', 'jc-tag', 'Orario modificato'));
+    if (ev.esercizi) c.appendChild(el('span', 'jc-tag', 'Esercizi'));
+    var z = pulsanteZoom(ev, { disabilitato: CONFIG.zoomDisabilitatoSuMobile });
+    if (z) c.appendChild(z);
+    return c;
+  }
+
+  /* =====================================================================
+     DETTAGLIO LEZIONE
+     ===================================================================== */
+  function apriDettaglio(ev, data) {
+    var dlg = $('jc-dialog'); dlg.textContent = '';
+    var head = el('div', 'jc-d-head f-' + famiglia(ev.subject));
+    var h = el('h3', '', ev.subject); h.id = 'jc-d-title';
+    head.appendChild(h);
+    head.appendChild(el('p', '', testoData(data) + ' · ' + ev.start + ' – ' + ev.end));
+    dlg.appendChild(head);
+
+    var body = el('div', 'jc-d-body');
+    var dl = el('dl');
+    function riga(k, v) { if (!v) return; dl.appendChild(el('dt', '', k)); dl.appendChild(el('dd', '', v)); }
+    if (ev.status === 'cancelled') riga('Stato', 'Lezione annullata');
+    if (ev.status === 'moved') { riga('Stato', 'Orario modificato'); riga('Orario originale', ev.origStart + ' – ' + ev.origEnd); }
+    riga('Anno', labelAnno(ev.year));
+    riga('Docente', ev.teacher || 'Da definire');
+    if (ev.esercizi) riga('Tipo', 'Esercizi');
+    riga('Aula', ev.room);
+    riga('Note', ev.note);
+    body.appendChild(dl);
+
+    var azioni = el('div', 'jc-d-actions');
+    var z = pulsanteZoom(ev, { disabilitato: true });
+    if (z) azioni.appendChild(z);
+    var chiudi = el('button', 'jc-btn', 'Chiudi'); chiudi.type = 'button';
+    chiudi.addEventListener('click', function () { dlg.close(); });
+    azioni.appendChild(chiudi);
+    body.appendChild(azioni);
+    dlg.appendChild(body);
+
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  $('jc-dialog').addEventListener('click', function (e) { if (e.target === this) this.close(); });
+
+  /* =====================================================================
+     ORARIO ATTUALE + LEZIONE IN CORSO (si aggiorna da solo ogni 30 secondi)
+     ===================================================================== */
+  function aggiornaOra() {
+    var ora = new Date(), oggiIso = isoDate(ora), minuti = ora.getHours() * 60 + ora.getMinutes();
+
+    Array.prototype.forEach.call(document.querySelectorAll('.jc-nowline,.jc-nowpill'), function (n) { n.remove(); });
+    var col = document.querySelector('.jc-col[data-date="' + oggiIso + '"]');
+    if (col && minuti >= GRIGLIA.start && minuti <= GRIGLIA.end) {
+      var top = (minuti - GRIGLIA.start) / 60 * CONFIG.pxOra;
+      var linea = el('div', 'jc-nowline'); linea.style.top = top + 'px'; col.appendChild(linea);
+      var pill = el('div', 'jc-nowpill', fmtMin(minuti)); pill.style.top = top + 'px'; col.appendChild(pill);
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll('.jc-evt,.jc-mcard'), function (n) {
+      var live = n.dataset.date === oggiIso && n.dataset.status !== 'cancelled' && toMin(n.dataset.start) <= minuti && minuti < toMin(n.dataset.end);
+      n.classList.toggle('is-live', live);
+    });
+  }
+
+  /* =====================================================================
+     AVVIO
+     ===================================================================== */
+  function disegna() {
+    var prima = CONFIG.inizioLezioni && isoDate(addDays(stato.lunedi, -7)) < isoDate(mondayOf(new Date(CONFIG.inizioLezioni + 'T12:00:00')));
+    $('jc-prev').disabled = !!prima;   // niente settimane prima dell'inizio delle lezioni
+    disegnaAnni(); aggiornaMenuIndirizzi(); disegnaPeriodo();
+    disegnaSettimana(); disegnaMobile(); aggiornaOra();
+  }
+
+  $('jc-prev').addEventListener('click', function () { stato.lunedi = addDays(stato.lunedi, -7); disegna(); });
+  $('jc-next').addEventListener('click', function () { stato.lunedi = addDays(stato.lunedi, 7); disegna(); });
+  $('jc-today').addEventListener('click', function () { vaiA_Oggi(); disegna(); });
+
+  if (!LEZIONI.length) {
+    $('jc-week').textContent = 'Nessuna lezione trovata: controlla il file lezioni.js.';
+    return;
+  }
+  stato.anno = annoIniziale();
+  stato.indirizzo = indirizzoIniziale();
+  creaMenuIndirizzi();
+  vaiA_Oggi();
+  disegnaLegenda();
+  disegna();
+  setInterval(aggiornaOra, 30000);
+  var attesa = null, larghezzaPrec = window.innerWidth;
+  window.addEventListener('resize', function () {
+    clearTimeout(attesa);
+    attesa = setTimeout(function () { if (window.innerWidth !== larghezzaPrec) { larghezzaPrec = window.innerWidth; disegna(); } }, 150);
+  });
+})();
+</script>
+<script>
+/* CARICAMENTO DATI: il calendario legge mattina.json dall'indirizzo qui sotto (si aggiorna da solo).
+   Se l'indirizzo non risponde, usa la copia incorporata in questa pagina. */
+(function () {
+  var URL_DATI = "https://giorgiapaolucci-janus.github.io/janus-calendari/mattina.json";
+  var incorporati = JSON.parse(document.getElementById('janus-dati').textContent);
+  var testoApp = document.getElementById('janus-app').textContent;
+  var avviato = false;
+  function avvia(d) {
+    if (avviato) return; avviato = true;
+    window.JANUS_ACCESSI_ZOOM = d.accessiZoom; window.JANUS_LEZIONI = d.lezioni || []; window.JANUS_MODIFICHE = d.modifiche || [];
+    var s = document.createElement('script'); s.text = testoApp; document.body.appendChild(s);
+  }
+  if (!URL_DATI || URL_DATI.indexOf('UTENTE') >= 0 || !window.fetch) { avvia(incorporati); return; }
+  var t = setTimeout(function () { avvia(incorporati); }, 4000);
+  fetch(URL_DATI + (URL_DATI.indexOf('?') < 0 ? '?v=' : '&v=') + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error('http'); return r.json(); })
+    .then(function (d) { if (!d || !d.lezioni || !d.lezioni.length) throw new Error('vuoto'); clearTimeout(t); avvia(d); })
+    .catch(function () { clearTimeout(t); avvia(incorporati); });
+})();
+</script>
+
+<script>
+(function () {
+  var pulsante = document.getElementById('jc-refresh');
+  if (!pulsante) return;
+  pulsante.addEventListener('click', function () {
+    var indirizzo = new URL(window.location.href);
+    indirizzo.searchParams.set('jc_refresh', String(Date.now()));
+    pulsante.disabled = true;
+    pulsante.querySelector('span').textContent = 'Aggiornamento…';
+    window.location.replace(indirizzo.href);
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -7,6 +7,7 @@
    Scrive mattina.json e sera.json. Stampa un rapporto (cose non pubblicate, differenze software/studenti). */
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const dir = __dirname, janus = path.join(dir, '..');
+const accessiZoom = require('../../../accessi-zoom.cjs');
 const stato = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
 const out = process.argv[3] || dir;
 const src = ['data.js', 'rules.js', 'engine.js'].map(f => fs.readFileSync(path.join(janus, f), 'utf8')).join('\n');
@@ -61,7 +62,7 @@ function applica(nome, cal) {
     modifiche.push({ lessonId: o.id, date: d, teacher: X.nomeD(o.docEff) });
   }));
   rapporto.push(nome + ': ' + L.length + ' lezioni, ' + nPerm + ' modifiche permanenti, ' + modifiche.length + ' sostituzioni con data' + (manca.length ? ' | nel calendario studenti ma non nel software: ' + manca.join(',') : '') + (extra.length ? ' | nel software ma non nei calendari studenti (e non aggiunte): ' + extra.join(',') : ''));
-  return { versione: 1, aggiornato: new Date().toISOString(), lezioni: L, modifiche };
+  return accessiZoom.applica({ versione: 1, aggiornato: new Date().toISOString(), lezioni: L, modifiche }, nome);
 }
 ['mattina', 'sera'].forEach((n, i) => { const d = applica(n, i ? 'S' : 'M'); fs.writeFileSync(path.join(out, n + '.json'), JSON.stringify(d)); });
 
