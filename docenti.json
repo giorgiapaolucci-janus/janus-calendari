@@ -1,6 +1,6 @@
 {
  "versione": 1,
- "aggiornato": "2026-10-22T14:26:16.569Z",
+ "aggiornato": "2026-10-26T14:44:47.507Z",
  "nomi": {
   "FV": "Federico Vani",
   "GC": "Giorgia Clementi",
@@ -2240,7 +2240,7 @@
    "turno": "Sera",
    "anno": "4/5",
    "materia": "Lab matematica",
-   "ind": "ITI Informatico",
+   "ind": "ITI Informatico / Scientifico",
    "aula": 6,
    "note": "",
    "esercizi": false
@@ -2435,7 +2435,7 @@
    "turno": "Sera",
    "anno": "4/5",
    "materia": "Lab lettura",
-   "ind": "IPSEOA / AFM",
+   "ind": "IPSEOA / AFM / Scientifico",
    "aula": 3,
    "note": "",
    "esercizi": false
@@ -2513,7 +2513,7 @@
    "turno": "Sera",
    "anno": "4/5",
    "materia": "Lab lettura",
-   "ind": "IPSEOA / AFM",
+   "ind": "IPSEOA / AFM / Scientifico",
    "aula": 3,
    "note": "",
    "esercizi": false
@@ -3150,7 +3150,7 @@
    "turno": "Sera",
    "anno": "4/5",
    "materia": "Lab creativo",
-   "ind": "ITI Informatico / AFM",
+   "ind": "ITI Informatico / AFM / Scientifico",
    "aula": 3,
    "note": "",
    "esercizi": false
@@ -3165,6 +3165,45 @@
    "materia": "Storia",
    "ind": "Tutti gli indirizzi",
    "aula": 4,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "SJ20261026_FIS18",
+   "doc": "GL",
+   "day": 4,
+   "hour": 18,
+   "turno": "Sera",
+   "anno": "4/5",
+   "materia": "Fisica",
+   "ind": "Scientifico",
+   "aula": 6,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "SJ20261026_FIS19",
+   "doc": "GL",
+   "day": 4,
+   "hour": 19,
+   "turno": "Sera",
+   "anno": "4/5",
+   "materia": "Fisica",
+   "ind": "Scientifico",
+   "aula": 6,
+   "note": "",
+   "esercizi": false
+  },
+  {
+   "id": "SJ20261026_SCI18",
+   "doc": "MR",
+   "day": 5,
+   "hour": 18,
+   "turno": "Sera",
+   "anno": "4/5",
+   "materia": "Scienze",
+   "ind": "Scientifico",
+   "aula": 5,
    "note": "",
    "esercizi": false
   }
