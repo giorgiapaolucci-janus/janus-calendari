@@ -7,10 +7,12 @@ function sheets(dir, state, app) {
   vm.runInNewContext(fs.readFileSync(path.join(app,'data.js'),'utf8')+'\nthis.sw={DOCENTI,TURNI};',ctx);
   const {DOCENTI,TURNI}=ctx.sw, days=['','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì'];
   const zoom={}; for(const f of [m,s]) for(const l of f.lezioni) { const r=l.room.replace('AULA ',''); if(/^\d+$/.test(r)&&!zoom[r]) zoom[r]=l.zoomUrl; }
-  const room=r=>r.esercizi?'Aula docenti':`Aula ${r.aula}`;
+  const room=r=>r.aula?`Aula ${r.aula}`:'';
+  const byId=new Map([...m.lezioni,...s.lezioni].map(l=>[l.id,l]));
+  const withUnassigned=(rr,calendar)=>rr.concat(calendar.lezioni.filter(l=>!l.teacher&&!rr.some(r=>r.id===l.id)).map(l=>({id:l.id,doc:'',day:l.weekday,hour:Number(l.start.slice(0,2)),anno:l.year.replace(/\s*ANNO/i,''),materia:l.subject,ind:(l.tracks||[]).map(t=>t==='mme'?'MME':t).join(' / '),aula:0,note:l.note||'',esercizi:!!l.esercizi}))); 
   const hour=h=>`${String(h).padStart(2,'0')}:00 – ${String(h).padStart(2,'0')}:50`;
   const headers=['Giorno','Orario','Anno','Indirizzi','Materia','Docente','Aula','Note','Link lezione (Zoom)','ID'];
-  const rows=rr=>[headers,...rr.slice().sort((a,b)=>a.day-b.day||a.hour-b.hour||a.anno.localeCompare(b.anno)||a.doc.localeCompare(b.doc)).map(r=>[days[r.day],hour(r.hour),r.anno+' anno',r.ind,r.materia,d.nomi[r.doc]||r.doc,room(r),r.esercizi?'Esercizi':r.note||'',zoom[r.aula]||'',r.id])];
+  const rows=rr=>[headers,...rr.slice().sort((a,b)=>a.day-b.day||a.hour-b.hour||a.anno.localeCompare(b.anno)||a.doc.localeCompare(b.doc)).map(r=>[days[r.day],hour(r.hour),r.anno+' anno',r.ind,r.materia,d.nomi[r.doc]||r.doc,room(r),r.esercizi?'Esercizi':r.note||'',byId.get(r.id)?.zoomUrl||'',r.id])];
   const all=[...d.diurno,...d.serale], teacher=[['Docente','Orario',...days.slice(1)]];
   for(const [id,name] of Object.entries(d.nomi).sort((a,b)=>a[1].localeCompare(b[1]))) {
     const mine=all.filter(r=>r.doc===id);
@@ -23,6 +25,6 @@ function sheets(dir, state, app) {
   for(const s of state.sost) for(const [lid,did] of Object.entries(s.map||{})) changes.push([s.data,s.data,'Sostituzione',names[did]||'nessun sostituto',lid,'']);
   for(const m of state.mods) changes.push([(m.creata||'').slice(0,10),'','Modifica permanente','',m.lessonId||'',m.motivo||'']);
   changes.sort((a,b)=>String(a[0]).localeCompare(String(b[0])));
-  return {spreadsheetId:SHEET_ID, sheets:{'Mattina':rows(d.diurno),'Sera':rows(d.serale),'Orari docenti':teacher,'Aule e link':rooms,'Turni docenti':shifts,'Modifiche e sostituzioni':[['Dal','Al','Tipo','Docente','Dettaglio','Note'],...changes]}};
+  return {spreadsheetId:SHEET_ID, sheets:{'Mattina':rows(withUnassigned(d.diurno,m)),'Sera':rows(withUnassigned(d.serale,s)),'Orari docenti':teacher,'Aule e link':rooms,'Turni docenti':shifts,'Modifiche e sostituzioni':[['Dal','Al','Tipo','Docente','Dettaglio','Note'],...changes]}};
 }
 module.exports={sheets,SHEET_ID};

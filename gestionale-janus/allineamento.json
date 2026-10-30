@@ -1,0 +1,7980 @@
+{
+  "id": "allineamento_20261030",
+  "baseCommit": "cebb87aa11127fa1e721a08760efd75810bed975",
+  "source": "Calendari pubblicati verificati il 30 ottobre 2026",
+  "actions": [
+    {
+      "lessonId": "L064",
+      "tipo": "del",
+      "before": {
+        "id": "L064",
+        "g": 3,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "ED CIVICA",
+        "ind": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ],
+        "tracks": [
+          "afm",
+          "classico",
+          "informatico",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "socio-sanitario",
+          "sportivo",
+          "turismo"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "L066",
+      "tipo": "del",
+      "before": {
+        "id": "L066",
+        "g": 3,
+        "h": 10,
+        "anno": "5",
+        "materia": "ED CIVICA",
+        "ind": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ],
+        "tracks": [
+          "afm",
+          "classico",
+          "informatico",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "socio-sanitario",
+          "sportivo",
+          "turismo"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "L071",
+      "tipo": "del",
+      "before": {
+        "id": "L071",
+        "g": 3,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "SCIENZE INTEGRATE",
+        "ind": "CLASSICO / LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+        "doc": "lp",
+        "aula": "2",
+        "note": "(+4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze integrate"
+        ],
+        "tracks": [
+          "classico",
+          "les",
+          "linguistico",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "sportivo"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "L074",
+      "tipo": "del",
+      "before": {
+        "id": "L074",
+        "g": 3,
+        "h": 11,
+        "anno": "5",
+        "materia": "SCIENZE INTEGRATE",
+        "ind": "CLASSICO / LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+        "doc": "lp",
+        "aula": "2",
+        "note": "(+4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze integrate"
+        ],
+        "tracks": [
+          "classico",
+          "les",
+          "linguistico",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "sportivo"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "L099",
+      "tipo": "del",
+      "before": {
+        "id": "L099",
+        "g": 4,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "BIOLOGIA",
+        "ind": "CLASSICO / SCIENZE APPLICATE",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "biologia"
+        ]
+      }
+    },
+    {
+      "lessonId": "L110",
+      "tipo": "del",
+      "before": {
+        "id": "L110",
+        "g": 5,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "LAB MATEMATICA",
+        "ind": "TUTTI",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      }
+    },
+    {
+      "lessonId": "L142",
+      "tipo": "del",
+      "before": {
+        "id": "L142",
+        "g": 5,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ]
+      }
+    },
+    {
+      "lessonId": "L144",
+      "tipo": "del",
+      "before": {
+        "id": "L144",
+        "g": 5,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "LAB ITALIANO",
+        "ind": "CLASSICO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ],
+        "tracks": [
+          "classico"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "L145",
+      "tipo": "del",
+      "before": {
+        "id": "L145",
+        "g": 5,
+        "h": 11,
+        "anno": "5",
+        "materia": "LAB ITALIANO",
+        "ind": "CLASSICO / IPSEOA",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ],
+        "tracks": [
+          "classico",
+          "ipseoa"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "A008",
+      "tipo": "del",
+      "before": {
+        "id": "A008",
+        "g": 3,
+        "h": 12,
+        "anno": "1/2",
+        "materia": "LAB GRAMMATICA",
+        "ind": "ITI INFORMATICO",
+        "doc": "gd",
+        "aula": "",
+        "note": "Esercizi (aula docenti o da casa)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": true,
+        "subj": [
+          "lab grammatica"
+        ]
+      }
+    },
+    {
+      "lessonId": "A020",
+      "tipo": "del",
+      "before": {
+        "id": "A020",
+        "g": 3,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "ED CIVICA",
+        "ind": "SOCIO SANITARIO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ]
+      }
+    },
+    {
+      "lessonId": "S051",
+      "tipo": "del",
+      "before": {
+        "id": "S051",
+        "g": 4,
+        "h": 18,
+        "anno": "1/2",
+        "materia": "SCIENZE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "as",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze"
+        ]
+      }
+    },
+    {
+      "lessonId": "LJ20261014_2",
+      "tipo": "del",
+      "before": {
+        "g": 5,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "ECONOMIA AZIENDALE",
+        "ind": "AFM",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "tracks": [
+          "afm"
+        ],
+        "id": "LJ20261014_2",
+        "casa": false,
+        "subj": [
+          "economia aziendale"
+        ],
+        "cal": "M"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_5",
+      "tipo": "del",
+      "before": {
+        "g": 3,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "FRANCESE AVANZATO",
+        "ind": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "tracks": [
+          "afm",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "socio-sanitario"
+        ],
+        "id": "LJ20261014_5",
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "cal": "M"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_6",
+      "tipo": "del",
+      "before": {
+        "g": 3,
+        "h": 10,
+        "anno": "5",
+        "materia": "FRANCESE AVANZATO",
+        "ind": "LES / LINGUISTICO / SOCIO SANITARIO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "tracks": [
+          "les",
+          "linguistico",
+          "socio-sanitario"
+        ],
+        "id": "LJ20261014_6",
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "cal": "M"
+      }
+    },
+    {
+      "lessonId": "L001",
+      "tipo": "set",
+      "before": {
+        "id": "L001",
+        "g": 1,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "LAB ITALIANO",
+        "ind": "PER TUTTI",
+        "doc": "gd",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+        "zoomPasscode": "498159",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L002",
+      "tipo": "set",
+      "before": {
+        "id": "L002",
+        "g": 1,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L003",
+      "tipo": "set",
+      "before": {
+        "id": "L003",
+        "g": 1,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "MECCATRONICA",
+        "ind": "MECCATRONICA",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "meccatronica"
+        ]
+      },
+      "patch": {
+        "ind": "Meccatronica",
+        "zoomUrl": "https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1",
+        "zoomPasscode": "510304",
+        "class": "MECCATRONICA"
+      }
+    },
+    {
+      "lessonId": "L004",
+      "tipo": "set",
+      "before": {
+        "id": "L004",
+        "g": 1,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "LAB INGLESE",
+        "ind": "PER TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L005",
+      "tipo": "set",
+      "before": {
+        "id": "L005",
+        "g": 1,
+        "h": 9,
+        "anno": "5",
+        "materia": "ITALIANO",
+        "ind": "PER TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+        "zoomPasscode": "617514",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L006",
+      "tipo": "set",
+      "before": {
+        "id": "L006",
+        "g": 1,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "SCIENZE UMANE",
+        "ind": "LES E SCIENZE UMANE",
+        "doc": "gd",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze umane"
+        ]
+      },
+      "patch": {
+        "ind": "LES e scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+        "zoomPasscode": "71721",
+        "class": "LES E SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L008",
+      "tipo": "set",
+      "before": {
+        "id": "L008",
+        "g": 1,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "LAB ITALIANO",
+        "ind": "PER TUTTI",
+        "doc": "gd",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+        "zoomPasscode": "71721",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L009",
+      "tipo": "set",
+      "before": {
+        "id": "L009",
+        "g": 1,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+        "zoomPasscode": "86719",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L010",
+      "tipo": "set",
+      "before": {
+        "id": "L010",
+        "g": 1,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "MECCATRONICA",
+        "ind": "MECCATRONICA",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "meccatronica"
+        ]
+      },
+      "patch": {
+        "ind": "Meccatronica",
+        "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+        "zoomPasscode": "579497",
+        "class": "MECCATRONICA"
+      }
+    },
+    {
+      "lessonId": "L011",
+      "tipo": "set",
+      "before": {
+        "id": "L011",
+        "g": 1,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "LAB INGLESE",
+        "ind": "PER TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L012",
+      "tipo": "set",
+      "before": {
+        "id": "L012",
+        "g": 1,
+        "h": 10,
+        "anno": "5",
+        "materia": "STORIA",
+        "ind": "PER TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+        "zoomPasscode": "290382",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L013",
+      "tipo": "set",
+      "before": {
+        "id": "L013",
+        "g": 1,
+        "h": 11,
+        "anno": "1/2",
+        "materia": "INGLESE",
+        "ind": "PER TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+3 +3/4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L014",
+      "tipo": "set",
+      "before": {
+        "id": "L014",
+        "g": 1,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "INGLESE",
+        "ind": "PER TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+3 +3/4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L015",
+      "tipo": "set",
+      "before": {
+        "id": "L015",
+        "g": 1,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "ITALIANO",
+        "ind": "PER TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1",
+        "zoomPasscode": "517741",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L016",
+      "tipo": "set",
+      "before": {
+        "id": "L016",
+        "g": 1,
+        "h": 11,
+        "anno": "5",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+        "zoomPasscode": "859341",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L017",
+      "tipo": "set",
+      "before": {
+        "id": "L017",
+        "g": 1,
+        "h": 12,
+        "anno": "1/2",
+        "materia": "INGLESE",
+        "ind": "PER TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+3 +3/4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+        "zoomPasscode": "728446",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L018",
+      "tipo": "set",
+      "before": {
+        "id": "L018",
+        "g": 1,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "INGLESE",
+        "ind": "PER TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+3 +3/4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+        "zoomPasscode": "728446",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L019",
+      "tipo": "set",
+      "before": {
+        "id": "L019",
+        "g": 1,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "STORIA",
+        "ind": "PER TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L020",
+      "tipo": "set",
+      "before": {
+        "id": "L020",
+        "g": 1,
+        "h": 12,
+        "anno": "5",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L021",
+      "tipo": "set",
+      "before": {
+        "id": "L021",
+        "g": 2,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "ITALIANO",
+        "ind": "PER TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+        "zoomPasscode": "617514",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L022",
+      "tipo": "set",
+      "before": {
+        "id": "L022",
+        "g": 2,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "IGIENE",
+        "ind": "SOCIO",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "igiene"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "SOCIO"
+      }
+    },
+    {
+      "lessonId": "L023",
+      "tipo": "set",
+      "before": {
+        "id": "L023",
+        "g": 2,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "FISICA",
+        "ind": "LICEI",
+        "doc": "er",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ]
+      },
+      "patch": {
+        "ind": "Licei",
+        "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+        "zoomPasscode": "498159",
+        "class": "SCIENTIFICI",
+        "tracks": [
+          "scientifico",
+          "scienze-applicate",
+          "sportivo",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "L024",
+      "tipo": "set",
+      "before": {
+        "id": "L024",
+        "g": 2,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "ECONOMIA AZIENDALE",
+        "ind": "AFM/TUR",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "economia aziendale"
+        ]
+      },
+      "patch": {
+        "ind": "AFM / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+        "zoomPasscode": "350240",
+        "class": "AFM/TUR"
+      }
+    },
+    {
+      "lessonId": "L026",
+      "tipo": "set",
+      "before": {
+        "id": "L026",
+        "g": 2,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L027",
+      "tipo": "set",
+      "before": {
+        "id": "L027",
+        "g": 2,
+        "h": 9,
+        "anno": "5",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L028",
+      "tipo": "set",
+      "before": {
+        "id": "L028",
+        "g": 2,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "ITALIANO",
+        "ind": "PER TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+        "zoomPasscode": "290382",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L029",
+      "tipo": "set",
+      "before": {
+        "id": "L029",
+        "g": 2,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "METODOLOGIE",
+        "ind": "SOCIO",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "metodologie operative"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "SOCIO"
+      }
+    },
+    {
+      "lessonId": "L030",
+      "tipo": "set",
+      "before": {
+        "id": "L030",
+        "g": 2,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "FISICA",
+        "ind": "LICEI",
+        "doc": "er",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ]
+      },
+      "patch": {
+        "ind": "Licei",
+        "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+        "zoomPasscode": "71721",
+        "class": "SCIENTIFICI",
+        "tracks": [
+          "scientifico",
+          "scienze-applicate",
+          "sportivo",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "L031",
+      "tipo": "set",
+      "before": {
+        "id": "L031",
+        "g": 2,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "ECONOMIA AZIENDALE",
+        "ind": "AFM/TUR",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "economia aziendale"
+        ]
+      },
+      "patch": {
+        "ind": "AFM / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "AFM/TUR"
+      }
+    },
+    {
+      "lessonId": "L033",
+      "tipo": "set",
+      "before": {
+        "id": "L033",
+        "g": 2,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+        "zoomPasscode": "86719",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L034",
+      "tipo": "set",
+      "before": {
+        "id": "L034",
+        "g": 2,
+        "h": 10,
+        "anno": "5",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+        "zoomPasscode": "86719",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L035",
+      "tipo": "set",
+      "before": {
+        "id": "L035",
+        "g": 2,
+        "h": 11,
+        "anno": "1/2",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+        "zoomPasscode": "859341",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L036",
+      "tipo": "set",
+      "before": {
+        "id": "L036",
+        "g": 2,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "ITALIANO",
+        "ind": "PER TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1",
+        "zoomPasscode": "517741",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L037",
+      "tipo": "set",
+      "before": {
+        "id": "L037",
+        "g": 2,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "IGIENE/METOD",
+        "ind": "SOCIO",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "igiene",
+          "metodologie operative"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "SOCIO"
+      }
+    },
+    {
+      "lessonId": "L038",
+      "tipo": "set",
+      "before": {
+        "id": "L038",
+        "g": 2,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "FISICA",
+        "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+        "doc": "er",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ],
+        "tracks": [
+          "scientifico",
+          "scienze-applicate",
+          "sportivo",
+          "les",
+          "linguistico",
+          "scienze-umane"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / LES / Linguistico / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+        "zoomPasscode": "925403",
+        "class": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L039",
+      "tipo": "set",
+      "before": {
+        "id": "L039",
+        "g": 2,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ],
+        "tracks": [
+          "scientifico",
+          "classico",
+          "scienze-applicate",
+          "sportivo",
+          "informatico",
+          "afm",
+          "socio-sanitario",
+          "turismo",
+          "mme",
+          "ipseoa"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti tranne les, linguistico e scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L040",
+      "tipo": "set",
+      "before": {
+        "id": "L040",
+        "g": 2,
+        "h": 11,
+        "anno": "5",
+        "materia": "IGIENE/METODOLOGIE OPERATIVE",
+        "ind": "SOCIO",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "igiene",
+          "metodologie operative"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "SOCIO"
+      }
+    },
+    {
+      "lessonId": "L041",
+      "tipo": "set",
+      "before": {
+        "id": "L041",
+        "g": 2,
+        "h": 11,
+        "anno": "5",
+        "materia": "FISICA",
+        "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+        "doc": "er",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ],
+        "tracks": [
+          "scientifico",
+          "scienze-applicate",
+          "sportivo",
+          "les",
+          "linguistico",
+          "scienze-umane"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / LES / Linguistico / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+        "zoomPasscode": "925403",
+        "class": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L042",
+      "tipo": "set",
+      "before": {
+        "id": "L042",
+        "g": 2,
+        "h": 11,
+        "anno": "5",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ],
+        "tracks": [
+          "scientifico",
+          "classico",
+          "scienze-applicate",
+          "sportivo",
+          "informatico",
+          "afm",
+          "socio-sanitario",
+          "turismo",
+          "mme",
+          "ipseoa"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti tranne les, linguistico e scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L043",
+      "tipo": "set",
+      "before": {
+        "id": "L043",
+        "g": 2,
+        "h": 12,
+        "anno": "1/2",
+        "materia": "MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L044",
+      "tipo": "set",
+      "before": {
+        "id": "L044",
+        "g": 2,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "STORIA",
+        "ind": "PER TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L045",
+      "tipo": "set",
+      "before": {
+        "id": "L045",
+        "g": 2,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "PSICOLOGIA",
+        "ind": "SOCIO",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "psicologia"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+        "zoomPasscode": "728446",
+        "class": "SOCIO"
+      }
+    },
+    {
+      "lessonId": "L046",
+      "tipo": "set",
+      "before": {
+        "id": "L046",
+        "g": 2,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "FISICA",
+        "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+        "doc": "er",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ],
+        "tracks": [
+          "scientifico",
+          "scienze-applicate",
+          "sportivo",
+          "les",
+          "linguistico",
+          "scienze-umane"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / LES / Linguistico / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1",
+        "zoomPasscode": "612842",
+        "class": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L047",
+      "tipo": "set",
+      "before": {
+        "id": "L047",
+        "g": 2,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ],
+        "tracks": [
+          "scientifico",
+          "classico",
+          "scienze-applicate",
+          "sportivo",
+          "informatico",
+          "afm",
+          "socio-sanitario",
+          "turismo",
+          "mme",
+          "ipseoa"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti tranne les, linguistico e scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+        "zoomPasscode": "343517",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L048",
+      "tipo": "set",
+      "before": {
+        "id": "L048",
+        "g": 2,
+        "h": 12,
+        "anno": "5",
+        "materia": "PSICOLOGIA",
+        "ind": "SOCIO",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "psicologia"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+        "zoomPasscode": "728446",
+        "class": "SOCIO"
+      }
+    },
+    {
+      "lessonId": "L049",
+      "tipo": "set",
+      "before": {
+        "id": "L049",
+        "g": 2,
+        "h": 12,
+        "anno": "5",
+        "materia": "FISICA",
+        "ind": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE",
+        "doc": "er",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ],
+        "tracks": [
+          "scientifico",
+          "scienze-applicate",
+          "sportivo",
+          "les",
+          "linguistico",
+          "scienze-umane"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / LES / Linguistico / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1",
+        "zoomPasscode": "612842",
+        "class": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L050",
+      "tipo": "set",
+      "before": {
+        "id": "L050",
+        "g": 2,
+        "h": 12,
+        "anno": "5",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI TRANNE LES, LINGUISTICO E SCIENZE UMANE",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ],
+        "tracks": [
+          "scientifico",
+          "classico",
+          "scienze-applicate",
+          "sportivo",
+          "informatico",
+          "afm",
+          "socio-sanitario",
+          "turismo",
+          "mme",
+          "ipseoa"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti tranne les, linguistico e scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+        "zoomPasscode": "343517",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L051",
+      "tipo": "set",
+      "before": {
+        "id": "L051",
+        "g": 3,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "SPAGNOLO",
+        "ind": "LES",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+3 + 3/4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "LES"
+      }
+    },
+    {
+      "lessonId": "L052",
+      "tipo": "set",
+      "before": {
+        "id": "L052",
+        "g": 3,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "EC.POLITICA",
+        "ind": "ITI/AFM/UMANE",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "economia politica"
+        ]
+      },
+      "patch": {
+        "ind": "ITI / AFM / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+        "zoomPasscode": "350240",
+        "class": "ITI/AFM/UMANE"
+      }
+    },
+    {
+      "lessonId": "L053",
+      "tipo": "set",
+      "before": {
+        "id": "L053",
+        "g": 3,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "SPAGNOLO",
+        "ind": "SOCIO/TUR/AFM/LES",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+3 + 3/4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario / Turismo / AFM / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "SOCIO/TUR/AFM/LES"
+      }
+    },
+    {
+      "lessonId": "L054",
+      "tipo": "set",
+      "before": {
+        "id": "L054",
+        "g": 3,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "LAB MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "gl",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "PER TUTTI",
+        "affiancaA": [
+          "socio-sanitario",
+          "linguistico"
+        ]
+      }
+    },
+    {
+      "lessonId": "L055",
+      "tipo": "set",
+      "before": {
+        "id": "L055",
+        "g": 3,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "FILOSOFIA",
+        "ind": "LICEI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "filosofia"
+        ]
+      },
+      "patch": {
+        "ind": "Licei",
+        "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+        "zoomPasscode": "617514",
+        "class": "LICEI"
+      }
+    },
+    {
+      "lessonId": "L056",
+      "tipo": "set",
+      "before": {
+        "id": "L056",
+        "g": 3,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "LAB MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "gl",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L057",
+      "tipo": "set",
+      "before": {
+        "id": "L057",
+        "g": 3,
+        "h": 9,
+        "anno": "5",
+        "materia": "FILOSOFIA",
+        "ind": "LICEI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "filosofia"
+        ]
+      },
+      "patch": {
+        "ind": "Licei",
+        "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+        "zoomPasscode": "617514",
+        "class": "LICEI"
+      }
+    },
+    {
+      "lessonId": "L058",
+      "tipo": "set",
+      "before": {
+        "id": "L058",
+        "g": 3,
+        "h": 9,
+        "anno": "5",
+        "materia": "LAB MATEMATICA",
+        "ind": "PER TUTTI",
+        "doc": "gl",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "PER TUTTI"
+      }
+    },
+    {
+      "lessonId": "L059",
+      "tipo": "set",
+      "before": {
+        "id": "L059",
+        "g": 3,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "SPAGNOLO",
+        "ind": "AFM / LES",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+3 + 3/4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ],
+        "tracks": [
+          "afm",
+          "les"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "AFM / LES"
+      }
+    },
+    {
+      "lessonId": "L060",
+      "tipo": "set",
+      "before": {
+        "id": "L060",
+        "g": 3,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "LAB MATEMATICA",
+        "ind": "AFM / ITI INFORMATICO / SCIENZE UMANE",
+        "doc": "gl",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ],
+        "tracks": [
+          "afm",
+          "informatico",
+          "scienze-umane"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / ITI Informatico / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+        "zoomPasscode": "86719",
+        "class": "AFM / ITI INFORMATICO / SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L061",
+      "tipo": "set",
+      "before": {
+        "id": "L061",
+        "g": 3,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "SPAGNOLO",
+        "ind": "SOCIO/TUR/AFM/LES",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+3 + 3/4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario / Turismo / AFM / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "SOCIO/TUR/AFM/LES"
+      }
+    },
+    {
+      "lessonId": "L062",
+      "tipo": "set",
+      "before": {
+        "id": "L062",
+        "g": 3,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "BIOLOGIA",
+        "ind": "LICEI (no Les)",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "biologia"
+        ]
+      },
+      "patch": {
+        "materia": "SCIENZE INTEGRATE",
+        "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
+        "doc": "mr",
+        "aula": "5",
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "sportivo",
+          "socio-sanitario"
+        ]
+      }
+    },
+    {
+      "lessonId": "L063",
+      "tipo": "set",
+      "before": {
+        "id": "L063",
+        "g": 3,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "SCIENZE UMANE",
+        "ind": "SCIENZE UMANE",
+        "doc": "gd",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze umane"
+        ],
+        "tracks": [
+          "scienze-umane"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Scienze umane / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+        "zoomPasscode": "71721",
+        "class": "Scienze umane / LES",
+        "tracks": [
+          "scienze-umane",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "L065",
+      "tipo": "set",
+      "before": {
+        "id": "L065",
+        "g": 3,
+        "h": 10,
+        "anno": "5",
+        "materia": "SCIENZE UMANE",
+        "ind": "SCIENZE UMANE",
+        "doc": "gd",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze umane"
+        ],
+        "tracks": [
+          "scienze-umane"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Scienze umane / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+        "zoomPasscode": "71721",
+        "class": "Scienze umane / LES",
+        "tracks": [
+          "scienze-umane",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "L068",
+      "tipo": "set",
+      "before": {
+        "id": "L068",
+        "g": 3,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "SCIENZE UMANE",
+        "ind": "LES / SCIENZE UMANE",
+        "doc": "gd",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze umane"
+        ],
+        "tracks": [
+          "les",
+          "scienze-umane"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "LES / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+        "zoomPasscode": "925403",
+        "class": "LES / SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L070",
+      "tipo": "set",
+      "before": {
+        "id": "L070",
+        "g": 3,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "SPAGNOLO",
+        "ind": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO",
+        "doc": "mb",
+        "aula": "3",
+        "note": "( +4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ],
+        "tracks": [
+          "afm",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "socio-sanitario"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / IPSEOA / LES / Linguistico / Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO"
+      }
+    },
+    {
+      "lessonId": "L072",
+      "tipo": "set",
+      "before": {
+        "id": "L072",
+        "g": 3,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "MECCATRONICA",
+        "ind": "MECCATRONICA",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "meccatronica"
+        ]
+      },
+      "patch": {
+        "ind": "Meccatronica",
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "MECCATRONICA"
+      }
+    },
+    {
+      "lessonId": "L073",
+      "tipo": "set",
+      "before": {
+        "id": "L073",
+        "g": 3,
+        "h": 11,
+        "anno": "5",
+        "materia": "SPAGNOLO",
+        "ind": "AFM / LES / LINGUISTICO / SOCIO SANITARIO",
+        "doc": "mb",
+        "aula": "3",
+        "note": "( +4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ],
+        "tracks": [
+          "afm",
+          "les",
+          "linguistico",
+          "socio-sanitario"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / LES / Linguistico / Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "AFM / LES / LINGUISTICO / SOCIO SANITARIO"
+      }
+    },
+    {
+      "lessonId": "L075",
+      "tipo": "set",
+      "before": {
+        "id": "L075",
+        "g": 3,
+        "h": 12,
+        "anno": "1/2",
+        "materia": "LAB GRAMMATICA",
+        "ind": "PER TUTTI",
+        "doc": "gd",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab grammatica"
+        ]
+      },
+      "patch": {
+        "materia": "SCIENZE INTEGRATE",
+        "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES / ITI informatico / AFM / Socio sanitario / Turismo / MME / IPSEOA",
+        "doc": "mr",
+        "aula": "5",
+        "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+        "zoomPasscode": "343517",
+        "class": "TUTTI",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "sportivo",
+          "les",
+          "informatico",
+          "afm",
+          "socio-sanitario",
+          "turismo",
+          "mme",
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "L076",
+      "tipo": "set",
+      "before": {
+        "id": "L076",
+        "g": 3,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "LATINO",
+        "ind": "SCIENTIFICO / SCIENZE UMANE",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "latino"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "LING/SCIENTIFICO",
+        "tracks": [
+          "scientifico",
+          "scienze-umane"
+        ]
+      }
+    },
+    {
+      "lessonId": "L077",
+      "tipo": "set",
+      "before": {
+        "id": "L077",
+        "g": 3,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI",
+        "doc": "gd",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L078",
+      "tipo": "set",
+      "before": {
+        "id": "L078",
+        "g": 3,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "SPAGNOLO",
+        "ind": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ],
+        "tracks": [
+          "afm",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "socio-sanitario"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / IPSEOA / LES / Linguistico / Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+        "zoomPasscode": "728446",
+        "class": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO"
+      }
+    },
+    {
+      "lessonId": "L079",
+      "tipo": "set",
+      "before": {
+        "id": "L079",
+        "g": 3,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "LAB ITALIANO",
+        "ind": "CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO",
+        "doc": "gd",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ],
+        "tracks": [
+          "classico",
+          "informatico",
+          "ipseoa",
+          "mme",
+          "scienze-umane",
+          "socio-sanitario",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Classico / ITI Informatico / IPSEOA / MME / Scienze umane / Socio sanitario / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "L080",
+      "tipo": "set",
+      "before": {
+        "id": "L080",
+        "g": 3,
+        "h": 12,
+        "anno": "5",
+        "materia": "SPAGNOLO",
+        "ind": "AFM / LES / LINGUISTICO / SOCIO SANITARIO",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ],
+        "tracks": [
+          "afm",
+          "les",
+          "linguistico",
+          "socio-sanitario"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / LES / Linguistico / Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+        "zoomPasscode": "728446",
+        "class": "AFM / LES / LINGUISTICO / SOCIO SANITARIO"
+      }
+    },
+    {
+      "lessonId": "L081",
+      "tipo": "set",
+      "before": {
+        "id": "L081",
+        "g": 3,
+        "h": 12,
+        "anno": "5",
+        "materia": "LAB ITALIANO",
+        "ind": "CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO",
+        "doc": "gd",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ],
+        "tracks": [
+          "classico",
+          "informatico",
+          "ipseoa",
+          "mme",
+          "scienze-umane",
+          "socio-sanitario",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Classico / ITI Informatico / IPSEOA / MME / Scienze umane / Socio sanitario / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "L083",
+      "tipo": "set",
+      "before": {
+        "id": "L083",
+        "g": 4,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "GEOSTORIA",
+        "ind": "TUTTI",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "geostoria"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+        "zoomPasscode": "498159",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L084",
+      "tipo": "set",
+      "before": {
+        "id": "L084",
+        "g": 4,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "FILOSOFIA",
+        "ind": "LICEI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "+ 4",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "filosofia"
+        ]
+      },
+      "patch": {
+        "ind": "Licei",
+        "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+        "zoomPasscode": "617514",
+        "class": "LICEI"
+      }
+    },
+    {
+      "lessonId": "L085",
+      "tipo": "set",
+      "before": {
+        "id": "L085",
+        "g": 4,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "SCRITTURA CREATIVA",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scrittura creativa"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L087",
+      "tipo": "set",
+      "before": {
+        "id": "L087",
+        "g": 4,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "SCRITTURA CREATIVA",
+        "ind": "CLASSICO / ITI INFORMATICO / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / TURISMO",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scrittura creativa"
+        ],
+        "tracks": [
+          "classico",
+          "informatico",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Classico / ITI Informatico / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "CLASSICO / ITI INFORMATICO / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / TURISMO"
+      }
+    },
+    {
+      "lessonId": "L088",
+      "tipo": "set",
+      "before": {
+        "id": "L088",
+        "g": 4,
+        "h": 9,
+        "anno": "5",
+        "materia": "DIRITTO",
+        "ind": "AFM / LES / SOCIO SANITARIO / SPORTIVO",
+        "doc": "gc",
+        "aula": "1",
+        "note": "+4/5",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "diritto"
+        ]
+      },
+      "patch": {
+        "ind": "AFM / LES / Socio sanitario / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "AFM/LES/SOCIO",
+        "tracks": [
+          "afm",
+          "les",
+          "socio-sanitario",
+          "sportivo"
+        ]
+      }
+    },
+    {
+      "lessonId": "L089",
+      "tipo": "set",
+      "before": {
+        "id": "L089",
+        "g": 4,
+        "h": 9,
+        "anno": "5",
+        "materia": "GPOI",
+        "ind": "ITI",
+        "doc": "lc",
+        "aula": "7",
+        "note": "(+4/5)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "gpoi"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+        "zoomPasscode": "350240",
+        "class": "ITI"
+      }
+    },
+    {
+      "lessonId": "L090",
+      "tipo": "set",
+      "before": {
+        "id": "L090",
+        "g": 4,
+        "h": 9,
+        "anno": "5",
+        "materia": "SCRITTURA CREATIVA",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scrittura creativa"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L091",
+      "tipo": "set",
+      "before": {
+        "id": "L091",
+        "g": 4,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "SCIENZE INTEGRATE",
+        "ind": "TUTTI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze integrate"
+        ]
+      },
+      "patch": {
+        "materia": "LAB GRAMMATICA",
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+        "zoomPasscode": "290382",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L092",
+      "tipo": "set",
+      "before": {
+        "id": "L092",
+        "g": 4,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "DIRITTO",
+        "ind": "SOCIO SANITARIO / TURISMO / AFM / LES / SPORTIVO",
+        "doc": "gc",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "diritto"
+        ]
+      },
+      "patch": {
+        "ind": "Socio sanitario / Turismo / AFM / LES / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+        "zoomPasscode": "86719",
+        "class": "SOCIO/TUR/AFM/LES",
+        "tracks": [
+          "socio-sanitario",
+          "turismo",
+          "afm",
+          "les",
+          "sportivo"
+        ]
+      }
+    },
+    {
+      "lessonId": "L093",
+      "tipo": "set",
+      "before": {
+        "id": "L093",
+        "g": 4,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "SCRITTURA CREATIVA",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scrittura creativa"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L095",
+      "tipo": "set",
+      "before": {
+        "id": "L095",
+        "g": 4,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "SCRITTURA CREATIVA",
+        "ind": "CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scrittura creativa"
+        ],
+        "tracks": [
+          "classico",
+          "informatico",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "socio-sanitario",
+          "sportivo",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Classico / ITI Informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "Classico / ITI Informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
+        "tracks": [
+          "classico",
+          "informatico",
+          "ipseoa",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "socio-sanitario",
+          "sportivo",
+          "turismo"
+        ],
+        "affiancaA": [
+          "linguistico",
+          "socio-sanitario",
+          "turismo",
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "L096",
+      "tipo": "set",
+      "before": {
+        "id": "L096",
+        "g": 4,
+        "h": 10,
+        "anno": "5",
+        "materia": "EC POLITICA / RELAZIONI INTERNAZIONALI",
+        "ind": "AFM-RIM",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "economia politica",
+          "relazioni internazionali"
+        ]
+      },
+      "patch": {
+        "materia": "EC POLITICA /RELAZIONI INTERNAZIONALI",
+        "ind": "AFM / RIM",
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "AFM-RIM"
+      }
+    },
+    {
+      "lessonId": "L097",
+      "tipo": "set",
+      "before": {
+        "id": "L097",
+        "g": 4,
+        "h": 10,
+        "anno": "5",
+        "materia": "SCRITTURA CREATIVA",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scrittura creativa"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi tranne LES",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "TUTTI",
+        "affiancaA": [
+          "linguistico",
+          "socio-sanitario",
+          "turismo",
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "L098",
+      "tipo": "set",
+      "before": {
+        "id": "L098",
+        "g": 4,
+        "h": 11,
+        "anno": "1/2",
+        "materia": "DIRITTO",
+        "ind": "TUTTI",
+        "doc": "gc",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "diritto"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+        "zoomPasscode": "859341",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L141",
+      "tipo": "set",
+      "before": {
+        "id": "L141",
+        "g": 4,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "INGLESE",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L101",
+      "tipo": "set",
+      "before": {
+        "id": "L101",
+        "g": 4,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "INGLESE",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L102",
+      "tipo": "set",
+      "before": {
+        "id": "L102",
+        "g": 4,
+        "h": 11,
+        "anno": "5",
+        "materia": "INGLESE",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L103",
+      "tipo": "set",
+      "before": {
+        "id": "L103",
+        "g": 4,
+        "h": 12,
+        "anno": "1/2",
+        "materia": "EDUCAZIONE CIVICA",
+        "ind": "TUTTI",
+        "doc": "gc",
+        "aula": "1",
+        "note": "(+3/4 ANNO)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L104",
+      "tipo": "set",
+      "before": {
+        "id": "L104",
+        "g": 4,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "GEO TURISTICA",
+        "ind": "TUR",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "geografia turistica"
+        ]
+      },
+      "patch": {
+        "ind": "Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1",
+        "zoomPasscode": "377146",
+        "class": "TUR"
+      }
+    },
+    {
+      "lessonId": "L105",
+      "tipo": "set",
+      "before": {
+        "id": "L105",
+        "g": 4,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "STORIA DELL'ARTE",
+        "ind": "LICEI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "(+1/2)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia dell'arte"
+        ]
+      },
+      "patch": {
+        "ind": "Licei",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "LICEI"
+      }
+    },
+    {
+      "lessonId": "L106",
+      "tipo": "set",
+      "before": {
+        "id": "L106",
+        "g": 4,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "ED CIVICA",
+        "ind": "TUTTI",
+        "doc": "gc",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L107",
+      "tipo": "set",
+      "before": {
+        "id": "L107",
+        "g": 4,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "INGLESE",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+        "zoomPasscode": "728446",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L108",
+      "tipo": "set",
+      "before": {
+        "id": "L108",
+        "g": 4,
+        "h": 12,
+        "anno": "5",
+        "materia": "INGLESE",
+        "ind": "TUTTI",
+        "doc": "mb",
+        "aula": "3",
+        "note": "(+4)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+        "zoomPasscode": "728446",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L111",
+      "tipo": "set",
+      "before": {
+        "id": "L111",
+        "g": 5,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "LAB MATEMATICA",
+        "ind": "TUTTI",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1",
+        "zoomPasscode": "510304",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L112",
+      "tipo": "set",
+      "before": {
+        "id": "L112",
+        "g": 5,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "LATINO",
+        "ind": "CLASSICO / SCIENTIFICO / SCIENZE UMANE",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "latino"
+        ],
+        "tracks": [
+          "classico",
+          "scientifico",
+          "scienze-umane"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Classico / Scientifico / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+        "zoomPasscode": "290382",
+        "class": "CLASSICO / SCIENTIFICO / SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L113",
+      "tipo": "set",
+      "before": {
+        "id": "L113",
+        "g": 5,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1",
+        "zoomPasscode": "513826",
+        "class": "TUTTI",
+        "affiancaA": [
+          "linguistico",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "L114",
+      "tipo": "set",
+      "before": {
+        "id": "L114",
+        "g": 5,
+        "h": 10,
+        "anno": "5",
+        "materia": "LATINO",
+        "ind": "CLASSICO / SCIENTIFICO / SCIENZE UMANE",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "latino"
+        ],
+        "tracks": [
+          "classico",
+          "scientifico",
+          "scienze-umane"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Classico / Scientifico / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+        "zoomPasscode": "290382",
+        "class": "CLASSICO / SCIENTIFICO / SCIENZE UMANE"
+      }
+    },
+    {
+      "lessonId": "L115",
+      "tipo": "set",
+      "before": {
+        "id": "L115",
+        "g": 5,
+        "h": 9,
+        "anno": "5",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1",
+        "zoomPasscode": "513826",
+        "class": "TUTTI",
+        "affiancaA": [
+          "linguistico",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "L116",
+      "tipo": "set",
+      "before": {
+        "id": "L116",
+        "g": 5,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "FISICA",
+        "ind": "ITI/AFM",
+        "doc": "er",
+        "aula": "4",
+        "note": "+3/4 Les e Linguistico",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ]
+      },
+      "patch": {
+        "ind": "ITI / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+        "zoomPasscode": "71721",
+        "class": "ITI/AFM"
+      }
+    },
+    {
+      "lessonId": "L118",
+      "tipo": "set",
+      "before": {
+        "id": "L118",
+        "g": 5,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "FRANCESE",
+        "ind": "LINGUISTICO / TURISMO / AFM / LES",
+        "doc": "ed",
+        "aula": "5",
+        "note": "+2/3 LES",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "francese"
+        ]
+      },
+      "patch": {
+        "materia": "FRANCESE GRAMMATICA",
+        "ind": "Linguistico / Turismo / AFM / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "LING/TUR /AFM-RIM",
+        "tracks": [
+          "linguistico",
+          "turismo",
+          "afm",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "L119",
+      "tipo": "set",
+      "before": {
+        "id": "L119",
+        "g": 5,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "INFORMATICA",
+        "ind": "AFM",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "informatica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+        "zoomPasscode": "86719",
+        "class": "AFM"
+      }
+    },
+    {
+      "lessonId": "L121",
+      "tipo": "set",
+      "before": {
+        "id": "L121",
+        "g": 5,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "IGIENE",
+        "ind": "SOCIO SANITARIO",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "igiene"
+        ],
+        "tracks": [
+          "socio-sanitario"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "SOCIO SANITARIO"
+      }
+    },
+    {
+      "lessonId": "L122",
+      "tipo": "set",
+      "before": {
+        "id": "L122",
+        "g": 5,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "FRANCESE",
+        "ind": "AFM / LES / SOCIO SANITARIO / TURISMO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "tracks": [
+          "afm",
+          "les",
+          "socio-sanitario",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "materia": "FRANCESE GRAMMATICA",
+        "ind": "AFM / LES / Socio sanitario / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "AFM / LES / SOCIO SANITARIO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "L143",
+      "tipo": "set",
+      "before": {
+        "id": "L143",
+        "g": 5,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "MECCATRONICA",
+        "ind": "MECCATRONICA",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "meccatronica"
+        ]
+      },
+      "patch": {
+        "ind": "Meccatronica",
+        "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+        "zoomPasscode": "579497",
+        "class": "MECCATRONICA"
+      }
+    },
+    {
+      "lessonId": "L124",
+      "tipo": "set",
+      "before": {
+        "id": "L124",
+        "g": 5,
+        "h": 10,
+        "anno": "5",
+        "materia": "FRANCESE",
+        "ind": "AFM / LES / SOCIO SANITARIO / TURISMO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "tracks": [
+          "afm",
+          "les",
+          "socio-sanitario",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "materia": "FRANCESE GRAMMATICA",
+        "ind": "AFM / LES / Socio sanitario / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "AFM / LES / SOCIO SANITARIO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "L126",
+      "tipo": "set",
+      "before": {
+        "id": "L126",
+        "g": 5,
+        "h": 11,
+        "anno": "1/2",
+        "materia": "FISICA",
+        "ind": "ITI/AFM",
+        "doc": "er",
+        "aula": "4",
+        "note": "+3/4 Les e Linguistico",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ]
+      },
+      "patch": {
+        "ind": "ITI / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+        "zoomPasscode": "925403",
+        "class": "ITI/AFM"
+      }
+    },
+    {
+      "lessonId": "L127",
+      "tipo": "set",
+      "before": {
+        "id": "L127",
+        "g": 5,
+        "h": 11,
+        "anno": "1/2",
+        "materia": "LATINO",
+        "ind": "UMANE",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "latino"
+        ]
+      },
+      "patch": {
+        "ind": "Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1",
+        "zoomPasscode": "517741",
+        "class": "UMANE"
+      }
+    },
+    {
+      "lessonId": "L128",
+      "tipo": "set",
+      "before": {
+        "id": "L128",
+        "g": 5,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "FRANCESE",
+        "ind": "AFM / LES / LINGUISTICO / TURISMO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "tracks": [
+          "afm",
+          "les",
+          "linguistico",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "materia": "FRANCESE AVANZATO",
+        "ind": "AFM / LES / Linguistico / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "AFM / LES / LINGUISTICO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "L130",
+      "tipo": "set",
+      "before": {
+        "id": "L130",
+        "g": 5,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "PSICOLOGIA",
+        "ind": "SOCIO SANITARIO",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "psicologia"
+        ],
+        "tracks": [
+          "socio-sanitario"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+        "zoomPasscode": "703830",
+        "class": "SOCIO SANITARIO"
+      }
+    },
+    {
+      "lessonId": "L132",
+      "tipo": "set",
+      "before": {
+        "id": "L132",
+        "g": 5,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "FRANCESE",
+        "ind": "AFM / LES / SOCIO SANITARIO / TURISMO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "tracks": [
+          "afm",
+          "les",
+          "socio-sanitario",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "materia": "FRANCESE AVANZATO",
+        "ind": "AFM / LES / Socio sanitario / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "AFM / LES / SOCIO SANITARIO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "L133",
+      "tipo": "set",
+      "before": {
+        "id": "L133",
+        "g": 5,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "INFORMATICA",
+        "ind": "ITI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "informatica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+        "zoomPasscode": "859341",
+        "class": "ITI"
+      }
+    },
+    {
+      "lessonId": "L134",
+      "tipo": "set",
+      "before": {
+        "id": "L134",
+        "g": 5,
+        "h": 11,
+        "anno": "5",
+        "materia": "FRANCESE",
+        "ind": "AFM / LES / SOCIO SANITARIO / TURISMO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "tracks": [
+          "afm",
+          "les",
+          "socio-sanitario",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "materia": "FRANCESE AVANZATO",
+        "ind": "AFM / LES / Socio sanitario / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "AFM / LES / SOCIO SANITARIO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "L135",
+      "tipo": "set",
+      "before": {
+        "id": "L135",
+        "g": 5,
+        "h": 11,
+        "anno": "5",
+        "materia": "INFORMATICA",
+        "ind": "ITI",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "informatica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+        "zoomPasscode": "859341",
+        "class": "ITI"
+      }
+    },
+    {
+      "lessonId": "L136",
+      "tipo": "set",
+      "before": {
+        "id": "L136",
+        "g": 5,
+        "h": 12,
+        "anno": "1/2",
+        "materia": "INFORMATICA",
+        "ind": "ITI/AFM",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "informatica"
+        ]
+      },
+      "patch": {
+        "ind": "ITI / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "ITI/AFM"
+      }
+    },
+    {
+      "lessonId": "L137",
+      "tipo": "set",
+      "before": {
+        "id": "L137",
+        "g": 5,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+        "zoomPasscode": "343517",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L138",
+      "tipo": "set",
+      "before": {
+        "id": "L138",
+        "g": 5,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "LAB MATEMATICA",
+        "ind": "TUTTI",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi tranne AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+        "zoomPasscode": "434438",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "L146",
+      "tipo": "set",
+      "before": {
+        "id": "L146",
+        "g": 5,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "STORIA DELL'ARTE",
+        "ind": "LICEI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia dell'arte"
+        ]
+      },
+      "patch": {
+        "ind": "Licei",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "LICEI"
+      }
+    },
+    {
+      "lessonId": "L139",
+      "tipo": "set",
+      "before": {
+        "id": "L139",
+        "g": 5,
+        "h": 12,
+        "anno": "5",
+        "materia": "STORIA DELL'ARTE",
+        "ind": "LICEI",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia dell'arte"
+        ]
+      },
+      "patch": {
+        "ind": "Licei",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "LICEI"
+      }
+    },
+    {
+      "lessonId": "L140",
+      "tipo": "set",
+      "before": {
+        "id": "L140",
+        "g": 5,
+        "h": 12,
+        "anno": "5",
+        "materia": "LAB MATEMATICA",
+        "ind": "TUTTI",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti gli indirizzi tranne AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+        "zoomPasscode": "434438",
+        "class": "TUTTI"
+      }
+    },
+    {
+      "lessonId": "A002",
+      "tipo": "set",
+      "before": {
+        "id": "A002",
+        "g": 5,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "LAB MATEMATICA",
+        "ind": "SCIENTIFICO / SCIENZE UMANE / AFM / SOCIO SANITARIO / MME / LES",
+        "doc": "gl",
+        "aula": "6",
+        "note": "Esercizi (Aula 6 o da casa)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / Scienze umane / AFM / Socio sanitario / MME / LES",
+        "note": "Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).",
+        "esercizi": true,
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "scientifico",
+          "scienze-umane",
+          "afm",
+          "socio-sanitario",
+          "mme",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "A003",
+      "tipo": "set",
+      "before": {
+        "id": "A003",
+        "g": 5,
+        "h": 11,
+        "anno": "5",
+        "materia": "LAB MATEMATICA",
+        "ind": "SCIENTIFICO / SCIENZE UMANE / AFM / SOCIO SANITARIO / MME / LES",
+        "doc": "gl",
+        "aula": "6",
+        "note": "Esercizi (Aula 6 o da casa)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / Scienze umane / AFM / Socio sanitario / MME / LES",
+        "note": "Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).",
+        "esercizi": true,
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "scientifico",
+          "scienze-umane",
+          "afm",
+          "socio-sanitario",
+          "mme",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "A006",
+      "tipo": "set",
+      "before": {
+        "id": "A006",
+        "g": 1,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "LAB ITALIANO",
+        "ind": "ITI INFORMATICO",
+        "doc": "gd",
+        "aula": "",
+        "note": "Esercizi (aula docenti o da casa)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": true,
+        "subj": [
+          "lab italiano"
+        ]
+      },
+      "patch": {
+        "ind": "ITI Informatico",
+        "note": "Esercizi assegnati dal docente: in sede in Aula docenti, da remoto da casa. Il docente è in lezione in AULA 4 (link Zoom).",
+        "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+        "zoomPasscode": "71721",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "informatico"
+        ],
+        "esercizi": true
+      }
+    },
+    {
+      "lessonId": "A009",
+      "tipo": "set",
+      "before": {
+        "id": "A009",
+        "g": 4,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "ED CIVICA",
+        "ind": "AFM / SOCIO SANITARIO",
+        "doc": "gc",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ]
+      },
+      "patch": {
+        "ind": "AFM / Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "afm",
+          "socio-sanitario"
+        ]
+      }
+    },
+    {
+      "lessonId": "A010",
+      "tipo": "set",
+      "before": {
+        "id": "A010",
+        "g": 4,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "DIRITTO",
+        "ind": "AFM / IPSEOA / LES / SOCIO SANITARIO / SPORTIVO",
+        "doc": "gc",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "diritto"
+        ],
+        "tracks": [
+          "afm",
+          "ipseoa",
+          "les",
+          "socio-sanitario",
+          "sportivo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / IPSEOA / LES / Socio sanitario / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "AFM / IPSEOA / LES / SOCIO SANITARIO / SPORTIVO"
+      }
+    },
+    {
+      "lessonId": "A013",
+      "tipo": "set",
+      "before": {
+        "id": "A013",
+        "g": 5,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "INFORMATICA",
+        "ind": "SCIENZE APPLICATE",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "informatica"
+        ]
+      },
+      "patch": {
+        "ind": "Scienze applicate",
+        "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+        "zoomPasscode": "859341",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "scienze-applicate"
+        ]
+      }
+    },
+    {
+      "lessonId": "A014",
+      "tipo": "set",
+      "before": {
+        "id": "A014",
+        "g": 5,
+        "h": 11,
+        "anno": "5",
+        "materia": "INFORMATICA",
+        "ind": "SCIENZE APPLICATE",
+        "doc": "fv",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "informatica"
+        ]
+      },
+      "patch": {
+        "ind": "Scienze applicate",
+        "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+        "zoomPasscode": "859341",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "scienze-applicate"
+        ]
+      }
+    },
+    {
+      "lessonId": "A015",
+      "tipo": "set",
+      "before": {
+        "id": "A015",
+        "g": 5,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "ED CIVICA",
+        "ind": "LES / SCIENZE UMANE",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ]
+      },
+      "patch": {
+        "ind": "LES / Scienze umane",
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "les",
+          "scienze-umane"
+        ]
+      }
+    },
+    {
+      "lessonId": "A016",
+      "tipo": "set",
+      "before": {
+        "id": "A016",
+        "g": 5,
+        "h": 11,
+        "anno": "1/2",
+        "materia": "LAB MATEMATICA",
+        "ind": "LES",
+        "doc": "gl",
+        "aula": "6",
+        "note": "Esercizi (Aula 6 o da casa)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "note": "Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).",
+        "esercizi": true,
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "A017",
+      "tipo": "set",
+      "before": {
+        "id": "A017",
+        "g": 3,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "LAB MATEMATICA",
+        "ind": "LES",
+        "doc": "gl",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+        "zoomPasscode": "132082",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "A018",
+      "tipo": "set",
+      "before": {
+        "id": "A018",
+        "g": 5,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "ED CIVICA",
+        "ind": "LES / SCIENZE UMANE / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SPORTIVO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ]
+      },
+      "patch": {
+        "ind": "LES / Scienze umane / Linguistico / Scientifico / Scienze applicate / Sportivo / ITI Informatico",
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "SOLO INDIRIZZI INDICATI / ITI Informatico",
+        "tracks": [
+          "les",
+          "scienze-umane",
+          "linguistico",
+          "scientifico",
+          "scienze-applicate",
+          "sportivo",
+          "informatico"
+        ]
+      }
+    },
+    {
+      "lessonId": "A019",
+      "tipo": "set",
+      "before": {
+        "id": "A019",
+        "g": 5,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "LAB MATEMATICA",
+        "ind": "LES",
+        "doc": "gl",
+        "aula": "6",
+        "note": "Esercizi (Aula 6 o da casa)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "note": "Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).",
+        "esercizi": true,
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "A021",
+      "tipo": "set",
+      "before": {
+        "id": "A021",
+        "g": 5,
+        "h": 9,
+        "anno": "4/5",
+        "materia": "FISICA",
+        "ind": "SCIENTIFICO / CLASSICO / LINGUISTICO / SCIENZE UMANE / SCIENZE APPLICATE / SPORTIVO / LES",
+        "doc": "er",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+        "zoomPasscode": "498159",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "sportivo",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "A022",
+      "tipo": "set",
+      "before": {
+        "id": "A022",
+        "g": 5,
+        "h": 9,
+        "anno": "5",
+        "materia": "FISICA",
+        "ind": "SCIENTIFICO / CLASSICO / LINGUISTICO / SCIENZE UMANE / SCIENZE APPLICATE / SPORTIVO / LES",
+        "doc": "er",
+        "aula": "4",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+        "zoomPasscode": "498159",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "sportivo",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "A023",
+      "tipo": "set",
+      "before": {
+        "id": "A023",
+        "g": 3,
+        "h": 9,
+        "anno": "3/4",
+        "materia": "SPAGNOLO",
+        "ind": "LINGUISTICO",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "ind": "Linguistico",
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "linguistico"
+        ]
+      }
+    },
+    {
+      "lessonId": "A024",
+      "tipo": "set",
+      "before": {
+        "id": "A024",
+        "g": 3,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "SPAGNOLO",
+        "ind": "LINGUISTICO",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "ind": "Linguistico",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "linguistico"
+        ]
+      }
+    },
+    {
+      "lessonId": "A026",
+      "tipo": "set",
+      "before": {
+        "id": "A026",
+        "g": 3,
+        "h": 11,
+        "anno": "1/2",
+        "materia": "SCIENZE MOTORIE",
+        "ind": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze motorie"
+        ],
+        "tracks": [
+          "afm",
+          "classico",
+          "informatico",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "socio-sanitario",
+          "sportivo",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / Classico / ITI Informatico / IPSEOA / LES / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+        "zoomPasscode": "929574",
+        "class": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "A027",
+      "tipo": "set",
+      "before": {
+        "id": "A027",
+        "g": 3,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "SCIENZE MOTORIE",
+        "ind": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze motorie"
+        ],
+        "tracks": [
+          "afm",
+          "classico",
+          "informatico",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "socio-sanitario",
+          "sportivo",
+          "turismo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / Classico / ITI Informatico / IPSEOA / LES / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+        "zoomPasscode": "929574",
+        "class": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO"
+      }
+    },
+    {
+      "lessonId": "A028",
+      "tipo": "set",
+      "before": {
+        "id": "A028",
+        "g": 5,
+        "h": 12,
+        "anno": "1/2",
+        "materia": "LAB ITALIANO",
+        "ind": "TUTTI TRANNE ITI E AFM",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab italiano"
+        ]
+      },
+      "patch": {
+        "ind": "Tutti tranne ITI e AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+        "zoomPasscode": "343517",
+        "class": "SOLO INDIRIZZI INDICATI",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "sportivo",
+          "les",
+          "socio-sanitario",
+          "turismo",
+          "mme",
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "A029",
+      "tipo": "set",
+      "before": {
+        "id": "A029",
+        "g": 5,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "ED CIVICA",
+        "ind": "AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ],
+        "tracks": [
+          "afm",
+          "informatico",
+          "ipseoa",
+          "les",
+          "linguistico",
+          "scienze-applicate",
+          "socio-sanitario",
+          "sportivo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / ITI Informatico / IPSEOA / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO"
+      }
+    },
+    {
+      "lessonId": "A030",
+      "tipo": "set",
+      "before": {
+        "id": "A030",
+        "g": 5,
+        "h": 10,
+        "anno": "5",
+        "materia": "ED CIVICA",
+        "ind": "AFM / ITI INFORMATICO / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ],
+        "tracks": [
+          "afm",
+          "informatico",
+          "les",
+          "linguistico",
+          "scienze-applicate",
+          "socio-sanitario",
+          "sportivo"
+        ],
+        "affiancaA": []
+      },
+      "patch": {
+        "ind": "AFM / ITI Informatico / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "AFM / ITI INFORMATICO / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_1",
+      "tipo": "set",
+      "before": {
+        "g": 1,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "ECONOMIA AZIENDALE",
+        "ind": "AFM",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "tracks": [
+          "afm"
+        ],
+        "id": "LJ20261014_1",
+        "casa": false,
+        "subj": [
+          "economia aziendale"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "AFM"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_10",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 11,
+        "anno": "5",
+        "materia": "LAB MATEMATICA",
+        "ind": "LINGUISTICO / SPORTIVO",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "tracks": [
+          "linguistico",
+          "sportivo"
+        ],
+        "id": "LJ20261014_10",
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "Linguistico / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "LINGUISTICO / SPORTIVO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_11",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "FRANCESE GRAMMATICA",
+        "ind": "IPSEOA / LINGUISTICO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "tracks": [
+          "ipseoa",
+          "linguistico"
+        ],
+        "id": "LJ20261014_11",
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "IPSEOA / Linguistico",
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "IPSEOA / LINGUISTICO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_12",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 10,
+        "anno": "5",
+        "materia": "FRANCESE GRAMMATICA",
+        "ind": "LINGUISTICO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "tracks": [
+          "linguistico"
+        ],
+        "id": "LJ20261014_12",
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "Linguistico",
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "LINGUISTICO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_13",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "FRANCESE AVANZATO",
+        "ind": "IPSEOA / LINGUISTICO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "tracks": [
+          "ipseoa",
+          "linguistico"
+        ],
+        "id": "LJ20261014_13",
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "IPSEOA / Linguistico",
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "IPSEOA / LINGUISTICO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_14",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 11,
+        "anno": "5",
+        "materia": "FRANCESE AVANZATO",
+        "ind": "LINGUISTICO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "tracks": [
+          "linguistico"
+        ],
+        "id": "LJ20261014_14",
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "Linguistico",
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "LINGUISTICO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_15",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "FRANCESE GRAMMATICA",
+        "ind": "SOCIO SANITARIO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "tracks": [
+          "socio-sanitario"
+        ],
+        "id": "LJ20261014_15",
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "SOCIO SANITARIO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_16",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "FRANCESE AVANZATO",
+        "ind": "SOCIO SANITARIO",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "tracks": [
+          "socio-sanitario"
+        ],
+        "id": "LJ20261014_16",
+        "casa": false,
+        "subj": [
+          "francese"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "Socio sanitario",
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "SOCIO SANITARIO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_17",
+      "tipo": "set",
+      "before": {
+        "g": 3,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "SCIENZE MOTORIE",
+        "ind": "IPSEOA / SOCIO SANITARIO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "tracks": [
+          "ipseoa",
+          "socio-sanitario"
+        ],
+        "id": "LJ20261014_17",
+        "casa": false,
+        "subj": [
+          "scienze motorie"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+        "zoomPasscode": "929574",
+        "class": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo",
+        "tracks": [
+          "ipseoa",
+          "socio-sanitario",
+          "les",
+          "informatico",
+          "turismo"
+        ]
+      }
+    },
+    {
+      "lessonId": "LJ20261014_18",
+      "tipo": "set",
+      "before": {
+        "g": 3,
+        "h": 11,
+        "anno": "5",
+        "materia": "SCIENZE MOTORIE",
+        "ind": "SOCIO SANITARIO",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "tracks": [
+          "socio-sanitario"
+        ],
+        "id": "LJ20261014_18",
+        "casa": false,
+        "subj": [
+          "scienze motorie"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "Socio sanitario / LES / ITI Informatico / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+        "zoomPasscode": "929574",
+        "class": "Socio sanitario / LES / ITI Informatico / Turismo",
+        "tracks": [
+          "socio-sanitario",
+          "les",
+          "informatico",
+          "turismo"
+        ]
+      }
+    },
+    {
+      "lessonId": "LJ20261014_3",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 11,
+        "anno": "3/4",
+        "materia": "LAB MATEMATICA",
+        "ind": "AFM / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "tracks": [
+          "afm",
+          "linguistico",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "sportivo"
+        ],
+        "id": "LJ20261014_3",
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "AFM / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "AFM / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_4",
+      "tipo": "set",
+      "before": {
+        "g": 4,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "EC POLITICA / RELAZIONI INTERNAZIONALI",
+        "ind": "AFM",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "tracks": [
+          "afm"
+        ],
+        "id": "LJ20261014_4",
+        "casa": false,
+        "subj": [
+          "economia politica",
+          "relazioni internazionali"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "AFM"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_7",
+      "tipo": "set",
+      "before": {
+        "g": 3,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "LAB FISICA",
+        "ind": "LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "tracks": [
+          "les",
+          "linguistico",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "sportivo"
+        ],
+        "id": "LJ20261014_7",
+        "casa": false,
+        "subj": [
+          "fisica"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "LES / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+        "zoomPasscode": "434438",
+        "class": "LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_8",
+      "tipo": "set",
+      "before": {
+        "g": 3,
+        "h": 12,
+        "anno": "5",
+        "materia": "LAB FISICA",
+        "ind": "LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "tracks": [
+          "les",
+          "linguistico",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "sportivo"
+        ],
+        "id": "LJ20261014_8",
+        "casa": false,
+        "subj": [
+          "fisica"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "LES / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+        "zoomPasscode": "434438",
+        "class": "LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_9",
+      "tipo": "set",
+      "before": {
+        "g": 5,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "LAB MATEMATICA",
+        "ind": "IPSEOA / LINGUISTICO / SPORTIVO",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "tracks": [
+          "ipseoa",
+          "linguistico",
+          "sportivo"
+        ],
+        "id": "LJ20261014_9",
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ],
+        "cal": "M"
+      },
+      "patch": {
+        "ind": "IPSEOA / Linguistico / Sportivo",
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "IPSEOA / LINGUISTICO / SPORTIVO"
+      }
+    },
+    {
+      "lessonId": "LJ20261014_FRA_GIO_45",
+      "tipo": "add",
+      "lezione": {
+        "g": 4,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "FRANCESE AVANZATO",
+        "ind": "LES / Linguistico / Socio sanitario / Turismo / IPSEOA",
+        "doc": "ed",
+        "aula": "5",
+        "note": "Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA",
+        "tracks": [
+          "les",
+          "linguistico",
+          "socio-sanitario",
+          "turismo",
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "LJ20261014_FRA_GIO_5",
+      "tipo": "add",
+      "lezione": {
+        "g": 4,
+        "h": 10,
+        "anno": "5",
+        "materia": "FRANCESE AVANZATO",
+        "ind": "LES / Linguistico / Socio sanitario / Turismo / IPSEOA",
+        "doc": "ed",
+        "aula": "5",
+        "note": "Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA",
+        "tracks": [
+          "les",
+          "linguistico",
+          "socio-sanitario",
+          "turismo",
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "LJ20261015_1",
+      "tipo": "add",
+      "lezione": {
+        "g": 3,
+        "h": 11,
+        "anno": "4/5",
+        "materia": "SCIENZE INTEGRATE",
+        "ind": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+        "doc": "mr",
+        "aula": "5",
+        "note": "(+4)",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+        "tracks": [
+          "classico",
+          "linguistico",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "sportivo"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "LJ20261015_2",
+      "tipo": "add",
+      "lezione": {
+        "g": 3,
+        "h": 11,
+        "anno": "5",
+        "materia": "SCIENZE INTEGRATE",
+        "ind": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+        "doc": "mr",
+        "aula": "5",
+        "note": "(+4)",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+        "zoomPasscode": "991407",
+        "class": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+        "tracks": [
+          "classico",
+          "linguistico",
+          "scientifico",
+          "scienze-applicate",
+          "scienze-umane",
+          "sportivo"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "LJ20261015_3",
+      "tipo": "add",
+      "lezione": {
+        "g": 3,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "LAB COMPETENZE MATURITÀ",
+        "ind": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+        "zoomPasscode": "290382",
+        "class": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+        "tracks": [
+          "afm",
+          "classico",
+          "informatico",
+          "ipseoa",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "socio-sanitario",
+          "sportivo",
+          "turismo"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "LJ20261015_4",
+      "tipo": "add",
+      "lezione": {
+        "g": 3,
+        "h": 10,
+        "anno": "5",
+        "materia": "LAB COMPETENZE MATURITÀ",
+        "ind": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+        "zoomPasscode": "290382",
+        "class": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+        "tracks": [
+          "afm",
+          "classico",
+          "informatico",
+          "ipseoa",
+          "linguistico",
+          "mme",
+          "scientifico",
+          "scienze-applicate",
+          "socio-sanitario",
+          "sportivo",
+          "turismo"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "LJ20261016_1",
+      "tipo": "add",
+      "lezione": {
+        "g": 5,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "LAB COMPITI",
+        "ind": "ITI Informatico / Scienze umane / LES / AFM",
+        "doc": "bl",
+        "aula": "3",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+        "zoomPasscode": "197031",
+        "class": "ITI INFORMATICO / SCIENZE UMANE / LES / AFM",
+        "tracks": [
+          "informatico",
+          "scienze-umane",
+          "les",
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "LJ20261016_LES_1",
+      "tipo": "add",
+      "lezione": {
+        "g": 4,
+        "h": 10,
+        "anno": "4/5",
+        "materia": "ECONOMIA POLITICA",
+        "ind": "LES",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "LES",
+        "tracks": [
+          "les"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "LJ20261016_LES_2",
+      "tipo": "add",
+      "lezione": {
+        "g": 4,
+        "h": 10,
+        "anno": "5",
+        "materia": "ECONOMIA POLITICA",
+        "ind": "LES",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+        "zoomPasscode": "36079",
+        "class": "LES",
+        "tracks": [
+          "les"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "LJ20261022_AFM_45",
+      "tipo": "add",
+      "lezione": {
+        "g": 5,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "ECONOMIA AZIENDALE",
+        "ind": "AFM",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1",
+        "zoomPasscode": "377146",
+        "class": "AFM",
+        "tracks": [
+          "afm"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "LJ20261022_AFM_5",
+      "tipo": "add",
+      "lezione": {
+        "g": 5,
+        "h": 12,
+        "anno": "5",
+        "materia": "ECONOMIA AZIENDALE",
+        "ind": "AFM",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1",
+        "zoomPasscode": "377146",
+        "class": "AFM",
+        "tracks": [
+          "afm"
+        ],
+        "affiancaA": []
+      }
+    },
+    {
+      "lessonId": "LJ20261029_MME_MER",
+      "tipo": "add",
+      "lezione": {
+        "g": 3,
+        "h": 11,
+        "anno": "5",
+        "materia": "MECCATRONICA",
+        "ind": "MME",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+        "zoomPasscode": "494425",
+        "class": "MME",
+        "tracks": [
+          "mme"
+        ]
+      }
+    },
+    {
+      "lessonId": "LJ20261029_MME_VEN",
+      "tipo": "add",
+      "lezione": {
+        "g": 5,
+        "h": 10,
+        "anno": "5",
+        "materia": "MECCATRONICA",
+        "ind": "MME",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+        "zoomPasscode": "579497",
+        "class": "MME",
+        "tracks": [
+          "mme"
+        ]
+      }
+    },
+    {
+      "lessonId": "S001",
+      "tipo": "set",
+      "before": {
+        "id": "S001",
+        "g": 1,
+        "h": 17,
+        "anno": "1/2",
+        "materia": "EPICA/ANTOLOGIA",
+        "ind": "Classico",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "epica/antologia"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+        "zoomPasscode": "729635",
+        "class": "SERALE",
+        "tracks": [
+          "classico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S002",
+      "tipo": "set",
+      "before": {
+        "id": "S002",
+        "g": 1,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "FRANCESE",
+        "ind": "AFM, IPSEOA",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "francese"
+        ]
+      },
+      "patch": {
+        "ind": "AFM / IPSEOA",
+        "zoomUrl": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+        "zoomPasscode": "140585",
+        "class": "SERALE",
+        "tracks": [
+          "afm",
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "S003",
+      "tipo": "set",
+      "before": {
+        "id": "S003",
+        "g": 1,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "LAB MATEMATICA",
+        "ind": "ITI Informatico",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "ITI Informatico / Scientifico",
+        "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+        "zoomPasscode": "905998",
+        "class": "SERALE",
+        "tracks": [
+          "informatico",
+          "scientifico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S004",
+      "tipo": "set",
+      "before": {
+        "id": "S004",
+        "g": 1,
+        "h": 17,
+        "anno": "5",
+        "materia": "FRANCESE",
+        "ind": "Turismo, AFM",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "francese"
+        ]
+      },
+      "patch": {
+        "ind": "Turismo / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+        "zoomPasscode": "140585",
+        "class": "SERALE",
+        "tracks": [
+          "turismo",
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S005",
+      "tipo": "set",
+      "before": {
+        "id": "S005",
+        "g": 1,
+        "h": 17,
+        "anno": "5",
+        "materia": "LAB MATEMATICA",
+        "ind": "MME, Sportivo, AFM",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "MME / Sportivo / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+        "zoomPasscode": "905998",
+        "class": "SERALE",
+        "tracks": [
+          "mme",
+          "sportivo",
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S006",
+      "tipo": "set",
+      "before": {
+        "id": "S006",
+        "g": 1,
+        "h": 17,
+        "anno": "5",
+        "materia": "STORIA DELL'ARTE",
+        "ind": "Scientifico, LES",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia dell'arte"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/83170304877?pwd=bpGf3l212xfS0EkXn2Dtruc3PtCIqy.1",
+        "zoomPasscode": "356111",
+        "class": "SERALE",
+        "tracks": [
+          "scientifico",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "S007",
+      "tipo": "set",
+      "before": {
+        "id": "S007",
+        "g": 1,
+        "h": 18,
+        "anno": "1/2",
+        "materia": "ITALIANO",
+        "ind": "Classico",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82305647110?pwd=6Yjv5oyunDlOHc4bz8IdL6C5dqooDR.1",
+        "zoomPasscode": "120431",
+        "class": "SERALE",
+        "tracks": [
+          "classico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S008",
+      "tipo": "set",
+      "before": {
+        "id": "S008",
+        "g": 1,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "LAB INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+        "zoomPasscode": "217016",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S009",
+      "tipo": "set",
+      "before": {
+        "id": "S009",
+        "g": 1,
+        "h": 18,
+        "anno": "5",
+        "materia": "LAB INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+        "zoomPasscode": "217016",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S010",
+      "tipo": "set",
+      "before": {
+        "id": "S010",
+        "g": 1,
+        "h": 19,
+        "anno": "1/2",
+        "materia": "INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/81403969941?pwd=K8HTkmtbRoO3JGH3PK8lbBupkmy82a.1",
+        "zoomPasscode": "680190",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S011",
+      "tipo": "set",
+      "before": {
+        "id": "S011",
+        "g": 1,
+        "h": 19,
+        "anno": "4/5",
+        "materia": "ITALIANO",
+        "ind": "Tutti gli indirizzi",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+        "zoomPasscode": "881979",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S012",
+      "tipo": "set",
+      "before": {
+        "id": "S012",
+        "g": 1,
+        "h": 19,
+        "anno": "5",
+        "materia": "ITALIANO",
+        "ind": "Tutti gli indirizzi",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+        "zoomPasscode": "881979",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S013",
+      "tipo": "set",
+      "before": {
+        "id": "S013",
+        "g": 1,
+        "h": 20,
+        "anno": "1/2",
+        "materia": "INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82025847999?pwd=L1Xjo1nNbawBlDwFpJEz12rZEXugCb.1",
+        "zoomPasscode": "69921",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S014",
+      "tipo": "set",
+      "before": {
+        "id": "S014",
+        "g": 1,
+        "h": 20,
+        "anno": "4/5",
+        "materia": "ITALIANO",
+        "ind": "Tutti gli indirizzi",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+        "zoomPasscode": "960821",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S015",
+      "tipo": "set",
+      "before": {
+        "id": "S015",
+        "g": 1,
+        "h": 20,
+        "anno": "5",
+        "materia": "ITALIANO",
+        "ind": "Tutti gli indirizzi",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+        "zoomPasscode": "960821",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S016",
+      "tipo": "set",
+      "before": {
+        "id": "S016",
+        "g": 2,
+        "h": 17,
+        "anno": "1/2",
+        "materia": "LAB LETTURA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab lettura"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+        "zoomPasscode": "834320",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S017",
+      "tipo": "set",
+      "before": {
+        "id": "S017",
+        "g": 2,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "INFORMATICA",
+        "ind": "ITI Informatico",
+        "doc": "sm",
+        "aula": "1",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "informatica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/81474490913?pwd=2K4jGaoLlBezAmCMaJtf21Psh2jQlO.1",
+        "zoomPasscode": "629221",
+        "class": "SERALE",
+        "tracks": [
+          "informatico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S018",
+      "tipo": "set",
+      "before": {
+        "id": "S018",
+        "g": 2,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "LAB LETTURA",
+        "ind": "IPSEOA, AFM",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab lettura"
+        ]
+      },
+      "patch": {
+        "ind": "IPSEOA / AFM / Scientifico",
+        "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+        "zoomPasscode": "834320",
+        "class": "SERALE",
+        "tracks": [
+          "ipseoa",
+          "afm",
+          "scientifico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S019",
+      "tipo": "set",
+      "before": {
+        "id": "S019",
+        "g": 2,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "RELAZIONI INTERNAZIONALI",
+        "ind": "AFM",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "S",
+        "v": "s019",
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "relazioni internazionali"
+        ]
+      },
+      "patch": {
+        "h": 18,
+        "materia": "RELAZIONI INTERNAZIONALI / ECONOMIA POLITICA",
+        "zoomUrl": "https://us06web.zoom.us/j/83766661468?pwd=0yFhk5gLkajhb2Z1Ggbbe0T5CU3Cf2.1",
+        "zoomPasscode": "659802",
+        "class": "SERALE",
+        "tracks": [
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S020",
+      "tipo": "set",
+      "before": {
+        "id": "S020",
+        "g": 2,
+        "h": 17,
+        "anno": "5",
+        "materia": "FILOSOFIA",
+        "ind": "Scientifico, Sportivo, LES",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "filosofia"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / Sportivo / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/83170304877?pwd=bpGf3l212xfS0EkXn2Dtruc3PtCIqy.1",
+        "zoomPasscode": "356111",
+        "class": "SERALE",
+        "tracks": [
+          "scientifico",
+          "sportivo",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "S021",
+      "tipo": "set",
+      "before": {
+        "id": "S021",
+        "g": 2,
+        "h": 17,
+        "anno": "5",
+        "materia": "LAB LETTURA",
+        "ind": "Turismo, AFM",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab lettura"
+        ]
+      },
+      "patch": {
+        "ind": "Turismo / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+        "zoomPasscode": "834320",
+        "class": "SERALE",
+        "tracks": [
+          "turismo",
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S022",
+      "tipo": "set",
+      "before": {
+        "id": "S022",
+        "g": 2,
+        "h": 17,
+        "anno": "5",
+        "materia": "MECCATRONICA",
+        "ind": "MME",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "meccatronica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+        "zoomPasscode": "905998",
+        "class": "SERALE",
+        "tracks": [
+          "mme"
+        ]
+      }
+    },
+    {
+      "lessonId": "S075",
+      "tipo": "set",
+      "before": {
+        "id": "S075",
+        "g": 2,
+        "h": 18,
+        "anno": "5",
+        "materia": "RELAZIONI INTERNAZIONALI / ECONOMIA POLITICA",
+        "ind": "AFM",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "relazioni internazionali",
+          "economia politica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83766661468?pwd=0yFhk5gLkajhb2Z1Ggbbe0T5CU3Cf2.1",
+        "zoomPasscode": "659802",
+        "class": "SERALE",
+        "tracks": [
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S023",
+      "tipo": "set",
+      "before": {
+        "id": "S023",
+        "g": 2,
+        "h": 18,
+        "anno": "1/2",
+        "materia": "LAB LETTURA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab lettura"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+        "zoomPasscode": "677493",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S025",
+      "tipo": "set",
+      "before": {
+        "id": "S025",
+        "g": 2,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "LAB LETTURA",
+        "ind": "IPSEOA, AFM",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": "s025",
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab lettura"
+        ]
+      },
+      "patch": {
+        "ind": "IPSEOA / AFM / Scientifico",
+        "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+        "zoomPasscode": "677493",
+        "class": "SERALE",
+        "tracks": [
+          "ipseoa",
+          "scientifico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S026",
+      "tipo": "set",
+      "before": {
+        "id": "S026",
+        "g": 2,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "TPSI E SISTEMI E RETI",
+        "ind": "ITI Informatico",
+        "doc": "sm",
+        "aula": "1",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "tpsi e sistemi e reti"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/86320197566?pwd=ZIKvXYla7pgy9KlayGiB30fuOmegtg.1",
+        "zoomPasscode": "419328",
+        "class": "SERALE",
+        "tracks": [
+          "informatico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S027",
+      "tipo": "set",
+      "before": {
+        "id": "S027",
+        "g": 2,
+        "h": 18,
+        "anno": "5",
+        "materia": "LAB LETTURA",
+        "ind": "Sportivo, Scientifico, LES, Turismo",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab lettura"
+        ]
+      },
+      "patch": {
+        "ind": "Sportivo / Scientifico / LES / Turismo",
+        "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+        "zoomPasscode": "677493",
+        "class": "SERALE",
+        "tracks": [
+          "sportivo",
+          "scientifico",
+          "les",
+          "turismo"
+        ]
+      }
+    },
+    {
+      "lessonId": "S028",
+      "tipo": "set",
+      "before": {
+        "id": "S028",
+        "g": 2,
+        "h": 18,
+        "anno": "5",
+        "materia": "MECCATRONICA",
+        "ind": "MME",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "meccatronica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/84974333805?pwd=saT6DX5Pn9rjmulNpXCOsfs0i5CIpt.1",
+        "zoomPasscode": "677574",
+        "class": "SERALE",
+        "tracks": [
+          "mme"
+        ]
+      }
+    },
+    {
+      "lessonId": "S029",
+      "tipo": "set",
+      "before": {
+        "id": "S029",
+        "g": 2,
+        "h": 19,
+        "anno": "1/2",
+        "materia": "MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/88925192676?pwd=EBgU5GwttDJ64puqkh3AanoU6ZsqbD.1",
+        "zoomPasscode": "246927",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S030",
+      "tipo": "set",
+      "before": {
+        "id": "S030",
+        "g": 2,
+        "h": 19,
+        "anno": "4/5",
+        "materia": "MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ft",
+        "aula": "2",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/86906722891?pwd=3g1Rw6UUFJjgJzlmXbYNSB4Hp2kGPn.1",
+        "zoomPasscode": "587051",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S031",
+      "tipo": "set",
+      "before": {
+        "id": "S031",
+        "g": 2,
+        "h": 19,
+        "anno": "5",
+        "materia": "POTENZIAMENTO INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "potenziamento inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/84979030342?pwd=i1IZeaxaX59eUq9cXtVwdS7Kg8Uq2a.1",
+        "zoomPasscode": "413745",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S032",
+      "tipo": "set",
+      "before": {
+        "id": "S032",
+        "g": 2,
+        "h": 20,
+        "anno": "1/2",
+        "materia": "MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/85415773151?pwd=tgVLv9Ig3xBTTVHcLdU45Mb1YfIJi1.1",
+        "zoomPasscode": "490801",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S033",
+      "tipo": "set",
+      "before": {
+        "id": "S033",
+        "g": 2,
+        "h": 20,
+        "anno": "4/5",
+        "materia": "MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ft",
+        "aula": "2",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83415684344?pwd=QlZaTia2PTaZE1bkJTdFH2teCAoyw4.1",
+        "zoomPasscode": "697563",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S034",
+      "tipo": "set",
+      "before": {
+        "id": "S034",
+        "g": 2,
+        "h": 20,
+        "anno": "5",
+        "materia": "POTENZIAMENTO INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "potenziamento inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/86903781297?pwd=4ye2NxZrxbObIDPuHZHGNmX93PbjaP.1",
+        "zoomPasscode": "254135",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S035",
+      "tipo": "set",
+      "before": {
+        "id": "S035",
+        "g": 3,
+        "h": 17,
+        "anno": "1/2",
+        "materia": "ITALIANO",
+        "ind": "Classico",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "italiano"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+        "zoomPasscode": "729635",
+        "class": "SERALE",
+        "tracks": [
+          "classico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S036",
+      "tipo": "set",
+      "before": {
+        "id": "S036",
+        "g": 3,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+        "zoomPasscode": "140585",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S037",
+      "tipo": "set",
+      "before": {
+        "id": "S037",
+        "g": 3,
+        "h": 17,
+        "anno": "5",
+        "materia": "INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+        "zoomPasscode": "140585",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S038",
+      "tipo": "set",
+      "before": {
+        "id": "S038",
+        "g": 3,
+        "h": 18,
+        "anno": "1/2",
+        "materia": "STORIA",
+        "ind": "Classico",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82305647110?pwd=6Yjv5oyunDlOHc4bz8IdL6C5dqooDR.1",
+        "zoomPasscode": "120431",
+        "class": "SERALE",
+        "tracks": [
+          "classico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S039",
+      "tipo": "set",
+      "before": {
+        "id": "S039",
+        "g": 3,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+        "zoomPasscode": "217016",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S040",
+      "tipo": "set",
+      "before": {
+        "id": "S040",
+        "g": 3,
+        "h": 18,
+        "anno": "5",
+        "materia": "INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+        "zoomPasscode": "217016",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S041",
+      "tipo": "set",
+      "before": {
+        "id": "S041",
+        "g": 3,
+        "h": 19,
+        "anno": "1/2",
+        "materia": "POTENZIAMENTO INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "potenziamento inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/81403969941?pwd=K8HTkmtbRoO3JGH3PK8lbBupkmy82a.1",
+        "zoomPasscode": "680190",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S042",
+      "tipo": "set",
+      "before": {
+        "id": "S042",
+        "g": 3,
+        "h": 19,
+        "anno": "4/5",
+        "materia": "STORIA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+        "zoomPasscode": "881979",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S043",
+      "tipo": "set",
+      "before": {
+        "id": "S043",
+        "g": 3,
+        "h": 19,
+        "anno": "5",
+        "materia": "MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ft",
+        "aula": "2",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/86906722891?pwd=3g1Rw6UUFJjgJzlmXbYNSB4Hp2kGPn.1",
+        "zoomPasscode": "587051",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S044",
+      "tipo": "set",
+      "before": {
+        "id": "S044",
+        "g": 3,
+        "h": 20,
+        "anno": "1/2",
+        "materia": "POTENZIAMENTO INGLESE",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "potenziamento inglese"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82025847999?pwd=L1Xjo1nNbawBlDwFpJEz12rZEXugCb.1",
+        "zoomPasscode": "69921",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S045",
+      "tipo": "set",
+      "before": {
+        "id": "S045",
+        "g": 3,
+        "h": 20,
+        "anno": "4/5",
+        "materia": "STORIA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+        "zoomPasscode": "960821",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S046",
+      "tipo": "set",
+      "before": {
+        "id": "S046",
+        "g": 3,
+        "h": 20,
+        "anno": "5",
+        "materia": "MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "ft",
+        "aula": "2",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83415684344?pwd=QlZaTia2PTaZE1bkJTdFH2teCAoyw4.1",
+        "zoomPasscode": "697563",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S047",
+      "tipo": "set",
+      "before": {
+        "id": "S047",
+        "g": 4,
+        "h": 17,
+        "anno": "1/2",
+        "materia": "GRECO",
+        "ind": "Classico",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "greco"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83170304877?pwd=bpGf3l212xfS0EkXn2Dtruc3PtCIqy.1",
+        "zoomPasscode": "356111",
+        "class": "SERALE",
+        "tracks": [
+          "classico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S048",
+      "tipo": "set",
+      "before": {
+        "id": "S048",
+        "g": 4,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "LAB MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+        "zoomPasscode": "905998",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S049",
+      "tipo": "set",
+      "before": {
+        "id": "S049",
+        "g": 4,
+        "h": 17,
+        "anno": "5",
+        "materia": "LAB MATEMATICA",
+        "ind": "Sportivo, Scientifico, MME, Turismo, AFM",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "ind": "Sportivo / Scientifico / MME / Turismo / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+        "zoomPasscode": "905998",
+        "class": "SERALE",
+        "tracks": [
+          "sportivo",
+          "scientifico",
+          "mme",
+          "turismo",
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S050",
+      "tipo": "set",
+      "before": {
+        "id": "S050",
+        "g": 4,
+        "h": 17,
+        "anno": "5",
+        "materia": "SCIENZE UMANE",
+        "ind": "LES",
+        "doc": "gd",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze umane"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+        "zoomPasscode": "729635",
+        "class": "SERALE",
+        "tracks": [
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "S052",
+      "tipo": "set",
+      "before": {
+        "id": "S052",
+        "g": 4,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "DIRITTO",
+        "ind": "AFM, IPSEOA",
+        "doc": "gc",
+        "aula": "1",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "diritto"
+        ]
+      },
+      "patch": {
+        "ind": "AFM / IPSEOA",
+        "zoomUrl": "https://us06web.zoom.us/j/86320197566?pwd=ZIKvXYla7pgy9KlayGiB30fuOmegtg.1",
+        "zoomPasscode": "419328",
+        "class": "SERALE",
+        "tracks": [
+          "afm",
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "S053",
+      "tipo": "set",
+      "before": {
+        "id": "S053",
+        "g": 4,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "GPOI",
+        "ind": "ITI Informatico",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "gpoi"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83766661468?pwd=0yFhk5gLkajhb2Z1Ggbbe0T5CU3Cf2.1",
+        "zoomPasscode": "659802",
+        "class": "SERALE",
+        "tracks": [
+          "informatico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S054",
+      "tipo": "set",
+      "before": {
+        "id": "S054",
+        "g": 4,
+        "h": 18,
+        "anno": "5",
+        "materia": "DIRITTO",
+        "ind": "Turismo, AFM",
+        "doc": "gc",
+        "aula": "1",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "diritto"
+        ]
+      },
+      "patch": {
+        "ind": "Turismo / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/86320197566?pwd=ZIKvXYla7pgy9KlayGiB30fuOmegtg.1",
+        "zoomPasscode": "419328",
+        "class": "SERALE",
+        "tracks": [
+          "turismo",
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S055",
+      "tipo": "set",
+      "before": {
+        "id": "S055",
+        "g": 4,
+        "h": 18,
+        "anno": "5",
+        "materia": "FISICA",
+        "ind": "Scientifico, Sportivo, LES",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / Sportivo / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/84974333805?pwd=saT6DX5Pn9rjmulNpXCOsfs0i5CIpt.1",
+        "zoomPasscode": "677574",
+        "class": "SERALE",
+        "tracks": [
+          "scientifico",
+          "sportivo",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "S056",
+      "tipo": "set",
+      "before": {
+        "id": "S056",
+        "g": 4,
+        "h": 19,
+        "anno": "4/5",
+        "materia": "ECONOMIA AZIENDALE",
+        "ind": "AFM",
+        "doc": "sz",
+        "aula": "7",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "economia aziendale"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83229719016?pwd=KvcAYbNOfDYfqXhqHdbNJmPkkbkata.1",
+        "zoomPasscode": "891408",
+        "class": "SERALE",
+        "tracks": [
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S057",
+      "tipo": "set",
+      "before": {
+        "id": "S057",
+        "g": 4,
+        "h": 19,
+        "anno": "5",
+        "materia": "DTA",
+        "ind": "Turismo",
+        "doc": "sz",
+        "aula": "7",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "dta"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83229719016?pwd=KvcAYbNOfDYfqXhqHdbNJmPkkbkata.1",
+        "zoomPasscode": "891408",
+        "class": "SERALE",
+        "tracks": [
+          "turismo"
+        ]
+      }
+    },
+    {
+      "lessonId": "S076",
+      "tipo": "set",
+      "before": {
+        "id": "S076",
+        "g": 4,
+        "h": 19,
+        "anno": "5",
+        "materia": "ECONOMIA AZIENDALE",
+        "ind": "AFM",
+        "doc": "sz",
+        "aula": "7",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "economia aziendale"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83229719016?pwd=KvcAYbNOfDYfqXhqHdbNJmPkkbkata.1",
+        "zoomPasscode": "891408",
+        "class": "SERALE",
+        "tracks": [
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S058",
+      "tipo": "set",
+      "before": {
+        "id": "S058",
+        "g": 4,
+        "h": 19,
+        "anno": "5",
+        "materia": "FISICA",
+        "ind": "Scientifico, Sportivo, LES",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "fisica"
+        ]
+      },
+      "patch": {
+        "ind": "Scientifico / Sportivo / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/88925192676?pwd=EBgU5GwttDJ64puqkh3AanoU6ZsqbD.1",
+        "zoomPasscode": "246927",
+        "class": "SERALE",
+        "tracks": [
+          "scientifico",
+          "sportivo",
+          "les"
+        ]
+      }
+    },
+    {
+      "lessonId": "S059",
+      "tipo": "set",
+      "before": {
+        "id": "S059",
+        "g": 5,
+        "h": 17,
+        "anno": "1/2",
+        "materia": "LATINO",
+        "ind": "Classico",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "latino"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+        "zoomPasscode": "729635",
+        "class": "SERALE",
+        "tracks": [
+          "classico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S060",
+      "tipo": "set",
+      "before": {
+        "id": "S060",
+        "g": 5,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "LAB MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": "AFM",
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+        "zoomPasscode": "905998",
+        "class": "SERALE",
+        "tracks": "*",
+        "affiancaA": [
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S061",
+      "tipo": "set",
+      "before": {
+        "id": "S061",
+        "g": 5,
+        "h": 17,
+        "anno": "4/5",
+        "materia": "SPAGNOLO",
+        "ind": "AFM",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+        "zoomPasscode": "834320",
+        "class": "SERALE",
+        "tracks": [
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S062",
+      "tipo": "set",
+      "before": {
+        "id": "S062",
+        "g": 5,
+        "h": 17,
+        "anno": "5",
+        "materia": "LAB MATEMATICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": "AFM",
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+        "zoomPasscode": "905998",
+        "class": "SERALE",
+        "tracks": "*",
+        "affiancaA": [
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S063",
+      "tipo": "set",
+      "before": {
+        "id": "S063",
+        "g": 5,
+        "h": 17,
+        "anno": "5",
+        "materia": "SPAGNOLO",
+        "ind": "LES, AFM",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "ind": "LES / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+        "zoomPasscode": "834320",
+        "class": "SERALE",
+        "tracks": [
+          "les",
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S064",
+      "tipo": "set",
+      "before": {
+        "id": "S064",
+        "g": 5,
+        "h": 18,
+        "anno": "1/2",
+        "materia": "GEOSTORIA - STORIA DELL'ARTE",
+        "ind": "Classico",
+        "doc": "aa",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "geostoria",
+          "storia dell'arte"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/82305647110?pwd=6Yjv5oyunDlOHc4bz8IdL6C5dqooDR.1",
+        "zoomPasscode": "120431",
+        "class": "SERALE",
+        "tracks": [
+          "classico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S065",
+      "tipo": "set",
+      "before": {
+        "id": "S065",
+        "g": 5,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "SPAGNOLO",
+        "ind": "AFM",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+        "zoomPasscode": "677493",
+        "class": "SERALE",
+        "tracks": [
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S066",
+      "tipo": "set",
+      "before": {
+        "id": "S066",
+        "g": 5,
+        "h": 18,
+        "anno": "5",
+        "materia": "SCIENZE",
+        "ind": "Sportivo, Scientifico",
+        "doc": "as",
+        "aula": "1",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze"
+        ]
+      },
+      "patch": {
+        "ind": "Sportivo / Scientifico",
+        "doc": "mr",
+        "aula": "5",
+        "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+        "zoomPasscode": "217016",
+        "class": "SERALE",
+        "tracks": [
+          "sportivo",
+          "scientifico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S067",
+      "tipo": "set",
+      "before": {
+        "id": "S067",
+        "g": 5,
+        "h": 18,
+        "anno": "5",
+        "materia": "SPAGNOLO",
+        "ind": "LES, AFM",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "spagnolo"
+        ]
+      },
+      "patch": {
+        "ind": "LES / AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+        "zoomPasscode": "677493",
+        "class": "SERALE",
+        "tracks": [
+          "les",
+          "afm"
+        ]
+      }
+    },
+    {
+      "lessonId": "S068",
+      "tipo": "set",
+      "before": {
+        "id": "S068",
+        "g": 5,
+        "h": 19,
+        "anno": "1/2",
+        "materia": "LAB CREATIVO",
+        "ind": "Tutti gli indirizzi",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab creativo"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/84979030342?pwd=i1IZeaxaX59eUq9cXtVwdS7Kg8Uq2a.1",
+        "zoomPasscode": "413745",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S069",
+      "tipo": "set",
+      "before": {
+        "id": "S069",
+        "g": 5,
+        "h": 19,
+        "anno": "4/5",
+        "materia": "LAB CREATIVO",
+        "ind": "Tutti gli indirizzi",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab creativo"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/84979030342?pwd=i1IZeaxaX59eUq9cXtVwdS7Kg8Uq2a.1",
+        "zoomPasscode": "413745",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S070",
+      "tipo": "set",
+      "before": {
+        "id": "S070",
+        "g": 5,
+        "h": 19,
+        "anno": "5",
+        "materia": "STORIA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "as",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia"
+        ]
+      },
+      "patch": {
+        "doc": "aa",
+        "zoomUrl": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+        "zoomPasscode": "881979",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S071",
+      "tipo": "set",
+      "before": {
+        "id": "S071",
+        "g": 5,
+        "h": 20,
+        "anno": "1/2",
+        "materia": "LAB CREATIVO",
+        "ind": "Tutti gli indirizzi",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab creativo"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/86903781297?pwd=4ye2NxZrxbObIDPuHZHGNmX93PbjaP.1",
+        "zoomPasscode": "254135",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "S072",
+      "tipo": "set",
+      "before": {
+        "id": "S072",
+        "g": 5,
+        "h": 20,
+        "anno": "4/5",
+        "materia": "DIRITTO E TECNICHE AMM",
+        "ind": "IPSEOA",
+        "doc": "sz",
+        "aula": "7",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "dta"
+        ]
+      },
+      "patch": {
+        "zoomUrl": "https://us06web.zoom.us/j/83069508750?pwd=dYQOYGWBeZ8ENuzjvAvOVcXWkHr1tq.1",
+        "zoomPasscode": "646585",
+        "class": "SERALE",
+        "tracks": [
+          "ipseoa"
+        ]
+      }
+    },
+    {
+      "lessonId": "S073",
+      "tipo": "set",
+      "before": {
+        "id": "S073",
+        "g": 5,
+        "h": 20,
+        "anno": "4/5",
+        "materia": "LAB CREATIVO",
+        "ind": "ITI Informatico, AFM",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab creativo"
+        ]
+      },
+      "patch": {
+        "ind": "ITI Informatico / AFM / Scientifico",
+        "zoomUrl": "https://us06web.zoom.us/j/86903781297?pwd=4ye2NxZrxbObIDPuHZHGNmX93PbjaP.1",
+        "zoomPasscode": "254135",
+        "class": "SERALE",
+        "tracks": [
+          "informatico",
+          "afm",
+          "scientifico"
+        ]
+      }
+    },
+    {
+      "lessonId": "S074",
+      "tipo": "set",
+      "before": {
+        "id": "S074",
+        "g": 5,
+        "h": 20,
+        "anno": "5",
+        "materia": "STORIA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "as",
+        "aula": "4",
+        "note": "",
+        "cal": "S",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia"
+        ]
+      },
+      "patch": {
+        "doc": "aa",
+        "zoomUrl": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+        "zoomPasscode": "960821",
+        "class": "SERALE",
+        "tracks": "*"
+      }
+    },
+    {
+      "lessonId": "SJ20261026_FIS18",
+      "tipo": "add",
+      "lezione": {
+        "g": 4,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "FISICA",
+        "ind": "Scientifico",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/84974333805?pwd=saT6DX5Pn9rjmulNpXCOsfs0i5CIpt.1",
+        "zoomPasscode": "677574",
+        "class": "SERALE",
+        "tracks": [
+          "scientifico"
+        ]
+      }
+    },
+    {
+      "lessonId": "SJ20261026_FIS19",
+      "tipo": "add",
+      "lezione": {
+        "g": 4,
+        "h": 19,
+        "anno": "4/5",
+        "materia": "FISICA",
+        "ind": "Scientifico",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/88925192676?pwd=EBgU5GwttDJ64puqkh3AanoU6ZsqbD.1",
+        "zoomPasscode": "246927",
+        "class": "SERALE",
+        "tracks": [
+          "scientifico"
+        ]
+      }
+    },
+    {
+      "lessonId": "SJ20261026_SCI18",
+      "tipo": "add",
+      "lezione": {
+        "g": 5,
+        "h": 18,
+        "anno": "4/5",
+        "materia": "SCIENZE",
+        "ind": "Scientifico",
+        "doc": "mr",
+        "aula": "5",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+        "zoomPasscode": "217016",
+        "class": "SERALE",
+        "tracks": [
+          "scientifico"
+        ]
+      }
+    },
+    {
+      "lessonId": "SJ20261030_MME_MECCANICA",
+      "tipo": "add",
+      "lezione": {
+        "g": 5,
+        "h": 18,
+        "anno": "5",
+        "materia": "MECCANICA, MACCHINE ED ENERGIA",
+        "ind": "MME",
+        "doc": null,
+        "aula": "",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://meet.google.com/czs-wsxe-iqt",
+        "class": "SERALE",
+        "tracks": [
+          "mme"
+        ]
+      }
+    }
+  ]
+}

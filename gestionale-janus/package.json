@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.cjs",
-    "test": "node --test test-locale.cjs",
+    "test": "node --test test-locale.cjs test-allineamento.cjs",
     "build:riservato": "node riservato/build.cjs",
     "test:riservato": "node --test riservato/test.cjs"
   }

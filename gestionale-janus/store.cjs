@@ -34,7 +34,14 @@ class Store {
       validate(collections);
       atomic(this.file, {version:1, revision:0, updatedAt:new Date().toISOString(), collections});
     }
-    this.read();
+    const previous=this.read();
+    if(fs.existsSync(path.join(__dirname,'allineamento.json'))){
+      const result=require('./allineamento.cjs').reconcile(previous);
+      if(result.changed||JSON.stringify(result.report)!==JSON.stringify(previous.allineamento)){
+        atomic(path.join(this.dir,'backup',`stato-${previous.revision}.json`),previous);
+        atomic(this.file,{...previous,revision:previous.revision+1,updatedAt:new Date().toISOString(),collections:result.collections,allineamento:result.report});
+      }
+    }
   }
   read() { const s = JSON.parse(fs.readFileSync(this.file, 'utf8')); validate(s.collections); return s; }
   save(revision, collections) {
@@ -42,7 +49,7 @@ class Store {
     const old = this.read();
     if (old.revision !== revision) { const e = Error('I dati sono cambiati in un’altra finestra. Ricarica la pagina e ripeti la modifica.'); e.status = 409; throw e; }
     atomic(path.join(this.dir, 'backup', `stato-${old.revision}.json`), old);
-    const next = {version:1, revision:old.revision+1, updatedAt:new Date().toISOString(), collections};
+    const next = {...old, version:1, revision:old.revision+1, updatedAt:new Date().toISOString(), collections};
     atomic(this.file, next); return next;
   }
 }

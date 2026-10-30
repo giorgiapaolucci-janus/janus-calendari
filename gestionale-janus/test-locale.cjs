@@ -4,12 +4,12 @@ test('importazione completa, persistenza al riavvio, backup e conflitto revision
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'janus-test-'));
  try {
   const store=new Store(dir,path.join(__dirname,'importazione')),s=store.read();
-  assert.equal(s.collections.assenze.length,0);assert.equal(s.collections.mods.length,69);assert.equal(s.collections.proposte.length,0);
+  assert.equal(s.collections.assenze.length,0);assert.equal(s.collections.mods.length,69+require('./allineamento.json').actions.length);assert.equal(s.collections.proposte.length,0);
   const next=structuredClone(s.collections);next.proposte.push({id:'prova',stato:'in attesa',azioni:[]});
-  store.save(0,next);assert.equal(new Store(dir,'non-usato').read().collections.proposte.length,1);
-  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dir,'backup/stato-0.json'))),s);
-  assert.throws(()=>store.save(0,s.collections),e=>e.status===409);
-  assert.throws(()=>store.save(1,{assenze:[]}));assert.equal(store.read().revision,1);
+  store.save(s.revision,next);assert.equal(new Store(dir,'non-usato').read().collections.proposte.length,1);
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dir,'backup/stato-'+s.revision+'.json'))),s);
+  assert.throws(()=>store.save(s.revision,s.collections),e=>e.status===409);
+  assert.throws(()=>store.save(s.revision+1,{assenze:[]}));assert.equal(store.read().revision,s.revision+1);
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
 test('richieste Google preservano formattazione, cancellano vecchie celle e bloccano formule',()=>{
@@ -50,7 +50,7 @@ test('server HTTP: CSRF, salvataggio, riavvio, conflitti e stato non pubblico',a
   const s=await(await fetch(base+'/api/state',{headers})).json();s.collections.proposte.push({id:'test',stato:'in attesa',azioni:[]});
   const options={method:'POST',headers,body:JSON.stringify({revision:s.revision,collections:s.collections})};
   assert.equal((await fetch(base+'/api/state',{...options,headers:{...headers,Origin:'https://example.org'}})).status,403);
-  const saved=await(await fetch(base+'/api/state',options)).json();assert.equal(saved.revision,1);
+  const saved=await(await fetch(base+'/api/state',options)).json();assert.equal(saved.revision,s.revision+1);
   assert.equal((await fetch(base+'/api/state',options)).status,409);
   await stop();await start();assert.equal(JSON.parse(fs.readFileSync(path.join(dir,'stato.json'))).collections.proposte.length,1);
  }finally{if(proc&&proc.exitCode===null)await stop();fs.rmSync(dir,{recursive:true,force:true});}

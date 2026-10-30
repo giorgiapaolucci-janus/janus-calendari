@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": 2,
-  "updatedAt": "2026-10-14T07:42:17.477Z",
+  "revision": 3,
+  "updatedAt": "2026-10-30T14:54:06.193Z",
   "collections": {
     "assenze": [
       {
@@ -1398,6 +1398,4198 @@
             "socio-sanitario"
           ]
         }
+      },
+      {
+        "id": "allineamento_20261030_L064",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.185Z",
+        "lessonId": "L064",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L066",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.186Z",
+        "lessonId": "L066",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L071",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.187Z",
+        "lessonId": "L071",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L074",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.188Z",
+        "lessonId": "L074",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L099",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.189Z",
+        "lessonId": "L099",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L110",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.190Z",
+        "lessonId": "L110",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L142",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.191Z",
+        "lessonId": "L142",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L144",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.192Z",
+        "lessonId": "L144",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L145",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.193Z",
+        "lessonId": "L145",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_A008",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.194Z",
+        "lessonId": "A008",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_A020",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.195Z",
+        "lessonId": "A020",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_S051",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.196Z",
+        "lessonId": "S051",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_2",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.197Z",
+        "lessonId": "LJ20261014_2",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_5",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.198Z",
+        "lessonId": "LJ20261014_5",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_6",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.199Z",
+        "lessonId": "LJ20261014_6",
+        "tipo": "del",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026"
+      },
+      {
+        "id": "allineamento_20261030_L001",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.200Z",
+        "lessonId": "L001",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+          "zoomPasscode": "498159",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L002",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.201Z",
+        "lessonId": "L002",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L003",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.202Z",
+        "lessonId": "L003",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Meccatronica",
+          "zoomUrl": "https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1",
+          "zoomPasscode": "510304",
+          "class": "MECCATRONICA"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L004",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.203Z",
+        "lessonId": "L004",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L005",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.204Z",
+        "lessonId": "L005",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+          "zoomPasscode": "617514",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L006",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.205Z",
+        "lessonId": "L006",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "LES e scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+          "zoomPasscode": "71721",
+          "class": "LES E SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L008",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.206Z",
+        "lessonId": "L008",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+          "zoomPasscode": "71721",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L009",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.207Z",
+        "lessonId": "L009",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+          "zoomPasscode": "86719",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L010",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.208Z",
+        "lessonId": "L010",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Meccatronica",
+          "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+          "zoomPasscode": "579497",
+          "class": "MECCATRONICA"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L011",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.209Z",
+        "lessonId": "L011",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L012",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.210Z",
+        "lessonId": "L012",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+          "zoomPasscode": "290382",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L013",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.211Z",
+        "lessonId": "L013",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L014",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.212Z",
+        "lessonId": "L014",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L015",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.213Z",
+        "lessonId": "L015",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1",
+          "zoomPasscode": "517741",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L016",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.214Z",
+        "lessonId": "L016",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+          "zoomPasscode": "859341",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L017",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.215Z",
+        "lessonId": "L017",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+          "zoomPasscode": "728446",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L018",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.216Z",
+        "lessonId": "L018",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+          "zoomPasscode": "728446",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L019",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.217Z",
+        "lessonId": "L019",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L020",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.218Z",
+        "lessonId": "L020",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L021",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.219Z",
+        "lessonId": "L021",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+          "zoomPasscode": "617514",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L022",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.220Z",
+        "lessonId": "L022",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "SOCIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L023",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.221Z",
+        "lessonId": "L023",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Licei",
+          "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+          "zoomPasscode": "498159",
+          "class": "SCIENTIFICI",
+          "tracks": [
+            "scientifico",
+            "scienze-applicate",
+            "sportivo",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L024",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.222Z",
+        "lessonId": "L024",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+          "zoomPasscode": "350240",
+          "class": "AFM/TUR"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L026",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.223Z",
+        "lessonId": "L026",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L027",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.224Z",
+        "lessonId": "L027",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L028",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.225Z",
+        "lessonId": "L028",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+          "zoomPasscode": "290382",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L029",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.226Z",
+        "lessonId": "L029",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "SOCIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L030",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.227Z",
+        "lessonId": "L030",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Licei",
+          "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+          "zoomPasscode": "71721",
+          "class": "SCIENTIFICI",
+          "tracks": [
+            "scientifico",
+            "scienze-applicate",
+            "sportivo",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L031",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.228Z",
+        "lessonId": "L031",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "AFM/TUR"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L033",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.229Z",
+        "lessonId": "L033",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+          "zoomPasscode": "86719",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L034",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.230Z",
+        "lessonId": "L034",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+          "zoomPasscode": "86719",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L035",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.231Z",
+        "lessonId": "L035",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+          "zoomPasscode": "859341",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L036",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.232Z",
+        "lessonId": "L036",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1",
+          "zoomPasscode": "517741",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L037",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.233Z",
+        "lessonId": "L037",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "SOCIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L038",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.234Z",
+        "lessonId": "L038",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / LES / Linguistico / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+          "zoomPasscode": "925403",
+          "class": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L039",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.235Z",
+        "lessonId": "L039",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti tranne les, linguistico e scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L040",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.236Z",
+        "lessonId": "L040",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "SOCIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L041",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.237Z",
+        "lessonId": "L041",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / LES / Linguistico / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+          "zoomPasscode": "925403",
+          "class": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L042",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.238Z",
+        "lessonId": "L042",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti tranne les, linguistico e scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L043",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.239Z",
+        "lessonId": "L043",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L044",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.240Z",
+        "lessonId": "L044",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L045",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.241Z",
+        "lessonId": "L045",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+          "zoomPasscode": "728446",
+          "class": "SOCIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L046",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.242Z",
+        "lessonId": "L046",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / LES / Linguistico / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1",
+          "zoomPasscode": "612842",
+          "class": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L047",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.243Z",
+        "lessonId": "L047",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti tranne les, linguistico e scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+          "zoomPasscode": "343517",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L048",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.244Z",
+        "lessonId": "L048",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+          "zoomPasscode": "728446",
+          "class": "SOCIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L049",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.245Z",
+        "lessonId": "L049",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / LES / Linguistico / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/81444547422?pwd=lj86Bhs2F3p211yxLRPoPPmS4cVNAS.1",
+          "zoomPasscode": "612842",
+          "class": "SCIENTIFICI/LES/LINGUISTICO/SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L050",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.246Z",
+        "lessonId": "L050",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti tranne les, linguistico e scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+          "zoomPasscode": "343517",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L051",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.247Z",
+        "lessonId": "L051",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "LES"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L052",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.248Z",
+        "lessonId": "L052",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "ITI / AFM / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+          "zoomPasscode": "350240",
+          "class": "ITI/AFM/UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L053",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.249Z",
+        "lessonId": "L053",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario / Turismo / AFM / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "SOCIO/TUR/AFM/LES"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L054",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.250Z",
+        "lessonId": "L054",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "PER TUTTI",
+          "affiancaA": [
+            "socio-sanitario",
+            "linguistico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L055",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.251Z",
+        "lessonId": "L055",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Licei",
+          "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+          "zoomPasscode": "617514",
+          "class": "LICEI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L056",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.252Z",
+        "lessonId": "L056",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L057",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.253Z",
+        "lessonId": "L057",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Licei",
+          "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+          "zoomPasscode": "617514",
+          "class": "LICEI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L058",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.254Z",
+        "lessonId": "L058",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "PER TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L059",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.255Z",
+        "lessonId": "L059",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "AFM / LES"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L060",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.256Z",
+        "lessonId": "L060",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / ITI Informatico / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+          "zoomPasscode": "86719",
+          "class": "AFM / ITI INFORMATICO / SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L061",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.257Z",
+        "lessonId": "L061",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario / Turismo / AFM / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "SOCIO/TUR/AFM/LES"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L062",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.258Z",
+        "lessonId": "L062",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "SCIENZE INTEGRATE",
+          "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
+          "doc": "mr",
+          "aula": "5",
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "sportivo",
+            "socio-sanitario"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L063",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.259Z",
+        "lessonId": "L063",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scienze umane / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+          "zoomPasscode": "71721",
+          "class": "Scienze umane / LES",
+          "tracks": [
+            "scienze-umane",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L065",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.260Z",
+        "lessonId": "L065",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scienze umane / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+          "zoomPasscode": "71721",
+          "class": "Scienze umane / LES",
+          "tracks": [
+            "scienze-umane",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L068",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.261Z",
+        "lessonId": "L068",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "LES / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+          "zoomPasscode": "925403",
+          "class": "LES / SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L070",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.262Z",
+        "lessonId": "L070",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / IPSEOA / LES / Linguistico / Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L072",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.263Z",
+        "lessonId": "L072",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Meccatronica",
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "MECCATRONICA"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L073",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.264Z",
+        "lessonId": "L073",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / LES / Linguistico / Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "AFM / LES / LINGUISTICO / SOCIO SANITARIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L075",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.265Z",
+        "lessonId": "L075",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "SCIENZE INTEGRATE",
+          "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES / ITI informatico / AFM / Socio sanitario / Turismo / MME / IPSEOA",
+          "doc": "mr",
+          "aula": "5",
+          "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+          "zoomPasscode": "343517",
+          "class": "TUTTI",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "sportivo",
+            "les",
+            "informatico",
+            "afm",
+            "socio-sanitario",
+            "turismo",
+            "mme",
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L076",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.266Z",
+        "lessonId": "L076",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "LING/SCIENTIFICO",
+          "tracks": [
+            "scientifico",
+            "scienze-umane"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L077",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.267Z",
+        "lessonId": "L077",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L078",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.268Z",
+        "lessonId": "L078",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / IPSEOA / LES / Linguistico / Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+          "zoomPasscode": "728446",
+          "class": "AFM / IPSEOA / LES / LINGUISTICO / SOCIO SANITARIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L079",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.269Z",
+        "lessonId": "L079",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Classico / ITI Informatico / IPSEOA / MME / Scienze umane / Socio sanitario / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L080",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.270Z",
+        "lessonId": "L080",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / LES / Linguistico / Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+          "zoomPasscode": "728446",
+          "class": "AFM / LES / LINGUISTICO / SOCIO SANITARIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L081",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.271Z",
+        "lessonId": "L081",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Classico / ITI Informatico / IPSEOA / MME / Scienze umane / Socio sanitario / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "CLASSICO / ITI INFORMATICO / IPSEOA / MME / SCIENZE UMANE / SOCIO SANITARIO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L083",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.272Z",
+        "lessonId": "L083",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+          "zoomPasscode": "498159",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L084",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.273Z",
+        "lessonId": "L084",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Licei",
+          "zoomUrl": "https://us06web.zoom.us/j/87982744860?pwd=zeQ93MbwJGlfAMrZaRKlKv7lebUS5B.1",
+          "zoomPasscode": "617514",
+          "class": "LICEI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L085",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.274Z",
+        "lessonId": "L085",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L087",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.275Z",
+        "lessonId": "L087",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Classico / ITI Informatico / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "CLASSICO / ITI INFORMATICO / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L088",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.276Z",
+        "lessonId": "L088",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / LES / Socio sanitario / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "AFM/LES/SOCIO",
+          "tracks": [
+            "afm",
+            "les",
+            "socio-sanitario",
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L089",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.277Z",
+        "lessonId": "L089",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+          "zoomPasscode": "350240",
+          "class": "ITI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L090",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.278Z",
+        "lessonId": "L090",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L091",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.279Z",
+        "lessonId": "L091",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "LAB GRAMMATICA",
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+          "zoomPasscode": "290382",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L092",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.280Z",
+        "lessonId": "L092",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario / Turismo / AFM / LES / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+          "zoomPasscode": "86719",
+          "class": "SOCIO/TUR/AFM/LES",
+          "tracks": [
+            "socio-sanitario",
+            "turismo",
+            "afm",
+            "les",
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L093",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.281Z",
+        "lessonId": "L093",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L095",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.282Z",
+        "lessonId": "L095",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Classico / ITI Informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "Classico / ITI Informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
+          "tracks": [
+            "classico",
+            "informatico",
+            "ipseoa",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "socio-sanitario",
+            "sportivo",
+            "turismo"
+          ],
+          "affiancaA": [
+            "linguistico",
+            "socio-sanitario",
+            "turismo",
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L096",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.283Z",
+        "lessonId": "L096",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "EC POLITICA /RELAZIONI INTERNAZIONALI",
+          "ind": "AFM / RIM",
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "AFM-RIM"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L097",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.284Z",
+        "lessonId": "L097",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi tranne LES",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "TUTTI",
+          "affiancaA": [
+            "linguistico",
+            "socio-sanitario",
+            "turismo",
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L098",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.285Z",
+        "lessonId": "L098",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+          "zoomPasscode": "859341",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L141",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.286Z",
+        "lessonId": "L141",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L101",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.287Z",
+        "lessonId": "L101",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L102",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.288Z",
+        "lessonId": "L102",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L103",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.289Z",
+        "lessonId": "L103",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L104",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.290Z",
+        "lessonId": "L104",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1",
+          "zoomPasscode": "377146",
+          "class": "TUR"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L105",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.291Z",
+        "lessonId": "L105",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Licei",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "LICEI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L106",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.292Z",
+        "lessonId": "L106",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L107",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.293Z",
+        "lessonId": "L107",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+          "zoomPasscode": "728446",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L108",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.294Z",
+        "lessonId": "L108",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81648812864?pwd=xaW1X09TpAe01yzsTMLAmtEmuzwpUE.1",
+          "zoomPasscode": "728446",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L111",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.295Z",
+        "lessonId": "L111",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/86246038904?pwd=4sRSl5s6W6BXNPlPmgCMabU6QInVNZ.1",
+          "zoomPasscode": "510304",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L112",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.296Z",
+        "lessonId": "L112",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Classico / Scientifico / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+          "zoomPasscode": "290382",
+          "class": "CLASSICO / SCIENTIFICO / SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L113",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.297Z",
+        "lessonId": "L113",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1",
+          "zoomPasscode": "513826",
+          "class": "TUTTI",
+          "affiancaA": [
+            "linguistico",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L114",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.298Z",
+        "lessonId": "L114",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Classico / Scientifico / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+          "zoomPasscode": "290382",
+          "class": "CLASSICO / SCIENTIFICO / SCIENZE UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L115",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.299Z",
+        "lessonId": "L115",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81877167780?pwd=IyobPTfOT4hunkPQy57KNSQtkUrKaD.1",
+          "zoomPasscode": "513826",
+          "class": "TUTTI",
+          "affiancaA": [
+            "linguistico",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L116",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.300Z",
+        "lessonId": "L116",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "ITI / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+          "zoomPasscode": "71721",
+          "class": "ITI/AFM"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L118",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.301Z",
+        "lessonId": "L118",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "FRANCESE GRAMMATICA",
+          "ind": "Linguistico / Turismo / AFM / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "LING/TUR /AFM-RIM",
+          "tracks": [
+            "linguistico",
+            "turismo",
+            "afm",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_L119",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.302Z",
+        "lessonId": "L119",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+          "zoomPasscode": "86719",
+          "class": "AFM"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L121",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.303Z",
+        "lessonId": "L121",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "SOCIO SANITARIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L122",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.304Z",
+        "lessonId": "L122",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "FRANCESE GRAMMATICA",
+          "ind": "AFM / LES / Socio sanitario / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "AFM / LES / SOCIO SANITARIO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L143",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.305Z",
+        "lessonId": "L143",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Meccatronica",
+          "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+          "zoomPasscode": "579497",
+          "class": "MECCATRONICA"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L124",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.306Z",
+        "lessonId": "L124",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "FRANCESE GRAMMATICA",
+          "ind": "AFM / LES / Socio sanitario / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "AFM / LES / SOCIO SANITARIO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L126",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.307Z",
+        "lessonId": "L126",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "ITI / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/83479030326?pwd=kWisWfRYmMbdOKgtt4vosGoOD1b2rY.1",
+          "zoomPasscode": "925403",
+          "class": "ITI/AFM"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L127",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.308Z",
+        "lessonId": "L127",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/84104210082?pwd=JaJWaNMufsjxOO6ZagyIGMWjXxKp7w.1",
+          "zoomPasscode": "517741",
+          "class": "UMANE"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L128",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.309Z",
+        "lessonId": "L128",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "FRANCESE AVANZATO",
+          "ind": "AFM / LES / Linguistico / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "AFM / LES / LINGUISTICO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L130",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.310Z",
+        "lessonId": "L130",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/83608101390?pwd=g3C57FPANsibgqU9lvCVUOglsoJDaS.1",
+          "zoomPasscode": "703830",
+          "class": "SOCIO SANITARIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L132",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.311Z",
+        "lessonId": "L132",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "FRANCESE AVANZATO",
+          "ind": "AFM / LES / Socio sanitario / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "AFM / LES / SOCIO SANITARIO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L133",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.312Z",
+        "lessonId": "L133",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+          "zoomPasscode": "859341",
+          "class": "ITI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L134",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.313Z",
+        "lessonId": "L134",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "materia": "FRANCESE AVANZATO",
+          "ind": "AFM / LES / Socio sanitario / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "AFM / LES / SOCIO SANITARIO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L135",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.314Z",
+        "lessonId": "L135",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+          "zoomPasscode": "859341",
+          "class": "ITI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L136",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.315Z",
+        "lessonId": "L136",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "ITI / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "ITI/AFM"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L137",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.316Z",
+        "lessonId": "L137",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+          "zoomPasscode": "343517",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L138",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.317Z",
+        "lessonId": "L138",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi tranne AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+          "zoomPasscode": "434438",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L146",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.318Z",
+        "lessonId": "L146",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Licei",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "LICEI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L139",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.319Z",
+        "lessonId": "L139",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Licei",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "LICEI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_L140",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.320Z",
+        "lessonId": "L140",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi tranne AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+          "zoomPasscode": "434438",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261030_A002",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.321Z",
+        "lessonId": "A002",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / Scienze umane / AFM / Socio sanitario / MME / LES",
+          "note": "Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).",
+          "esercizi": true,
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "scientifico",
+            "scienze-umane",
+            "afm",
+            "socio-sanitario",
+            "mme",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A003",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.322Z",
+        "lessonId": "A003",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / Scienze umane / AFM / Socio sanitario / MME / LES",
+          "note": "Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).",
+          "esercizi": true,
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "scientifico",
+            "scienze-umane",
+            "afm",
+            "socio-sanitario",
+            "mme",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A006",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.323Z",
+        "lessonId": "A006",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "ITI Informatico",
+          "note": "Esercizi assegnati dal docente: in sede in Aula docenti, da remoto da casa. Il docente è in lezione in AULA 4 (link Zoom).",
+          "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+          "zoomPasscode": "71721",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "informatico"
+          ],
+          "esercizi": true
+        }
+      },
+      {
+        "id": "allineamento_20261030_A009",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.324Z",
+        "lessonId": "A009",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "afm",
+            "socio-sanitario"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A010",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.325Z",
+        "lessonId": "A010",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / IPSEOA / LES / Socio sanitario / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "AFM / IPSEOA / LES / SOCIO SANITARIO / SPORTIVO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_A013",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.326Z",
+        "lessonId": "A013",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scienze applicate",
+          "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+          "zoomPasscode": "859341",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "scienze-applicate"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A014",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.327Z",
+        "lessonId": "A014",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scienze applicate",
+          "zoomUrl": "https://us06web.zoom.us/j/81013308978?pwd=roJeYOY4aMkGHHvDsJNGsjKknsouQO.1",
+          "zoomPasscode": "859341",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "scienze-applicate"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A015",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.328Z",
+        "lessonId": "A015",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "LES / Scienze umane",
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "les",
+            "scienze-umane"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A016",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.329Z",
+        "lessonId": "A016",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "note": "Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).",
+          "esercizi": true,
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A017",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.330Z",
+        "lessonId": "A017",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
+          "zoomPasscode": "132082",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A018",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.331Z",
+        "lessonId": "A018",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "LES / Scienze umane / Linguistico / Scientifico / Scienze applicate / Sportivo / ITI Informatico",
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "SOLO INDIRIZZI INDICATI / ITI Informatico",
+          "tracks": [
+            "les",
+            "scienze-umane",
+            "linguistico",
+            "scientifico",
+            "scienze-applicate",
+            "sportivo",
+            "informatico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A019",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.332Z",
+        "lessonId": "A019",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "note": "Esercizi assegnati dal docente: in sede in Aula 6, da remoto da casa. Il docente è in lezione in AULA 6 (link Zoom).",
+          "esercizi": true,
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A021",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.333Z",
+        "lessonId": "A021",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+          "zoomPasscode": "498159",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "sportivo",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A022",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.334Z",
+        "lessonId": "A022",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/89300227622?pwd=hEbncJExkZIgBVoJKWxeOX1Lhz60tD.1",
+          "zoomPasscode": "498159",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "sportivo",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A023",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.335Z",
+        "lessonId": "A023",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Linguistico",
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "linguistico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A024",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.336Z",
+        "lessonId": "A024",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Linguistico",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "linguistico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A026",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.337Z",
+        "lessonId": "A026",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / Classico / ITI Informatico / IPSEOA / LES / Linguistico / MME / Scientifico / Scienze applicate / Scienze umane / Socio sanitario / Sportivo / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+          "zoomPasscode": "929574",
+          "class": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SOCIO SANITARIO / SPORTIVO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_A027",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.338Z",
+        "lessonId": "A027",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / Classico / ITI Informatico / IPSEOA / LES / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+          "zoomPasscode": "929574",
+          "class": "AFM / CLASSICO / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / MME / SCIENTIFICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / TURISMO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_A028",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.339Z",
+        "lessonId": "A028",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Tutti tranne ITI e AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/86270285894?pwd=143I8P2ax2VtIlwzn4zDaDcnATL4gs.1",
+          "zoomPasscode": "343517",
+          "class": "SOLO INDIRIZZI INDICATI",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "sportivo",
+            "les",
+            "socio-sanitario",
+            "turismo",
+            "mme",
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_A029",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.340Z",
+        "lessonId": "A029",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / ITI Informatico / IPSEOA / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_A030",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.341Z",
+        "lessonId": "A030",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / ITI Informatico / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "AFM / ITI INFORMATICO / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_1",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.342Z",
+        "lessonId": "LJ20261014_1",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "AFM"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_10",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.343Z",
+        "lessonId": "LJ20261014_10",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Linguistico / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "LINGUISTICO / SPORTIVO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_11",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.344Z",
+        "lessonId": "LJ20261014_11",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "IPSEOA / Linguistico",
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "IPSEOA / LINGUISTICO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_12",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.345Z",
+        "lessonId": "LJ20261014_12",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Linguistico",
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "LINGUISTICO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_13",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.346Z",
+        "lessonId": "LJ20261014_13",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "IPSEOA / Linguistico",
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "IPSEOA / LINGUISTICO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_14",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.347Z",
+        "lessonId": "LJ20261014_14",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Linguistico",
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "LINGUISTICO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_15",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.348Z",
+        "lessonId": "LJ20261014_15",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "SOCIO SANITARIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_16",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.349Z",
+        "lessonId": "LJ20261014_16",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario",
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "SOCIO SANITARIO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_17",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.350Z",
+        "lessonId": "LJ20261014_17",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+          "zoomPasscode": "929574",
+          "class": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo",
+          "tracks": [
+            "ipseoa",
+            "socio-sanitario",
+            "les",
+            "informatico",
+            "turismo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_18",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.351Z",
+        "lessonId": "LJ20261014_18",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Socio sanitario / LES / ITI Informatico / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+          "zoomPasscode": "929574",
+          "class": "Socio sanitario / LES / ITI Informatico / Turismo",
+          "tracks": [
+            "socio-sanitario",
+            "les",
+            "informatico",
+            "turismo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_3",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.352Z",
+        "lessonId": "LJ20261014_3",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "AFM / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_4",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.353Z",
+        "lessonId": "LJ20261014_4",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "AFM"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_7",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.354Z",
+        "lessonId": "LJ20261014_7",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "LES / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+          "zoomPasscode": "434438",
+          "class": "LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_8",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.355Z",
+        "lessonId": "LJ20261014_8",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "LES / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+          "zoomPasscode": "434438",
+          "class": "LES / LINGUISTICO / SCIENTIFICO / SCIENZE APPLICATE / SCIENZE UMANE / SPORTIVO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_9",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.356Z",
+        "lessonId": "LJ20261014_9",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "IPSEOA / Linguistico / Sportivo",
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "IPSEOA / LINGUISTICO / SPORTIVO"
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_FRA_GIO_45",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.357Z",
+        "lessonId": "LJ20261014_FRA_GIO_45",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 4,
+          "h": 10,
+          "anno": "4/5",
+          "materia": "FRANCESE AVANZATO",
+          "ind": "LES / Linguistico / Socio sanitario / Turismo / IPSEOA",
+          "doc": "ed",
+          "aula": "5",
+          "note": "Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA",
+          "tracks": [
+            "les",
+            "linguistico",
+            "socio-sanitario",
+            "turismo",
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261014_FRA_GIO_5",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.358Z",
+        "lessonId": "LJ20261014_FRA_GIO_5",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 4,
+          "h": 10,
+          "anno": "5",
+          "materia": "FRANCESE AVANZATO",
+          "ind": "LES / Linguistico / Socio sanitario / Turismo / IPSEOA",
+          "doc": "ed",
+          "aula": "5",
+          "note": "Doppia scelta: LES con Economia politica; altri indirizzi con Scrittura creativa",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "LES / LINGUISTICO / SOCIO SANITARIO / TURISMO / IPSEOA",
+          "tracks": [
+            "les",
+            "linguistico",
+            "socio-sanitario",
+            "turismo",
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261015_1",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.359Z",
+        "lessonId": "LJ20261015_1",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 3,
+          "h": 11,
+          "anno": "4/5",
+          "materia": "SCIENZE INTEGRATE",
+          "ind": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+          "doc": "mr",
+          "aula": "5",
+          "note": "(+4)",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+          "tracks": [
+            "classico",
+            "linguistico",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "sportivo"
+          ],
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261015_2",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.360Z",
+        "lessonId": "LJ20261015_2",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 3,
+          "h": 11,
+          "anno": "5",
+          "materia": "SCIENZE INTEGRATE",
+          "ind": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+          "doc": "mr",
+          "aula": "5",
+          "note": "(+4)",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/85720114111?pwd=KKjlUDK3GkFPHMSX1DCpEysa56eYPO.1",
+          "zoomPasscode": "991407",
+          "class": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
+          "tracks": [
+            "classico",
+            "linguistico",
+            "scientifico",
+            "scienze-applicate",
+            "scienze-umane",
+            "sportivo"
+          ],
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261015_3",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.361Z",
+        "lessonId": "LJ20261015_3",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 3,
+          "h": 10,
+          "anno": "4/5",
+          "materia": "LAB COMPETENZE MATURITÀ",
+          "ind": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+          "doc": "lp",
+          "aula": "2",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+          "zoomPasscode": "290382",
+          "class": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+          "tracks": [
+            "afm",
+            "classico",
+            "informatico",
+            "ipseoa",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo",
+            "turismo"
+          ],
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261015_4",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.362Z",
+        "lessonId": "LJ20261015_4",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 3,
+          "h": 10,
+          "anno": "5",
+          "materia": "LAB COMPETENZE MATURITÀ",
+          "ind": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+          "doc": "lp",
+          "aula": "2",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/82423044250?pwd=2Ot8zvyxMjOQdBDBtbJrPca7G81dDa.1",
+          "zoomPasscode": "290382",
+          "class": "AFM / Classico / ITI informatico / IPSEOA / Linguistico / MME / Scientifico / Scienze applicate / Socio sanitario / Sportivo / Turismo",
+          "tracks": [
+            "afm",
+            "classico",
+            "informatico",
+            "ipseoa",
+            "linguistico",
+            "mme",
+            "scientifico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo",
+            "turismo"
+          ],
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261016_1",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.363Z",
+        "lessonId": "LJ20261016_1",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 5,
+          "h": 9,
+          "anno": "1/2",
+          "materia": "LAB COMPITI",
+          "ind": "ITI Informatico / Scienze umane / LES / AFM",
+          "doc": "bl",
+          "aula": "3",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/88296074447?pwd=KCe7mSEspswbZd5YEPRk4SjVzbEUNG.1",
+          "zoomPasscode": "197031",
+          "class": "ITI INFORMATICO / SCIENZE UMANE / LES / AFM",
+          "tracks": [
+            "informatico",
+            "scienze-umane",
+            "les",
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261016_LES_1",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.364Z",
+        "lessonId": "LJ20261016_LES_1",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 4,
+          "h": 10,
+          "anno": "4/5",
+          "materia": "ECONOMIA POLITICA",
+          "ind": "LES",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "LES",
+          "tracks": [
+            "les"
+          ],
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261016_LES_2",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.365Z",
+        "lessonId": "LJ20261016_LES_2",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 4,
+          "h": 10,
+          "anno": "5",
+          "materia": "ECONOMIA POLITICA",
+          "ind": "LES",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "LES",
+          "tracks": [
+            "les"
+          ],
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261022_AFM_45",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.366Z",
+        "lessonId": "LJ20261022_AFM_45",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 5,
+          "h": 12,
+          "anno": "4/5",
+          "materia": "ECONOMIA AZIENDALE",
+          "ind": "AFM",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1",
+          "zoomPasscode": "377146",
+          "class": "AFM",
+          "tracks": [
+            "afm"
+          ],
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261022_AFM_5",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.367Z",
+        "lessonId": "LJ20261022_AFM_5",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 5,
+          "h": 12,
+          "anno": "5",
+          "materia": "ECONOMIA AZIENDALE",
+          "ind": "AFM",
+          "doc": "lc",
+          "aula": "7",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/87017061368?pwd=g7DZIoNMdwoYujWpvmtvetTeOQcvow.1",
+          "zoomPasscode": "377146",
+          "class": "AFM",
+          "tracks": [
+            "afm"
+          ],
+          "affiancaA": []
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261029_MME_MER",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.368Z",
+        "lessonId": "LJ20261029_MME_MER",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 3,
+          "h": 11,
+          "anno": "5",
+          "materia": "MECCATRONICA",
+          "ind": "MME",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
+          "zoomPasscode": "494425",
+          "class": "MME",
+          "tracks": [
+            "mme"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_LJ20261029_MME_VEN",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.369Z",
+        "lessonId": "LJ20261029_MME_VEN",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 5,
+          "h": 10,
+          "anno": "5",
+          "materia": "MECCATRONICA",
+          "ind": "MME",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+          "zoomPasscode": "579497",
+          "class": "MME",
+          "tracks": [
+            "mme"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S001",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.370Z",
+        "lessonId": "S001",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+          "zoomPasscode": "729635",
+          "class": "SERALE",
+          "tracks": [
+            "classico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S002",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.371Z",
+        "lessonId": "S002",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / IPSEOA",
+          "zoomUrl": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+          "zoomPasscode": "140585",
+          "class": "SERALE",
+          "tracks": [
+            "afm",
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S003",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.372Z",
+        "lessonId": "S003",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "ITI Informatico / Scientifico",
+          "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+          "zoomPasscode": "905998",
+          "class": "SERALE",
+          "tracks": [
+            "informatico",
+            "scientifico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S004",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.373Z",
+        "lessonId": "S004",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Turismo / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+          "zoomPasscode": "140585",
+          "class": "SERALE",
+          "tracks": [
+            "turismo",
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S005",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.374Z",
+        "lessonId": "S005",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "MME / Sportivo / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+          "zoomPasscode": "905998",
+          "class": "SERALE",
+          "tracks": [
+            "mme",
+            "sportivo",
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S006",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.375Z",
+        "lessonId": "S006",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/83170304877?pwd=bpGf3l212xfS0EkXn2Dtruc3PtCIqy.1",
+          "zoomPasscode": "356111",
+          "class": "SERALE",
+          "tracks": [
+            "scientifico",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S007",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.376Z",
+        "lessonId": "S007",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82305647110?pwd=6Yjv5oyunDlOHc4bz8IdL6C5dqooDR.1",
+          "zoomPasscode": "120431",
+          "class": "SERALE",
+          "tracks": [
+            "classico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S008",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.377Z",
+        "lessonId": "S008",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+          "zoomPasscode": "217016",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S009",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.378Z",
+        "lessonId": "S009",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+          "zoomPasscode": "217016",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S010",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.379Z",
+        "lessonId": "S010",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/81403969941?pwd=K8HTkmtbRoO3JGH3PK8lbBupkmy82a.1",
+          "zoomPasscode": "680190",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S011",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.380Z",
+        "lessonId": "S011",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+          "zoomPasscode": "881979",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S012",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.381Z",
+        "lessonId": "S012",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+          "zoomPasscode": "881979",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S013",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.382Z",
+        "lessonId": "S013",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82025847999?pwd=L1Xjo1nNbawBlDwFpJEz12rZEXugCb.1",
+          "zoomPasscode": "69921",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S014",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.383Z",
+        "lessonId": "S014",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+          "zoomPasscode": "960821",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S015",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.384Z",
+        "lessonId": "S015",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+          "zoomPasscode": "960821",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S016",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.385Z",
+        "lessonId": "S016",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+          "zoomPasscode": "834320",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S017",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.386Z",
+        "lessonId": "S017",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/81474490913?pwd=2K4jGaoLlBezAmCMaJtf21Psh2jQlO.1",
+          "zoomPasscode": "629221",
+          "class": "SERALE",
+          "tracks": [
+            "informatico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S018",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.387Z",
+        "lessonId": "S018",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "IPSEOA / AFM / Scientifico",
+          "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+          "zoomPasscode": "834320",
+          "class": "SERALE",
+          "tracks": [
+            "ipseoa",
+            "afm",
+            "scientifico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S019",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.388Z",
+        "lessonId": "S019",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "h": 18,
+          "materia": "RELAZIONI INTERNAZIONALI / ECONOMIA POLITICA",
+          "zoomUrl": "https://us06web.zoom.us/j/83766661468?pwd=0yFhk5gLkajhb2Z1Ggbbe0T5CU3Cf2.1",
+          "zoomPasscode": "659802",
+          "class": "SERALE",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S020",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.389Z",
+        "lessonId": "S020",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / Sportivo / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/83170304877?pwd=bpGf3l212xfS0EkXn2Dtruc3PtCIqy.1",
+          "zoomPasscode": "356111",
+          "class": "SERALE",
+          "tracks": [
+            "scientifico",
+            "sportivo",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S021",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.390Z",
+        "lessonId": "S021",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Turismo / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+          "zoomPasscode": "834320",
+          "class": "SERALE",
+          "tracks": [
+            "turismo",
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S022",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.391Z",
+        "lessonId": "S022",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+          "zoomPasscode": "905998",
+          "class": "SERALE",
+          "tracks": [
+            "mme"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S075",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.392Z",
+        "lessonId": "S075",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83766661468?pwd=0yFhk5gLkajhb2Z1Ggbbe0T5CU3Cf2.1",
+          "zoomPasscode": "659802",
+          "class": "SERALE",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S023",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.393Z",
+        "lessonId": "S023",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+          "zoomPasscode": "677493",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S025",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.394Z",
+        "lessonId": "S025",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "IPSEOA / AFM / Scientifico",
+          "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+          "zoomPasscode": "677493",
+          "class": "SERALE",
+          "tracks": [
+            "ipseoa",
+            "scientifico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S026",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.395Z",
+        "lessonId": "S026",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/86320197566?pwd=ZIKvXYla7pgy9KlayGiB30fuOmegtg.1",
+          "zoomPasscode": "419328",
+          "class": "SERALE",
+          "tracks": [
+            "informatico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S027",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.396Z",
+        "lessonId": "S027",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Sportivo / Scientifico / LES / Turismo",
+          "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+          "zoomPasscode": "677493",
+          "class": "SERALE",
+          "tracks": [
+            "sportivo",
+            "scientifico",
+            "les",
+            "turismo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S028",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.397Z",
+        "lessonId": "S028",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/84974333805?pwd=saT6DX5Pn9rjmulNpXCOsfs0i5CIpt.1",
+          "zoomPasscode": "677574",
+          "class": "SERALE",
+          "tracks": [
+            "mme"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S029",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.398Z",
+        "lessonId": "S029",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/88925192676?pwd=EBgU5GwttDJ64puqkh3AanoU6ZsqbD.1",
+          "zoomPasscode": "246927",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S030",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.399Z",
+        "lessonId": "S030",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/86906722891?pwd=3g1Rw6UUFJjgJzlmXbYNSB4Hp2kGPn.1",
+          "zoomPasscode": "587051",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S031",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.400Z",
+        "lessonId": "S031",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/84979030342?pwd=i1IZeaxaX59eUq9cXtVwdS7Kg8Uq2a.1",
+          "zoomPasscode": "413745",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S032",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.401Z",
+        "lessonId": "S032",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/85415773151?pwd=tgVLv9Ig3xBTTVHcLdU45Mb1YfIJi1.1",
+          "zoomPasscode": "490801",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S033",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.402Z",
+        "lessonId": "S033",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83415684344?pwd=QlZaTia2PTaZE1bkJTdFH2teCAoyw4.1",
+          "zoomPasscode": "697563",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S034",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.403Z",
+        "lessonId": "S034",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/86903781297?pwd=4ye2NxZrxbObIDPuHZHGNmX93PbjaP.1",
+          "zoomPasscode": "254135",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S035",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.404Z",
+        "lessonId": "S035",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+          "zoomPasscode": "729635",
+          "class": "SERALE",
+          "tracks": [
+            "classico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S036",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.405Z",
+        "lessonId": "S036",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+          "zoomPasscode": "140585",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S037",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.406Z",
+        "lessonId": "S037",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/88037158316?pwd=MbRtdG4OEn3YdC9ix3EWabKxJiQGoU.1",
+          "zoomPasscode": "140585",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S038",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.407Z",
+        "lessonId": "S038",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82305647110?pwd=6Yjv5oyunDlOHc4bz8IdL6C5dqooDR.1",
+          "zoomPasscode": "120431",
+          "class": "SERALE",
+          "tracks": [
+            "classico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S039",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.408Z",
+        "lessonId": "S039",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+          "zoomPasscode": "217016",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S040",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.409Z",
+        "lessonId": "S040",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+          "zoomPasscode": "217016",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S041",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.410Z",
+        "lessonId": "S041",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/81403969941?pwd=K8HTkmtbRoO3JGH3PK8lbBupkmy82a.1",
+          "zoomPasscode": "680190",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S042",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.411Z",
+        "lessonId": "S042",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+          "zoomPasscode": "881979",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S043",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.412Z",
+        "lessonId": "S043",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/86906722891?pwd=3g1Rw6UUFJjgJzlmXbYNSB4Hp2kGPn.1",
+          "zoomPasscode": "587051",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S044",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.413Z",
+        "lessonId": "S044",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82025847999?pwd=L1Xjo1nNbawBlDwFpJEz12rZEXugCb.1",
+          "zoomPasscode": "69921",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S045",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.414Z",
+        "lessonId": "S045",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+          "zoomPasscode": "960821",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S046",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.415Z",
+        "lessonId": "S046",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83415684344?pwd=QlZaTia2PTaZE1bkJTdFH2teCAoyw4.1",
+          "zoomPasscode": "697563",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S047",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.416Z",
+        "lessonId": "S047",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83170304877?pwd=bpGf3l212xfS0EkXn2Dtruc3PtCIqy.1",
+          "zoomPasscode": "356111",
+          "class": "SERALE",
+          "tracks": [
+            "classico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S048",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.417Z",
+        "lessonId": "S048",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+          "zoomPasscode": "905998",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S049",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.418Z",
+        "lessonId": "S049",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Sportivo / Scientifico / MME / Turismo / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+          "zoomPasscode": "905998",
+          "class": "SERALE",
+          "tracks": [
+            "sportivo",
+            "scientifico",
+            "mme",
+            "turismo",
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S050",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.419Z",
+        "lessonId": "S050",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+          "zoomPasscode": "729635",
+          "class": "SERALE",
+          "tracks": [
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S052",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.420Z",
+        "lessonId": "S052",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "AFM / IPSEOA",
+          "zoomUrl": "https://us06web.zoom.us/j/86320197566?pwd=ZIKvXYla7pgy9KlayGiB30fuOmegtg.1",
+          "zoomPasscode": "419328",
+          "class": "SERALE",
+          "tracks": [
+            "afm",
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S053",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.421Z",
+        "lessonId": "S053",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83766661468?pwd=0yFhk5gLkajhb2Z1Ggbbe0T5CU3Cf2.1",
+          "zoomPasscode": "659802",
+          "class": "SERALE",
+          "tracks": [
+            "informatico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S054",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.422Z",
+        "lessonId": "S054",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Turismo / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/86320197566?pwd=ZIKvXYla7pgy9KlayGiB30fuOmegtg.1",
+          "zoomPasscode": "419328",
+          "class": "SERALE",
+          "tracks": [
+            "turismo",
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S055",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.423Z",
+        "lessonId": "S055",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / Sportivo / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/84974333805?pwd=saT6DX5Pn9rjmulNpXCOsfs0i5CIpt.1",
+          "zoomPasscode": "677574",
+          "class": "SERALE",
+          "tracks": [
+            "scientifico",
+            "sportivo",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S056",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.424Z",
+        "lessonId": "S056",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83229719016?pwd=KvcAYbNOfDYfqXhqHdbNJmPkkbkata.1",
+          "zoomPasscode": "891408",
+          "class": "SERALE",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S057",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.425Z",
+        "lessonId": "S057",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83229719016?pwd=KvcAYbNOfDYfqXhqHdbNJmPkkbkata.1",
+          "zoomPasscode": "891408",
+          "class": "SERALE",
+          "tracks": [
+            "turismo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S076",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.426Z",
+        "lessonId": "S076",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83229719016?pwd=KvcAYbNOfDYfqXhqHdbNJmPkkbkata.1",
+          "zoomPasscode": "891408",
+          "class": "SERALE",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S058",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.427Z",
+        "lessonId": "S058",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Scientifico / Sportivo / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/88925192676?pwd=EBgU5GwttDJ64puqkh3AanoU6ZsqbD.1",
+          "zoomPasscode": "246927",
+          "class": "SERALE",
+          "tracks": [
+            "scientifico",
+            "sportivo",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S059",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.428Z",
+        "lessonId": "S059",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/87303145307?pwd=jeGlECD5OS2y4IpUuvzZJSWa4BEyeZ.1",
+          "zoomPasscode": "729635",
+          "class": "SERALE",
+          "tracks": [
+            "classico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S060",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.429Z",
+        "lessonId": "S060",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+          "zoomPasscode": "905998",
+          "class": "SERALE",
+          "tracks": "*",
+          "affiancaA": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S061",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.430Z",
+        "lessonId": "S061",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+          "zoomPasscode": "834320",
+          "class": "SERALE",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S062",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.431Z",
+        "lessonId": "S062",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82163498901?pwd=PPJbBMdekaftZwAxiVzWa82iWTaiFj.1",
+          "zoomPasscode": "905998",
+          "class": "SERALE",
+          "tracks": "*",
+          "affiancaA": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S063",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.432Z",
+        "lessonId": "S063",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "LES / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/85606085123?pwd=KSEdxVcmkj5EV8bm0KOVk4gtS0Xj2t.1",
+          "zoomPasscode": "834320",
+          "class": "SERALE",
+          "tracks": [
+            "les",
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S064",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.433Z",
+        "lessonId": "S064",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/82305647110?pwd=6Yjv5oyunDlOHc4bz8IdL6C5dqooDR.1",
+          "zoomPasscode": "120431",
+          "class": "SERALE",
+          "tracks": [
+            "classico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S065",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.434Z",
+        "lessonId": "S065",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+          "zoomPasscode": "677493",
+          "class": "SERALE",
+          "tracks": [
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S066",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.435Z",
+        "lessonId": "S066",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "Sportivo / Scientifico",
+          "doc": "mr",
+          "aula": "5",
+          "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+          "zoomPasscode": "217016",
+          "class": "SERALE",
+          "tracks": [
+            "sportivo",
+            "scientifico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S067",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.436Z",
+        "lessonId": "S067",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "LES / AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/87132662648?pwd=Cjth7v3zObtQpKSy0HNUPGqSt98stR.1",
+          "zoomPasscode": "677493",
+          "class": "SERALE",
+          "tracks": [
+            "les",
+            "afm"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S068",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.437Z",
+        "lessonId": "S068",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/84979030342?pwd=i1IZeaxaX59eUq9cXtVwdS7Kg8Uq2a.1",
+          "zoomPasscode": "413745",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S069",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.438Z",
+        "lessonId": "S069",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/84979030342?pwd=i1IZeaxaX59eUq9cXtVwdS7Kg8Uq2a.1",
+          "zoomPasscode": "413745",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S070",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.439Z",
+        "lessonId": "S070",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "doc": "aa",
+          "zoomUrl": "https://us06web.zoom.us/j/82066832845?pwd=2TRHxbyUeptf00ma0MO5UnY751PeSG.1",
+          "zoomPasscode": "881979",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S071",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.440Z",
+        "lessonId": "S071",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/86903781297?pwd=4ye2NxZrxbObIDPuHZHGNmX93PbjaP.1",
+          "zoomPasscode": "254135",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_S072",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.441Z",
+        "lessonId": "S072",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "zoomUrl": "https://us06web.zoom.us/j/83069508750?pwd=dYQOYGWBeZ8ENuzjvAvOVcXWkHr1tq.1",
+          "zoomPasscode": "646585",
+          "class": "SERALE",
+          "tracks": [
+            "ipseoa"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S073",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.442Z",
+        "lessonId": "S073",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "ind": "ITI Informatico / AFM / Scientifico",
+          "zoomUrl": "https://us06web.zoom.us/j/86903781297?pwd=4ye2NxZrxbObIDPuHZHGNmX93PbjaP.1",
+          "zoomPasscode": "254135",
+          "class": "SERALE",
+          "tracks": [
+            "informatico",
+            "afm",
+            "scientifico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_S074",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.443Z",
+        "lessonId": "S074",
+        "tipo": "set",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "patch": {
+          "doc": "aa",
+          "zoomUrl": "https://us06web.zoom.us/j/84328484178?pwd=rSJNn8Cpye1Dru7qEvmFmulnbWvxq5.1",
+          "zoomPasscode": "960821",
+          "class": "SERALE",
+          "tracks": "*"
+        }
+      },
+      {
+        "id": "allineamento_20261030_SJ20261026_FIS18",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.444Z",
+        "lessonId": "SJ20261026_FIS18",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 4,
+          "h": 18,
+          "anno": "4/5",
+          "materia": "FISICA",
+          "ind": "Scientifico",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/84974333805?pwd=saT6DX5Pn9rjmulNpXCOsfs0i5CIpt.1",
+          "zoomPasscode": "677574",
+          "class": "SERALE",
+          "tracks": [
+            "scientifico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_SJ20261026_FIS19",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.445Z",
+        "lessonId": "SJ20261026_FIS19",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 4,
+          "h": 19,
+          "anno": "4/5",
+          "materia": "FISICA",
+          "ind": "Scientifico",
+          "doc": "gl",
+          "aula": "6",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/88925192676?pwd=EBgU5GwttDJ64puqkh3AanoU6ZsqbD.1",
+          "zoomPasscode": "246927",
+          "class": "SERALE",
+          "tracks": [
+            "scientifico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_SJ20261026_SCI18",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.446Z",
+        "lessonId": "SJ20261026_SCI18",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 5,
+          "h": 18,
+          "anno": "4/5",
+          "materia": "SCIENZE",
+          "ind": "Scientifico",
+          "doc": "mr",
+          "aula": "5",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+          "zoomPasscode": "217016",
+          "class": "SERALE",
+          "tracks": [
+            "scientifico"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261030_SJ20261030_MME_MECCANICA",
+        "batch": "allineamento_20261030",
+        "creata": "2026-10-30T14:54:06.447Z",
+        "lessonId": "SJ20261030_MME_MECCANICA",
+        "tipo": "add",
+        "motivo": "Allineamento del gestionale ai calendari pubblicati, 30 ottobre 2026",
+        "lezione": {
+          "g": 5,
+          "h": 18,
+          "anno": "5",
+          "materia": "MECCANICA, MACCHINE ED ENERGIA",
+          "ind": "MME",
+          "doc": null,
+          "aula": "",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://meet.google.com/czs-wsxe-iqt",
+          "class": "SERALE",
+          "tracks": [
+            "mme"
+          ]
+        }
       }
     ],
     "proposte": [
@@ -2018,5 +6210,11 @@
     ],
     "regole": [],
     "docenti": []
+  },
+  "allineamento": {
+    "id": "allineamento_20261030",
+    "stato": "completato",
+    "modifiche": 263,
+    "conflitti": []
   }
 }

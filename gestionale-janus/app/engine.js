@@ -1,7 +1,7 @@
 /* MOTORE - regole, competenze, disponibilità, sostituzioni, controlli.
    Stato condiviso in ST (riempito dal db o in locale). Nessun accesso a DOM qui. */
 const ST = { assenze: [], sost: [], mods: [], proposte: [], regole: [], docOv: {}, ver: 0 };
-const DOC = {}; DOCENTI.forEach(d => { DOC[d.id] = d; });
+const DOC = {}; (typeof DOCENTI_ARCHIVIO==='undefined'?[]:DOCENTI_ARCHIVIO).concat(DOCENTI).forEach(d => { DOC[d.id] = d; });
 function bump() { ST.ver++; _memo.clear(); }
 const _memo = new Map();
 
@@ -24,7 +24,7 @@ function validaData(s) { return typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.t
 /* ---------- materie ---------- */
 const SUBJ_RULES = [
   [/EPICA/, 'epica/antologia'], [/LAB.*ITALIANO/, 'lab italiano'], [/LAB.*INGLESE/, 'lab inglese'], [/LAB.*MATEMATICA/, 'lab matematica'],
-  [/LAB.*GRAMMATICA/, 'lab grammatica'], [/LAB.*LETTURA/, 'lab lettura'], [/LAB.*CREATIVO/, 'lab creativo'], [/POTENZIAMENTO/, 'potenziamento inglese'],
+  [/LAB.*GRAMMATICA/, 'lab grammatica'], [/LAB.*LETTURA/, 'lab lettura'], [/LAB.*CREATIVO/, 'lab creativo'], [/LAB.*FISICA/, 'lab fisica'], [/POTENZIAMENTO/, 'potenziamento inglese'],
   [/SCRITTURA/, 'scrittura creativa'], [/ED\.? ?CIVICA|EDUCAZIONE CIVICA/, 'educazione civica'], [/EC\.? ?POLITICA|ECONOMIA POLITICA/, 'economia politica'],
   [/ECONOMIA AZIENDALE/, 'economia aziendale'], [/DIRITTO E TECNICHE|^DTA/, 'dta'], [/GPOI/, 'gpoi'], [/GEO TURISTICA|GEOGRAFIA TUR/, 'geografia turistica'],
   [/GEOSTORIA/, 'geostoria'], [/STORIA DELL/, "storia dell'arte"], [/STORIA/, 'storia'], [/ITALIANO/, 'italiano'], [/MATEMATICA/, 'matematica'],
@@ -87,18 +87,18 @@ function caricaBase() {
     (flag || '').split(',').forEach(f => { if (f.startsWith('v:')) l.v = f.slice(2); if (f.startsWith('d:')) l.dop = f.slice(2); });
     return l;
   });
-  BASE.forEach(l => { l.casa = !l.aula && /casa|esercizi/i.test(l.note); l.subj = disc(l.materia); });
+  BASE.forEach(l => { l.casa = !!l.esercizi || (!l.aula && /casa|esercizi/i.test(l.note)); l.subj = disc(l.materia); });
 }
 function lezioni() {
   if (_memo.has('lez')) return _memo.get('lez');
   const mods = ST.mods.slice().sort((a, b) => (a.creata || '').localeCompare(b.creata || ''));
   const m = new Map(BASE.map(l => [l.id, { ...l }]));
   mods.forEach(x => {
-    if (x.tipo === 'add' && x.lezione) { const l = { ...x.lezione, id: x.lessonId }; l.casa = !l.aula && /casa|esercizi/i.test(l.note || ''); l.subj = disc(l.materia); l.cal = l.h >= 15 ? 'S' : 'M'; m.set(l.id, l); }
+    if (x.tipo === 'add' && x.lezione) { const l = { ...x.lezione, id: x.lessonId }; l.casa = !!l.esercizi || (!l.aula && /casa|esercizi/i.test(l.note || '')); l.subj = disc(l.materia); l.cal = l.h >= 15 ? 'S' : 'M'; m.set(l.id, l); }
     else if (x.tipo === 'del') m.delete(x.lessonId);
     else if (x.tipo === 'set' && m.has(x.lessonId)) {
       const l = m.get(x.lessonId); Object.assign(l, x.patch || {});
-      l.cal = l.h >= 15 ? 'S' : 'M'; l.casa = !l.aula && /casa|esercizi/i.test(l.note || ''); l.subj = disc(l.materia);
+      l.cal = l.h >= 15 ? 'S' : 'M'; l.casa = !!l.esercizi || (!l.aula && /casa|esercizi/i.test(l.note || '')); l.subj = disc(l.materia);
     }
   });
   const out = [...m.values()]; _memo.set('lez', out); return out;
@@ -292,7 +292,7 @@ function valutaModifica(lessonId, patch) {
   const ids = new Set(sess);
   const nuova = cur.map(x => {
     if (!ids.has(x.id)) return x;
-    const n = { ...x, ...patch }; n.cal = n.h >= 15 ? 'S' : 'M'; n.casa = !n.aula && /casa|esercizi/i.test(n.note || ''); n.subj = disc(n.materia); return n;
+    const n = { ...x, ...patch }; n.cal = n.h >= 15 ? 'S' : 'M'; n.casa = !!n.esercizi || (!n.aula && /casa|esercizi/i.test(n.note || '')); n.subj = disc(n.materia); return n;
   });
   const dopo = controlliSu(nuova).filter(i => !prev.has(sig(i)));
   return { lezioni: [...ids], nuove: dopo, bloccanti: dopo.filter(i => i.sev === 'err'), avvisi: dopo.filter(i => i.sev !== 'err'), risolte: prima.filter(i => !controlliSu(nuova).some(j => sig(j) === sig(i))).length };

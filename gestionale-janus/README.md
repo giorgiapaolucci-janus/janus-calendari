@@ -5,7 +5,7 @@ Test di collaborazione: modifica effettuata dalla seconda collaboratrice tramite
 
 ## Versione operativa del gestionale
 
-Codice derivato dal gestionale operativo di Giorgia, con le modifiche al calendario del 12 e del 14 ottobre 2026 (revisione 2). Non è la copia HTML autonoma preparata per Delera.
+Codice del gestionale operativo con docenti e lezioni allineati ai calendari pubblicati al 30 ottobre 2026. Comprende Marianna Raia, le modifiche di mattina e sera, le assegnazioni MME/Turismo e la lezione di Meccanica con Google Meet senza docente. Non è la copia HTML autonoma preparata per Delera.
 
 ### Avvio
 
@@ -23,7 +23,15 @@ Prima di iniziare: Fetch/Pull. Prima di fare push: Fetch/Pull e risolvere gli ev
 
 ### Dati e segreti
 
-Il calendario iniziale comprende le 69 modifiche permanenti della revisione 2. Non sono incluse assenze personali, sostituzioni datate, cronologia delle proposte, credenziali Google/GitHub, token OAuth, backup o archivi del Mac. Ogni avvio crea un archivio locale escluso da Git. I link Zoom nel codice non contengono la password del collegamento; gli accessi alle lezioni vanno forniti separatamente alle persone autorizzate.
+Il calendario iniziale importa le modifiche storiche e applica una volta l'allineamento del 30 ottobre definito in `allineamento.json`. I collegamenti alle lezioni e gli accessi per aula/orario rimangono quelli dei calendari pubblicati. Non sono incluse credenziali Google/GitHub o token OAuth. Ogni avvio usa un archivio locale escluso da Git. Lo snapshot versionato in `dati/` conserva lo storico già presente nel repository.
+
+### Aggiornare un gestionale già in uso
+
+Eseguire Fetch/Pull del ramo `preparazione-janus`, chiudere il vecchio processo Janus e riavviarlo dalla stessa cartella, conservando `archivio/`. Al primo avvio aggiornato il programma confronta le lezioni locali con la versione precedente e quella pubblicata; salva un backup, applica l'allineamento e registra l'operazione. I riavvii successivi non riapplicano le modifiche, quindi le nuove modifiche delle collaboratrici restano valide.
+
+Assenze, sostituzioni, proposte, regole, personalizzazioni dei docenti e lezioni locali aggiuntive sono conservate. Se una lezione modificata localmente contrasta con l'allineamento, nessuna modifica del pacchetto viene applicata: viene mostrato l'elenco degli ID da verificare e la pubblicazione automatica viene sospesa. Non sostituire l'archivio locale con lo snapshot GitHub. Alessandra Sbucafratta è esclusa dai filtri attivi ma rimane riconoscibile nello storico.
+
+`npm test` verifica anche la migrazione, i conflitti locali e il confronto di tutte le 248 lezioni esportate (compresi link e passcode) con i calendari pubblicati.
 
 Non copiare la cartella `archivio` dal Mac nel repository. Per la sincronizzazione reale occorre configurare gli accessi nell’ambiente autorizzato. Senza credenziali questa copia non pubblica sui calendari esterni. L’integrazione esistente, se configurata, pubblica i dati su `main`: non attivarla durante semplici prove di sviluppo.
 

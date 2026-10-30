@@ -10,7 +10,7 @@ function adopt(collections) {
 function collectionState(){return Object.fromEntries(COLS.map(c=>[c,Object.entries(LOCAL[c]).map(([id,data])=>({...data,id}))]));}
 async function initStore() {
   U.canEdit=false;U.canWrite=false;U.uid='giorgia-locale';
-  try {const state=await api('state');localRevision=state.revision;syncStatus=state.sync;adopt(state.collections);localReady=true;U.canEdit=true;U.canWrite=true;}
+  try {const state=await api('state');localRevision=state.revision;syncStatus=state.sync;adopt(state.collections);localReady=true;U.canEdit=true;U.canWrite=true;if(state.allineamento?.stato==='conflitti')U.msg={k:'err',t:'Allineamento sospeso: ci sono modifiche locali diverse su '+state.allineamento.conflitti.map(c=>c.lessonId).join(', ')+'. Le modifiche locali sono state conservate; la pubblicazione automatica è sospesa.'};}
   catch(e){U.msg={k:'err',t:'Dati non caricati: '+e.message};}
   render();
 }

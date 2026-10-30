@@ -14,17 +14,17 @@ const DOCENTI = [
   { id: 'fv', nome: 'Federico Vani', breve: 'Federico', aule: ['1'], cal: 'M', sera: false, mat: ['matematica', 'informatica'] },
   { id: 'gc', nome: 'Giorgia Clementi', breve: 'Giorgia', aule: ['1'], cal: 'MS', sera: true, mat: ['diritto', 'educazione civica'] },
   { id: 'lp', nome: 'Luca Picarazzi', breve: 'Luca', aule: ['2'], cal: 'MS', sera: true, mat: ['italiano', 'storia', 'filosofia', 'latino', 'greco', 'biologia', 'scienze integrate', "storia dell'arte", 'lab italiano'] },
-  { id: 'bl', nome: 'Beatrice Lungu', breve: 'Bea', aule: ['3'], cal: 'M', sera: false, mat: ['igiene', 'metodologie operative', 'psicologia'] },
+  { id: 'bl', nome: 'Beatrice Lungu', breve: 'Bea', aule: ['3'], cal: 'M', sera: false, mat: ['igiene', 'metodologie operative', 'psicologia', 'lab compiti'] },
   { id: 'mb', nome: 'Martina Branca', breve: 'Martina', aule: ['3'], cal: 'MS', sera: true, mat: ['inglese', 'lab inglese', 'potenziamento inglese', 'spagnolo', 'scrittura creativa', 'lab creativo', 'lab lettura'] },
   { id: 'er', nome: 'Elisa Rubeo', breve: 'Elisa R.', aule: ['4', '1'], cal: 'M', sera: false, mat: ['fisica', 'matematica'] },
   { id: 'gd', nome: 'Giulia Dipalo', breve: 'Giulia', aule: ['4', '1'], cal: 'MS', sera: true, mat: ['scienze umane', 'lab italiano', 'lab grammatica'] },
   { id: 'ed', nome: 'Elisa Di Felice', breve: 'Elisa', aule: ['5'], cal: 'MS', sera: true, mat: ['francese', 'inglese', 'lab inglese', 'potenziamento inglese', 'lab italiano'] },
-  { id: 'gl', nome: 'Gabriele Luverà', breve: 'Gabriele', aule: ['6'], cal: 'MS', sera: true, mat: ['matematica', 'lab matematica', 'fisica', 'meccatronica', 'chimica'] },
+  { id: 'gl', nome: 'Gabriele Luverà', breve: 'Gabriele', aule: ['6'], cal: 'MS', sera: true, mat: ['matematica', 'lab matematica', 'fisica', 'lab fisica', 'meccatronica', 'chimica'] },
   { id: 'lc', nome: 'Lucia Carlucci', breve: 'Lucia', aule: ['7'], cal: 'MS', sera: true, mat: ['economia aziendale', 'economia politica', 'dta', 'gpoi', 'geografia turistica', 'educazione civica', 'relazioni internazionali', 'scienze motorie'] },
   { id: 'aa', nome: 'Alessandra Albano', breve: 'Alessandra', aule: ['4', '6'], cal: 'MS', sera: true, mat: ['italiano', 'storia', 'geostoria', 'latino', 'epica/antologia', "storia dell'arte", 'lab italiano'] },
   { id: 'sm', nome: 'Salvatore Martello', breve: 'Salvatore', aule: ['1'], cal: 'S', sera: true, mat: ['informatica', 'tpsi e sistemi e reti'] },
   { id: 'ft', nome: 'Fabio Trerè', breve: 'Fabio', aule: ['2'], cal: 'S', sera: true, mat: ['matematica'] },
-  { id: 'as', nome: 'Alessandra Sbucafratta', breve: 'Sbucafratta', aule: ['1', '4'], cal: 'S', sera: true, mat: ['scienze', 'storia'] },
+  { id: 'mr', nome: 'Marianna Raia', breve: 'Marianna', aule: ['5'], cal: 'MS', sera: true, mat: ['scienze', 'scienze integrate'] },
   { id: 'sz', nome: 'Sara Mazza', breve: 'Sara', aule: ['7'], cal: 'S', sera: true, mat: ['economia aziendale', 'dta'] }
 ];
 
@@ -32,6 +32,9 @@ const DOCENTI = [
    P presenza, S smart working, - nessun turno indicato.
    m = mattina (riga 9:00/10:00, vale per tutta la mattina), p = 14:00/15:00,
    p2 = 15:00/16:00, s = 17:00/18:00 (solo dove il foglio lo indica). */
+// Docente storico, escluso dai filtri ma riconoscibile nelle assenze passate.
+const DOCENTI_ARCHIVIO = [{ id: 'as', nome: 'Alessandra Sbucafratta', breve: 'Sbucafratta', aule: ['1', '4'], cal: 'S', sera: true, mat: ['scienze', 'storia'] }];
+
 const TURNI = {
   m: { aa: 'SPSPS', bl: 'SPSPP', gd: 'PSPPS', lc: 'PPPPP', ed: 'SPSPP', gl: 'PSPSP', mb: 'PSPPS', lp: 'PPPPP', er: 'PP--P', fv: 'PP--P', gc: '---P-', sm: '-----', ft: '-----', as: '-----', sz: '-----' },
   p: { aa: 'S-S--', bl: 'SPSPP', gd: 'PSPPS', lc: 'S-S-S', ed: '-P-PP', gl: 'PSPSP', mb: 'PSPPS', lp: 'PPPPP', er: '-----', fv: '-----', gc: '-----' },

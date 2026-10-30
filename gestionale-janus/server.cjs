@@ -17,6 +17,7 @@ function generate(state) {
   return {folder,payload};
 }
 async function publish(state) {
+  if(state.allineamento?.stato==='conflitti'){sync.locale='Allineamento da verificare: pubblicazione sospesa per conservare le modifiche locali.';atomic(STATUS,sync);return;}
   let output;
   try { output=generate(state); sync.locale='Dati esportati'; sync.exportRevision=state.revision; }
   catch(e) {sync.locale='Esportazione non riuscita. Dati salvati; riprova.';atomic(STATUS,sync);return;}
@@ -37,7 +38,7 @@ async function publish(state) {
   }
   sync.checkedAt=new Date().toISOString();atomic(STATUS,sync);
 }
-function status(){const c=config();return {...sync,automatico:!!c.automatico,githubConfigurato:!!c.github,googleConfigurato:!!c.google,googleEmail:c.google?.client_email||'',spreadsheetId:SHEET_ID};}
+function status(){const c=config();return {...sync,allineamento:store.read().allineamento,automatico:!!c.automatico,githubConfigurato:!!c.github,googleConfigurato:!!c.google,googleEmail:c.google?.client_email||'',spreadsheetId:SHEET_ID};}
 function html() {
   const src=['data.js','rules.js','engine.js','app.js','local.js'].map(n=>fs.readFileSync(path.join(APP,n),'utf8')).join('\n');
   return '<!doctype html><html lang="it"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'+fs.readFileSync(path.join(APP,'template.html'),'utf8').replace('/*__SCRIPT__*/',`window.JANUS_TOKEN=${JSON.stringify(TOKEN)};\n${src}`)+'</html>';

@@ -44,6 +44,7 @@ function applica(nome, cal) {
       if (p.ind !== undefined) l.class = p.ind.startsWith('TUTTI TRANNE') ? 'PER TUTTI' : p.ind;
       if (p.tracks !== undefined) l.tracks = p.tracks.slice();
       if (p.affiancaA !== undefined) l.affiancaA = p.affiancaA.slice();
+      for (const key of ['zoomUrl','zoomPasscode','esercizi','class']) if (p[key] !== undefined) l[key] = p[key];
       if (p.anno) l.year = /ANNO/i.test(p.anno) ? p.anno : p.anno + ' ANNO';
       nPerm++;
     } else if (m.tipo === 'add' && m.lezione) {
@@ -51,6 +52,7 @@ function applica(nome, cal) {
       const n = { id, weekday: z.g, start: hh(z.h), end: hf(z.h), subject: z.materia, year: /ANNO/i.test(z.anno) ? z.anno : z.anno + ' ANNO', class: cal === 'S' ? 'SERALE' : (z.ind || 'PER TUTTI'), teacher: z.doc ? X.nomeD(z.doc) : '', room: aulaTxt(z.aula), note: z.note || '', zoomUrl: zoomPerAula[aulaTxt(z.aula)] || '', status: 'scheduled' };
       if (z.tracks !== undefined) n.tracks = z.tracks.slice();
       if (z.affiancaA !== undefined) n.affiancaA = z.affiancaA.slice();
+      for (const key of ['zoomUrl','zoomPasscode','esercizi','class']) if (z[key] !== undefined) n[key] = z[key];
       L.push(n); per.set(id, n); nPerm++;
     }
   });
@@ -77,6 +79,8 @@ function fmtInd(s) {
 const MAT = { 'dta': 'Diritto e tecniche amm. (DTA)', 'gpoi': 'GPOI', 'tpsi e sistemi e reti': 'TPSI e Sistemi e reti', 'metodologie operative': 'Metodologie', 'epica/antologia': 'Epica / Antologia', 'scienze integrate': 'Scienze integrate' };
 function fmtMat(m) {
   const s = String(m || '').toUpperCase();
+  if (/FRANCESE GRAMMATICA/.test(s)) return 'Francese grammatica';
+  if (/FRANCESE AVANZATO/.test(s)) return 'Francese avanzato';
   if (/IGIENE\s*\/\s*METOD/.test(s)) return 'Igiene / Metodologie';
   if (/GEOSTORIA\s*-\s*STORIA DELL/.test(s)) return "Geostoria - Storia dell'arte";
   return X.disc(m).map(d => MAT[d] || d.charAt(0).toUpperCase() + d.slice(1)).join(' / ');
