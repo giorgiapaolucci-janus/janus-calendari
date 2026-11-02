@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-10-29T13:21:51.795Z",
+  "aggiornato": "2026-11-02T11:38:34.236Z",
   "lezioni": [
     {
       "id": "L001",
@@ -827,13 +827,19 @@
       "end": "09:50",
       "subject": "EC.POLITICA",
       "year": "1/2 ANNO",
-      "class": "ITI/AFM/UMANE",
+      "class": "ITI/AFM/UMANE/LES",
       "teacher": "Lucia Carlucci",
       "room": "AULA 7",
       "note": "",
       "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
       "status": "scheduled",
-      "zoomPasscode": "350240"
+      "zoomPasscode": "350240",
+      "tracks": [
+        "informatico",
+        "afm",
+        "scienze-umane",
+        "les"
+      ]
     },
     {
       "id": "L053",
@@ -956,7 +962,7 @@
       "end": "10:50",
       "subject": "LAB MATEMATICA",
       "year": "1/2 ANNO",
-      "class": "AFM / ITI INFORMATICO / SCIENZE UMANE",
+      "class": "AFM / ITI INFORMATICO / SCIENZE UMANE / LES",
       "teacher": "Gabriele Luverà",
       "room": "AULA 1",
       "note": "",
@@ -965,7 +971,8 @@
       "tracks": [
         "afm",
         "informatico",
-        "scienze-umane"
+        "scienze-umane",
+        "les"
       ],
       "affiancaA": [],
       "zoomPasscode": "86719"
@@ -2326,24 +2333,6 @@
       "zoomPasscode": "494425"
     },
     {
-      "id": "A017",
-      "weekday": 3,
-      "start": "09:00",
-      "end": "09:50",
-      "subject": "LAB MATEMATICA",
-      "year": "1/2 ANNO",
-      "class": "SOLO INDIRIZZI INDICATI",
-      "teacher": "Gabriele Luverà",
-      "room": "AULA 1",
-      "note": "",
-      "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
-      "status": "scheduled",
-      "tracks": [
-        "les"
-      ],
-      "zoomPasscode": "132082"
-    },
-    {
       "id": "A018",
       "weekday": 5,
       "start": "10:00",
@@ -3195,6 +3184,25 @@
       "tracks": [
         "mme"
       ]
+    },
+    {
+      "id": "LJ20261102_LES_FRANCESE",
+      "weekday": 5,
+      "start": "10:00",
+      "end": "10:50",
+      "subject": "FRANCESE GRAMMATICA",
+      "year": "1/2 ANNO",
+      "class": "LES",
+      "teacher": "Elisa Di Felice",
+      "room": "AULA 5",
+      "note": "",
+      "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+      "status": "scheduled",
+      "tracks": [
+        "les"
+      ],
+      "zoomPasscode": "118862",
+      "affiancaA": []
     }
   ],
   "modifiche": [],
