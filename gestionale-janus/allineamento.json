@@ -1,7 +1,7 @@
 {
-  "id": "allineamento_20261030",
+  "id": "allineamento_20261102",
   "baseCommit": "cebb87aa11127fa1e721a08760efd75810bed975",
-  "source": "Calendari pubblicati verificati il 30 ottobre 2026",
+  "source": "Calendari verificati al 30 ottobre e modifiche LES 1/2 approvate il 2 novembre 2026",
   "actions": [
     {
       "lessonId": "L064",
@@ -1866,7 +1866,34 @@
         ]
       },
       "patch": {
+        "ind": "ITI/AFM/UMANE/LES",
+        "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+        "zoomPasscode": "350240",
+        "class": "ITI/AFM/UMANE/LES",
+        "tracks": [
+          "informatico",
+          "afm",
+          "scienze-umane",
+          "les"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L052",
+        "g": 3,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "EC.POLITICA",
         "ind": "ITI / AFM / Scienze umane",
+        "doc": "lc",
+        "aula": "7",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "economia politica"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
         "zoomPasscode": "350240",
         "class": "ITI/AFM/UMANE"
@@ -2104,7 +2131,40 @@
         "affiancaA": []
       },
       "patch": {
+        "ind": "AFM / ITI INFORMATICO / SCIENZE UMANE / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+        "zoomPasscode": "86719",
+        "class": "AFM / ITI INFORMATICO / SCIENZE UMANE / LES",
+        "tracks": [
+          "afm",
+          "informatico",
+          "scienze-umane",
+          "les"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L060",
+        "g": 3,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "LAB MATEMATICA",
         "ind": "AFM / ITI Informatico / Scienze umane",
+        "doc": "gl",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ],
+        "tracks": [
+          "afm",
+          "informatico",
+          "scienze-umane"
+        ],
+        "affiancaA": [],
         "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
         "zoomPasscode": "86719",
         "class": "AFM / ITI INFORMATICO / SCIENZE UMANE"
@@ -4450,7 +4510,7 @@
     },
     {
       "lessonId": "A017",
-      "tipo": "set",
+      "tipo": "del",
       "before": {
         "id": "A017",
         "g": 3,
@@ -4469,7 +4529,23 @@
           "lab matematica"
         ]
       },
-      "patch": {
+      "acceptedBefore": {
+        "id": "A017",
+        "g": 3,
+        "h": 9,
+        "anno": "1/2",
+        "materia": "LAB MATEMATICA",
+        "ind": "LES",
+        "doc": "gl",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/83568027431?pwd=ojYE1O10shVTxg8CUObbSCOatj2nN7.1",
         "zoomPasscode": "132082",
         "class": "SOLO INDIRIZZI INDICATI",
@@ -7974,6 +8050,32 @@
         "tracks": [
           "mme"
         ]
+      }
+    },
+    {
+      "lessonId": "LJ20261102_LES_FRANCESE",
+      "tipo": "add",
+      "lezione": {
+        "g": 5,
+        "h": 10,
+        "anno": "1/2",
+        "materia": "FRANCESE GRAMMATICA",
+        "ind": "LES",
+        "doc": "ed",
+        "aula": "5",
+        "note": "",
+        "v": null,
+        "dop": null,
+        "subj": [
+          "francese"
+        ],
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "LES",
+        "tracks": [
+          "les"
+        ],
+        "affiancaA": []
       }
     }
   ]

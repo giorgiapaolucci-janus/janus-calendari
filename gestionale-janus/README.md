@@ -5,7 +5,7 @@ Test di collaborazione: modifica effettuata dalla seconda collaboratrice tramite
 
 ## Versione operativa del gestionale
 
-Codice del gestionale operativo con docenti e lezioni allineati ai calendari pubblicati al 30 ottobre 2026. Comprende Marianna Raia, le modifiche di mattina e sera, le assegnazioni MME/Turismo e la lezione di Meccanica con Google Meet senza docente. Non è la copia HTML autonoma preparata per Delera.
+Codice del gestionale operativo con docenti e lezioni allineati ai calendari pubblicati al 30 ottobre e alle modifiche LES 1/2 del 2 novembre 2026. Comprende Marianna Raia, le modifiche di mattina e sera, le assegnazioni MME/Turismo e la lezione di Meccanica con Google Meet senza docente. Non è la copia HTML autonoma preparata per Delera.
 
 ### Avvio
 
@@ -23,7 +23,7 @@ Prima di iniziare: Fetch/Pull. Prima di fare push: Fetch/Pull e risolvere gli ev
 
 ### Dati e segreti
 
-Il calendario iniziale importa le modifiche storiche e applica una volta l'allineamento del 30 ottobre definito in `allineamento.json`. I collegamenti alle lezioni e gli accessi per aula/orario rimangono quelli dei calendari pubblicati. Non sono incluse credenziali Google/GitHub o token OAuth. Ogni avvio usa un archivio locale escluso da Git. Lo snapshot versionato in `dati/` conserva lo storico già presente nel repository.
+Il calendario iniziale importa le modifiche storiche e applica una volta l'allineamento cumulativo del 2 novembre definito in `allineamento.json`. I collegamenti alle lezioni e gli accessi per aula/orario rimangono quelli dei calendari pubblicati. Non sono incluse credenziali Google/GitHub o token OAuth. Ogni avvio usa un archivio locale escluso da Git. Lo snapshot versionato in `dati/` conserva lo storico già presente nel repository.
 
 ### Aggiornare un gestionale già in uso
 
@@ -40,3 +40,5 @@ Non copiare la cartella `archivio` dal Mac nel repository. Per la sincronizzazio
 Calendario, docenti, assenze e modifiche, controlli, regole, persistenza locale con backup e controllo revisioni, generatori dei tre calendari e integrazioni Google/GitHub. La funzione Chat interna è stata rimossa. `riservato/` contiene la preparazione del portale di sola consultazione, ancora da configurare e pubblicare. I relativi test richiedono prima `npm run build:riservato`.
 
 Le due copie locali non condividono automaticamente i dati inseriti nel gestionale: GitHub condivide il codice. Un archivio operativo unico richiede una configurazione ulteriore. La pubblicazione del codice in questo ramo non cambia i file dei calendari Delera.
+
+Aggiornamento LES 1/2 del 2 novembre: mercoledì 9 Economia politica (Lucia, Aula 7) al posto del laboratorio; mercoledì 10 Spagnolo oppure Lab matematica (Gabriele, Aula 1); venerdì 10 Educazione civica oppure Francese grammatica (Elisa Di Felice, Aula 5). Le sessioni condividono gli accessi già esistenti. La migrazione gestisce anche archivi già allineati il 30 ottobre e conserva backup e modifiche locali non discordanti.

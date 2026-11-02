@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": 3,
-  "updatedAt": "2026-10-30T14:54:06.193Z",
+  "revision": 4,
+  "updatedAt": "2026-11-02T11:38:34.232Z",
   "collections": {
     "assenze": [
       {
@@ -5590,6 +5590,84 @@
             "mme"
           ]
         }
+      },
+      {
+        "id": "allineamento_20261102_L052",
+        "batch": "allineamento_20261102",
+        "creata": "2026-11-02T11:38:34.230Z",
+        "lessonId": "L052",
+        "tipo": "set",
+        "motivo": "Calendari verificati al 30 ottobre e modifiche LES 1/2 approvate il 2 novembre 2026",
+        "patch": {
+          "ind": "ITI/AFM/UMANE/LES",
+          "zoomUrl": "https://us06web.zoom.us/j/83282325109?pwd=nx3ZXP0iPUoZqbHkwtheRdZlK9VvYC.1",
+          "zoomPasscode": "350240",
+          "class": "ITI/AFM/UMANE/LES",
+          "tracks": [
+            "informatico",
+            "afm",
+            "scienze-umane",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261102_L060",
+        "batch": "allineamento_20261102",
+        "creata": "2026-11-02T11:38:34.231Z",
+        "lessonId": "L060",
+        "tipo": "set",
+        "motivo": "Calendari verificati al 30 ottobre e modifiche LES 1/2 approvate il 2 novembre 2026",
+        "patch": {
+          "ind": "AFM / ITI INFORMATICO / SCIENZE UMANE / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/86537770129?pwd=dmBVFLHT09v5SMRq5t3t9eMYOtc8nh.1",
+          "zoomPasscode": "86719",
+          "class": "AFM / ITI INFORMATICO / SCIENZE UMANE / LES",
+          "tracks": [
+            "afm",
+            "informatico",
+            "scienze-umane",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261102_A017",
+        "batch": "allineamento_20261102",
+        "creata": "2026-11-02T11:38:34.232Z",
+        "lessonId": "A017",
+        "tipo": "del",
+        "motivo": "Calendari verificati al 30 ottobre e modifiche LES 1/2 approvate il 2 novembre 2026"
+      },
+      {
+        "id": "allineamento_20261102_LJ20261102_LES_FRANCESE",
+        "batch": "allineamento_20261102",
+        "creata": "2026-11-02T11:38:34.233Z",
+        "lessonId": "LJ20261102_LES_FRANCESE",
+        "tipo": "add",
+        "motivo": "Calendari verificati al 30 ottobre e modifiche LES 1/2 approvate il 2 novembre 2026",
+        "lezione": {
+          "g": 5,
+          "h": 10,
+          "anno": "1/2",
+          "materia": "FRANCESE GRAMMATICA",
+          "ind": "LES",
+          "doc": "ed",
+          "aula": "5",
+          "note": "",
+          "v": null,
+          "dop": null,
+          "subj": [
+            "francese"
+          ],
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "LES",
+          "tracks": [
+            "les"
+          ],
+          "affiancaA": []
+        }
       }
     ],
     "proposte": [
@@ -6212,9 +6290,9 @@
     "docenti": []
   },
   "allineamento": {
-    "id": "allineamento_20261030",
+    "id": "allineamento_20261102",
     "stato": "completato",
-    "modifiche": 263,
+    "modifiche": 4,
     "conflitti": []
   }
 }

@@ -4,6 +4,17 @@ const snapshot=()=>JSON.parse(fs.readFileSync(path.join(__dirname,'dati/calendar
 function previous(){const s=snapshot();delete s.allineamento;s.collections.mods=s.collections.mods.filter(m=>m.batch!==plan.id);return s;}
 function engine(collections){const ctx=vm.createContext({console,document:{addEventListener(){}}});vm.runInContext(['data.js','rules.js','engine.js','app.js'].map(f=>fs.readFileSync(path.join(__dirname,'app',f),'utf8')).join('\n')+'\nthis.X={ST,bump,lezioni,DOCENTI,DOC,controlli,pCal,U};',ctx);Object.assign(ctx.X.ST,{mods:collections.mods,assenze:collections.assenze,sost:collections.sost,regole:collections.regole,docOv:Object.fromEntries(collections.docenti.map(d=>[d.id,d]))});ctx.X.bump();return ctx.X;}
 const canonical=d=>d.lezioni.map(l=>({id:l.id,weekday:l.weekday,start:l.start,end:l.end,subject:l.subject,year:l.year,class:l.class,teacher:l.teacher,room:l.room,note:l.note||'',tracks:l.tracks||null,affiancaA:l.affiancaA||[],esercizi:!!l.esercizi,zoomUrl:l.zoomUrl||'',zoomPasscode:l.zoomPasscode||''})).sort((a,b)=>a.id.localeCompare(b.id));
+test('LES 1/2: Economia politica e doppie scelte con accessi delle sessioni esistenti',()=>{
+ const s=snapshot(),rows=lessons(s.collections),row=id=>rows.find(l=>l.id===id);
+ assert.equal(row('A017'),undefined);assert.ok(row('L052').tracks.includes('les'));assert.equal(row('L052').doc,'lc');assert.equal(row('L052').aula,'7');
+ assert.ok(row('L060').tracks.includes('les'));assert.equal(row('L060').h,10);assert.equal(row('L060').aula,'1');
+ for(const id of ['L051','L059','A015'])assert.ok(row(id),'Opzione precedente conservata: '+id);
+ const french=row('LJ20261102_LES_FRANCESE'),shared=row('L118');assert.equal(french.anno,'1/2');assert.equal(french.g,5);assert.equal(french.h,10);assert.equal(french.doc,'ed');assert.equal(french.aula,'5');
+ assert.equal(french.zoomUrl,shared.zoomUrl);assert.equal(french.zoomPasscode,shared.zoomPasscode);assert.equal(rows.filter(l=>l.id===french.id).length,1);
+ const prior={...s,allineamento:{id:'allineamento_20261030',stato:'completato'},collections:{...s.collections,mods:s.collections.mods.filter(m=>m.batch!==plan.id)}};
+ assert.equal(reconcile(prior).report.modifiche,4);
+ prior.collections.mods.push({id:'variazione_collega',tipo:'set',lessonId:'L060',creata:'2099-01-01',patch:{ind:'GRUPPO LOCALE'}});const conflict=reconcile(prior);assert.equal(conflict.report.stato,'conflitti');assert.deepEqual(conflict.collections,prior.collections);
+});
 test('allineamento completo e idempotente, con preservazione di storico, assenze, sostituzioni e proposte',()=>{
  const old=previous();old.collections.assenze.push({id:'assenza_locale',docenteId:'as',dal:'2026-10-09',al:'2026-10-09'});old.collections.sost.push({id:'sost_locale',data:'2026-10-09',map:{L001:'gd'}});old.collections.proposte.push({id:'proposta_locale',stato:'in attesa',azioni:[]});old.collections.docenti.push({id:'gd',matExtra:['materia locale']});
  old.collections.mods.push({id:'nota_locale',tipo:'set',lessonId:'L001',creata:'2099-01-01',patch:{note:'Nota locale da conservare'}});
