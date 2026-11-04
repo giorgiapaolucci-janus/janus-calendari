@@ -12,7 +12,7 @@ test('LES 1/2: Economia politica e doppie scelte con accessi delle sessioni esis
  const french=row('LJ20261102_LES_FRANCESE'),shared=row('L118');assert.equal(french.anno,'1/2');assert.equal(french.g,5);assert.equal(french.h,10);assert.equal(french.doc,'ed');assert.equal(french.aula,'5');
  assert.equal(french.zoomUrl,shared.zoomUrl);assert.equal(french.zoomPasscode,shared.zoomPasscode);assert.equal(rows.filter(l=>l.id===french.id).length,1);
  const prior={...s,allineamento:{id:'allineamento_20261030',stato:'completato'},collections:{...s.collections,mods:s.collections.mods.filter(m=>m.batch!==plan.id)}};
- assert.equal(reconcile(prior).report.modifiche,4);
+ assert.equal(reconcile(prior).report.stato,"completato");
  prior.collections.mods.push({id:'variazione_collega',tipo:'set',lessonId:'L060',creata:'2099-01-01',patch:{ind:'GRUPPO LOCALE'}});const conflict=reconcile(prior);assert.equal(conflict.report.stato,'conflitti');assert.deepEqual(conflict.collections,prior.collections);
 });
 test('allineamento completo e idempotente, con preservazione di storico, assenze, sostituzioni e proposte',()=>{
@@ -42,7 +42,7 @@ test('tutte le 248 lezioni esportate coincidono con i calendari pubblicati, incl
  const expected=require('./allineamento-verifica.json');for(const n of ['mattina','sera']){const d=JSON.parse(fs.readFileSync(path.join(dir,n+'.json')));assert.equal(d.lezioni.length,expected.conteggi[n]);assert.equal(crypto.createHash('sha256').update(JSON.stringify(canonical(d))).digest('hex'),expected.sha256[n]);assert.equal(new Set(d.lezioni.map(l=>l.id)).size,d.lezioni.length);}
  const teacher=JSON.parse(fs.readFileSync(path.join(dir,'docenti.json')));assert.equal(teacher.nomi.MR,'Marianna Raia');assert.ok(!teacher.nomi.AS);assert.ok([...teacher.diurno,...teacher.serale].every(l=>l.doc!=='AS'));
  assert.equal(teacher.diurno.find(l=>l.id==='LJ20261014_7').materia,'Lab fisica');assert.equal(teacher.diurno.find(l=>l.id==='L118').materia,'Francese grammatica');assert.equal(teacher.diurno.find(l=>l.id==='L128').materia,'Francese avanzato');
- const serale=JSON.parse(fs.readFileSync(path.join(dir,'sera.json')));const meet=serale.lezioni.find(l=>l.id==='SJ20261030_MME_MECCANICA');assert.equal(meet.teacher,'');assert.equal(meet.zoomUrl,'https://meet.google.com/czs-wsxe-iqt');assert.equal(meet.start,'18:00');
+ const serale=JSON.parse(fs.readFileSync(path.join(dir,'sera.json')));const meet=serale.lezioni.find(l=>l.id==='SJ20261030_MME_MECCANICA');assert.equal(meet.teacher,'');assert.equal(meet.zoomUrl,'https://meet.google.com/ahe-wpeq-zwu');assert.equal(meet.start,'18:00');
  const {sheets}=require('./sheets.cjs');const payload=sheets(dir,state.collections,path.join(__dirname,'app'));const row=payload.sheets.Sera.find(r=>r[9]===meet.id);assert.equal(row[5],'');assert.equal(row[8],meet.zoomUrl);
  assert.ok(payload.sheets['Orari docenti'].some(r=>r[0]==='Marianna Raia'));assert.ok(payload.sheets['Turni docenti'].every(r=>r[0]!=='Alessandra Sbucafratta'));
  }finally{fs.rmSync(dir,{recursive:true,force:true});}

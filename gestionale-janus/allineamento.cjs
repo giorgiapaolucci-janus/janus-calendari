@@ -12,7 +12,12 @@ function reconcile(state,plan=JSON.parse(fs.readFileSync(path.join(__dirname,'al
  for(const a of plan.actions){
   const l=current.get(a.lessonId),fields=a.tipo==='set'?Object.keys(a.patch).filter(k=>k!=='class'):[];
   if(a.tipo==='add'){
-   if(!l)pending.push(a);else if(!Object.entries(a.lezione).filter(([k])=>k!=='class').every(([k,v])=>same(k==='esercizi'?!!l[k]:l[k],v)))conflicts.push({lessonId:a.lessonId,campi:['nuova lezione già presente con dati diversi']});
+   const matches=template=>Object.entries(template).filter(([k])=>k!=='class').every(([k,v])=>same(k==='esercizi'?!!l[k]:l[k],v));
+   if(!l)pending.push(a);
+   else if(!matches(a.lezione)){
+    if(a.acceptedBefore&&matches(a.acceptedBefore))pending.push({...a,tipo:'set',patch:a.lezione});
+    else conflicts.push({lessonId:a.lessonId,campi:['nuova lezione già presente con dati diversi']});
+   }
   }else if(a.tipo==='del'){
    if(!l)continue;
    const fields=['g','h','anno','materia','ind','doc','aula','note','tracks','affiancaA'];

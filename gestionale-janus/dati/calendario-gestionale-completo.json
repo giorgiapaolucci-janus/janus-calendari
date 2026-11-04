@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": 4,
-  "updatedAt": "2026-11-02T11:38:34.232Z",
+  "revision": 5,
+  "updatedAt": "2026-11-04T15:36:06.885Z",
   "collections": {
     "assenze": [
       {
@@ -5668,6 +5668,46 @@
           ],
           "affiancaA": []
         }
+      },
+      {
+        "id": "allineamento_20261104_SJ20261030_MME_MECCANICA",
+        "batch": "allineamento_20261104",
+        "creata": "2026-11-04T15:36:06.882Z",
+        "lessonId": "SJ20261030_MME_MECCANICA",
+        "tipo": "set",
+        "motivo": "Aggiornamento collegamento Meet MME 5 serale venerdì 18:00, 4 novembre 2026",
+        "patch": {
+          "g": 5,
+          "h": 18,
+          "anno": "5",
+          "materia": "MECCANICA, MACCHINE ED ENERGIA",
+          "ind": "MME",
+          "doc": null,
+          "aula": "",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://meet.google.com/ahe-wpeq-zwu",
+          "class": "SERALE",
+          "tracks": [
+            "mme"
+          ]
+        },
+        "lezione": {
+          "g": 5,
+          "h": 18,
+          "anno": "5",
+          "materia": "MECCANICA, MACCHINE ED ENERGIA",
+          "ind": "MME",
+          "doc": null,
+          "aula": "",
+          "note": "",
+          "esercizi": false,
+          "zoomUrl": "https://meet.google.com/ahe-wpeq-zwu",
+          "class": "SERALE",
+          "tracks": [
+            "mme"
+          ]
+        }
       }
     ],
     "proposte": [
@@ -6290,9 +6330,9 @@
     "docenti": []
   },
   "allineamento": {
-    "id": "allineamento_20261102",
+    "id": "allineamento_20261104",
     "stato": "completato",
-    "modifiche": 4,
+    "modifiche": 1,
     "conflitti": []
   }
 }

@@ -1,11 +1,11 @@
 {
-  "data": "2026-11-02",
+  "data": "2026-11-04",
   "conteggi": {
     "mattina": 170,
     "sera": 78
   },
   "sha256": {
     "mattina": "7d4f72005ad1c932c683c8aef670f343f2f78d0fa3f793c5e94e5f61d4d2fe6d",
-    "sera": "1219b8b6f5fbf0e98b0f7df665f92c18bd586442c9c8e55d6f4535834ecd6d31"
+    "sera": "c7a93edf4bb0b74ba3464b9f3d33aee91a3ed731fe186544e3c24bb20578c38d"
   }
 }

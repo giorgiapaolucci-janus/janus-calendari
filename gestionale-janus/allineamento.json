@@ -1,7 +1,7 @@
 {
-  "id": "allineamento_20261102",
+  "id": "allineamento_20261104",
   "baseCommit": "cebb87aa11127fa1e721a08760efd75810bed975",
-  "source": "Calendari verificati al 30 ottobre e modifiche LES 1/2 approvate il 2 novembre 2026",
+  "source": "Aggiornamento collegamento Meet MME 5 serale venerdì 18:00, 4 novembre 2026",
   "actions": [
     {
       "lessonId": "L064",
@@ -8036,6 +8036,22 @@
       "lessonId": "SJ20261030_MME_MECCANICA",
       "tipo": "add",
       "lezione": {
+        "g": 5,
+        "h": 18,
+        "anno": "5",
+        "materia": "MECCANICA, MACCHINE ED ENERGIA",
+        "ind": "MME",
+        "doc": null,
+        "aula": "",
+        "note": "",
+        "esercizi": false,
+        "zoomUrl": "https://meet.google.com/ahe-wpeq-zwu",
+        "class": "SERALE",
+        "tracks": [
+          "mme"
+        ]
+      },
+      "acceptedBefore": {
         "g": 5,
         "h": 18,
         "anno": "5",
