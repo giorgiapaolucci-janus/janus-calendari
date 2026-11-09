@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-02T11:38:34.236Z",
+  "aggiornato": "2026-11-09T09:42:05.324Z",
   "lezioni": [
     {
       "id": "L001",
@@ -1637,13 +1637,21 @@
       "end": "12:50",
       "subject": "STORIA DELL'ARTE",
       "year": "3/4 ANNO",
-      "class": "LICEI",
+      "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
       "teacher": "Luca Picarazzi",
       "room": "AULA 2",
       "note": "(+1/2)",
       "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
       "status": "scheduled",
-      "zoomPasscode": "816044"
+      "zoomPasscode": "816044",
+      "tracks": [
+        "scientifico",
+        "classico",
+        "linguistico",
+        "scienze-umane",
+        "scienze-applicate",
+        "les"
+      ]
     },
     {
       "id": "L106",
@@ -1658,7 +1666,10 @@
       "note": "",
       "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
       "status": "scheduled",
-      "zoomPasscode": "438503"
+      "zoomPasscode": "438503",
+      "affiancaA": [
+        "sportivo"
+      ]
     },
     {
       "id": "L107",
@@ -2102,7 +2113,10 @@
       "note": "",
       "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
       "status": "scheduled",
-      "zoomPasscode": "434438"
+      "zoomPasscode": "434438",
+      "affiancaA": [
+        "sportivo"
+      ]
     },
     {
       "id": "L146",
@@ -2111,13 +2125,21 @@
       "end": "12:50",
       "subject": "STORIA DELL'ARTE",
       "year": "4/5 ANNO",
-      "class": "LICEI",
+      "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
       "teacher": "Luca Picarazzi",
       "room": "AULA 2",
       "note": "",
       "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
       "status": "scheduled",
-      "zoomPasscode": "816044"
+      "zoomPasscode": "816044",
+      "tracks": [
+        "scientifico",
+        "classico",
+        "linguistico",
+        "scienze-umane",
+        "scienze-applicate",
+        "les"
+      ]
     },
     {
       "id": "L139",
@@ -2126,13 +2148,21 @@
       "end": "12:50",
       "subject": "STORIA DELL'ARTE",
       "year": "5 ANNO",
-      "class": "LICEI",
+      "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
       "teacher": "Luca Picarazzi",
       "room": "AULA 2",
       "note": "",
       "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
       "status": "scheduled",
-      "zoomPasscode": "816044"
+      "zoomPasscode": "816044",
+      "tracks": [
+        "scientifico",
+        "classico",
+        "linguistico",
+        "scienze-umane",
+        "scienze-applicate",
+        "les"
+      ]
     },
     {
       "id": "L140",
@@ -2147,7 +2177,10 @@
       "note": "",
       "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
       "status": "scheduled",
-      "zoomPasscode": "434438"
+      "zoomPasscode": "434438",
+      "affiancaA": [
+        "sportivo"
+      ]
     },
     {
       "id": "A002",

@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-02T11:38:34.236Z",
+  "aggiornato": "2026-11-09T09:42:05.325Z",
   "nomi": {
     "FV": "Federico Vani",
     "GC": "Giorgia Clementi",
@@ -1484,7 +1484,7 @@
       "turno": "Mattina",
       "anno": "3/4",
       "materia": "Storia dell'arte",
-      "ind": "Licei",
+      "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
       "aula": 2,
       "note": "(+1/2)",
       "esercizi": false
@@ -2160,7 +2160,7 @@
       "turno": "Mattina",
       "anno": "5",
       "materia": "Storia dell'arte",
-      "ind": "Licei",
+      "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
       "aula": 2,
       "note": "",
       "esercizi": false
@@ -2186,7 +2186,7 @@
       "turno": "Mattina",
       "anno": "4/5",
       "materia": "Storia dell'arte",
-      "ind": "Licei",
+      "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
       "aula": 2,
       "note": "",
       "esercizi": false
