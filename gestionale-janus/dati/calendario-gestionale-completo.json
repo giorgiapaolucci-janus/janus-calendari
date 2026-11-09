@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": 5,
-  "updatedAt": "2026-11-04T15:36:06.885Z",
+  "revision": 6,
+  "updatedAt": "2026-11-09T09:42:05.313Z",
   "collections": {
     "assenze": [
       {
@@ -5708,6 +5708,123 @@
             "mme"
           ]
         }
+      },
+      {
+        "id": "allineamento_20261109_L105",
+        "batch": "allineamento_20261109",
+        "creata": "2026-11-09T09:42:05.310Z",
+        "lessonId": "L105",
+        "tipo": "set",
+        "motivo": "Sostituzioni Storia dell’arte per Liceo Sportivo: Educazione civica 3/4 e Lab matematica 4/5 e 5, 9 novembre 2026",
+        "patch": {
+          "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261109_L106",
+        "batch": "allineamento_20261109",
+        "creata": "2026-11-09T09:42:05.311Z",
+        "lessonId": "L106",
+        "tipo": "set",
+        "motivo": "Sostituzioni Storia dell’arte per Liceo Sportivo: Educazione civica 3/4 e Lab matematica 4/5 e 5, 9 novembre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi",
+          "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+          "zoomPasscode": "438503",
+          "class": "TUTTI",
+          "affiancaA": [
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261109_L138",
+        "batch": "allineamento_20261109",
+        "creata": "2026-11-09T09:42:05.312Z",
+        "lessonId": "L138",
+        "tipo": "set",
+        "motivo": "Sostituzioni Storia dell’arte per Liceo Sportivo: Educazione civica 3/4 e Lab matematica 4/5 e 5, 9 novembre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi tranne AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+          "zoomPasscode": "434438",
+          "class": "TUTTI",
+          "affiancaA": [
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261109_L146",
+        "batch": "allineamento_20261109",
+        "creata": "2026-11-09T09:42:05.313Z",
+        "lessonId": "L146",
+        "tipo": "set",
+        "motivo": "Sostituzioni Storia dell’arte per Liceo Sportivo: Educazione civica 3/4 e Lab matematica 4/5 e 5, 9 novembre 2026",
+        "patch": {
+          "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261109_L139",
+        "batch": "allineamento_20261109",
+        "creata": "2026-11-09T09:42:05.314Z",
+        "lessonId": "L139",
+        "tipo": "set",
+        "motivo": "Sostituzioni Storia dell’arte per Liceo Sportivo: Educazione civica 3/4 e Lab matematica 4/5 e 5, 9 novembre 2026",
+        "patch": {
+          "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+          "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+          "zoomPasscode": "816044",
+          "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "les"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261109_L140",
+        "batch": "allineamento_20261109",
+        "creata": "2026-11-09T09:42:05.315Z",
+        "lessonId": "L140",
+        "tipo": "set",
+        "motivo": "Sostituzioni Storia dell’arte per Liceo Sportivo: Educazione civica 3/4 e Lab matematica 4/5 e 5, 9 novembre 2026",
+        "patch": {
+          "ind": "Tutti gli indirizzi tranne AFM",
+          "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+          "zoomPasscode": "434438",
+          "class": "TUTTI",
+          "affiancaA": [
+            "sportivo"
+          ]
+        }
       }
     ],
     "proposte": [
@@ -6330,9 +6447,9 @@
     "docenti": []
   },
   "allineamento": {
-    "id": "allineamento_20261104",
+    "id": "allineamento_20261109",
     "stato": "completato",
-    "modifiche": 1,
+    "modifiche": 6,
     "conflitti": []
   }
 }

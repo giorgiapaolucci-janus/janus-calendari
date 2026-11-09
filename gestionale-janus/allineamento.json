@@ -1,7 +1,7 @@
 {
-  "id": "allineamento_20261104",
+  "id": "allineamento_20261109",
   "baseCommit": "cebb87aa11127fa1e721a08760efd75810bed975",
-  "source": "Aggiornamento collegamento Meet MME 5 serale venerdì 18:00, 4 novembre 2026",
+  "source": "Sostituzioni Storia dell’arte per Liceo Sportivo: Educazione civica 3/4 e Lab matematica 4/5 e 5, 9 novembre 2026",
   "actions": [
     {
       "lessonId": "L064",
@@ -3315,7 +3315,36 @@
         ]
       },
       "patch": {
+        "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "les"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L105",
+        "g": 4,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "STORIA DELL'ARTE",
         "ind": "Licei",
+        "doc": "lp",
+        "aula": "2",
+        "note": "(+1/2)",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia dell'arte"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
         "zoomPasscode": "816044",
         "class": "LICEI"
@@ -3344,6 +3373,30 @@
       },
       "patch": {
         "ind": "Tutti gli indirizzi",
+        "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
+        "zoomPasscode": "438503",
+        "class": "TUTTI",
+        "affiancaA": [
+          "sportivo"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L106",
+        "g": 4,
+        "h": 12,
+        "anno": "3/4",
+        "materia": "ED CIVICA",
+        "ind": "Tutti gli indirizzi",
+        "doc": "gc",
+        "aula": "1",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "educazione civica"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/81161849501?pwd=lgj16CqtOiart0mJeYU0FX1doX4gCi.1",
         "zoomPasscode": "438503",
         "class": "TUTTI"
@@ -4118,6 +4171,30 @@
         "ind": "Tutti gli indirizzi tranne AFM",
         "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
         "zoomPasscode": "434438",
+        "class": "TUTTI",
+        "affiancaA": [
+          "sportivo"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L138",
+        "g": 5,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "LAB MATEMATICA",
+        "ind": "Tutti gli indirizzi tranne AFM",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ],
+        "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+        "zoomPasscode": "434438",
         "class": "TUTTI"
       }
     },
@@ -4143,7 +4220,36 @@
         ]
       },
       "patch": {
+        "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "les"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L146",
+        "g": 5,
+        "h": 12,
+        "anno": "4/5",
+        "materia": "STORIA DELL'ARTE",
         "ind": "Licei",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia dell'arte"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
         "zoomPasscode": "816044",
         "class": "LICEI"
@@ -4171,7 +4277,36 @@
         ]
       },
       "patch": {
+        "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+        "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
+        "zoomPasscode": "816044",
+        "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / LES",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "les"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L139",
+        "g": 5,
+        "h": 12,
+        "anno": "5",
+        "materia": "STORIA DELL'ARTE",
         "ind": "Licei",
+        "doc": "lp",
+        "aula": "2",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "storia dell'arte"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/87556167000?pwd=2lfTH25BCuu4xUEYw8ZeBargs9rbrn.1",
         "zoomPasscode": "816044",
         "class": "LICEI"
@@ -4200,6 +4335,30 @@
       },
       "patch": {
         "ind": "Tutti gli indirizzi tranne AFM",
+        "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
+        "zoomPasscode": "434438",
+        "class": "TUTTI",
+        "affiancaA": [
+          "sportivo"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L140",
+        "g": 5,
+        "h": 12,
+        "anno": "5",
+        "materia": "LAB MATEMATICA",
+        "ind": "Tutti gli indirizzi tranne AFM",
+        "doc": "gl",
+        "aula": "6",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "lab matematica"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/85119207521?pwd=Hw3j8UMstPriwRFHFXHf4azUW4ItTG.1",
         "zoomPasscode": "434438",
         "class": "TUTTI"
