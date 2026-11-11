@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-09T09:42:05.325Z",
+  "aggiornato": "2026-11-11T15:12:56.761Z",
   "nomi": {
     "FV": "Federico Vani",
     "GC": "Giorgia Clementi",
@@ -918,19 +918,6 @@
       "esercizi": false
     },
     {
-      "id": "L072",
-      "doc": "GL",
-      "day": 3,
-      "hour": 11,
-      "turno": "Mattina",
-      "anno": "4/5",
-      "materia": "Meccatronica",
-      "ind": "Meccatronica",
-      "aula": 6,
-      "note": "",
-      "esercizi": false
-    },
-    {
       "id": "L073",
       "doc": "MB",
       "day": 3,
@@ -977,7 +964,7 @@
       "turno": "Mattina",
       "anno": "4/5",
       "materia": "Scienze motorie",
-      "ind": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo",
+      "ind": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo / MME",
       "aula": 7,
       "note": "",
       "esercizi": false
@@ -990,7 +977,7 @@
       "turno": "Mattina",
       "anno": "5",
       "materia": "Scienze motorie",
-      "ind": "Socio sanitario / LES / ITI Informatico / Turismo",
+      "ind": "Socio sanitario / LES / ITI Informatico / Turismo / MME",
       "aula": 7,
       "note": "",
       "esercizi": false
@@ -1019,19 +1006,6 @@
       "ind": "Classico / Linguistico / Scientifico / Scienze applicate / Scienze umane / Sportivo",
       "aula": 5,
       "note": "(+4)",
-      "esercizi": false
-    },
-    {
-      "id": "LJ20261029_MME_MER",
-      "doc": "GL",
-      "day": 3,
-      "hour": 11,
-      "turno": "Mattina",
-      "anno": "5",
-      "materia": "Meccatronica",
-      "ind": "MME",
-      "aula": 6,
-      "note": "",
       "esercizi": false
     },
     {
@@ -1724,19 +1698,6 @@
       "esercizi": false
     },
     {
-      "id": "L143",
-      "doc": "GL",
-      "day": 5,
-      "hour": 10,
-      "turno": "Mattina",
-      "anno": "4/5",
-      "materia": "Meccatronica",
-      "ind": "Meccatronica",
-      "aula": 6,
-      "note": "",
-      "esercizi": false
-    },
-    {
       "id": "A015",
       "doc": "LC",
       "day": 5,
@@ -1770,7 +1731,7 @@
       "turno": "Mattina",
       "anno": "4/5",
       "materia": "Educazione civica",
-      "ind": "AFM / ITI Informatico / IPSEOA / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo",
+      "ind": "AFM / ITI Informatico / IPSEOA / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo / MME",
       "aula": 7,
       "note": "",
       "esercizi": false
@@ -1783,7 +1744,7 @@
       "turno": "Mattina",
       "anno": "5",
       "materia": "Educazione civica",
-      "ind": "AFM / ITI Informatico / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo",
+      "ind": "AFM / ITI Informatico / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo / MME",
       "aula": 7,
       "note": "",
       "esercizi": false
@@ -1824,19 +1785,6 @@
       "materia": "Francese grammatica",
       "ind": "Socio sanitario",
       "aula": 5,
-      "note": "",
-      "esercizi": false
-    },
-    {
-      "id": "LJ20261029_MME_VEN",
-      "doc": "GL",
-      "day": 5,
-      "hour": 10,
-      "turno": "Mattina",
-      "anno": "5",
-      "materia": "Meccatronica",
-      "ind": "MME",
-      "aula": 6,
       "note": "",
       "esercizi": false
     },

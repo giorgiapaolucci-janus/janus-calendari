@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-09T09:42:05.324Z",
+  "aggiornato": "2026-11-11T15:12:56.761Z",
   "lezioni": [
     {
       "id": "L001",
@@ -1100,21 +1100,6 @@
       "zoomPasscode": "703830"
     },
     {
-      "id": "L072",
-      "weekday": 3,
-      "start": "11:00",
-      "end": "11:50",
-      "subject": "MECCATRONICA",
-      "year": "4/5 ANNO",
-      "class": "MECCATRONICA",
-      "teacher": "Gabriele Luverà",
-      "room": "AULA 6",
-      "note": "",
-      "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
-      "status": "scheduled",
-      "zoomPasscode": "494425"
-    },
-    {
       "id": "L073",
       "weekday": 3,
       "start": "11:00",
@@ -1889,21 +1874,6 @@
       "zoomPasscode": "118862"
     },
     {
-      "id": "L143",
-      "weekday": 5,
-      "start": "10:00",
-      "end": "10:50",
-      "subject": "MECCATRONICA",
-      "year": "4/5 ANNO",
-      "class": "MECCATRONICA",
-      "teacher": "Gabriele Luverà",
-      "room": "AULA 6",
-      "note": "",
-      "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
-      "status": "scheduled",
-      "zoomPasscode": "579497"
-    },
-    {
       "id": "L124",
       "weekday": 5,
       "start": "10:00",
@@ -2588,7 +2558,7 @@
       "end": "10:50",
       "subject": "ED CIVICA",
       "year": "4/5 ANNO",
-      "class": "AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO",
+      "class": "AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / MME",
       "teacher": "Lucia Carlucci",
       "room": "AULA 7",
       "note": "",
@@ -2602,7 +2572,8 @@
         "linguistico",
         "scienze-applicate",
         "socio-sanitario",
-        "sportivo"
+        "sportivo",
+        "mme"
       ],
       "affiancaA": [],
       "zoomPasscode": "36079"
@@ -2614,7 +2585,7 @@
       "end": "10:50",
       "subject": "ED CIVICA",
       "year": "5 ANNO",
-      "class": "AFM / ITI INFORMATICO / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO",
+      "class": "AFM / ITI INFORMATICO / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / MME",
       "teacher": "Lucia Carlucci",
       "room": "AULA 7",
       "note": "",
@@ -2627,7 +2598,8 @@
         "linguistico",
         "scienze-applicate",
         "socio-sanitario",
-        "sportivo"
+        "sportivo",
+        "mme"
       ],
       "affiancaA": [],
       "zoomPasscode": "36079"
@@ -2786,7 +2758,7 @@
       "end": "11:50",
       "subject": "SCIENZE MOTORIE",
       "year": "4/5 ANNO",
-      "class": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo",
+      "class": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo / MME",
       "teacher": "Lucia Carlucci",
       "room": "AULA 7",
       "note": "",
@@ -2797,7 +2769,8 @@
         "socio-sanitario",
         "les",
         "informatico",
-        "turismo"
+        "turismo",
+        "mme"
       ],
       "zoomPasscode": "929574"
     },
@@ -2808,7 +2781,7 @@
       "end": "11:50",
       "subject": "SCIENZE MOTORIE",
       "year": "5 ANNO",
-      "class": "Socio sanitario / LES / ITI Informatico / Turismo",
+      "class": "Socio sanitario / LES / ITI Informatico / Turismo / MME",
       "teacher": "Lucia Carlucci",
       "room": "AULA 7",
       "note": "",
@@ -2818,7 +2791,8 @@
         "socio-sanitario",
         "les",
         "informatico",
-        "turismo"
+        "turismo",
+        "mme"
       ],
       "zoomPasscode": "929574"
     },
@@ -3181,42 +3155,6 @@
       "affiancaA": [],
       "esercizi": false,
       "zoomPasscode": "377146"
-    },
-    {
-      "id": "LJ20261029_MME_MER",
-      "weekday": 3,
-      "start": "11:00",
-      "end": "11:50",
-      "subject": "MECCATRONICA",
-      "year": "5 ANNO",
-      "class": "MME",
-      "teacher": "Gabriele Luverà",
-      "room": "AULA 6",
-      "note": "",
-      "zoomUrl": "https://us06web.zoom.us/j/81903670591?pwd=0bh2Tej41miErxq4iJtSBuwUfUPtwb.1",
-      "status": "scheduled",
-      "zoomPasscode": "494425",
-      "tracks": [
-        "mme"
-      ]
-    },
-    {
-      "id": "LJ20261029_MME_VEN",
-      "weekday": 5,
-      "start": "10:00",
-      "end": "10:50",
-      "subject": "MECCATRONICA",
-      "year": "5 ANNO",
-      "class": "MME",
-      "teacher": "Gabriele Luverà",
-      "room": "AULA 6",
-      "note": "",
-      "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
-      "status": "scheduled",
-      "zoomPasscode": "579497",
-      "tracks": [
-        "mme"
-      ]
     },
     {
       "id": "LJ20261102_LES_FRANCESE",
