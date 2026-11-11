@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": 6,
-  "updatedAt": "2026-11-09T09:42:05.313Z",
+  "revision": 7,
+  "updatedAt": "2026-11-11T15:12:56.754Z",
   "collections": {
     "assenze": [
       {
@@ -5825,6 +5825,130 @@
             "sportivo"
           ]
         }
+      },
+      {
+        "id": "allineamento_20261111_L072",
+        "batch": "allineamento_20261111",
+        "creata": "2026-11-11T15:12:56.754Z",
+        "lessonId": "L072",
+        "tipo": "del",
+        "motivo": "MME 4/5 e 5: Scienze motorie mercoledì 11 e Educazione civica venerdì 10 con Lucia Carlucci Aula 7, 11 novembre 2026"
+      },
+      {
+        "id": "allineamento_20261111_L143",
+        "batch": "allineamento_20261111",
+        "creata": "2026-11-11T15:12:56.755Z",
+        "lessonId": "L143",
+        "tipo": "del",
+        "motivo": "MME 4/5 e 5: Scienze motorie mercoledì 11 e Educazione civica venerdì 10 con Lucia Carlucci Aula 7, 11 novembre 2026"
+      },
+      {
+        "id": "allineamento_20261111_A029",
+        "batch": "allineamento_20261111",
+        "creata": "2026-11-11T15:12:56.756Z",
+        "lessonId": "A029",
+        "tipo": "set",
+        "motivo": "MME 4/5 e 5: Scienze motorie mercoledì 11 e Educazione civica venerdì 10 con Lucia Carlucci Aula 7, 11 novembre 2026",
+        "patch": {
+          "ind": "AFM / ITI Informatico / IPSEOA / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo / MME",
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "AFM / ITI INFORMATICO / IPSEOA / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / MME",
+          "tracks": [
+            "afm",
+            "informatico",
+            "ipseoa",
+            "les",
+            "linguistico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo",
+            "mme"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261111_A030",
+        "batch": "allineamento_20261111",
+        "creata": "2026-11-11T15:12:56.757Z",
+        "lessonId": "A030",
+        "tipo": "set",
+        "motivo": "MME 4/5 e 5: Scienze motorie mercoledì 11 e Educazione civica venerdì 10 con Lucia Carlucci Aula 7, 11 novembre 2026",
+        "patch": {
+          "ind": "AFM / ITI Informatico / LES / Linguistico / Scienze applicate / Socio sanitario / Sportivo / MME",
+          "zoomUrl": "https://us06web.zoom.us/j/87593831246?pwd=NmIvcGDRjgpMdTmLOGAJT37Lf90Cbg.1",
+          "zoomPasscode": "36079",
+          "class": "AFM / ITI INFORMATICO / LES / LINGUISTICO / SCIENZE APPLICATE / SOCIO SANITARIO / SPORTIVO / MME",
+          "tracks": [
+            "afm",
+            "informatico",
+            "les",
+            "linguistico",
+            "scienze-applicate",
+            "socio-sanitario",
+            "sportivo",
+            "mme"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261111_LJ20261014_17",
+        "batch": "allineamento_20261111",
+        "creata": "2026-11-11T15:12:56.758Z",
+        "lessonId": "LJ20261014_17",
+        "tipo": "set",
+        "motivo": "MME 4/5 e 5: Scienze motorie mercoledì 11 e Educazione civica venerdì 10 con Lucia Carlucci Aula 7, 11 novembre 2026",
+        "patch": {
+          "ind": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo / MME",
+          "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+          "zoomPasscode": "929574",
+          "class": "IPSEOA / Socio sanitario / LES / ITI Informatico / Turismo / MME",
+          "tracks": [
+            "ipseoa",
+            "socio-sanitario",
+            "les",
+            "informatico",
+            "turismo",
+            "mme"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261111_LJ20261014_18",
+        "batch": "allineamento_20261111",
+        "creata": "2026-11-11T15:12:56.759Z",
+        "lessonId": "LJ20261014_18",
+        "tipo": "set",
+        "motivo": "MME 4/5 e 5: Scienze motorie mercoledì 11 e Educazione civica venerdì 10 con Lucia Carlucci Aula 7, 11 novembre 2026",
+        "patch": {
+          "ind": "Socio sanitario / LES / ITI Informatico / Turismo / MME",
+          "zoomUrl": "https://us06web.zoom.us/j/89713424183?pwd=QuNUYkXf82KcmnOO4Qy2xcXRJacnlO.1",
+          "zoomPasscode": "929574",
+          "class": "Socio sanitario / LES / ITI Informatico / Turismo / MME",
+          "tracks": [
+            "socio-sanitario",
+            "les",
+            "informatico",
+            "turismo",
+            "mme"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261111_LJ20261029_MME_MER",
+        "batch": "allineamento_20261111",
+        "creata": "2026-11-11T15:12:56.760Z",
+        "lessonId": "LJ20261029_MME_MER",
+        "tipo": "del",
+        "motivo": "MME 4/5 e 5: Scienze motorie mercoledì 11 e Educazione civica venerdì 10 con Lucia Carlucci Aula 7, 11 novembre 2026"
+      },
+      {
+        "id": "allineamento_20261111_LJ20261029_MME_VEN",
+        "batch": "allineamento_20261111",
+        "creata": "2026-11-11T15:12:56.761Z",
+        "lessonId": "LJ20261029_MME_VEN",
+        "tipo": "del",
+        "motivo": "MME 4/5 e 5: Scienze motorie mercoledì 11 e Educazione civica venerdì 10 con Lucia Carlucci Aula 7, 11 novembre 2026"
       }
     ],
     "proposte": [
@@ -6447,9 +6571,9 @@
     "docenti": []
   },
   "allineamento": {
-    "id": "allineamento_20261109",
+    "id": "allineamento_20261111",
     "stato": "completato",
-    "modifiche": 6,
+    "modifiche": 8,
     "conflitti": []
   }
 }
