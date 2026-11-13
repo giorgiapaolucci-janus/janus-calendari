@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-04T15:36:06.909Z",
+  "aggiornato": "2026-11-13T08:52:47.695Z",
   "lezioni": [
     {
       "id": "S001",
@@ -1371,6 +1371,24 @@
       "status": "scheduled",
       "tracks": [
         "mme"
+      ]
+    },
+    {
+      "id": "SJ20261113_SCI_INTEGRATE_12",
+      "weekday": 4,
+      "start": "18:00",
+      "end": "18:50",
+      "subject": "SCIENZE INTEGRATE",
+      "year": "1/2 ANNO",
+      "class": "SERALE",
+      "teacher": "Marianna Raia",
+      "room": "AULA 5",
+      "note": "",
+      "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
+      "zoomPasscode": "217016",
+      "status": "scheduled",
+      "tracks": [
+        "*"
       ]
     }
   ],

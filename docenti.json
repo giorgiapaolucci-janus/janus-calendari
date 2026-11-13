@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-11T15:12:56.761Z",
+  "aggiornato": "2026-11-13T08:52:47.695Z",
   "nomi": {
     "FV": "Federico Vani",
     "GC": "Giorgia Clementi",
@@ -2883,6 +2883,32 @@
       "esercizi": false
     },
     {
+      "id": "SJ20261026_FIS18",
+      "doc": "GL",
+      "day": 4,
+      "hour": 18,
+      "turno": "Sera",
+      "anno": "4/5",
+      "materia": "Fisica",
+      "ind": "Scientifico",
+      "aula": 6,
+      "note": "",
+      "esercizi": false
+    },
+    {
+      "id": "SJ20261113_SCI_INTEGRATE_12",
+      "doc": "MR",
+      "day": 4,
+      "hour": 18,
+      "turno": "Sera",
+      "anno": "1/2",
+      "materia": "Scienze integrate",
+      "ind": "Tutti gli indirizzi",
+      "aula": 5,
+      "note": "",
+      "esercizi": false
+    },
+    {
       "id": "S056",
       "doc": "SZ",
       "day": 4,
@@ -2930,6 +2956,19 @@
       "anno": "5",
       "materia": "Fisica",
       "ind": "Scientifico / Sportivo / LES",
+      "aula": 6,
+      "note": "",
+      "esercizi": false
+    },
+    {
+      "id": "SJ20261026_FIS19",
+      "doc": "GL",
+      "day": 4,
+      "hour": 19,
+      "turno": "Sera",
+      "anno": "4/5",
+      "materia": "Fisica",
+      "ind": "Scientifico",
       "aula": 6,
       "note": "",
       "esercizi": false
@@ -3052,6 +3091,19 @@
       "esercizi": false
     },
     {
+      "id": "SJ20261026_SCI18",
+      "doc": "MR",
+      "day": 5,
+      "hour": 18,
+      "turno": "Sera",
+      "anno": "4/5",
+      "materia": "Scienze",
+      "ind": "Scientifico",
+      "aula": 5,
+      "note": "",
+      "esercizi": false
+    },
+    {
       "id": "S068",
       "doc": "MB",
       "day": 5,
@@ -3139,45 +3191,6 @@
       "materia": "Storia",
       "ind": "Tutti gli indirizzi",
       "aula": 4,
-      "note": "",
-      "esercizi": false
-    },
-    {
-      "id": "SJ20261026_FIS18",
-      "doc": "GL",
-      "day": 4,
-      "hour": 18,
-      "turno": "Sera",
-      "anno": "4/5",
-      "materia": "Fisica",
-      "ind": "Scientifico",
-      "aula": 6,
-      "note": "",
-      "esercizi": false
-    },
-    {
-      "id": "SJ20261026_FIS19",
-      "doc": "GL",
-      "day": 4,
-      "hour": 19,
-      "turno": "Sera",
-      "anno": "4/5",
-      "materia": "Fisica",
-      "ind": "Scientifico",
-      "aula": 6,
-      "note": "",
-      "esercizi": false
-    },
-    {
-      "id": "SJ20261026_SCI18",
-      "doc": "MR",
-      "day": 5,
-      "hour": 18,
-      "turno": "Sera",
-      "anno": "4/5",
-      "materia": "Scienze",
-      "ind": "Scientifico",
-      "aula": 5,
       "note": "",
       "esercizi": false
     }
