@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-11T15:12:56.761Z",
+  "aggiornato": "2026-11-16T16:15:53.514Z",
   "lezioni": [
     {
       "id": "L001",
@@ -3174,6 +3174,24 @@
       ],
       "zoomPasscode": "118862",
       "affiancaA": []
+    },
+    {
+      "id": "LJ20261116_UMANE_34",
+      "weekday": 4,
+      "start": "10:00",
+      "end": "10:50",
+      "subject": "SCIENZE UMANE",
+      "year": "3/4 ANNO",
+      "class": "SCIENZE UMANE",
+      "teacher": "Giulia Dipalo",
+      "room": "AULA 4",
+      "note": "",
+      "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+      "zoomPasscode": "71721",
+      "status": "scheduled",
+      "tracks": [
+        "scienze-umane"
+      ]
     }
   ],
   "modifiche": [],

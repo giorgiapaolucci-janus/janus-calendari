@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-13T08:52:47.695Z",
+  "aggiornato": "2026-11-16T16:15:53.515Z",
   "nomi": {
     "FV": "Federico Vani",
     "GC": "Giorgia Clementi",
@@ -1263,7 +1263,7 @@
       "turno": "Mattina",
       "anno": "3/4",
       "materia": "Scrittura creativa",
-      "ind": "Tutti gli indirizzi",
+      "ind": "Tutti tranne Scienze umane",
       "aula": 3,
       "note": "",
       "esercizi": false
@@ -1369,6 +1369,19 @@
       "materia": "Economia politica",
       "ind": "LES",
       "aula": 7,
+      "note": "",
+      "esercizi": false
+    },
+    {
+      "id": "LJ20261116_UMANE_34",
+      "doc": "GD",
+      "day": 4,
+      "hour": 10,
+      "turno": "Mattina",
+      "anno": "3/4",
+      "materia": "Scienze umane",
+      "ind": "Scienze umane",
+      "aula": 4,
       "note": "",
       "esercizi": false
     },
