@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": 8,
-  "updatedAt": "2026-11-13T08:52:47.684Z",
+  "revision": 9,
+  "updatedAt": "2026-11-16T16:15:53.503Z",
   "collections": {
     "assenze": [
       {
@@ -5973,6 +5973,44 @@
           "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
           "zoomPasscode": "217016"
         }
+      },
+      {
+        "id": "allineamento_20261116_L093",
+        "batch": "allineamento_20261116",
+        "creata": "2026-11-16T16:15:53.500Z",
+        "lessonId": "L093",
+        "tipo": "set",
+        "motivo": "Scienze umane 3/4 giovedì 10:00 con Giulia Dipalo Aula 4 al posto di Scrittura creativa, 16 novembre 2026",
+        "patch": {
+          "ind": "TUTTI TRANNE SCIENZE UMANE",
+          "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+          "zoomPasscode": "419767",
+          "class": "TUTTI"
+        }
+      },
+      {
+        "id": "allineamento_20261116_LJ20261116_UMANE_34",
+        "batch": "allineamento_20261116",
+        "creata": "2026-11-16T16:15:53.501Z",
+        "lessonId": "LJ20261116_UMANE_34",
+        "tipo": "add",
+        "motivo": "Scienze umane 3/4 giovedì 10:00 con Giulia Dipalo Aula 4 al posto di Scrittura creativa, 16 novembre 2026",
+        "lezione": {
+          "g": 4,
+          "h": 10,
+          "anno": "3/4",
+          "materia": "SCIENZE UMANE",
+          "ind": "SCIENZE UMANE",
+          "doc": "gd",
+          "aula": "4",
+          "note": "",
+          "class": "SCIENZE UMANE",
+          "tracks": [
+            "scienze-umane"
+          ],
+          "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+          "zoomPasscode": "71721"
+        }
       }
     ],
     "proposte": [
@@ -6595,9 +6633,9 @@
     "docenti": []
   },
   "allineamento": {
-    "id": "allineamento_20261113",
+    "id": "allineamento_20261116",
     "stato": "completato",
-    "modifiche": 1,
+    "modifiche": 2,
     "conflitti": []
   }
 }

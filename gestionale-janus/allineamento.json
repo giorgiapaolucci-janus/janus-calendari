@@ -1,7 +1,7 @@
 {
-  "id": "allineamento_20261113",
+  "id": "allineamento_20261116",
   "baseCommit": "cebb87aa11127fa1e721a08760efd75810bed975",
-  "source": "Scienze integrate serale 1/2 anno, tutti gli indirizzi, giovedì 18:00 con Marianna Raia Aula 5, 13 novembre 2026",
+  "source": "Scienze umane 3/4 giovedì 10:00 con Giulia Dipalo Aula 4 al posto di Scrittura creativa, 16 novembre 2026",
   "actions": [
     {
       "lessonId": "L064",
@@ -3008,7 +3008,28 @@
         ]
       },
       "patch": {
+        "ind": "TUTTI TRANNE SCIENZE UMANE",
+        "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
+        "zoomPasscode": "419767",
+        "class": "TUTTI"
+      },
+      "acceptedBefore": {
+        "id": "L093",
+        "g": 4,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "SCRITTURA CREATIVA",
         "ind": "Tutti gli indirizzi",
+        "doc": "mb",
+        "aula": "3",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scrittura creativa"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/82316518078?pwd=MgcU8zIXxufFdahWiqko3nXAXuhWQs.1",
         "zoomPasscode": "419767",
         "class": "TUTTI"
@@ -8496,6 +8517,26 @@
         ],
         "zoomUrl": "https://us06web.zoom.us/j/85276782515?pwd=HobbtTUXo04PoHQM4zqrjQDZiygSAd.1",
         "zoomPasscode": "217016"
+      }
+    },
+    {
+      "lessonId": "LJ20261116_UMANE_34",
+      "tipo": "add",
+      "lezione": {
+        "g": 4,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "SCIENZE UMANE",
+        "ind": "SCIENZE UMANE",
+        "doc": "gd",
+        "aula": "4",
+        "note": "",
+        "class": "SCIENZE UMANE",
+        "tracks": [
+          "scienze-umane"
+        ],
+        "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
+        "zoomPasscode": "71721"
       }
     }
   ]
