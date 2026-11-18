@@ -1,6 +1,6 @@
 {
   "versione": 1,
-  "aggiornato": "2026-11-16T16:15:53.514Z",
+  "aggiornato": "2026-11-18T08:29:41.794Z",
   "lezioni": [
     {
       "id": "L001",
@@ -999,7 +999,7 @@
       "end": "10:50",
       "subject": "SCIENZE INTEGRATE",
       "year": "3/4 ANNO",
-      "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
+      "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
       "teacher": "Marianna Raia",
       "room": "AULA 5",
       "note": "",
@@ -1011,8 +1011,7 @@
         "linguistico",
         "scienze-umane",
         "scienze-applicate",
-        "sportivo",
-        "socio-sanitario"
+        "sportivo"
       ],
       "zoomPasscode": "118862"
     },
@@ -3191,6 +3190,24 @@
       "status": "scheduled",
       "tracks": [
         "scienze-umane"
+      ]
+    },
+    {
+      "id": "LJ20261118_SOCIO_34",
+      "weekday": 3,
+      "start": "10:00",
+      "end": "10:50",
+      "subject": "IGIENE / METODOLOGIE",
+      "year": "3/4 ANNO",
+      "class": "SOCIO SANITARIO",
+      "teacher": "Beatrice Lungu",
+      "room": "AULA 6",
+      "note": "",
+      "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+      "zoomPasscode": "579497",
+      "status": "scheduled",
+      "tracks": [
+        "socio-sanitario"
       ]
     }
   ],
