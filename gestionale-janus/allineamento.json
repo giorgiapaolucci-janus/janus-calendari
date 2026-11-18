@@ -1,7 +1,7 @@
 {
-  "id": "allineamento_20261116",
+  "id": "allineamento_20261118",
   "baseCommit": "cebb87aa11127fa1e721a08760efd75810bed975",
-  "source": "Scienze umane 3/4 giovedì 10:00 con Giulia Dipalo Aula 4 al posto di Scrittura creativa, 16 novembre 2026",
+  "source": "Socio sanitario 3/4 mercoledì 10:00: Igiene/Metodologie Beatrice Lungu Aula 6 al posto di Scienze integrate, 18 novembre 2026",
   "actions": [
     {
       "lessonId": "L064",
@@ -2221,9 +2221,38 @@
       },
       "patch": {
         "materia": "SCIENZE INTEGRATE",
+        "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
+        "doc": "mr",
+        "aula": "5",
+        "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+        "zoomPasscode": "118862",
+        "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
+        "tracks": [
+          "scientifico",
+          "classico",
+          "linguistico",
+          "scienze-umane",
+          "scienze-applicate",
+          "sportivo"
+        ]
+      },
+      "acceptedBefore": {
+        "id": "L062",
+        "g": 3,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "SCIENZE INTEGRATE",
         "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
         "doc": "mr",
         "aula": "5",
+        "note": "",
+        "cal": "M",
+        "v": null,
+        "dop": null,
+        "casa": false,
+        "subj": [
+          "scienze integrate"
+        ],
         "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
         "zoomPasscode": "118862",
         "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo / Socio sanitario",
@@ -8537,6 +8566,26 @@
         ],
         "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
         "zoomPasscode": "71721"
+      }
+    },
+    {
+      "lessonId": "LJ20261118_SOCIO_34",
+      "tipo": "add",
+      "lezione": {
+        "g": 3,
+        "h": 10,
+        "anno": "3/4",
+        "materia": "IGIENE / METODOLOGIE",
+        "ind": "SOCIO SANITARIO",
+        "doc": "bl",
+        "aula": "6",
+        "note": "",
+        "class": "SOCIO SANITARIO",
+        "tracks": [
+          "socio-sanitario"
+        ],
+        "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+        "zoomPasscode": "579497"
       }
     }
   ]

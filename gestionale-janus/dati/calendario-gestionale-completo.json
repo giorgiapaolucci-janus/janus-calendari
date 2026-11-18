@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "revision": 9,
-  "updatedAt": "2026-11-16T16:15:53.503Z",
+  "revision": 10,
+  "updatedAt": "2026-11-18T08:29:41.783Z",
   "collections": {
     "assenze": [
       {
@@ -6011,6 +6011,55 @@
           "zoomUrl": "https://us06web.zoom.us/j/83012781888?pwd=lne7WzyLk9CfZv7DdyUybCukBTEkm9.1",
           "zoomPasscode": "71721"
         }
+      },
+      {
+        "id": "allineamento_20261118_L062",
+        "batch": "allineamento_20261118",
+        "creata": "2026-11-18T08:29:41.781Z",
+        "lessonId": "L062",
+        "tipo": "set",
+        "motivo": "Socio sanitario 3/4 mercoledì 10:00: Igiene/Metodologie Beatrice Lungu Aula 6 al posto di Scienze integrate, 18 novembre 2026",
+        "patch": {
+          "materia": "SCIENZE INTEGRATE",
+          "ind": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
+          "doc": "mr",
+          "aula": "5",
+          "zoomUrl": "https://us06web.zoom.us/j/82496726093?pwd=y93cSlSbz3HRLMabfZN8SRzxV1rHXM.1",
+          "zoomPasscode": "118862",
+          "class": "Scientifico / Classico / Linguistico / Scienze umane / Scienze applicate / Sportivo",
+          "tracks": [
+            "scientifico",
+            "classico",
+            "linguistico",
+            "scienze-umane",
+            "scienze-applicate",
+            "sportivo"
+          ]
+        }
+      },
+      {
+        "id": "allineamento_20261118_LJ20261118_SOCIO_34",
+        "batch": "allineamento_20261118",
+        "creata": "2026-11-18T08:29:41.782Z",
+        "lessonId": "LJ20261118_SOCIO_34",
+        "tipo": "add",
+        "motivo": "Socio sanitario 3/4 mercoledì 10:00: Igiene/Metodologie Beatrice Lungu Aula 6 al posto di Scienze integrate, 18 novembre 2026",
+        "lezione": {
+          "g": 3,
+          "h": 10,
+          "anno": "3/4",
+          "materia": "IGIENE / METODOLOGIE",
+          "ind": "SOCIO SANITARIO",
+          "doc": "bl",
+          "aula": "6",
+          "note": "",
+          "class": "SOCIO SANITARIO",
+          "tracks": [
+            "socio-sanitario"
+          ],
+          "zoomUrl": "https://us06web.zoom.us/j/88256833884?pwd=yyDlyQZRG3t3wiGE8DFuqxVqlQXWaF.1",
+          "zoomPasscode": "579497"
+        }
       }
     ],
     "proposte": [
@@ -6633,7 +6682,7 @@
     "docenti": []
   },
   "allineamento": {
-    "id": "allineamento_20261116",
+    "id": "allineamento_20261118",
     "stato": "completato",
     "modifiche": 2,
     "conflitti": []
