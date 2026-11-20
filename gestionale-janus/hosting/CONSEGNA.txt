@@ -1,0 +1,78 @@
+JANUS CONDIVISO — PREPARAZIONE DEL 20 NOVEMBRE 2026
+
+Stato: codice preparato. Hosting e account reali NON configurati; Delera NON
+ancora collegato al salvataggio condiviso. Nessun acquisto effettuato.
+
+Soluzione proposta
+Un solo servizio Node.js su un piccolo server Linux con Docker Compose,
+disco persistente e Cloudflare Tunnel/Access. Le colleghe autorizzate hanno
+gli stessi permessi nel gestionale. GitHub rimane il repository del codice
+e dei tre JSON consultati dai calendari Delera. Non esporre il server Node
+direttamente: tutte le richieste verificano il JWT di Access e le email.
+
+Preparazione a cura del referente tecnico
+1. Individuare hosting, dominio o sottodominio aziendale e account Cloudflare.
+   Scegliere il piano e approvare eventuali costi prima dell'attivazione.
+   L'hosting deve supportare Docker e un volume persistente; una singola
+   istanza del servizio gestisce l'archivio (non avviare repliche indipendenti).
+2. Scaricare il ramo preparazione-janus del repository condiviso.
+3. In hosting copiare .env.example in .env e impostare dominio, issuer,
+   audience Access e le email delle colleghe. Non inviare token in chat.
+4. Configurare Access per TUTTO il sottodominio con soli utenti autorizzati.
+   Configurare Tunnel verso http://127.0.0.1:8765 e HTTP Host Header uguale
+   al dominio di JANUS_PUBLIC_ORIGIN. Non configurare bypass o porta pubblica.
+5. Creare in hosting/secrets/ i file github-token.txt e tunnel-token.txt.
+   Il token GitHub deve limitarsi al repository janus-calendari con Contents
+   lettura/scrittura e facoltà di aggiornare main secondo le regole aziendali.
+   I file segreti NON devono essere aggiunti a GitHub o incollati in Delera.
+6. Prima del primo avvio esportare i dati dal vecchio gestionale Delera di
+   ogni collega: le modifiche nel browser non sono nel repository. Confrontare
+   le copie e importare un solo stato concordato, mantenendo i backup.
+   Il file stato.json deve avere version, revision e collections valide.
+   Non sovrascrivere un archivio esistente né azzerare il volume. Senza un
+   archivio importato, il servizio parte dallo snapshot del 18 novembre.
+7. Dalla cartella hosting eseguire docker compose config e poi
+   docker compose up -d --build. La porta Node non è pubblicata sull'host.
+   Verificare e fissare versioni/digest delle immagini prima dell'esercizio.
+8. Conservare backup esterni del volume janus_data, con prova di ripristino.
+   Le copie nel volume sono utili ma non proteggono dalla perdita del disco.
+
+Collegamento Delera una sola volta
+- Sostituire il vecchio HTML del GESTIONALE con un collegamento al dominio
+  autenticato. Il vecchio HTML salva nel browser: non usarlo più per modifiche.
+  Il nuovo gestionale si apre nel proprio dominio; non incorporarlo in iframe.
+- I calendari studenti e docenti restano su Delera e leggono i tre JSON Pages.
+  Aggiornare una volta l'HTML studenti con la gestione 'uncovered' e la grafica
+  corrente. Una lezione scoperta non è una lezione annullata.
+- Le pagine già aperte devono ricaricare i dati. La verifica del servizio
+  controlla i tre JSON pubblici; non certifica da sola l'HTML incollato su Delera.
+
+Salvataggio e pubblicazione
+- L'approvazione salva assenza e sostituzioni nello stesso archivio condiviso.
+- Un salvataggio con revisione vecchia restituisce 409 e non sovrascrive i dati.
+- I tre JSON vengono pubblicati nello stesso commit, senza forzare main.
+- Le sostituzioni e le scoperte sono esportate per data; l'orario base rimane.
+- Il servizio confronta tutti e tre i JSON letti da Delera con quelli generati.
+  Finché differiscono, segnala pubblicazione incompleta e ritenta ogni 30s.
+  Un errore remoto conserva i dati: non mostra un falso successo.
+- Google Sheets richiede il collegamento separato già previsto nel progetto.
+
+Modifiche richieste in chat dopo l'attivazione
+Prima leggere lo stato condiviso corrente; applicare la modifica allo stesso
+archivio tramite il servizio autenticato e verificare la pubblicazione. Non
+trattare una modifica del codice o dello snapshot GitHub come modifica dei dati
+operativi. Non modificare direttamente i JSON pubblici mentre il servizio è
+attivo: verrebbero rimpiazzati alla successiva esportazione dell'archivio.
+
+Collaudo prima del passaggio definitivo
+Verificare due account autorizzati, account estraneo e richiesta senza JWT;
+salvare da due finestre e controllare il conflitto revisione; approvare una
+assenza di prova in staging e controllare mattina, sera e docenti nelle date
+interessate; simulare GitHub/Pages indisponibili; verificare ripresa e backup.
+Confrontare nel browser reale tutti i link Delera prima di dichiarare conclusa
+la migrazione. Non cambiare automaticamente le approvazioni reali del browser.
+
+Riferimenti del referente tecnico
+https://docs.docker.com/compose/how-tos/use-secrets/
+https://developers.cloudflare.com/tunnel/reference/tunnel-tokens/
+https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/

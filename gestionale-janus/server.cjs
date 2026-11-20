@@ -1,10 +1,11 @@
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),cp=require('node:child_process');
 const {Store,atomic}=require('./store.cjs'),{sheets,SHEET_ID}=require('./sheets.cjs'), integrations=require('./integrations.cjs');
+const runtime=require('./condivisione.cjs').runtime(),{verify}=require('./verifica-pubblicazione.cjs');
 const ROOT=__dirname, APP=path.join(ROOT,'app'), DATA=process.env.JANUS_DATA_DIR||path.join(ROOT,'archivio');
 const store=new Store(DATA,path.join(ROOT,'importazione')), TOKEN=crypto.randomBytes(32).toString('hex');
-const PORT=Number(process.env.JANUS_PORT||8765), ORIGIN=`http://127.0.0.1:${PORT}`;
+const PORT=runtime.port, ORIGIN=runtime.origin;
 const SECRET=path.join(DATA,'collegamenti-privati.json'), STATUS=path.join(DATA,'sincronizzazione.json');
-const config=()=>fs.existsSync(SECRET)?JSON.parse(fs.readFileSync(SECRET,'utf8')):{};
+const config=()=>{const c=fs.existsSync(SECRET)?JSON.parse(fs.readFileSync(SECRET,'utf8')):{};return {...c,...((runtime.githubToken||process.env.JANUS_GITHUB_TOKEN)?{github:runtime.githubToken||process.env.JANUS_GITHUB_TOKEN}:{}),...(runtime.shared?{automatico:true}:{})};};
 let sync=fs.existsSync(STATUS)?JSON.parse(fs.readFileSync(STATUS,'utf8')):{github:'Da collegare',google:'Da collegare'};
 let queue=Promise.resolve();
 const enqueue=fn=>{const result=queue.then(fn);queue=result.catch(()=>{});return result;};
@@ -17,6 +18,7 @@ function generate(state) {
   return {folder,payload};
 }
 async function publish(state) {
+  sync.delera='Aggiornamento da completare';sync.deleraVerificato=false;
   if(state.allineamento?.stato==='conflitti'){sync.locale='Allineamento da verificare: pubblicazione sospesa per conservare le modifiche locali.';atomic(STATUS,sync);return;}
   let output;
   try { output=generate(state); sync.locale='Dati esportati'; sync.exportRevision=state.revision; }
@@ -28,17 +30,20 @@ async function publish(state) {
     if(!conf.automatico){sync[service]='Automatico disattivato';continue;}
     try {
       const contentHash=crypto.createHash('sha256').update(JSON.stringify(state.collections)).digest('hex');
-      if(sync[service+'Hash']===contentHash&&sync[service]==='Aggiornato')continue;
+      const alreadyPublished=sync[service+'Hash']===contentHash&&sync[service]==='Aggiornato';
       if(service==='github') {
         const files=Object.fromEntries(['mattina.json','sera.json','docenti.json'].map(n=>[n,fs.readFileSync(path.join(output.folder,n),'utf8')]));
-        await integrations.github(credential,files);
-      } else await integrations.google(credential,output.payload);
+        if(!alreadyPublished)sync.githubCommit=await integrations.github(credential,files);
+        const verified=await verify(files);sync.deleraVerificato=verified.ok;
+        sync.delera=verified.ok?'Dati per Delera verificati':'GitHub aggiornato; attesa aggiornamento dei dati per Delera';
+        sync.deleraRevision=verified.ok?state.revision:null;
+      } else if(!alreadyPublished)await integrations.google(credential,output.payload);
       sync[service]='Aggiornato';sync[service+'Revision']=state.revision;sync[service+'Hash']=contentHash;
     } catch(e) {sync[service]=e.message;}
   }
   sync.checkedAt=new Date().toISOString();atomic(STATUS,sync);
 }
-function status(){const c=config();return {...sync,allineamento:store.read().allineamento,automatico:!!c.automatico,githubConfigurato:!!c.github,googleConfigurato:!!c.google,googleEmail:c.google?.client_email||'',spreadsheetId:SHEET_ID};}
+function status(){const c=config();return {...sync,condiviso:runtime.shared,allineamento:store.read().allineamento,automatico:!!c.automatico,githubConfigurato:!!c.github,googleConfigurato:!!c.google,googleEmail:c.google?.client_email||'',spreadsheetId:SHEET_ID};}
 function html() {
   const src=['data.js','rules.js','engine.js','app.js','local.js'].map(n=>fs.readFileSync(path.join(APP,n),'utf8')).join('\n');
   return '<!doctype html><html lang="it"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'+fs.readFileSync(path.join(APP,'template.html'),'utf8').replace('/*__SCRIPT__*/',`window.JANUS_TOKEN=${JSON.stringify(TOKEN)};\n${src}`)+'</html>';
@@ -47,7 +52,8 @@ async function body(req) {let text='';for await(const b of req){text+=b;if(Buffe
 const server=http.createServer(async(req,res)=>{
   const send=(code,value,type='application/json')=>{res.writeHead(code,{'Content-Type':type+'; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer'});res.end(type==='application/json'?JSON.stringify(value):value);};
   try {
-    if(req.headers.host!==`127.0.0.1:${PORT}`)return send(403,{error:'Host non consentito.'});
+    if(req.headers.host!==(new URL(ORIGIN)).host)return send(403,{error:'Host non consentito.'});
+    try{await runtime.authenticate(req);}catch{return send(403,{error:'Accesso riservato alle colleghe autorizzate.'});}
     if(req.url==='/'&&req.method==='GET')return send(200,html(),'text/html');
     if(req.headers['x-janus-token']!==TOKEN||(req.headers.origin&&req.headers.origin!==ORIGIN))return send(403,{error:'Apri Calendari Janus dal suo indirizzo locale.'});
     if(req.url==='/api/state'&&req.method==='GET')return send(200,{...store.read(),sync:status()});
@@ -61,6 +67,7 @@ const server=http.createServer(async(req,res)=>{
     }
     if(req.url==='/api/sync'&&req.method==='POST') {await enqueue(()=>publish(store.read()));return send(200,status());}
     if(req.url==='/api/config'&&req.method==='POST') {
+      if(runtime.shared)return send(403,{error:'I collegamenti si configurano nei segreti del server condiviso.'});
       const input=await body(req), c=config();
       if(typeof input.github==='string'&&input.github.trim())c.github=input.github.trim();
       if(input.google) {
@@ -74,4 +81,6 @@ const server=http.createServer(async(req,res)=>{
   }catch(e){send(e.status||400,{error:e.message});}
 });
 server.on('error',e=>{console.error('Avvio non riuscito: '+e.code);process.exitCode=1;});
-server.listen(PORT,'127.0.0.1',()=>{console.log('Calendari Janus: '+ORIGIN);enqueue(()=>publish(store.read()));if(process.env.JANUS_OPEN_BROWSER==='1')cp.spawn('open',[ORIGIN],{stdio:'ignore'});});
+server.listen(PORT,runtime.host,()=>{console.log('Calendari Janus: '+ORIGIN);enqueue(()=>publish(store.read()));if(!runtime.shared&&process.env.JANUS_OPEN_BROWSER==='1')cp.spawn('open',[ORIGIN],{stdio:'ignore'});});
+// Il commit GitHub può precedere di alcuni minuti l'aggiornamento di Pages.
+const retry=setInterval(()=>{if(!sync.deleraVerificato&&config().automatico)enqueue(()=>publish(store.read())).catch(()=>{});},30000);retry.unref();

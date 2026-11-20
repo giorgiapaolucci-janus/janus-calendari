@@ -57,10 +57,13 @@ function applica(nome, cal) {
     }
   });
   // 3) sostituzioni approvate -> modifiche con data
-  const modifiche = []; const date = [...new Set(X.ST.sost.map(s => s.data))].sort();
-  date.forEach(d => X.effettive(d).filter(o => o.cal === cal && o.sost && o.docEff !== o.docOrig).forEach(o => {
+  const modifiche = []; const dateSet = new Set(X.ST.sost.map(s => s.data));
+  X.ST.assenze.forEach(a=>X.intervallo(a.dal,a.al).forEach(d=>dateSet.add(d)));
+  const date=[...dateSet].sort();
+  date.forEach(d => X.effettive(d).filter(o => o.cal === cal && (o.scoperta || (o.sost && o.docEff !== o.docOrig))).forEach(o => {
     const l = per.get(o.id); if (!l) return;
-    if (!o.docEff) { rapporto.push('NON pubblicata (scoperta): ' + d + ' ' + hh(o.h) + ' ' + o.materia + ' (' + o.id + ')'); return; }
+    if ((o.scoperta || !o.docEff) && !o.casa) { modifiche.push({lessonId:o.id,date:d,teacher:'Lezione scoperta — sostituto da definire',status:'uncovered',zoomUrl:''});return; }
+    if(!o.docEff)return;
     modifiche.push({ lessonId: o.id, date: d, teacher: X.nomeD(o.docEff) });
   }));
   rapporto.push(nome + ': ' + L.length + ' lezioni, ' + nPerm + ' modifiche permanenti, ' + modifiche.length + ' sostituzioni con data' + (manca.length ? ' | nel calendario studenti ma non nel software: ' + manca.join(',') : '') + (extra.length ? ' | nel software ma non nei calendari studenti (e non aggiunte): ' + extra.join(',') : ''));

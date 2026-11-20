@@ -4,7 +4,7 @@ test('importazione completa, persistenza al riavvio, backup e conflitto revision
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'janus-test-'));
  try {
   const store=new Store(dir,path.join(__dirname,'importazione')),s=store.read();
-  assert.equal(s.collections.assenze.length,0);assert.equal(s.collections.mods.length,69+require('./allineamento.json').actions.length);assert.equal(s.collections.proposte.length,0);
+  assert.equal(s.collections.assenze.length,0);assert.equal(require('./allineamento.cjs').lessons(s.collections).length,247);assert.equal(s.collections.proposte.length,0);
   const next=structuredClone(s.collections);next.proposte.push({id:'prova',stato:'in attesa',azioni:[]});
   store.save(s.revision,next);assert.equal(new Store(dir,'non-usato').read().collections.proposte.length,1);
   assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dir,'backup/stato-'+s.revision+'.json'))),s);

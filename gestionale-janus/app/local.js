@@ -30,8 +30,14 @@ async function localAction(fn) {
     await fn();
     if(localDirty) {
       if(U.msg?.k==='err')throw Error(U.msg.t);
-      const next=await api('state',{revision:localRevision,collections:collectionState()});
+      const collections=collectionState();
+      const relevant=c=>JSON.stringify(Object.fromEntries(Object.entries(c).filter(([k])=>k!=='proposte')));
+      const changed=relevant(snapshot)!==relevant(collections);
+      const next=await api('state',{revision:localRevision,collections});
       localRevision=next.revision;syncStatus=next.sync;adopt(next.collections);
+      if(changed&&syncStatus.condiviso)U.msg=syncStatus.deleraVerificato
+        ?{k:'ok',t:'Modifica salvata nell’archivio condiviso. Dati dei calendari per Delera verificati; le pagine aperte devono ricaricare i dati.'}
+        :{k:'info',t:'Modifica salvata nell’archivio condiviso. Aggiornamento Delera ancora da completare: '+(syncStatus.delera||syncStatus.github||'in attesa')+'. Consulta Salvataggio e collegamenti.'};
     }
   } catch(e) {
     adopt(snapshot);
@@ -42,11 +48,14 @@ async function localAction(fn) {
   } finally {localBusy=false;localDirty=false;render();}
 }
 function pSync() {
+  if(syncStatus.condiviso)return `<section class="card"><h2>Archivio condiviso</h2><p>Revisione ${localRevision}. Le colleghe lavorano sullo stesso archivio; un salvataggio basato su una vecchia revisione viene bloccato.</p><p>GitHub: <strong>${esc(syncStatus.github||'Da collegare')}</strong></p><p>Dati per Delera: <strong>${esc(syncStatus.delera||'Aggiornamento da completare')}</strong></p><p>La verifica riguarda i tre file di dati letti dai calendari. Le pagine Delera devono usare i collegamenti corretti e ricaricare i dati.</p><button class="b" data-a="syncLocale">Riprova aggiornamento</button> <button class="b" data-a="statoCondiviso">Controlla esito</button> <button class="b" data-a="ricaricaCondiviso">Ricarica archivio condiviso</button> <button class="b" data-a="backupLocale">Scarica copia dei dati</button></section>`;
   return `<div class="grid2"><section class="card"><h2>Archivio su questo Mac</h2><p>Le modifiche vengono salvate su disco. Ogni salvataggio conserva una copia della versione precedente.</p><p>Revisione ${localRevision}. Le proposte cambiano il calendario solo dopo l’approvazione.</p><button class="b" data-a="backupLocale">Scarica copia dei dati</button></section>
   <section class="card"><h2>Aggiornamenti</h2><p>GitHub / Delera: <strong>${esc(syncStatus.github||'Da collegare')}</strong></p><p>Google Sheets: <strong>${esc(syncStatus.google||'Da collegare')}</strong></p><p>${esc(syncStatus.locale||'Preparazione esportazioni…')}</p><a class="b" href="https://docs.google.com/spreadsheets/d/17BkPIZw_eKagNqW_WEXkWfdA3ABFiWfnJ0NBBvUV4rw/edit" target="_blank" rel="noreferrer">Apri il foglio</a> <button class="b" data-a="syncLocale">Riprova aggiornamento</button><p class="sub" style="margin-top:12px">Gli aggiornamenti automatici funzionano mentre questo programma è in esecuzione. Un errore remoto non cancella le modifiche salvate.</p></section></div>
   <section class="card" style="margin-top:14px"><h2>Collega i servizi</h2><p>Questa configurazione è necessaria una sola volta. Gli accessi di Claude e Codex non vengono trasferiti al programma.</p><div class="col"><label>Token GitHub per janus-calendari (Contents: lettura e scrittura)<br><input id="github-token" type="password" autocomplete="off" placeholder="${syncStatus.githubConfigurato?'Già configurato; lascia vuoto per conservarlo':'Token GitHub'}" style="width:100%"></label><label>File JSON dell’account di servizio Google<br><input id="google-key" type="file" accept=".json"></label><p class="sub">Abilita Google Sheets API nel progetto Google e condividi il foglio come Editor con l’indirizzo dell’account di servizio. ${esc(syncStatus.googleEmail||'')}</p><label><input id="auto-sync" type="checkbox" ${syncStatus.automatico?'checked':''}> Aggiorna GitHub e il foglio dopo ogni modifica effettiva</label><p class="sub">Le credenziali restano nell’archivio locale, escluse dai backup scaricabili e dai file pubblicati.</p><button class="b pri" data-a="configLocale">Salva collegamenti</button></div></section>`;
 }
 ACT.syncLocale=async()=>{syncStatus=await api('sync',{});U.msg={k:'info',t:'Verifica degli aggiornamenti completata. Consulta gli esiti qui sotto.'};};
+ACT.statoCondiviso=async()=>{syncStatus=await api('status');U.msg={k:'info',t:'Esito della pubblicazione aggiornato.'};};
+ACT.ricaricaCondiviso=async()=>{const s=await api('state');localRevision=s.revision;syncStatus=s.sync;adopt(s.collections);U.msg={k:'info',t:'Archivio condiviso ricaricato.'};};
 ACT.configLocale=async()=>{
   const file=document.getElementById('google-key').files[0];
   const body={github:document.getElementById('github-token').value,automatico:document.getElementById('auto-sync').checked};

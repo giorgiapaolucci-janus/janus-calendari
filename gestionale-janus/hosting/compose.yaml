@@ -1,0 +1,34 @@
+services:
+  janus:
+    build:
+      context: ../..
+      dockerfile: gestionale-janus/hosting/Dockerfile
+    restart: unless-stopped
+    environment:
+      JANUS_MODE: condiviso
+      JANUS_DATA_DIR: /var/lib/janus
+      JANUS_PUBLIC_ORIGIN: ${JANUS_PUBLIC_ORIGIN:?Configurare il dominio HTTPS}
+      JANUS_ACCESS_ISSUER: ${JANUS_ACCESS_ISSUER:?Configurare Cloudflare Access}
+      JANUS_ACCESS_AUD: ${JANUS_ACCESS_AUD:?Configurare audience Access}
+      JANUS_ALLOWED_EMAILS: ${JANUS_ALLOWED_EMAILS:?Configurare le email autorizzate}
+      JANUS_GITHUB_TOKEN_FILE: /run/secrets/github_token
+    volumes:
+      - janus_data:/var/lib/janus
+    secrets:
+      - github_token
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    network_mode: service:janus
+    depends_on:
+      - janus
+    command: [tunnel, --no-autoupdate, run, --token-file, /run/secrets/tunnel_token]
+    secrets:
+      - tunnel_token
+volumes:
+  janus_data:
+secrets:
+  github_token:
+    file: ./secrets/github-token.txt
+  tunnel_token:
+    file: ./secrets/tunnel-token.txt

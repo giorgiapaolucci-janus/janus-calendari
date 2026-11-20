@@ -23,7 +23,7 @@ function render() {
   const attesa = ST.proposte.filter(p => p.stato === 'in attesa').length;
   $('#tabs').innerHTML = TABS.map(([k, n]) => '<button role="tab" data-a="tab" data-k="' + k + '" aria-selected="' + (U.tab === k) + '">' + n + (k === 'ass' && attesa ? '<span class="badge">' + attesa + '</span>' : '') + '</button>').join('');
   $('#status').innerHTML = '<span class="pill ' + (U.canEdit ? 'ok' : '') + '">' + (U.canEdit ? 'Può modificare e approvare' : 'Sola consultazione') + '</span>'
-    + '<span class="pill ' + (localReady ? 'ok' : 'warn') + '">' + (localReady ? (localBusy ? 'Salvataggio in corso…' : 'Salvato su questo Mac') : 'Caricamento archivio…') + '</span>';
+    + '<span class="pill ' + (localReady ? 'ok' : 'warn') + '">' + (localReady ? (localBusy ? 'Salvataggio in corso…' : (syncStatus.condiviso ? 'Salvato nell’archivio condiviso' : 'Salvato su questo Mac')) : 'Caricamento archivio…') + '</span>';
   const keep = {}; const ae = document.activeElement;
   $('#main').querySelectorAll('input[id],select[id],textarea[id]').forEach(el => { if (el.type !== 'file' && el.type !== 'password') keep[el.id] = el.value; });
   const aid = ae && ae.id; const ss = ae && ae.selectionStart;
